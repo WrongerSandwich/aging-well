@@ -10,7 +10,7 @@ Heart, vasculature, blood pressure.
 ## Levers that touch this system
 | Lever | Key claim(s) (ref by lever file row #) | Net importance for this system |
 |-------|----------------------------------------|--------------------------------|
-| Substances | smoking #1–#7 (CVD HR 1.50, tripled all-cause); alcohol #9–#10 (IHD J-curve real but net-negative); smokeless #8; vaping #11–#15 (modest CVD signal vs never-use, T2; less harmful than smoking) | ● strong — smoking is a top CVD driver; cessation is the largest reversible CV win. Vaping adds a small T2 signal. |
+| Substances | smoking #1–#7 (CVD HR 1.50, tripled all-cause); alcohol #9–#10 (IHD J-curve real but net-negative); smokeless #8; vaping #11–#15 (modest CVD signal vs never-use, T2; less harmful than smoking); cannabis #16–#17, #25–#26 (composite CV RR 1.48 but tobacco-confounded, T2/T3) | ● strong — smoking is a top CVD driver; cessation is the largest reversible CV win. Vaping/cannabis add smaller, confounded T2/T3 signals. |
 
 ## Coverage check
 - [x] At least one T1/T2 lever accounts for the main drivers of decline here *(smoking, T1)*
