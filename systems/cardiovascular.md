@@ -10,9 +10,9 @@ Heart, vasculature, blood pressure.
 ## Levers that touch this system
 | Lever | Key claim(s) (ref by lever file row #) | Net importance for this system |
 |-------|----------------------------------------|--------------------------------|
-|  |  |  |
+| Substances | smoking #1–#7 (CVD HR 1.50, tripled all-cause); alcohol #9–#10 (IHD J-curve real but net-negative); smokeless #8; vaping #11–#15 (modest CVD signal vs never-use, T2; less harmful than smoking) | ● strong — smoking is a top CVD driver; cessation is the largest reversible CV win. Vaping adds a small T2 signal. |
 
 ## Coverage check
-- [ ] At least one T1/T2 lever accounts for the main drivers of decline here
+- [x] At least one T1/T2 lever accounts for the main drivers of decline here *(smoking, T1)*
 - [ ] Irreversible failure modes for this system are identified and have a protective action
-- Known irreversible failure modes:
+- Known irreversible failure modes: post-MI myocardial scar; advanced atherosclerotic plaque/calcification (manageable, not reversible). *Other levers (exercise, nutrition/metabolic) still pending — do not declare covered.*
