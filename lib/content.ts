@@ -3,7 +3,7 @@ export interface Finding {
   tierLabel: string;
   tierModifier?: "inverse";
   lever: string;
-  category: "substances" | "exercise";
+  category: "substances" | "exercise" | "sleep";
   titleLines: string[];
   summary: string;
   stat?: { value: string; labelLines: string[] };
@@ -74,6 +74,34 @@ export const findings: Finding[] = [
   {
     number: "05",
     tierLabel: "T1",
+    lever: "Sleep",
+    category: "sleep",
+    titleLines: ["Sleep ~7½ hours,", "regularly."],
+    summary:
+      "The risk nadir for mortality, CVD, and stroke sits near 7–7.5h — but consistent sleep–wake timing is the better-measured signal, and the long-sleep “danger zone” is mostly reverse causation.",
+    stat: { value: "1.88×", labelLines: ["higher CVD mortality", "with irregular timing"] },
+    detail: {
+      body: "Don’t fear-cap your sleep: the two largest meta-analyses don’t even agree that short sleep (under 7h) raises mortality. Treat 7–7.5h and a steady schedule as a sensible target, not a knife-edge.",
+      source: "UK Biobank accelerometry · large cohorts · observational",
+    },
+  },
+  {
+    number: "06",
+    tierLabel: "T1",
+    lever: "Sleep",
+    category: "sleep",
+    titleLines: ["Fix insomnia with", "CBT-I, not pills."],
+    summary:
+      "First-line and durable to about a year. The real prize: in older adults it roughly halved incident depression — sleep’s one hard-endpoint causal win.",
+    stat: { value: "~49%", labelLines: ["lower incident", "depression · NNT 7"] },
+    detail: {
+      body: "Use in-person or a validated digital CBT-I program ahead of hypnotics. The hard-endpoint evidence is for depression prevention; effects on cardiovascular events remain unproven.",
+      source: "RCT · clinician-diagnosed endpoint · high confidence",
+    },
+  },
+  {
+    number: "07",
+    tierLabel: "T1",
     lever: "Substances",
     category: "substances",
     cardModifier: "compact",
@@ -82,7 +110,7 @@ export const findings: Finding[] = [
       "Zero minimizes total harm. If drinking, ≤1/day is a harm-reduction ceiling—not a target.",
   },
   {
-    number: "06",
+    number: "08",
     tierLabel: "T2",
     lever: "Substances",
     category: "substances",
@@ -91,18 +119,29 @@ export const findings: Finding[] = [
     summary:
       "Do not start as a non-smoker. For smokers, a complete switch is defensible; dual use buys no measured benefit.",
   },
+  {
+    number: "09",
+    tierLabel: "T1",
+    lever: "Sleep",
+    category: "sleep",
+    cardModifier: "compact muted",
+    titleLines: ["Treat sleep apnea for symptoms, not your heart."],
+    summary:
+      "Moderate–severe OSA tracks with cardiovascular risk, but CPAP did not cut hard cardiac events in RCTs. Treat it for sleepiness, blood pressure, and quality of life.",
+  },
 ];
 
 export const heroEyebrow = "Research in progress";
 
 export interface Filter {
   label: string;
-  value: "all" | "substances" | "exercise";
+  value: "all" | "substances" | "exercise" | "sleep";
 }
 export const findingsFilters: Filter[] = [
   { label: "All findings", value: "all" },
   { label: "Substances", value: "substances" },
   { label: "Exercise", value: "exercise" },
+  { label: "Sleep", value: "sleep" },
 ];
 
 export interface Tier {
