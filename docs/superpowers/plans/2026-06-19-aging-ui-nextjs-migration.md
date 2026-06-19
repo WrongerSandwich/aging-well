@@ -442,12 +442,12 @@ describe("parseStatus", () => {
 });
 
 describe("countClaims", () => {
-  it("counts only numbered table rows, ignoring the divider and blank rows", () => {
+  it("counts only numbered rows with a non-empty claim cell, ignoring the divider and blank rows", () => {
     expect(countClaims(RESEARCHED)).toBe(3);
     expect(countClaims(IN_PROGRESS)).toBe(1);
   });
-  it("counts a stub's empty claim table as having its placeholder row", () => {
-    expect(countClaims(STUB)).toBe(1);
+  it("does not count a stub's empty placeholder row (blank claim cell)", () => {
+    expect(countClaims(STUB)).toBe(0);
   });
 });
 
@@ -532,11 +532,16 @@ export function parseStatus(md: string): LeverStatus {
   return "pending";
 }
 
-// Counts numbered claim rows: table rows whose first cell is an integer.
-// Excludes the "— T3/T4 below —" divider and blank spacer rows.
+// Counts real claim rows: numbered table rows whose Claim cell (the cell
+// after the number) is non-empty. Excludes the "— T3/T4 below —" divider,
+// blank spacer rows, and stub placeholder rows (which have a blank claim cell).
 export function countClaims(md: string): number {
-  const matches = md.match(/^\|\s*\d+\s*\|/gm);
-  return matches ? matches.length : 0;
+  let count = 0;
+  for (const line of md.split("\n")) {
+    const match = line.match(/^\|\s*\d+\s*\|([^|]*)\|/);
+    if (match && match[1].trim() !== "") count += 1;
+  }
+  return count;
 }
 
 // Counts source rows: table rows whose first cell is an S-prefixed id (S001, ...).
@@ -1112,7 +1117,9 @@ export default function StatusSection() {
       <div className="lever-list">
         {statusRows.map((row) => {
           const lever = row.slug ? derived.levers[row.slug] : undefined;
-          const note = row.note ?? (lever ? `${lever.claims} claims` : "");
+          const note =
+            row.note ??
+            (lever && lever.claims > 0 ? `${lever.claims} claims` : "Not yet researched");
           const statusLabel =
             row.statusLabel ?? (lever ? STATUS_LABEL[lever.status] : "Pending");
           return (
