@@ -1,7 +1,7 @@
 export interface Finding {
   number: string;
   tierLabel: string;
-  tierModifier?: "tier-2" | "inverse";
+  tierModifier?: "inverse";
   lever: string;
   category: "substances" | "exercise";
   titleLines: string[];
@@ -84,7 +84,6 @@ export const findings: Finding[] = [
   {
     number: "06",
     tierLabel: "T2",
-    tierModifier: "tier-2",
     lever: "Substances",
     category: "substances",
     cardModifier: "compact muted",

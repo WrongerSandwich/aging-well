@@ -13,6 +13,9 @@ describe("Findings", () => {
     await user.click(first);
     expect(first).toHaveAttribute("aria-expanded", "true");
     expect(first).toHaveTextContent(/hide evidence/i);
+    await user.click(first);
+    expect(first).toHaveAttribute("aria-expanded", "false");
+    expect(first).toHaveTextContent(/view evidence/i);
   });
 
   it("hides non-matching cards when a category filter is active", async () => {

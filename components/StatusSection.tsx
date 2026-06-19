@@ -38,7 +38,11 @@ export default function StatusSection() {
           const lever = row.slug ? derived.levers[row.slug] : undefined;
           const note =
             row.note ??
-            (lever && lever.claims > 0 ? `${lever.claims} claims` : "Not yet researched");
+            (lever && lever.claims > 0
+              ? `${lever.claims} claims`
+              : lever?.status === "in-progress"
+                ? "Agent active"
+                : "Not yet researched");
           const statusLabel =
             row.statusLabel ?? (lever ? STATUS_LABEL[lever.status] : "Pending");
           return (
