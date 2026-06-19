@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T18:55:48.178Z",
+  "generatedAt": "2026-06-19T19:01:18.481Z",
   "levers": {
     "exercise": {
       "slug": "exercise",
@@ -11,19 +11,19 @@
       "slug": "medical-screening",
       "name": "Medical & Screening",
       "status": "pending",
-      "claims": 1
+      "claims": 0
     },
     "nutrition-metabolic": {
       "slug": "nutrition-metabolic",
       "name": "Nutrition & Metabolic",
       "status": "in-progress",
-      "claims": 1
+      "claims": 0
     },
     "oral-sensory": {
       "slug": "oral-sensory",
       "name": "Oral & Sensory",
       "status": "pending",
-      "claims": 1
+      "claims": 0
     },
     "sleep": {
       "slug": "sleep",
@@ -35,7 +35,7 @@
       "slug": "stress-social",
       "name": "Stress & Social",
       "status": "pending",
-      "claims": 1
+      "claims": 0
     },
     "substances": {
       "slug": "substances",
@@ -47,13 +47,13 @@
       "slug": "sun-skin",
       "name": "Sun & Skin",
       "status": "pending",
-      "claims": 1
+      "claims": 0
     }
   },
   "totals": {
     "leversComplete": 3,
     "leversTotal": 8,
     "sourcesTotal": 69,
-    "claimsTotal": 68
+    "claimsTotal": 63
   }
 }

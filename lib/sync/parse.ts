@@ -33,11 +33,16 @@ export function parseStatus(md: string): LeverStatus {
   return "pending";
 }
 
-// Counts numbered claim rows: table rows whose first cell is an integer.
-// Excludes the "— T3/T4 below —" divider and blank spacer rows.
+// Counts real claim rows: numbered table rows whose Claim cell (the cell
+// after the number) is non-empty. Excludes the "— T3/T4 below —" divider,
+// blank spacer rows, and stub placeholder rows (which have a blank claim cell).
 export function countClaims(md: string): number {
-  const matches = md.match(/^\|\s*\d+\s*\|/gm);
-  return matches ? matches.length : 0;
+  let count = 0;
+  for (const line of md.split("\n")) {
+    const match = line.match(/^\|\s*\d+\s*\|([^|]*)\|/);
+    if (match && match[1].trim() !== "") count += 1;
+  }
+  return count;
 }
 
 // Counts source rows: table rows whose first cell is an S-prefixed id (S001, ...).

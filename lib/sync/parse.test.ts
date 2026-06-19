@@ -69,12 +69,12 @@ describe("parseStatus", () => {
 });
 
 describe("countClaims", () => {
-  it("counts only numbered table rows, ignoring the divider and blank rows", () => {
+  it("counts only numbered rows with a non-empty claim cell, ignoring the divider and blank rows", () => {
     expect(countClaims(RESEARCHED)).toBe(3);
     expect(countClaims(IN_PROGRESS)).toBe(1);
   });
-  it("counts a stub's empty claim table as having its placeholder row", () => {
-    expect(countClaims(STUB)).toBe(1);
+  it("does not count a stub's empty placeholder row (blank claim cell)", () => {
+    expect(countClaims(STUB)).toBe(0);
   });
 });
 
@@ -108,7 +108,7 @@ describe("buildDerived", () => {
       leversComplete: 1,
       leversTotal: 3,
       sourcesTotal: 3,
-      claimsTotal: 5,
+      claimsTotal: 4,
     });
     expect(out.levers.substances.name).toBe("Substances");
     expect(out.levers["nutrition-metabolic"].status).toBe("in-progress");
