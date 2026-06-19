@@ -20,6 +20,11 @@ contaminate the ranking with low-certainty noise.
 | Exercise: is measured CRF a *quantifiably* stronger mortality predictor than self-reported activity, head-to-head? | Data strongly suggest yes; no surviving claim makes the direct same-population comparison | Yes — measured CRF is the cleaner signal; self-report attenuates | T1 (indirect) | Low priority — doesn't change the action |
 | Exercise: resistance-training dose optimum — plateau (~90–119 min/wk) or J-curve (peak 30–60 min/wk)? | Two strong cohorts disagree (Zhang S031 vs Momma-type S037) | Effective dose is *small* either way (~2 sessions/wk); exact optimum unsettled | T1/T2, conflicting | Low priority — both point to "~2×/wk is enough" |
 
+| Sleep: reversibility tiers (FAST/SLOW/IRREVERSIBLE) — acute-debt recovery, sleep-banking, weekend catch-up, chronic-restriction normalization? | No claim survived adversarial verification across two scoped attempts | Acute debt ≈ FAST (largely recoverable, imperfect); chronic risk ≈ SLOW; "sleep banking" weak | none surviving | Low priority — actions don't change; revisit only if reversibility weighting becomes decisive |
+| Sleep: does CBT-I prevent depression in NON-elderly adults? | The hard-endpoint RCT (Irwin, HR 0.51) is older-adults, single-site | Likely generalizes; unproven | T1 (one population) | If CBT-I/depression ranks near a decision boundary |
+| Sleep: any RCT (vs observational) that improving sleep lowers hard CV events / BP / mortality? | Confirmed set has none — CBT-I & sleep extension only move surrogates/depression | Probably a true gap (cf. CPAP MACE null) | absent | Watch for large sleep-intervention outcome trials |
+| Sleep: is short-sleep (<7h) causally harmful for mortality at all? | The two biggest meta-analyses disagree (GeroScience HR 1.14 vs Kwok NS); MR-insomnia suggests some causal cardiometabolic effect | Small real effect, smaller than observational HRs | T1, conflicting | At synthesis if sleep ranks near a boundary |
+
 ## Speculative / hype-adjacent (T3–T4 holding pen)
 Longevity-influencer and supplement claims live here until/unless real human outcome
 data promotes them. Do NOT let these into the ranked list on mechanistic plausibility
