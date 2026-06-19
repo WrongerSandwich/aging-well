@@ -686,7 +686,7 @@ git commit -m "feat: add sync CLI and generate derived data from aging-well"
 
 **Interfaces:**
 - Produces:
-  - `interface Finding { number: string; tierLabel: string; tierModifier?: "tier-2" | "inverse"; lever: string; category: "substances" | "exercise"; titleLines: string[]; summary: string; stat?: { value: string; labelLines: string[] }; detail?: { body: string; source: string }; cardModifier?: "feature" | "dark" | "compact" | "compact muted" }`
+  - `interface Finding { number: string; tierLabel: string; tierModifier?: "inverse"; lever: string; category: "substances" | "exercise"; titleLines: string[]; summary: string; stat?: { value: string; labelLines: string[] }; detail?: { body: string; source: string }; cardModifier?: "feature" | "dark" | "compact" | "compact muted" }`
   - `interface Tier { id: string; verdict: string; description: string; dim?: boolean }`
   - `interface StatusRow { index: string; label: string; slug?: string; note?: string; statusLabel?: string; active?: boolean }`
   - `interface Question { number: string; text: string }`
@@ -703,7 +703,7 @@ Transcribe all six finding articles from `reference/index.html:83-138` into the 
 export interface Finding {
   number: string;
   tierLabel: string;
-  tierModifier?: "tier-2" | "inverse";
+  tierModifier?: "inverse";
   lever: string;
   category: "substances" | "exercise";
   titleLines: string[];
@@ -796,12 +796,7 @@ export const findings: Finding[] = [
 ];
 ```
 
-Note: finding 06 uses `tier-2` styling (red). Set its `tierModifier` to `"tier-2"`:
-
-```ts
-  // in finding "06", add:
-    tierModifier: "tier-2",
-```
+Note: finding 06 uses `tier-2` styling (red), which `FindingCard` derives from `tierLabel === "T2"` (Task 7) — so no `tierModifier` is needed on it. `tierModifier` is only for the `"inverse"` variant (finding 03).
 
 - [ ] **Step 2: Add the filter, hero, tiers, status, questions, and static metrics data**
 
@@ -1119,7 +1114,11 @@ export default function StatusSection() {
           const lever = row.slug ? derived.levers[row.slug] : undefined;
           const note =
             row.note ??
-            (lever && lever.claims > 0 ? `${lever.claims} claims` : "Not yet researched");
+            (lever && lever.claims > 0
+              ? `${lever.claims} claims`
+              : lever?.status === "in-progress"
+                ? "Agent active"
+                : "Not yet researched");
           const statusLabel =
             row.statusLabel ?? (lever ? STATUS_LABEL[lever.status] : "Pending");
           return (
@@ -1381,6 +1380,9 @@ describe("Findings", () => {
     await user.click(first);
     expect(first).toHaveAttribute("aria-expanded", "true");
     expect(first).toHaveTextContent(/hide evidence/i);
+    await user.click(first);
+    expect(first).toHaveAttribute("aria-expanded", "false");
+    expect(first).toHaveTextContent(/view evidence/i);
   });
 
   it("hides non-matching cards when a category filter is active", async () => {
