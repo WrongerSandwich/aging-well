@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-06-19T19:01:18.481Z",
+  "levers": {
+    "exercise": {
+      "slug": "exercise",
+      "name": "Exercise",
+      "status": "complete",
+      "claims": 18
+    },
+    "medical-screening": {
+      "slug": "medical-screening",
+      "name": "Medical & Screening",
+      "status": "pending",
+      "claims": 0
+    },
+    "nutrition-metabolic": {
+      "slug": "nutrition-metabolic",
+      "name": "Nutrition & Metabolic",
+      "status": "in-progress",
+      "claims": 0
+    },
+    "oral-sensory": {
+      "slug": "oral-sensory",
+      "name": "Oral & Sensory",
+      "status": "pending",
+      "claims": 0
+    },
+    "sleep": {
+      "slug": "sleep",
+      "name": "Sleep",
+      "status": "complete",
+      "claims": 18
+    },
+    "stress-social": {
+      "slug": "stress-social",
+      "name": "Stress & Social",
+      "status": "pending",
+      "claims": 0
+    },
+    "substances": {
+      "slug": "substances",
+      "name": "Substances",
+      "status": "complete",
+      "claims": 27
+    },
+    "sun-skin": {
+      "slug": "sun-skin",
+      "name": "Sun & Skin",
+      "status": "pending",
+      "claims": 0
+    }
+  },
+  "totals": {
+    "leversComplete": 3,
+    "leversTotal": 8,
+    "sourcesTotal": 69,
+    "claimsTotal": 63
+  }
+}

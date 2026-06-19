@@ -8,9 +8,9 @@
   --rust: #b84d2e;
   --line: rgba(27, 37, 33, 0.18);
   --muted: #657069;
-  --serif: "Newsreader", Georgia, serif;
-  --sans: "Manrope", Arial, sans-serif;
-  --mono: "DM Mono", monospace;
+  --serif: var(--font-serif), "Newsreader", Georgia, serif;
+  --sans: var(--font-sans), "Manrope", Arial, sans-serif;
+  --mono: var(--font-mono), "DM Mono", monospace;
 }
 
 * { box-sizing: border-box; }

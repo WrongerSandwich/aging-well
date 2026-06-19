@@ -1,27 +1,32 @@
 # Aging Well research brief
 
-A dependency-free static dashboard presenting the current findings in the adjacent
-`aging-well` research project. This repository contains a read-only snapshot; it
-does not read from or write to the research directory at runtime.
+A Next.js dashboard presenting the current findings from the adjacent `aging-well`
+research project. Editorial content (finding cards, hero copy, open questions) is
+hand-authored in `lib/content.ts`. The mechanical metrics — levers complete, sources
+tracked, claims cataloged, and per-lever status — are derived from the research repo
+by `scripts/sync.ts` and committed as `lib/derived.json`.
 
-## Run locally
+## Develop
 
 ```sh
-python3 -m http.server 8080
+npm install
+npm run dev      # http://localhost:3000
+npm test         # vitest
 ```
 
-Then open `http://localhost:8080`.
+## Update the research snapshot
 
-## Host
+After research sessions land in `../aging-well`, regenerate the derived data, then
+hand-author any new finding cards for newly completed levers:
 
-Serve the repository root with any static web server. There is no build step. For
-example, an nginx location can point directly at this directory with `index.html`
-as its index file.
+```sh
+npm run sync     # reads ../aging-well, rewrites lib/derived.json
+```
 
-The only external requests are for the three Google Fonts used by the design. The
-page remains functional with local fallback fonts if those requests are blocked.
+Point at a non-default location with `AGING_WELL_DIR=/path/to/aging-well npm run sync`.
+The sync script is local-only; Vercel builds from the committed `lib/derived.json`.
 
-## Updating the snapshot
+## Deploy
 
-The displayed content reflects the research state on June 18, 2026. Update the
-copy and metrics in `index.html` after additional lever sessions are completed.
+Hosted on Vercel. Push to the connected branch; Vercel auto-detects Next.js and
+builds. No configuration file required.
