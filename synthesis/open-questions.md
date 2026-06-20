@@ -25,6 +25,12 @@ contaminate the ranking with low-certainty noise.
 | Sleep: any RCT (vs observational) that improving sleep lowers hard CV events / BP / mortality? | Confirmed set has none — CBT-I & sleep extension only move surrogates/depression | Probably a true gap (cf. CPAP MACE null) | absent | Watch for large sleep-intervention outcome trials |
 | Sleep: is short-sleep (<7h) causally harmful for mortality at all? | The two biggest meta-analyses disagree (GeroScience HR 1.14 vs Kwok NS); MR-insomnia suggests some causal cardiometabolic effect | Small real effect, smaller than observational HRs | T1, conflicting | At synthesis if sleep ranks near a boundary |
 
+| Nutrition: PREDIMED (the Mediterranean-diet RCT) specific numbers? | Crowded out of verification across 5 runs (verify-cap) — not independently confirmed in project tiers | Primary MACE HR ~0.69–0.72 in high-risk adults; consistent with the lever but unverified here | T1 RCT (known but un-verified) | If MedDiet ranks near a decision boundary; DASH-BP already anchors causal diet |
+| Nutrition: does sodium REDUCTION cut hard CVD events, and the PURE very-low-sodium J-curve? | DASH/sodium lower BP (surrogate) but hard-endpoint + J-curve adjudication weren't verified | Modest benefit likely; extreme-low-sodium harm contested | T1 contested | If sodium ranks near a boundary |
+| Nutrition: does the Look AHEAD weight-loss CV-null generalize beyond diabetics? | No RCT of intentional weight loss powered for hard endpoints exists outside T2D | Causal weight-loss→mortality benefit genuinely untested in non-diabetics | absent | Watch for new trials; affects how hard to weight "lose weight" as an action |
+| Nutrition: any HUMAN causal evidence for protein-restriction / mTOR longevity? | Entirely rodent/mechanistic (T3); the one human cohort (Levine) is confounded & contested | Muscle-preservation (adequate protein) beats restriction-for-longevity | T3 | Low priority — adequate-protein guidance is the safer default |
+| Nutrition: fiber dose-response shape (the 25–29 g "plateau" was refuted)? | Clean threshold didn't survive verification | Monotonic-with-attenuation, no proven ceiling | T1 obs | Low priority |
+
 ## Speculative / hype-adjacent (T3–T4 holding pen)
 Longevity-influencer and supplement claims live here until/unless real human outcome
 data promotes them. Do NOT let these into the ranked list on mechanistic plausibility
