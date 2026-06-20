@@ -3,7 +3,9 @@ import { renderClaim } from "@/lib/renderClaim";
 import Citations from "./Citations";
 
 function tierClass(tier: string): string {
-  return /^T2/.test(tier) ? "tier tier-2" : "tier tier-1";
+  if (/^T2/.test(tier)) return "tier tier-2";
+  if (/^T[34]/.test(tier)) return "tier tier-info";
+  return "tier tier-1";
 }
 
 export default function ClaimCard({

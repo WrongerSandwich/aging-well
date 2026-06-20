@@ -39,6 +39,7 @@ export default function LeverDetailView({
         <p className="lever-empty">No claims researched yet for this lever.</p>
       ) : (
         <>
+          {primary.length > 0 && (
           <section className="claims-section">
             <h2>Claims · act on these</h2>
             <p className="claims-note">
@@ -50,6 +51,7 @@ export default function LeverDetailView({
               ))}
             </div>
           </section>
+          )}
 
           {informational.length > 0 && (
             <section className="claims-section informational">

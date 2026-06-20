@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T00:12:03.486Z",
+  "generatedAt": "2026-06-20T00:38:33.493Z",
   "levers": {
     "exercise": {
       "slug": "exercise",
@@ -262,8 +262,8 @@
     "medical-screening": {
       "slug": "medical-screening",
       "name": "Medical & Screening",
-      "status": "pending",
-      "scope": "Vaccination, age-appropriate cancer screening, baseline physician relationship, biomarker monitoring.\n\n- In:\n- Out (and where it lives instead):",
+      "status": "in-progress",
+      "scope": "Vaccination, age-appropriate cancer screening, pharmacologic primary prevention, biomarker monitoring. The \"catch-it-early / prevent-with-a-pill\" lever — where the key tension is disease-specific vs all-cause mortality, overdiagnosis, and screening-hype.\n\n- In: age-appropriate cancer screening (colorectal, breast, cervical, lung-LDCT, prostate-PSA) — mortality benefit, NNS, overdiagnosis; cardiovascular & metabolic PHARMACOLOGIC primary prevention (statins, antihypertensives, aspirin, lipid/BP targets, coronary-artery-calcium scoring, diabetes/HbA1c screening) — routed here from `nutrition-metabolic`; adult VACCINATION (influenza, shingles/Shingrix, pneumococcal, RSV, COVID); biomarker monitoring & the executive-physical / full-body-MRI / multi-cancer-early-detection (Galleri) hype; polypharmacy / deprescribing; baseline physician relationship.\n- Out (and where it lives instead): the behavioral levers that reduce the NEED for screening/drugs (diet → `nutrition-metabolic`, exercise → `exercise`, smoking → `substances`); disease *treatment* beyond primary prevention (out of project scope); dental screening → `oral-sensory`; skin-cancer screening & dermatology → noted here only if it shares a mortality endpoint, else `sun-skin`; hearing/vision screening → `oral-sensory`/sensory.",
       "claims": [],
       "dose": "",
       "actions": "- [ ]",
@@ -1622,6 +1622,210 @@
       "citation": "CBT sleep-extension RCT in short sleepers 2021, J Sleep Res (n=18, 6 wk).",
       "url": "https://pubmed.ncbi.nlm.nih.gov/34459060/",
       "tier": "T2 (small RCT)"
+    },
+    "S071": {
+      "id": "S071",
+      "citation": "Eleftheriou et al. 2018, Br J Nutr — Mediterranean diet & all-cause mortality meta-analysis (30 cohorts, 225,600 deaths).",
+      "url": "https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/mediterranean-diet-and-its-components-in-relation-to-allcause-mortality-metaanalysis/81EB9EF4D5B7AD5BC3ADC8AEC86371E1",
+      "tier": "T1 (obs)"
+    },
+    "S072": {
+      "id": "S072",
+      "citation": "Karam et al. 2021, Nutrients — MedDiet in secondary-prevention (CVD) cohorts (7 studies).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8400615/",
+      "tier": "T1 (obs)"
+    },
+    "S073": {
+      "id": "S073",
+      "citation": "Hall et al. 2019, Cell Metabolism — ultra-processed food inpatient RCT (n=20, 2 wk).30248-7)",
+      "url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(19",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    "S074": {
+      "id": "S074",
+      "citation": "Suksatan et al. 2022, Nutrients — UPF & mortality meta-analysis (7 cohorts, 207,291).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747520/",
+      "tier": "T1 (obs)"
+    },
+    "S075": {
+      "id": "S075",
+      "citation": "Chen et al. 2023, Diabetes Care — UPF & type-2 diabetes meta-analysis (415,554).",
+      "url": "https://diabetesjournals.org/care/article/46/7/1335/148548/Ultra-Processed-Food-Consumption-and-Risk-of-Type",
+      "tier": "T1 (obs)"
+    },
+    "S076": {
+      "id": "S076",
+      "citation": "Mo et al. 2025, Front Nutr — plant-based diet indices & mortality (11 cohorts, 977,763).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11788165/",
+      "tier": "T1 (obs)"
+    },
+    "S077": {
+      "id": "S077",
+      "citation": "Orlich et al. 2013, JAMA Intern Med — Adventist Health Study-2 vegetarian mortality (n=73,308).",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1710093",
+      "tier": "T1 (obs)"
+    },
+    "S078": {
+      "id": "S078",
+      "citation": "Key et al. — EPIC-Oxford vegetarian/vegan mortality review (UK, ~18yr).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7613518/",
+      "tier": "T1 (obs)"
+    },
+    "S079": {
+      "id": "S079",
+      "citation": "Dybvik et al. 2023, Eur J Nutr — vegetarian/vegan & CVD meta-analysis (13 cohorts, 844,175).",
+      "url": "https://link.springer.com/article/10.1007/s00394-022-02942-8",
+      "tier": "T1 (obs)"
+    },
+    "S081": {
+      "id": "S081",
+      "citation": "Wang et al. 2016, Public Health Nutrition — red/processed meat & mortality meta (17 cohorts, 150,328 deaths).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26143683/",
+      "tier": "T1 (obs)"
+    },
+    "S082": {
+      "id": "S082",
+      "citation": "WHO/IARC Monograph 114 — carcinogenicity of red & processed meat.",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/cancer-carcinogenicity-of-the-consumption-of-red-meat-and-processed-meat",
+      "tier": "T1 (classification)"
+    },
+    "S083": {
+      "id": "S083",
+      "citation": "Bradbury et al. 2020, Int J Epidemiol — UK Biobank meat & colorectal cancer (n=474,996).",
+      "url": "https://academic.oup.com/ije/article/49/5/1540/5894731",
+      "tier": "T1 (obs)"
+    },
+    "S084": {
+      "id": "S084",
+      "citation": "Johnston et al. 2019, Annals Intern Med (NutriRECS) — GRADE review of meat reduction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31569235/",
+      "tier": "T1 (GRADE)"
+    },
+    "S085": {
+      "id": "S085",
+      "citation": "SSB & cardiometabolic mortality meta-analyses (Frontiers Nutr 2023; Nutrients 2021; 2024 update).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10050372/",
+      "tier": "T1 (obs)"
+    },
+    "S086": {
+      "id": "S086",
+      "citation": "Ma et al. 2023, BMJ — SSB & mortality in type-2 diabetics (Harvard cohorts + meta).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37076174/",
+      "tier": "T1 (obs)"
+    },
+    "S087": {
+      "id": "S087",
+      "citation": "Saneei et al. 2014, Nutr Metab Cardiovasc Dis — DASH & blood pressure RCT meta (17 RCTs, n=2,561).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25149893/",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    "S088": {
+      "id": "S088",
+      "citation": "Reynolds et al. 2019, The Lancet — carbohydrate quality / fiber & health (185 cohorts + 58 RCTs).31809-9/fulltext)",
+      "url": "https://www.thelancet.com/article/S0140-6736(18",
+      "tier": "T1 (obs + RCT-surrogate)"
+    },
+    "S089": {
+      "id": "S089",
+      "citation": "Huang et al. 2015, BMC Medicine — NIH-AARP whole grains/cereal fiber & mortality (n=367,442).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4371798/",
+      "tier": "T1 (obs)"
+    },
+    "S090": {
+      "id": "S090",
+      "citation": "Hu et al. 2019, JAHA — marine omega-3 supplements & CV outcomes meta (13 RCTs, 127,477).",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.013543",
+      "tier": "T1 (RCT meta)"
+    },
+    "S091": {
+      "id": "S091",
+      "citation": "Gencer et al. 2021, Circulation — omega-3 supplements & atrial fibrillation (7 RCTs, 81,210).",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.055654",
+      "tier": "T1 (RCT meta)"
+    },
+    "S092": {
+      "id": "S092",
+      "citation": "REDUCE-IT vs STRENGTH review — high-dose EPA & the mineral-oil-placebo controversy.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11697285/",
+      "tier": "T1 (RCT)"
+    },
+    "S093": {
+      "id": "S093",
+      "citation": "Kim/Je/Giovannucci 2019, Eur J Epidemiol — coffee & mortality meta (40 cohorts, 3.85M).",
+      "url": "https://link.springer.com/article/10.1007/s10654-019-00524-3",
+      "tier": "T1 (obs)"
+    },
+    "S094": {
+      "id": "S094",
+      "citation": "Coffee Mendelian-randomization & hard endpoints (up to 223,414).",
+      "url": "https://academic.oup.com/ije/article/45/6/1938/2731240",
+      "tier": "T1 (MR)"
+    },
+    "S095": {
+      "id": "S095",
+      "citation": "CALERIE-2 caloric-restriction RCT in non-obese humans.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7727025/",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    "S096": {
+      "id": "S096",
+      "citation": "CALERIE telomere analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11296136/",
+      "tier": "T2"
+    },
+    "S097": {
+      "id": "S097",
+      "citation": "Intermittent fasting vs continuous caloric restriction RCT meta-analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11930668/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S098": {
+      "id": "S098",
+      "citation": "Lowe et al. 2020, JAMA Intern Med (TREAT) — time-restricted eating RCT.",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2771095",
+      "tier": "T1 (RCT)"
+    },
+    "S099": {
+      "id": "S099",
+      "citation": "Berrington de Gonzalez et al. 2010, NEJM (NCI Cohort Consortium, n=1.46M) + Global BMI Mortality Collaboration 2016 (~10.6M).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3066051/",
+      "tier": "T1 (pooled cohorts)"
+    },
+    "S100": {
+      "id": "S100",
+      "citation": "Stokes & Preston 2015, Int J Epidemiol — obesity paradox as collider/reverse-causation artifact.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4701612/",
+      "tier": "T1 (methodological)"
+    },
+    "S101": {
+      "id": "S101",
+      "citation": "UK individual-participant waist/WHR meta-analysis (9 cohorts, 82,864).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4170776/",
+      "tier": "T1 (obs)"
+    },
+    "S102": {
+      "id": "S102",
+      "citation": "Korean NHIS waist-circumference & mortality cohort (>23M adults).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6352259/",
+      "tier": "T1 (obs)"
+    },
+    "S103": {
+      "id": "S103",
+      "citation": "Look AHEAD — intensive lifestyle weight loss & CV events RCT (n=5,145 T2D).30162-0/abstract)",
+      "url": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(16",
+      "tier": "T1 (RCT, hard endpoint)"
+    },
+    "S104": {
+      "id": "S104",
+      "citation": "Levine & Longo 2014, Cell Metabolism — protein intake & mortality (NHANES III).00062-X)",
+      "url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(14",
+      "tier": "T3 (single confounded cohort)"
+    },
+    "S105": {
+      "id": "S105",
+      "citation": "Naghshi et al. 2020, BMJ — dietary protein & mortality meta (32 cohorts, 715,128).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7374797/",
+      "tier": "T1 (obs)"
     }
   }
 }

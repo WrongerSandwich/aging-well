@@ -67,6 +67,7 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .finding-top { display: flex; justify-content: space-between; align-items: center; }
 .tier { padding: 5px 8px; background: var(--forest); color: white; font: 10px var(--mono); }
 .tier-2 { background: var(--rust); }
+.tier-info { background: var(--paper-deep); color: var(--muted); }
 .tier.inverse { background: var(--lime); color: var(--forest); }
 .lever { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; opacity: .65; }
 .finding-number { margin: 38px 0 12px; font: 10px var(--mono); opacity: .45; }

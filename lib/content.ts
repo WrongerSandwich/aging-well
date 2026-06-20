@@ -171,7 +171,7 @@ export const statusRows: StatusRow[] = [
   { index: "01", label: "Substances", slug: "substances" },
   { index: "02", label: "Exercise", slug: "exercise" },
   { index: "03", label: "Sleep", slug: "sleep" },
-  { index: "04", label: "Nutrition & metabolic", slug: "nutrition-metabolic", active: true },
+  { index: "04", label: "Nutrition & metabolic", slug: "nutrition-metabolic" },
   { index: "05", label: "Medical screening", slug: "medical-screening" },
   {
     index: "06–08",

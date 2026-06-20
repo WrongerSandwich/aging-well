@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T00:12:03.486Z",
+  "generatedAt": "2026-06-20T00:38:33.493Z",
   "levers": {
     "exercise": {
       "slug": "exercise",
@@ -10,7 +10,7 @@
     "medical-screening": {
       "slug": "medical-screening",
       "name": "Medical & Screening",
-      "status": "pending",
+      "status": "in-progress",
       "claims": 0
     },
     "nutrition-metabolic": {
@@ -53,7 +53,7 @@
   "totals": {
     "leversComplete": 4,
     "leversTotal": 8,
-    "sourcesTotal": 69,
+    "sourcesTotal": 103,
     "claimsTotal": 82
   }
 }
