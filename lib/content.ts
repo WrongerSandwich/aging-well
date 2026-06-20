@@ -90,6 +90,7 @@ export const findings: Finding[] = [
     tierLabel: "T1",
     lever: "Sleep",
     category: "sleep",
+    cardModifier: "feature",
     titleLines: ["Fix insomnia with", "CBT-I, not pills."],
     summary:
       "First-line and durable to about a year. The real prize: in older adults it roughly halved incident depression — sleep’s one hard-endpoint causal win.",
@@ -130,8 +131,10 @@ export const findings: Finding[] = [
   {
     number: "09",
     tierLabel: "T1",
+    tierModifier: "inverse",
     lever: "Nutrition",
     category: "nutrition-metabolic",
+    cardModifier: "dark",
     titleLines: ["Eat plant-forward,", "high-fiber."],
     summary:
       "A Mediterranean, high-fiber, plant-forward pattern captures most of the benefit — you don’t need to be vegetarian, and plant-based done badly (refined grains, sugar) is worse, not better.",
