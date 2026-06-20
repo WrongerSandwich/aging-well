@@ -26,6 +26,10 @@ npm run sync     # reads ../aging-well, rewrites lib/derived.json
 Point at a non-default location with `AGING_WELL_DIR=/path/to/aging-well npm run sync`.
 The sync script is local-only; Vercel builds from the committed `lib/derived.json`.
 
+`npm run sync` also writes `lib/detail.json` — the full per-lever claims, sources,
+and prose powering the `/levers/<slug>` detail pages. Both JSON files are committed;
+Vercel builds from them and never reads `../aging-well`.
+
 ## Deploy
 
 Hosted on Vercel. Push to the connected branch; Vercel auto-detects Next.js and

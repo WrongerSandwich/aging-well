@@ -3,7 +3,7 @@ export interface Finding {
   tierLabel: string;
   tierModifier?: "inverse";
   lever: string;
-  category: "substances" | "exercise" | "sleep";
+  category: "substances" | "exercise" | "sleep" | "nutrition-metabolic";
   titleLines: string[];
   summary: string;
   stat?: { value: string; labelLines: string[] };
@@ -102,6 +102,48 @@ export const findings: Finding[] = [
   {
     number: "07",
     tierLabel: "T1",
+    lever: "Nutrition",
+    category: "nutrition-metabolic",
+    titleLines: ["Cut ultra-processed food", "and sugary drinks."],
+    summary:
+      "Nutrition’s 80/20 is subtractive: the robust, replicated signals are the harms, not the superfoods. Ultra-processed food is the one diet factor with a causal weight-gain RCT.",
+    stat: { value: "+15%", labelLines: ["all-cause mortality", "per 10% of calories from UPF"] },
+    detail: {
+      body: "Sugar-sweetened beverages are the clearest single-food harm — about 27% higher type-2 diabetes risk per daily serving. Keep processed meat low too; unprocessed red meat is a weaker, low-certainty signal.",
+      source: "Large cohorts + an intake/weight RCT · observational for mortality",
+    },
+  },
+  {
+    number: "08",
+    tierLabel: "T1",
+    lever: "Nutrition",
+    category: "nutrition-metabolic",
+    titleLines: ["Keep BMI ~20–25,", "mind your waist."],
+    summary:
+      "Adiposity is the causally-cleanest signal in all of nutrition once reverse causation is stripped out. The “obesity paradox” is an artifact, not protection.",
+    stat: { value: "1.44×", labelLines: ["higher mortality", "at BMI 30–35"] },
+    detail: {
+      body: "Frame this as “don’t gain,” not “weight-loss is a guaranteed fix”: in a large RCT, intentional weight loss did not cut hard cardiovascular events. Waist size adds risk even within a normal BMI.",
+      source: "Pooled cohorts · hard endpoints; intentional-loss RCT null",
+    },
+  },
+  {
+    number: "09",
+    tierLabel: "T1",
+    lever: "Nutrition",
+    category: "nutrition-metabolic",
+    titleLines: ["Eat plant-forward,", "high-fiber."],
+    summary:
+      "A Mediterranean, high-fiber, plant-forward pattern captures most of the benefit — you don’t need to be vegetarian, and plant-based done badly (refined grains, sugar) is worse, not better.",
+    stat: { value: "15–30%", labelLines: ["lower mortality", "high vs. low fiber"] },
+    detail: {
+      body: "These are observational associations that shrink at realistic intake increments, so treat the pattern as sensible rather than precise. DASH is the one pattern with a clean causal win — about −7/−4 mmHg blood pressure.",
+      source: "Large cohorts · observational; DASH from RCTs",
+    },
+  },
+  {
+    number: "10",
+    tierLabel: "T1",
     lever: "Substances",
     category: "substances",
     cardModifier: "compact",
@@ -110,7 +152,7 @@ export const findings: Finding[] = [
       "Zero minimizes total harm. If drinking, ≤1/day is a harm-reduction ceiling—not a target.",
   },
   {
-    number: "08",
+    number: "11",
     tierLabel: "T2",
     lever: "Substances",
     category: "substances",
@@ -120,7 +162,7 @@ export const findings: Finding[] = [
       "Do not start as a non-smoker. For smokers, a complete switch is defensible; dual use buys no measured benefit.",
   },
   {
-    number: "09",
+    number: "12",
     tierLabel: "T1",
     lever: "Sleep",
     category: "sleep",
@@ -129,19 +171,30 @@ export const findings: Finding[] = [
     summary:
       "Moderate–severe OSA tracks with cardiovascular risk, but CPAP did not cut hard cardiac events in RCTs. Treat it for sleepiness, blood pressure, and quality of life.",
   },
+  {
+    number: "13",
+    tierLabel: "T2",
+    lever: "Nutrition",
+    category: "nutrition-metabolic",
+    cardModifier: "compact muted",
+    titleLines: ["Skip the supplement and fasting hype."],
+    summary:
+      "Fish-oil pills don’t replace fish (and raise atrial-fibrillation risk); fasting, caloric restriction, and time-restricted eating add nothing beyond the calories they cut. Coffee (≤3–4 cups) is fine.",
+  },
 ];
 
 export const heroEyebrow = "Research in progress";
 
 export interface Filter {
   label: string;
-  value: "all" | "substances" | "exercise" | "sleep";
+  value: "all" | "substances" | "exercise" | "sleep" | "nutrition-metabolic";
 }
 export const findingsFilters: Filter[] = [
   { label: "All findings", value: "all" },
   { label: "Substances", value: "substances" },
   { label: "Exercise", value: "exercise" },
   { label: "Sleep", value: "sleep" },
+  { label: "Nutrition", value: "nutrition-metabolic" },
 ];
 
 export interface Tier {
@@ -171,7 +224,7 @@ export const statusRows: StatusRow[] = [
   { index: "01", label: "Substances", slug: "substances" },
   { index: "02", label: "Exercise", slug: "exercise" },
   { index: "03", label: "Sleep", slug: "sleep" },
-  { index: "04", label: "Nutrition & metabolic", slug: "nutrition-metabolic", active: true },
+  { index: "04", label: "Nutrition & metabolic", slug: "nutrition-metabolic" },
   { index: "05", label: "Medical screening", slug: "medical-screening" },
   {
     index: "06–08",

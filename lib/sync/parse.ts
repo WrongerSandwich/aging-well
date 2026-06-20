@@ -78,3 +78,109 @@ export function buildDerived(
     },
   };
 }
+
+export interface Claim {
+  number: number;
+  text: string;
+  systems: string;
+  tier: string;
+  tierGroup: "primary" | "informational";
+  effect: string;
+  reversibility: string;
+  confidence: string;
+  sources: string[];
+}
+
+export interface Source {
+  id: string;
+  citation: string;
+  url: string | null;
+  tier: string;
+}
+
+export interface LeverDetail {
+  slug: string;
+  name: string;
+  status: LeverStatus;
+  scope: string;
+  claims: Claim[];
+  dose: string;
+  actions: string;
+  caveats: string;
+  openQuestions: string;
+}
+
+// Parses the 8-column claims table into structured records. Skips the
+// "— T3/T4 below —" divider and stub placeholder rows (blank claim cell).
+export function parseClaimsDetailed(md: string): Claim[] {
+  const claims: Claim[] = [];
+  for (const line of md.split("\n")) {
+    if (!/^\|\s*\d+\s*\|/.test(line)) continue;
+    const cells = line.split("|").map((c) => c.trim());
+    // ["", "#", "Claim", "Systems", "Tier", "Effect", "Reversibility", "Confidence", "Source(s)", ""]
+    if (cells.length < 9) continue;
+    const text = cells[2];
+    if (text === "") continue;
+    const tier = cells[4];
+    claims.push({
+      number: Number(cells[1]),
+      text,
+      systems: cells[3],
+      tier,
+      tierGroup: /^T[12]/.test(tier) ? "primary" : "informational",
+      effect: cells[5],
+      reversibility: cells[6],
+      confidence: cells[7],
+      sources: cells[8].match(/S\d+/g) ?? [],
+    });
+  }
+  return claims;
+}
+
+// Returns the text body between "## <heading>" and the next "## " heading.
+export function parseSection(md: string, heading: string): string {
+  const lines = md.split("\n");
+  const start = lines.findIndex((l) => l.trim() === `## ${heading}`);
+  if (start === -1) return "";
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (lines[i].startsWith("## ")) {
+      end = i;
+      break;
+    }
+  }
+  return lines.slice(start + 1, end).join("\n").trim();
+}
+
+// Parses the sources table; strips the "[link](url)" markdown into a bare url.
+export function parseSources(sourcesMd: string): Source[] {
+  const sources: Source[] = [];
+  for (const line of sourcesMd.split("\n")) {
+    if (!/^\|\s*S\d+\s*\|/.test(line)) continue;
+    const cells = line.split("|").map((c) => c.trim());
+    if (cells.length < 5) continue;
+    const raw = cells[2];
+    const linkMatch = raw.match(/\[link\]\((https?:\/\/[^)]+)\)/);
+    sources.push({
+      id: cells[1],
+      citation: raw.replace(/\s*\[link\]\([^)]+\)/, "").trim(),
+      url: linkMatch ? linkMatch[1] : null,
+      tier: cells[3],
+    });
+  }
+  return sources;
+}
+
+export function parseLeverDetail(slug: string, md: string): LeverDetail {
+  return {
+    slug,
+    name: parseLeverName(md),
+    status: parseStatus(md),
+    scope: parseSection(md, "Scope"),
+    claims: parseClaimsDetailed(md),
+    dose: parseSection(md, "Dose / threshold"),
+    actions: parseSection(md, "Actions (behavioral, checkable)"),
+    caveats: parseSection(md, "Caveats / population modifiers"),
+    openQuestions: parseSection(md, "Open questions"),
+  };
+}

@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { derived } from "@/lib/derived";
+import { detail } from "@/lib/detail";
 import { statusRows, type StatusRow } from "@/lib/content";
 
 const STATUS_LABEL: Record<string, string> = {
@@ -48,7 +50,13 @@ export default function StatusSection() {
           return (
             <div key={row.index} className={rowClass(row, lever?.status)}>
               <span>{row.index}</span>
-              <strong>{row.label}</strong>
+              {row.slug && (detail.levers[row.slug]?.claims.length ?? 0) > 0 ? (
+                <strong>
+                  <Link href={`/levers/${row.slug}`}>{row.label}</Link>
+                </strong>
+              ) : (
+                <strong>{row.label}</strong>
+              )}
               <em>{note}</em>
               <b>{statusLabel}</b>
             </div>

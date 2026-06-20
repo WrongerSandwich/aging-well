@@ -1,0 +1,1831 @@
+{
+  "generatedAt": "2026-06-20T00:38:33.493Z",
+  "levers": {
+    "exercise": {
+      "slug": "exercise",
+      "name": "Exercise",
+      "status": "complete",
+      "scope": "Cardiorespiratory fitness, resistance/strength, mobility/balance. The second-largest modifiable cluster after substances — and unlike substances, almost entirely a \"do more\" rather than \"stop\" lever.\n\n- In: aerobic/cardiorespiratory training and measured fitness (VO2max / METs); resistance/strength training (incl. grip strength as a marker); mobility / balance / flexibility training; dose-response and minimum effective dose; detraining/retraining (reversibility); falls & fracture prevention via the exercise route.\n- Out (and where it lives instead): post-exercise recovery & sleep → `sleep`; protein and dietary intake to support training → `nutrition-metabolic`; sedentary-behavior metabolic effects (sitting, glucose) → noted here only where they share a mortality endpoint, otherwise `nutrition-metabolic`; orthopedic injury management / DEXA & screening decisions → `medical-screening` (the fracture *risk reduction* claim stays here); cognitive/mood benefits of exercise → ticked in `neurological`/`stress-social` but the mortality/healthspan claims stay here.",
+      "claims": [
+        {
+          "number": 1,
+          "text": "Cardiorespiratory fitness (CRF) is the single strongest exercise-related mortality predictor — high vs low fitness nearly halves all-cause mortality",
+          "systems": "Cardio, Metabolic, Musculo",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "High-vs-low CRF HR **0.47** (0.39–0.56) & 0.59 (0.52–0.66). Per **+1 MET**: all-cause HR 0.83–0.89 (≈11–17% ↓; Kodama RR 0.87 [0.84–0.90]); CHD/CVD events RR 0.85 (0.82–0.88) per MET. Low fit (<7.9 METs) vs high (≥10.9): all-cause RR **1.70** (1.51–1.92), CVD 1.56 (1.39–1.75)",
+          "reversibility": "SLOW (CRF is trainable & lost with detraining)",
+          "confidence": "H",
+          "sources": [
+            "S026",
+            "S027"
+          ]
+        },
+        {
+          "number": 2,
+          "text": "Most of the aerobic benefit is bought going from SEDENTARY to ~meeting guidelines — a strong 80/20 / minimum-effective-dose effect",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "~150 min/wk moderate activity **alone** → all-cause HR **0.79–0.81** (≈19–21% ↓ vs sedentary); continued but diminishing returns to ~300 min/wk; **no U-shape / no harm** observed at these doses",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S028"
+          ]
+        },
+        {
+          "number": 3,
+          "text": "Vigorous-activity dose-response is curvilinear and flattens early; a *mix* of intensities beats all-out vigorous",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "All-cause HR **0.78** (0.76–0.79) at ~180 min/wk VPA vs light-moderate; modest gains past 180; **reduced** benefit >450 min/wk (sparse, weak — see #17). Intensity mix: optimal ~37.5% vigorous HR 0.90 < 100%-vigorous HR 0.95 (CI crosses 1.0)",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S029"
+          ]
+        },
+        {
+          "number": 4,
+          "text": "Activity *pattern* doesn't matter once weekly volume is met — \"weekend warrior\" ≈ spread-out",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "All-cause: weekend-warrior HR **0.77** (0.68–0.87) vs regularly-active 0.70 (0.63–0.78); CVD WW 0.80 ≈ RA 0.79. **No significant difference** between patterns",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S030"
+          ]
+        },
+        {
+          "number": 5,
+          "text": "Resistance training lowers mortality INDEPENDENTLY of aerobic activity, at a small effective dose",
+          "systems": "Musculo, Cardio, Neuro, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "~60–119 min/wk (adjusted for aerobic): all-cause HR **0.87** (0.81–0.95) @ 90–119 min; CVD HR 0.81 (0.67–0.97); neuro-disease HR 0.73 (0.58–0.92). **Plateau** above ~120 min/wk. The competing \"strength-alone gives NO benefit\" claim was **refuted** (see #15)",
+          "reversibility": "SLOW (muscle is trainable & lost with detraining)",
+          "confidence": "H",
+          "sources": [
+            "S031"
+          ]
+        },
+        {
+          "number": 6,
+          "text": "Combining aerobic + resistance gives the largest mortality reduction — but the increment over high-aerobic-alone is small",
+          "systems": "Cardio, Musculo, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "Combined all-cause HR **0.50–0.55** vs sedentary (≈45–50% ↓): Zhang 0.55, López-Bueno 0.50. High-aerobic alone already 0.53–0.58 — combo adds a little",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S031",
+            "S028"
+          ]
+        },
+        {
+          "number": 7,
+          "text": "Grip strength is a robust, continuous all-cause & CVD mortality PREDICTOR — a frailty biomarker, **not** proof that grip training extends life",
+          "systems": "Musculo, Cardio",
+          "tier": "T1 (as *predictor* / surrogate)",
+          "tierGroup": "primary",
+          "effect": "Lowest-vs-highest HR **1.41** (1.30–1.52) all-cause, 1.63 (1.36–1.96) CVD; per **−5 kg** HR 1.16 (1.12–1.20); per **−1 SD** HR 1.30 all-cause, 1.75 CVD",
+          "reversibility": "n/a (prognostic marker)",
+          "confidence": "H (as predictor)",
+          "sources": [
+            "S032",
+            "S033",
+            "S034"
+          ]
+        },
+        {
+          "number": 8,
+          "text": "Simple balance/functional tests strongly predict mortality & disability — prognostic markers, **not** proof balance training cuts mortality",
+          "systems": "Musculo, Neuro",
+          "tier": "T1 (as *predictor* / surrogate)",
+          "tierGroup": "primary",
+          "effect": "Failing a **10-s one-leg stance** (ages 51–75): all-cause HR **1.84** (1.23–2.78), adjusted. **SPPB** 0–3 vs 10–12: OR **3.25** (2.86–3.79); 4–6 OR 2.14; 7–9 OR 1.50",
+          "reversibility": "n/a (prognostic marker)",
+          "confidence": "H (as predictor)",
+          "sources": [
+            "S035",
+            "S036"
+          ]
+        },
+        {
+          "number": 9,
+          "text": "**[RCT]** Balance/functional (\"postural-control\") training is the single most effective modality for preventing FALLS — and this is causal, not just predictive",
+          "systems": "Musculo, Neuro",
+          "tier": "T1 (RCT meta, Cochrane HIGH GRADE)",
+          "tierGroup": "primary",
+          "effect": "Rate of falls **RaR 0.76** (0.70–0.81, Cochrane HIGH); number of fallers supervised **RR 0.82** (0.75–0.91), home-based 0.66 (0.49–0.88, sparse). Balance+resistance → RaR **0.66** (0.50–0.88). Absolute: ~5–8 fewer fallers, 14–23 fewer falls, 2–3 fewer injured per 100 people",
+          "reversibility": "SLOW (benefit needs ongoing training — see #14)",
+          "confidence": "H",
+          "sources": [
+            "S038",
+            "S039"
+          ]
+        },
+        {
+          "number": 10,
+          "text": "**[RCT]** What does NOT prevent falls: walking-only, flexibility-only, and pure resistance/endurance programs show no moderate-certainty benefit; combined/multifactorial works but less than pure balance training",
+          "systems": "Musculo",
+          "tier": "T1 (RCT meta)",
+          "tierGroup": "primary",
+          "effect": "Combined/multifactorial RR **0.88–0.93** (ranks below postural-control); walking/flexibility/resistance-or-endurance alone: no moderate-certainty effect (home multifactorial RR 0.97). Multi-component is best for the balance-test *surrogate* (unipedal-stance g 0.97)",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S039",
+            "S038",
+            "S040"
+          ]
+        },
+        {
+          "number": 11,
+          "text": "**[RCT]** Exercise reduces FRACTURES ~25–33% — fall-related, low-trauma, and major osteoporotic",
+          "systems": "Musculo",
+          "tier": "T1/T2 (RCT meta; secondary endpoint)",
+          "tierGroup": "primary",
+          "effect": "Fall-related fracture **RR 0.74** (0.59–0.92); low-trauma overall IR 0.67 (0.51–0.87); major osteoporotic IR 0.69 / RR 0.75. Three independent meta-analyses converge, low heterogeneity (I²<13%)",
+          "reversibility": "SLOW",
+          "confidence": "M–H (direction robust; see #12 caveat)",
+          "sources": [
+            "S042",
+            "S043",
+            "S044"
+          ]
+        },
+        {
+          "number": 12,
+          "text": "**[RCT]** Supervised programs roughly DOUBLE the anti-fracture effect of unsupervised — but no trial is powered for fracture as a primary endpoint",
+          "systems": "Musculo",
+          "tier": "T2 (between-trial subgroup; certainty caveat)",
+          "tierGroup": "primary",
+          "effect": "Supervised fracture IR **0.44** (0.27–0.73) vs unsupervised IR 0.83 (NS, p=0.24). **No RCT adequately powered for fracture as a primary outcome** → BMD is the accepted surrogate; supervision effect is confounded by intensity/adherence",
+          "reversibility": "—",
+          "confidence": "M",
+          "sources": [
+            "S043",
+            "S045"
+          ]
+        },
+        {
+          "number": 13,
+          "text": "**[RCT]** Only HIGH-intensity resistance + impact training (HiRIT) BUILDS bone; low/moderate intensity at best halts loss — and the hip barely responds densitometrically",
+          "systems": "Musculo",
+          "tier": "T2 (RCT, surrogate endpoint = BMD)",
+          "tierGroup": "primary",
+          "effect": "HiRIT (≥80% 1RM / ground-reaction-force ≥4× BW): **lumbar spine +2–4%** over 8 mo (LIFTMOR +2.9% vs −1.2% control; MEDEX-OP 1.9% vs 0.1%). Femoral neck +0.3% vs −2.0% (maintenance, structural not densitometric). HiRIT>moderate SMD 2.37 but very-low GRADE (I²=98%)",
+          "reversibility": "SLOW (reversible — #14)",
+          "confidence": "M (LS build); L–M (hip)",
+          "sources": [
+            "S045",
+            "S046",
+            "S047"
+          ]
+        },
+        {
+          "number": 14,
+          "text": "**[RCT/obs-extension]** Bone (and strength) gains are REVERSIBLE — detraining returns BMD toward baseline within ~12 mo; continued training sustains and extends gains",
+          "systems": "Musculo",
+          "tier": "T2/T3 (small, self-selected follow-up)",
+          "tierGroup": "primary",
+          "effect": "3-yr LIFTMOR extension: continuers **+8.63%** LS BMD vs discontinuers +2.18% (p=0.042); \"BMD can return to baseline after ~12 months detraining.\" This is the SLOW-reversibility column made concrete: benefits require maintenance",
+          "reversibility": "SLOW",
+          "confidence": "M (continuation self-selected; ~50% attrition)",
+          "sources": [
+            "S045"
+          ]
+        },
+        {
+          "number": 15,
+          "text": "\"Muscle-strengthening alone (without aerobic) confers NO mortality benefit\" (HR 0.94, NS) — TESTED and REFUTED here (0–3)",
+          "systems": "—",
+          "tier": "T4 (provenance / negative claim)",
+          "tierGroup": "informational",
+          "effect": "One JAMA-cohort framing; refuted in adversarial verification → the independent RT mortality benefit (#5) stands. Don't cite the null",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S028"
+          ]
+        },
+        {
+          "number": 16,
+          "text": "The optimal resistance-training DOSE is unsettled across the two best mortality cohorts",
+          "systems": "Musculo",
+          "tier": "T3 (cross-study conflict)",
+          "tierGroup": "informational",
+          "effect": "Largest cohort shows a **plateau** at 90–119 min/wk; an older 16-cohort meta found a **J-curve peaking 30–60 min/wk** (\"any amount\" RR 0.85). Both agree the effective dose is *small*",
+          "reversibility": "—",
+          "confidence": "L–M",
+          "sources": [
+            "S037",
+            "S031"
+          ]
+        },
+        {
+          "number": 17,
+          "text": "Extreme aerobic volume (>450 min/wk vigorous) showing \"reduced benefit\" is a weak signal",
+          "systems": "Cardio",
+          "tier": "T3 (sparse/unstable)",
+          "tierGroup": "informational",
+          "effect": "Rests on sparse, author-flagged unstable data. No evidence of *harm* — read as \"returns flatten,\" not \"exercise becomes dangerous\"",
+          "reversibility": "—",
+          "confidence": "L",
+          "sources": [
+            "S029"
+          ]
+        },
+        {
+          "number": 18,
+          "text": "Over-large intervention effect estimates that did NOT survive verification — do not cite",
+          "systems": "—",
+          "tier": "T4 (refuted magnitudes)",
+          "tierGroup": "informational",
+          "effect": "All refuted 0–3: falls \"OR 0.32 / 68% reduction\"; resistance→femoral-neck BMD \"SMD 0.89\" & lumbar \"SMD 0.88\"; \"Tai Chi has the most outcomes with benefit\"; \"fractures reduced only in >12-mo trials.\" Use the conservative figures in #9–#13 instead",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        }
+      ],
+      "dose": "**The 80/20:** unlike substances (where the win is total cessation), exercise's win is **getting off zero**. The dose-response is steepest at the bottom; the first ~150 min/week of moderate activity buys most of the *mortality* benefit, and returns flatten well before \"elite\" volumes. The falls/fracture/bone benefits, by contrast, are **modality-specific** — you have to do the *right kind*, not just more.\n\n- **Aerobic — minimum effective dose:** ~150 min/wk moderate (or ~75 min vigorous) buys ≈19–21% lower all-cause mortality vs sedentary. Returns flatten by ~300 min/wk moderate / ~180 min/wk vigorous; the high-volume \"reversal\" (#17) is weak. Pattern is irrelevant — weekend-warrior = spread-out (#4).\n- **Intensity:** measured **CRF** is the strongest predictor (each +1 MET ≈ −11–17% mortality). A *mix* of intensities (~30–60% vigorous) edges out all-out vigorous (#3).\n- **Resistance — small effective dose for mortality:** ~60–119 min/wk (≈2 sessions) captures the independent benefit; **plateaus** above ~120 min/wk (#5). For *bone*, though, intensity is the lever, not volume: only **HiRIT** (heavy, ≥80% 1RM, or high-impact) builds lumbar-spine BMD; moderate lifting maintains but doesn't build (#13).\n- **Balance — the falls dose:** supervised, **>3-month, ≥2×/week balance/functional training** (Otago-style, or balance+resistance) is what moves falls and fractures. Walking, stretching, or lifting *alone* do **not** prevent falls (#10). The benefit is not banked — it fades when you stop (#14, and entirely so in frail aged-care populations).\n- **The best single prescription:** aerobic (for mortality) + heavy resistance/impact (for bone & strength) + a balance/functional component (for falls). The three modalities buy *different* endpoints — they're not interchangeable.",
+      "actions": "- [ ] **Get off zero first.** If sedentary, reach ~150 min/week of moderate aerobic activity (brisk walk, zone-2). Buys ~1/5 of all-cause mortality risk — most of exercise's longevity benefit.\n- [ ] **Build cardiorespiratory fitness as the primary longevity target.** Push some volume to higher intensity (a ~30–60% vigorous mix beats all-easy or all-hard); aim to climb MET categories over time.\n- [ ] **Resistance train ~2×/week.** For *mortality* ~60–120 min/wk is enough (plateaus after). For *bone*, make some of it **heavy/high-intensity (HiRIT)** — moderate loads maintain bone but don't build it.\n- [ ] **Add a dedicated balance/functional component** (single-leg work, Otago-style, or tai chi within a balance program). This is the *causal, RCT-proven* lever for falls (RaR ~0.76) and fall-related fractures (~−25–33%) — and walking/stretching/lifting alone won't deliver it.\n- [ ] **Treat it as maintenance, not a deposit.** Fitness, strength, and bone gains reverse with detraining over months — the benefit requires *continuing*, which is why this is a lifelong habit, not a project.\n- [ ] **Don't over-optimize scheduling.** Weekend-warrior is fine for the aerobic/mortality piece — total weekly volume is what matters.",
+      "caveats": "- **Two different evidence tiers, don't blend them.** The *mortality/longevity* numbers (#1–#8) are OBSERVATIONAL — reverse causation (subclinically ill people are less fit/weaker) and healthy-adherent bias (exercisers smoke less, eat better, higher SES) inflate them; read as upper bounds. The *falls/fracture/BMD* numbers (#9–#14) are RCT INTERVENTION evidence — genuinely causal, the strongest tier in this project — but fracture is a secondary/underpowered endpoint (#12) and BMD is a surrogate for fracture.\n- **Surrogate vs hard endpoint:** grip strength (#7) and balance tests (#8) *predict* mortality but aren't proof that training them lowers mortality. The case that exercise extends life rests on the cohort data (#1–#6); the case that it prevents *falls/fractures* rests on the RCTs (#9–#11). Keep those two claims separate — exercise's proven *causal* wins are falls/fracture/bone/strength, while its longevity effect, though large, is associational.\n- **Modality specificity is real:** \"exercise\" is not one thing. Aerobic buys mortality; heavy resistance buys bone & strength; balance buys falls. Walking is great for #1–#4 and useless for falls (#10). Don't let a single word hide three different prescriptions.\n- **Reversibility is SLOW, not irreversible** — the key contrast with substances. Fitness, muscle, and bone gains are lost with detraining (BMD toward baseline in ~12 mo, #14) and regained with retraining. Benefits require maintenance; a fit past doesn't bank permanent protection.\n- **Population fit:** the falls/fracture and balance-predictor evidence comes from older adults (mean ages ~70s) — most relevant as you age. In *frail/residential* populations the falls benefit holds during training but **disappears once training stops** (high-certainty), so continuity matters even more there. For a healthy mid-life adult, the aerobic/CRF and resistance claims carry the weight; balance/bone work is preventive investment for later.\n- **The combined-training edge over high-aerobic-alone is small for *mortality*** (#6) — don't oversell \"you must lift to live longer.\" Lift for strength, bone, falls, and function; the marginal mortality gain over being aerobically fit is modest.",
+      "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **Sarcopenia / muscle-mass & strength intervention magnitudes** — the targeted run nailed falls/fracture/BMD but the resistance-training effect sizes on *muscle mass, strength, gait speed, chair-stand* in sarcopenic/older adults did **not** survive verification as clean numbers. Direction is certain (RT builds muscle/strength); the pooled magnitudes are still un-pinned. Lower priority — doesn't change the action (\"lift heavy, ~2×/wk\").\n- **Muscle/strength detraining-retraining kinetics** — only *bone* detraining was quantified (~12 mo to baseline). How fast strength/muscle are lost and regained in older adults is still unquantified here. Physiologically SLOW; specifics open.\n- **Resistance dose optimum** — plateau (~90–119 min/wk) vs J-curve (peak 30–60 min/wk) disagreement (#16). Both point to \"~2×/wk is enough,\" so low decision-relevance.\n- **Anti-fracture mechanism split** — how much of exercise's fracture reduction is via *falls* (mechanical) vs *BMD/bone-quality*? No adequately-powered primary-endpoint trial separates them (#12). Academic, not action-relevant.\n- *(Resolved this session: whether training — not just fitness — causally reduces falls & fractures. YES, RCT-grade, #9–#11.)*"
+    },
+    "medical-screening": {
+      "slug": "medical-screening",
+      "name": "Medical & Screening",
+      "status": "in-progress",
+      "scope": "Vaccination, age-appropriate cancer screening, pharmacologic primary prevention, biomarker monitoring. The \"catch-it-early / prevent-with-a-pill\" lever — where the key tension is disease-specific vs all-cause mortality, overdiagnosis, and screening-hype.\n\n- In: age-appropriate cancer screening (colorectal, breast, cervical, lung-LDCT, prostate-PSA) — mortality benefit, NNS, overdiagnosis; cardiovascular & metabolic PHARMACOLOGIC primary prevention (statins, antihypertensives, aspirin, lipid/BP targets, coronary-artery-calcium scoring, diabetes/HbA1c screening) — routed here from `nutrition-metabolic`; adult VACCINATION (influenza, shingles/Shingrix, pneumococcal, RSV, COVID); biomarker monitoring & the executive-physical / full-body-MRI / multi-cancer-early-detection (Galleri) hype; polypharmacy / deprescribing; baseline physician relationship.\n- Out (and where it lives instead): the behavioral levers that reduce the NEED for screening/drugs (diet → `nutrition-metabolic`, exercise → `exercise`, smoking → `substances`); disease *treatment* beyond primary prevention (out of project scope); dental screening → `oral-sensory`; skin-cancer screening & dermatology → noted here only if it shares a mortality endpoint, else `sun-skin`; hearing/vision screening → `oral-sensory`/sensory.",
+      "claims": [],
+      "dose": "",
+      "actions": "- [ ]",
+      "caveats": "",
+      "openQuestions": ""
+    },
+    "nutrition-metabolic": {
+      "slug": "nutrition-metabolic",
+      "name": "Nutrition & Metabolic",
+      "status": "complete",
+      "scope": "Diet pattern, protein, visceral fat, glucose, lipids, blood pressure. The hub connecting cardio/neuro/renal decline — and the lever most plagued by healthy-user confounding and nutrition-science hype.\n\n- In: dietary PATTERNS (Mediterranean, DASH, plant-forward, Western/ultra-processed); specific FOODS & macronutrients (red & processed meat, added sugar/SSBs, sodium, fiber, fish/omega-3, whole grains); PROTEIN adequacy & the protein/mTOR/IGF-1 longevity debate; COFFEE/caffeine (from substances); CALORIC restriction / intermittent fasting / TRE; body WEIGHT / visceral adiposity / BMI vs mortality; GLYCEMIC / metabolic-syndrome / lipids / BP as modifiable endpoints.\n- Out (and where it lives instead): protein/calories to fuel resistance training → `exercise`; ALCOHOL → `substances` (coffee comes here); longevity-hype supplements (NMN, resveratrol, metformin) → T3/T4 holding pen in `synthesis`; PHARMACOLOGIC weight loss (GLP-1) & lipid/BP drugs → `medical-screening`; sleep→appetite → `sleep`; dental erosion from sugar → `oral-sensory`.",
+      "claims": [
+        {
+          "number": 1,
+          "text": "Diet QUALITY/PATTERN matters, but the effect shrinks sharply observational→realistic-increment, and no pattern has an RCT on mortality",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "Mediterranean high-vs-low all-cause **RR 0.79** (21% ↓) but only **RR 0.92 per 1-SD** (8% ↓ — the realistic increment). All observational, self-reported at baseline, healthy-user confounded",
+          "reversibility": "SLOW",
+          "confidence": "H (assoc); the causal magnitude is the open question",
+          "sources": [
+            "S071"
+          ]
+        },
+        {
+          "number": 2,
+          "text": "Plant-based diet QUALITY (not plant-based *label*) drives the association — unhealthy-plant-based is *worse*",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "Healthy plant index (hPDI) all-cause HR **0.86**, CVD 0.83; general PDI 0.85; **UNHEALTHY plant index (uPDI) all-cause 1.20** (↑). ~978k participants, replicated",
+          "reversibility": "SLOW",
+          "confidence": "H (assoc)",
+          "sources": [
+            "S076"
+          ]
+        },
+        {
+          "number": 3,
+          "text": "Vegetarian/vegan mortality evidence is mixed and confounded, with a real stroke-harm offset",
+          "systems": "Cardio, Immune",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "AHS-2 all-cause HR 0.88 (sig in men 0.82, NS women); **EPIC-Oxford NULL** (veg 1.00, vegan 1.14). Vegetarian CVD RR 0.85, IHD 0.79 — but total stroke **+20%**, hemorrhagic **+43%** (survives adjustment)",
+          "reversibility": "SLOW",
+          "confidence": "M (heavily healthy-user confounded)",
+          "sources": [
+            "S077",
+            "S078",
+            "S079"
+          ]
+        },
+        {
+          "number": 4,
+          "text": "**Ultra-processed food**: dose-response mortality association + a genuine *causal* intake/weight signal",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (obs) + **[RCT]** (surrogate)",
+          "tierGroup": "primary",
+          "effect": "Obs: all-cause **HR 1.15 per 10%** energy from UPF (highest-vs-lowest 1.21), CVD 1.50, **cancer 1.00 (null)**; T2D HR 1.12/10% (1.46 Q5-v-Q1). **[RCT] Hall 2019** metabolic-ward: UPF *caused* **+508 kcal/day** intake & +0.9 kg/2wk (n=20). Obs confounded (UPF tracks smoking/low-SES)",
+          "reversibility": "SLOW",
+          "confidence": "H (RCT intake signal); M (obs hard endpoints)",
+          "sources": [
+            "S073",
+            "S074",
+            "S075"
+          ]
+        },
+        {
+          "number": 5,
+          "text": "**Processed meat**: consistent mortality/cancer association; processed > unprocessed red",
+          "systems": "Cardio, Immune",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "Processed all-cause **RR 1.15/serving**, CVD 1.15, cancer 1.08. IARC **Group 1** carcinogen, **+18% colorectal/50g** (but small *absolute* risk; ~34k deaths/yr globally vs ~1M tobacco). Unprocessed red weaker, US-only (EPIC null)",
+          "reversibility": "SLOW",
+          "confidence": "M (assoc; GRADE genuinely low — see #18)",
+          "sources": [
+            "S081",
+            "S082",
+            "S083"
+          ]
+        },
+        {
+          "number": 6,
+          "text": "**Sugar-sweetened beverages**: the most mechanistically-plausible single-food harm (liquid calories, glycemic load)",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "Per serving/day: **T2D RR 1.27**, CHD 1.20, CVD 1.09, all-cause 1.08–1.10 (CI ~1.0); ~23% of effect adiposity-mediated. In diabetics, high SSB all-cause HR 1.20",
+          "reversibility": "SLOW",
+          "confidence": "M–H",
+          "sources": [
+            "S085",
+            "S086"
+          ]
+        },
+        {
+          "number": 7,
+          "text": "**[RCT] DASH diet lowers blood pressure** — the cleanest causal diet→hard-surrogate win",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (RCT, validated surrogate)",
+          "tierGroup": "primary",
+          "effect": "DASH reduced systolic **−6.74 mmHg** (−8.25,−5.23), diastolic **−3.54** (17 RCTs, n=2,561); larger in hypertensives. BP is a validated CVD surrogate — this is the strongest *causal* node in the lever",
+          "reversibility": "SLOW (BP responds in weeks)",
+          "confidence": "H",
+          "sources": [
+            "S087"
+          ]
+        },
+        {
+          "number": 8,
+          "text": "**Dietary fiber** is the strongest single-food-group longevity *association* — but observational only",
+          "systems": "Cardio, Metabolic, Immune",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "High-vs-low **15–30% lower** all-cause/CVD mortality + 16–24% lower CHD/stroke/T2D/colorectal-cancer incidence (Reynolds Lancet, 185 cohorts). GRADE moderate. RCTs confirm only *surrogates* (weight, BP, cholesterol). Cereal fiber drives the whole-grain benefit",
+          "reversibility": "SLOW",
+          "confidence": "H (assoc); M (causal)",
+          "sources": [
+            "S088",
+            "S089"
+          ]
+        },
+        {
+          "number": 9,
+          "text": "**Fish-vs-fish-oil** is the canonical observational-RCT divergence — supplements largely fail",
+          "systems": "Cardio",
+          "tier": "T1 (RCT meta)",
+          "tierGroup": "primary",
+          "effect": "Marine omega-3 **supplements**: all-cause mortality **null (RR ~0.97)**; small CVD-death 0.93, MI 0.92; and a dose-dependent **+25% atrial-fibrillation risk** (HR 1.25). REDUCE-IT (high-dose EPA, MACE HR 0.75) is an outlier clouded by a non-inert mineral-oil placebo & contradicted by the null STRENGTH trial",
+          "reversibility": "SLOW",
+          "confidence": "H (the supplement null)",
+          "sources": [
+            "S090",
+            "S091",
+            "S092"
+          ]
+        },
+        {
+          "number": 10,
+          "text": "**Coffee**: robust U-shaped mortality association, nadir ~3–4 cups/day — but confounded, no causal proof",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (obs) / **[MR]** null",
+          "tierGroup": "primary",
+          "effect": "All-cause nadir ~3.5 cups **RR 0.85**; benefit present for **decaf too** (so not caffeine alone). **[MR] null** — genetically-predicted coffee shows no IHD/stroke/mortality effect → the U-curve is largely confounded (reverse causation: sick people quit). No hard-endpoint RCT",
+          "reversibility": "SLOW",
+          "confidence": "M (robust assoc, weak causality)",
+          "sources": [
+            "S093",
+            "S094"
+          ]
+        },
+        {
+          "number": 11,
+          "text": "**Body weight / BMI**: a J-curve with the nadir at ~20–25, and a *causally-cleaner* signal than most of nutrition",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (pooled cohorts, hard endpoint)",
+          "tierGroup": "primary",
+          "effect": "Never-smokers, early deaths excluded: overweight (25–30) HR **1.13**, obesity-1 (30–35) **1.44**, obesity-2 (35–40) **1.88**, severe (40+) **2.51**; **+31% per 5 BMI units** over 25. Underweight also raised (HR ~1.5). ~1.5–10.6M participants",
+          "reversibility": "SLOW (weight is modifiable)",
+          "confidence": "H",
+          "sources": [
+            "S099"
+          ]
+        },
+        {
+          "number": 12,
+          "text": "The **\"obesity paradox\" is a reverse-causation/collider artifact**, not protection from excess weight",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (methodological)",
+          "tierGroup": "primary",
+          "effect": "The apparent \"overweight protective\" finding (crude HR ~0.95) *reverses* when restricting to never-smokers & excluding early follow-up (smoking + illness-driven weight loss are the confounders). Longer follow-up *strengthens* the obesity association",
+          "reversibility": "—",
+          "confidence": "H (qualitative); specific reversal magnitudes were refuted",
+          "sources": [
+            "S099",
+            "S100"
+          ]
+        },
+        {
+          "number": 13,
+          "text": "**Central/visceral adiposity** independently predicts mortality beyond BMI",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "Waist circumference & waist-to-hip ratio each **~HR 1.15 per SD** for CVD death (BMI no longer independent after full adjustment); high WC raises risk **even within normal BMI** (HR ~1.61). Waist matters beyond the scale",
+          "reversibility": "SLOW",
+          "confidence": "H (assoc)",
+          "sources": [
+            "S101",
+            "S102"
+          ]
+        },
+        {
+          "number": 14,
+          "text": "**Adequate protein favours muscle preservation**; the protein-restriction-for-longevity story is the weaker bet",
+          "systems": "Musculo, Metabolic",
+          "tier": "T1 (obs) vs T3 (the restriction hypothesis)",
+          "tierGroup": "primary",
+          "effect": "Pooled 32 cohorts (715k): total protein all-cause HR **0.94**, **plant** protein 0.92 (CVD 0.88), **animal protein null** (1.00) → food-source/healthy-user confounding, not protein per se. Adequate protein (~1.0–1.2 g/kg) for sarcopenia has stronger human support than mTOR/IGF-1 restriction (rodent/mechanistic)",
+          "reversibility": "SLOW",
+          "confidence": "H (plant assoc); the restriction-for-longevity case is T3",
+          "sources": [
+            "S105"
+          ]
+        },
+        {
+          "number": 15,
+          "text": "**[RCT] Intentional weight loss did NOT cut hard CV events** — the causal counterpoint to #11",
+          "systems": "Cardio, Metabolic",
+          "tier": "T1 RCT, but a *null* (placed here as the key caveat to the adiposity association)",
+          "tierGroup": "primary",
+          "effect": "**Look AHEAD** (n=5,145 T2D, intensive lifestyle): sustained 6–8.6% weight loss yet primary CV composite **HR 0.95 (NS)**, stopped for futility. The strong BMI *association* (#11) does NOT translate to a demonstrated causal CV benefit from intentional weight loss (in diabetics). Post-hoc ≥10%-loss benefit is non-randomized",
+          "reversibility": "SLOW",
+          "confidence": "H (for the null)",
+          "sources": [
+            "S103"
+          ]
+        },
+        {
+          "number": 16,
+          "text": "**Fasting / caloric restriction / TRE: no human longevity evidence — surrogate-only, mostly rodent extrapolation**",
+          "systems": "Metabolic",
+          "tier": "T2/T3 (RCT on surrogates; longevity claim is animal)",
+          "tierGroup": "primary",
+          "effect": "CALERIE-2 (only sustained-CR RCT in non-obese humans, ~12% CR): cardiometabolic markers improve but **no hard endpoints**, and **telomeres were null/slightly worse** (opposite the rodent story). Intermittent fasting does **NOT** beat plain calorie restriction (−0.41 kg, NS); time-restricted eating **null in TREAT** (~65% of lost weight was lean mass) — benefit is entirely calorie-mediated",
+          "reversibility": "SLOW",
+          "confidence": "M (the deflation is solid; longevity claims are T3)",
+          "sources": [
+            "S095",
+            "S096",
+            "S097",
+            "S098"
+          ]
+        },
+        {
+          "number": 17,
+          "text": "The Levine/Longo \"high protein in midlife shortens lifespan\" claim is one small confounded cohort — contested",
+          "systems": "Metabolic, Immune",
+          "tier": "T3 (single confounded NHANES analysis)",
+          "tierGroup": "informational",
+          "effect": "Levine 2014: high protein at 50–65 → all-cause HR 1.74, cancer 4.33× — but from a **single 24-hr recall**, sparse-data-unstable (diabetes HR 73!), and the effect **vanished adjusting for animal-protein source**. The \"protective after 65\" companion was refuted; a 2025 re-analysis found no association. Don't treat as established",
+          "reversibility": "—",
+          "confidence": "L",
+          "sources": [
+            "S104"
+          ]
+        },
+        {
+          "number": 18,
+          "text": "Calibration: the red-meat GRADE controversy — the certainty of evidence is genuinely LOW",
+          "systems": "Immune",
+          "tier": "T4 (evidence-calibration)",
+          "tierGroup": "informational",
+          "effect": "2019 NutriRECS/Annals GRADE review rated the meat-mortality certainty **LOW** and issued a *weak* recommendation to *continue* current intake (~8–9 fewer deaths/1000 over 11y). A reminder that single-food relative risks rest on low-certainty observational data",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S084"
+          ]
+        },
+        {
+          "number": 19,
+          "text": "Refuted / overturned specifics — do not cite",
+          "systems": "—",
+          "tier": "T4 (refuted)",
+          "tierGroup": "informational",
+          "effect": "All failed verification: a clean fiber \"plateau at 25–29 g/day\"; whole-grain \"monotonic dose-response\"; per-3%-energy plant-protein substitution figures; specific obesity-paradox reversal magnitudes (HR 1.16/1.51); WHtR U-shape nadir HRs. Use the conservative figures in #1–#14",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        }
+      ],
+      "dose": "**The 80/20 for nutrition is \"don't eat badly,\" not \"eat superfoods.\"** The robust, replicated, mechanistically-plausible signals are the *harms* (ultra-processed food, SSBs, excess processed meat) and *adiposity*; the \"beneficial food\" signals are real but observational, confounded, and small once you account for healthy-user effects.\n\n- **The highest-value moves** are subtractive and weight-related: avoid ultra-processed food and sugar-sweetened beverages (the one food with a causal intake/weight RCT, #4), keep processed meat low (#5), and **keep BMI in the ~20–25 range / waist in check** (#11, #13 — the causally-cleanest signal, though intentional weight loss isn't proven on hard endpoints, #15).\n- **Pattern > individual foods:** a Mediterranean / high-fiber / plant-*forward* (not necessarily vegetarian) pattern captures most of the benefit; DASH is the one pattern with a clean causal (BP) win (#7). Plant-based done badly (refined grains, sugar) is *worse*, not better (#2).\n- **Fiber:** aim for a high-fiber diet (most-vs-least ≈ 15–30% lower mortality association), but there's no proven magic threshold — the \"25–29 g plateau\" was refuted (#19). More plants, less refining.\n- **Skip the hype:** omega-3 *supplements* don't reproduce fish-the-food and raise AF risk (#9); coffee is fine and probably net-positive but not a proven lever (#10); fasting/CR/TRE buy nothing beyond the calorie reduction they cause (#16); protein-restriction-for-longevity is rodent-grade — favour *adequate* protein for muscle (#14).\n- **Protein dose:** ~1.0–1.2 g/kg for an older adult (muscle preservation) is the better-supported target than restriction; plant protein is the cleaner association but largely a food-source/healthy-user effect.",
+      "actions": "- [ ] **Minimize ultra-processed food and sugar-sweetened beverages** — the most defensible dietary harms (UPF has the one causal weight-gain RCT; SSBs have the clearest mechanism).\n- [ ] **Keep BMI ~20–25 and waist in check** — adiposity is the causally-cleanest nutrition signal once reverse causation is stripped out. (Caveat: *intentional* weight loss isn't proven to cut hard CV events, so frame this as \"don't gain,\" not \"weight-loss is a guaranteed fix.\")\n- [ ] **Eat a plant-forward, high-fiber, Mediterranean-style pattern** — captures most of the benefit; you don't need to be vegetarian (and badly-done plant-based is worse).\n- [ ] **Keep processed meat low**; unprocessed red meat is a weaker/low-certainty signal — moderate, don't agonize.\n- [ ] **Get adequate protein (~1.0–1.2 g/kg), favouring plant + lean sources** — for muscle preservation; ignore protein-restriction-for-longevity claims.\n- [ ] **Don't chase supplements or fasting protocols** — fish oil doesn't replace fish (and raises AF risk); fasting/CR/TRE add nothing beyond calorie control. Coffee (≤3–4 cups) is fine.\n- [ ] If hypertensive, **adopt DASH** — the one diet with proven causal BP lowering (~−7/−4 mmHg).",
+      "caveats": "- **Healthy-user confounding is the dominant, pervasive threat** — flagged for every observational row. Diet-quality adherers and plant-eaters are systematically leaner, more active, non-smoking, higher-SES; authors of every cohort acknowledge residual confounding. The big associations are real but weak *levers*.\n- **Three different failure modes, same lesson:** (a) patterns/foods → *self-selection confounding* (effect shrinks observational→RCT); (b) omega-3 → *food-vs-supplement gap* (reductionist nutrients don't reproduce whole-food signals); (c) fasting/CR → *rodent over-extrapolation* (no human hard-endpoint data). All argue against superfood/supplement/protocol optimization.\n- **Adiposity is the exception that's causally cleaner** — large pooled cohorts with reverse-causation handled by exclusion (never-smokers, drop early deaths) give a robust J-curve. BUT the one intentional-weight-loss RCT on hard endpoints (Look AHEAD) was null, so \"lose weight → live longer\" is association, not proven causation. Best read: *avoid gaining* excess adiposity; weight-loss benefit on hard endpoints is genuinely uncertain.\n- **Reversibility is SLOW, not irreversible** — cardiometabolic markers, weight, BP, lipids recover over weeks–months to years; no \"banking,\" but also no permanent damage from a period of poor diet (except where it already triggered atherosclerosis/cancer, which live in those systems). DASH-BP is the fastest-responding node.\n- **Absolute vs relative risk:** several scary relative risks (processed meat +18% colorectal) are small in *absolute* terms; the GRADE certainty for single-food claims is genuinely low (#18). Don't over-weight a single food.\n- **Population fit:** the protein/sarcopenia guidance is most relevant for *older* adults; the BMI nadir and curves are from large multi-continent cohorts (mostly mitigated for smoking/illness confounding).",
+      "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **PREDIMED** (the Mediterranean-diet RCT, primary MACE HR ~0.69–0.72 in high-risk adults) was crowded out of verification across runs and is **not independently confirmed here** — the best-known diet RCT remains a gap; its well-known result is consistent with #1/#7 but treat as not-yet-verified-in-project-tiers. (DASH-BP #7 already anchors the causal-diet story.)\n- **Sodium → hard endpoints / the PURE J-curve** — DASH/sodium lower BP (surrogate), but whether sodium *reduction* cuts hard CVD events, and the contested very-low-sodium-harm (PURE) signal, were not verified. Added-sugar (beyond SSBs) specifics also un-pinned.\n- **Does the Look AHEAD null generalize beyond diabetics?** No RCT of intentional weight loss powered for hard endpoints exists in a non-diabetic population — so the causal benefit of weight loss on mortality is genuinely untested outside diabetes.\n- **Any human causal evidence for protein-restriction/mTOR longevity?** Currently entirely rodent/mechanistic (T3). And the muscle-preservation side (~1.0–1.2 g/kg) was asserted as stronger but its specific RCT magnitudes weren't in the confirmed set.\n- **Fiber dose-response shape** — the clean \"25–29 g plateau\" was refuted; is benefit monotonic-with-attenuation or is there a true ceiling?"
+    },
+    "oral-sensory": {
+      "slug": "oral-sensory",
+      "name": "Oral & Sensory",
+      "status": "pending",
+      "scope": "Teeth/enamel/gums, hearing, vision. Mostly irreversible hardware; hearing loss is a major dementia risk factor.\n\n- In:\n- Out (and where it lives instead):",
+      "claims": [],
+      "dose": "",
+      "actions": "- [ ]",
+      "caveats": "",
+      "openQuestions": ""
+    },
+    "sleep": {
+      "slug": "sleep",
+      "name": "Sleep",
+      "status": "complete",
+      "scope": "Duration, consolidation, circadian alignment, recovery. The downstream-of-everything lever — and the one most entangled with reverse causation (illness disrupts sleep as much as sleep disrupts health).\n\n- In: sleep duration (the U-shaped mortality curve); sleep quality / consolidation / efficiency / fragmentation; circadian alignment & timing (shift work, social jetlag, sleep regularity, chronotype); major sleep disorders as mortality/CVD drivers (insomnia, obstructive sleep apnea); napping; behavioral sleep hygiene (light exposure, screens, timing); and INTERVENTION evidence — does improving sleep (CBT-I, treating OSA/CPAP, sleep extension) change hard endpoints?\n- Out (and where it lives instead): exercise-as-recovery / training adaptation → `exercise`; caffeine & alcohol *as substances* → `substances` (their sleep-disruption mechanism is noted here, but the mortality claim stays there); sleep's metabolic/glucose markers (insulin sensitivity, weight) → `nutrition-metabolic` (the CVD/mortality endpoint stays here); depression/anxiety as drivers of insomnia → `stress-social` (bidirectional — flagged, not owned here); dementia mechanism deep-dive (glymphatic/amyloid) → ticked in `neurological`, but the sleep→dementia risk claim stays here; melatonin/pharmacologic sleep aids → basic sleep-aid evidence noted here, deep supplement analysis deferred.",
+      "claims": [
+        {
+          "number": 1,
+          "text": "Sleep duration vs all-cause mortality is U/J-shaped, nadir ~7–7.5h — but the two arms are not equal",
+          "systems": "Cardio, Neuro, Metabolic",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "Short <7h all-cause HR **1.14** (1.10–1.18); long ≥9h HR **1.34** (1.26–1.42). Single large cohort (NHANES) steeper: ≤5h 1.28 AC / 1.32 CV; ≥9h 1.53 AC / 1.74 CV; spline nadir 7.04–7.32h",
+          "reversibility": "SLOW (if causal at all — see #2)",
+          "confidence": "H (for the association)",
+          "sources": [
+            "S048",
+            "S049"
+          ]
+        },
+        {
+          "number": 2,
+          "text": "The long-sleep arm is largely a REVERSE-CAUSATION artifact, and the two biggest meta-analyses disagree on short sleep",
+          "systems": "Cardio",
+          "tier": "T1 (the causal caveat)",
+          "tierGroup": "primary",
+          "effect": "Long sleep I²=92%, publication bias (Egger p=0.02); authors tie it to \"undiagnosed illness, depression, low SES.\" Kwok 2018 (74 cohorts, 3.34M): J-shaped, long sleep drives risk (RR 1.14@9h→1.47@11h) but short <7h **NS**; MR finds **no causal** long-sleep→stroke effect",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S050",
+            "S052"
+          ]
+        },
+        {
+          "number": 3,
+          "text": "The same U-shape holds for CVD, cerebrovascular disease, and stroke (not just mortality), nadir ~7.5h",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "CVD nadir ~7.5h (low-risk 4.3–10.3h); cerebrovascular ~7.5h (p=0.05, marginal). Stroke: short ≤5–6h HR 1.29 incidence / 1.12 mortality; long >8–9h 1.46 / 1.45 (long arm reverse-causal)",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S051",
+            "S052"
+          ]
+        },
+        {
+          "number": 4,
+          "text": "Insomnia is a MODEST predictor of cardiovascular events and a WEAK one for mortality",
+          "systems": "Cardio",
+          "tier": "T1/T2 (observational)",
+          "tierGroup": "primary",
+          "effect": "Insomnia→CVD RR **1.31** (1.14–1.51); →MI 1.48 (1.03–2.12, fragile, I²=84%); →all-cause mortality only **1.14**, significant only at 10–20yr follow-up. Poor sleep *quality* → CHD RR 1.44 but **not** mortality. (A \"CV-mortality RR 1.53\" claim was **refuted** — see #16)",
+          "reversibility": "SLOW",
+          "confidence": "M",
+          "sources": [
+            "S053",
+            "S050"
+          ]
+        },
+        {
+          "number": 5,
+          "text": "Sleep-timing IRREGULARITY (objective accelerometry) is a strong mortality predictor — the best-measured sleep signal",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (observational, objective)",
+          "tierGroup": "primary",
+          "effect": "Low Sleep Regularity Index (5th pct vs median), UK Biobank n=88,975: all-cause HR 1.53 → **1.22** (1.07–1.39) fully adjusted; CVD-mortality **1.88** (largest); cancer 1.36 (prodromal — early-follow-up HR >2 falls to ~1.05 by yr 4)",
+          "reversibility": "SLOW",
+          "confidence": "M–H",
+          "sources": [
+            "S054"
+          ]
+        },
+        {
+          "number": 6,
+          "text": "**[MR]** The strongest CAUSAL thread: genetically-predicted insomnia raises coronary artery disease and hypertension risk",
+          "systems": "Cardio",
+          "tier": "T1 (Mendelian randomization — causal)",
+          "tierGroup": "primary",
+          "effect": "Genetic insomnia → CAD OR **1.14** (1.10–1.19); → hypertension OR **1.16** (1.13–1.18). Germline instruments are immune to reverse causation. Caveat: authors hedge to \"possibly causal\"; CAD I²=97% (HTN more robust, I²=28%)",
+          "reversibility": "SLOW (modifiable risk)",
+          "confidence": "M",
+          "sources": [
+            "S055"
+          ]
+        },
+        {
+          "number": 7,
+          "text": "Untreated moderate–severe OSA is a substantial CVD/mortality risk — OBSERVATIONALLY",
+          "systems": "Cardio, Immune",
+          "tier": "T1 (observational)",
+          "tierGroup": "primary",
+          "effect": "AHI dose-response: moderate (15–30) HR 1.56, severe (>30) **2.45**. Pooled: composite CV HR 1.82, stroke 2.12, CV-mortality 1.89, all-cause mortality **1.68**",
+          "reversibility": "SLOW",
+          "confidence": "M (GRADE moderate)",
+          "sources": [
+            "S056",
+            "S057"
+          ]
+        },
+        {
+          "number": 8,
+          "text": "**[RCT]** …but CPAP does NOT reduce hard cardiovascular events — the central observational-vs-RCT divergence",
+          "systems": "Cardio",
+          "tier": "T1 (RCT meta-analysis)",
+          "tierGroup": "primary",
+          "effect": "Pooled 6 RCTs (n=4,493, established CVD): MACE OR **0.94** (0.79–1.12, NS). Null driven by poor adherence (SAVE 3.3 h/night, ISAACC 2.78 — below the ~4h where benefit appears). The \">4h benefit\" is post-hoc, healthy-adherer-biased. CPAP DOES improve sleepiness, BP (~2–3 mmHg), QoL — **not** hard CV events",
+          "reversibility": "n/a (treatment)",
+          "confidence": "H (for the null)",
+          "sources": [
+            "S057",
+            "S056"
+          ]
+        },
+        {
+          "number": 9,
+          "text": "Sleep→dementia is mostly REVERSE CAUSATION (prodromal), not a large causal lever",
+          "systems": "Neuro",
+          "tier": "T1/T2 (cohort + MR)",
+          "tierGroup": "primary",
+          "effect": "Short sleep *strengthens* with lag (OR 1.44@6yr → 3.44@19yr — argues against pure reverse causation); long sleep prodromal (sig only ~3yr). **MR null**: duration→all-cause dementia OR 1.19 (NS), →AD 0.89 (NS). AD's ~20yr prodrome biases observational sleep–AD links",
+          "reversibility": "SLOW (mostly); see #18",
+          "confidence": "M",
+          "sources": [
+            "S058",
+            "S059",
+            "S060"
+          ]
+        },
+        {
+          "number": 10,
+          "text": "Glymphatic/slow-wave amyloid clearance: real human single-night signals, but surrogate-only",
+          "systems": "Neuro",
+          "tier": "T2/T3 (surrogate)",
+          "tierGroup": "primary",
+          "effect": "One night total deprivation raised amyloid-PET ~**5%** (SUVr 1.35→1.42, n=20); slow-wave disruption raised CSF Aβ40. Small, single-night, CSF/PET/plasma surrogates — **no link to dementia incidence**, nothing showing better sleep prevents AD",
+          "reversibility": "unknown",
+          "confidence": "L",
+          "sources": [
+            "S061",
+            "S062"
+          ]
+        },
+        {
+          "number": 11,
+          "text": "**[RCT]** CBT-I reliably treats insomnia itself — first-line, durable to ~1 year",
+          "systems": "Neuro",
+          "tier": "T1 (RCT meta-analysis; surrogate endpoint)",
+          "tierGroup": "primary",
+          "effect": "ISI Hedges g **0.64** (3mo) → 0.40 (6mo) → 0.25 (12mo); older adults: sleep efficiency +8.4 pp, SOL −9.3 min, WASO −23.4 min; digital CBT-I SMD −0.71 (29 RCTs, n=9,475). AASM first-line over hypnotics (conditional, low-GRADE). Endpoint is the *surrogate* (insomnia severity), not a hard outcome",
+          "reversibility": "— (it's the fix)",
+          "confidence": "H",
+          "sources": [
+            "S063",
+            "S064",
+            "S065",
+            "S066"
+          ]
+        },
+        {
+          "number": 12,
+          "text": "**[RCT]** The single strongest CAUSAL win: CBT-I PREVENTS major depression — a hard endpoint",
+          "systems": "Neuro",
+          "tier": "T1 (RCT, hard clinician-diagnosed endpoint)",
+          "tierGroup": "primary",
+          "effect": "Older adults (n=291, mean 70), CBT-I vs active comparator, 36-mo: incident/recurrent DSM-5 depression 12.2% vs 25.9%, HR **0.51** (0.29–0.88, ~49% ↓), **NNT 7.3**. (Responder-subgroup HR 0.17 is real but its *mediation* framing was refuted — cite the ITT 0.51; see #16)",
+          "reversibility": "n/a (prevention)",
+          "confidence": "H",
+          "sources": [
+            "S067"
+          ]
+        },
+        {
+          "number": 13,
+          "text": "**[RCT]** CBT-I lowers inflammation (CRP) — but thin, single-lab, surrogate",
+          "systems": "Cardio, Immune",
+          "tier": "T2 (single RCT, surrogate markers)",
+          "tierGroup": "primary",
+          "effect": "Irwin n=123: CBT-I reduced CRP (overall p=.04) + genome-wide proinflammatory expression. Single lab (UCLA), not independently replicated for CBT-I; Tai Chi Chih showed *more durable* cellular effects — so the anti-inflammatory benefit may not be sleep-specific",
+          "reversibility": "SLOW",
+          "confidence": "L–M",
+          "sources": [
+            "S068"
+          ]
+        },
+        {
+          "number": 14,
+          "text": "**[RCT]** Sleep EXTENSION in short sleepers cuts appetite and a little weight — small, short, surrogate",
+          "systems": "Metabolic",
+          "tier": "T2 (small RCT, surrogate endpoint)",
+          "tierGroup": "primary",
+          "effect": "Habitual <6.5h sleepers extended ~1.2h/night (n=80, 2 wk): energy intake **−270 kcal/day** (objective, doubly-labeled water); weight −0.87 kg — but **mostly fat-free mass** (−0.62 kg lean vs −0.25 kg fat). Insulin/HOMA-IR claim **refuted** (#17). No BP or hard-endpoint signal",
+          "reversibility": "SLOW",
+          "confidence": "M (for appetite); L (for weight benefit)",
+          "sources": [
+            "S069",
+            "S070"
+          ]
+        },
+        {
+          "number": 15,
+          "text": "Reversibility of sleep loss — a genuine EVIDENCE GAP this session",
+          "systems": "—",
+          "tier": "evidence-gap",
+          "tierGroup": "informational",
+          "effect": "No claim on acute-debt recovery, \"sleep banking,\" weekend catch-up, or chronic-restriction normalization survived adversarial verification. Working tiers (physiology, NOT verified here): acute debt ≈ **FAST** (largely recoverable, imperfectly); chronic-restriction risk ≈ **SLOW** to normalize; \"sleep banking\" weak. Treat as unresolved",
+          "reversibility": "see note",
+          "confidence": "—",
+          "sources": []
+        },
+        {
+          "number": 16,
+          "text": "The CBT-I \"sustained remission → 82.6% depression reduction (HR 0.17)\" MEDIATION framing was REFUTED (0–3)",
+          "systems": "—",
+          "tier": "T4 (provenance)",
+          "tierGroup": "informational",
+          "effect": "The responder-subgroup number is real but it's per-protocol, not ITT; the causal-mediation interpretation didn't survive verification. The defensible causal figure is the ITT **HR 0.51** (#12)",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S067"
+          ]
+        },
+        {
+          "number": 17,
+          "text": "Refuted / overturned magnitudes — do not cite",
+          "systems": "—",
+          "tier": "T4 (refuted)",
+          "tierGroup": "informational",
+          "effect": "All failed verification: insomnia → CV-mortality \"RR 1.53\"; sleep-extension → insulin/HOMA-IR improvement; \"long sleep causally raises stroke\" (MR null). Use the conservative figures in #1–#14",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        },
+        {
+          "number": 18,
+          "text": "The \"sleep clears amyloid → prevents Alzheimer's\" causal story is mechanistic hype, not outcome evidence",
+          "systems": "Neuro",
+          "tier": "T3 (anti-hype)",
+          "tierGroup": "informational",
+          "effect": "The glymphatic narrative rests on single-night surrogate shifts (#10) and mouse work; **no human evidence** that improving sleep lowers dementia incidence, and MR is null (#9). Plausible mechanism ≠ actionable longevity lever",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S061"
+          ]
+        }
+      ],
+      "dose": "**The 80/20 is unusual for this lever: the dose target is real but the *causal payoff* of hitting it is smaller than the scary HRs imply.**\n\n- **Duration:** aim for **~7–7.5h** — the consistent nadir for mortality, CVD, cerebrovascular disease, and stroke. But two honest caveats: (a) the *long-sleep* danger zone (≥9h) is mostly sick people sleeping more, not sleep harming you — don't fear-set an alarm to cap sleep; (b) the two biggest meta-analyses don't even agree that *short* sleep (<7h) raises mortality. Treat 7–7.5h as a sensible target, not a knife-edge.\n- **Regularity beats duration heroics:** the best-measured signal is *irregular* timing (objective SRI → CVD-mortality HR 1.88). Consistent sleep/wake times are likely higher-yield than chasing an exact duration. (Still observational.)\n- **Insomnia / quality:** the actionable move is **CBT-I**, not sleeping pills — it's first-line, durable ~1 year, and (the real prize) roughly halves incident depression. This is the one place \"fixing sleep\" has hard-endpoint causal evidence.\n- **OSA:** if you have moderate–severe OSA, treat it for **symptoms** (sleepiness, BP, quality of life) — but do **not** expect CPAP to prevent heart attacks; the RCTs are null. Adherence <4h/night is the norm and part of why.\n- **Where the lever is NOT:** chasing specific sleep *stages*, glymphatic \"brain detox,\" or wearable scores has no hard-outcome evidence. Don't optimize the surrogate.",
+      "actions": "- [ ] Target a **regular ~7–7.5h** sleep opportunity, with consistent sleep/wake times (regularity may matter more than the exact number).\n- [ ] Don't catastrophize occasional short nights or naturally longer sleep — the long-sleep \"risk\" is mostly reverse causation, and acute debt is largely recoverable.\n- [ ] If you have chronic insomnia, do **CBT-I** (in person or a validated digital program) — first-line, durable, and the one sleep intervention with a hard causal payoff (≈49% lower incident depression). Avoid hypnotics as the default.\n- [ ] If you snore heavily / have witnessed apneas / daytime sleepiness, get screened for **OSA** and treat it — for *symptoms and BP*, not as a heart-attack-prevention strategy. If you use CPAP, aim for >4h/night or it does little.\n- [ ] Protect sleep as a *depression and daytime-function* lever (its best-evidenced benefits), not as a longevity silver bullet — the mortality HRs overstate the causal stakes.",
+      "caveats": "- **Causality is the whole story.** Of ~62 confirmed claims, the genuinely causal ones are narrow: MR (insomnia→CAD/HTN, #6) and two RCT threads (CBT-I→depression #12; CPAP→*no* MACE #8). Everything else is observational with **reverse causation as a live, author-acknowledged confounder** — illness, depression, and low SES cause poor/long sleep, inflating every HR. The large numbers are real *associations* but weak *levers*.\n- **The OSA paradox is the teaching case:** strong observational risk (mortality HR up to 2.45) + null CPAP RCTs (MACE OR 0.94). Either the risk is confounded, or CPAP adherence is too poor to realize it — probably both. Don't let the observational number set the expectation for treatment benefit.\n- **Dementia link is mostly prodromal:** sleep changes appear years before diagnosis (AD has a ~20-yr prodrome), MR is null, and the glymphatic story is surrogate-only. Sleep is more *early-warning sign* than *cause* of dementia.\n- **CBT-I evidence is strong for insomnia/depression, thinner downstream:** the depression result is one large single-site RCT in *older* adults (does it generalize to mid-life?); the inflammation/CRP benefit is one single-lab RCT and may not be sleep-specific (Tai Chi did better). No RCT shows CBT-I or sleep extension lowering CV events or mortality.\n- **Sleep extension** trials are small (n=80), short (2 wk), and surrogate; the weight loss was mostly *fat-free* mass (not clearly good), and the insulin-sensitivity claim was refuted. Promising for appetite, not established for cardiometabolic health.\n- **Reversibility is genuinely unresolved here** (#15) — physiologically acute debt is largely FAST-recoverable and chronic risk likely SLOW-normalizing, but no verified claim pins it. Don't assert \"sleep banking\" or \"weekend catch-up erases the risk.\"\n- **Most cohort data is self-reported** (recall bias); the SRI/UK Biobank study (objective accelerometry) is the notable, stronger exception. Several duration meta-analyses share overlapping author groups (reduced independence).",
+      "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **Reversibility tiers (FAST/SLOW/IRREVERSIBLE)** — acute-debt full recovery vs persistent deficits, \"sleep banking\" (Rupp/Wesensten), weekend catch-up offsetting weekday risk, and chronic-restriction normalization. None survived verification — the one part of the question still genuinely open. A dedicated pass could close it, but it's low decision-relevance (the actions don't change).\n- **Does CBT-I prevent depression in non-elderly adults?** The hard-endpoint RCT is older-adults, single-site. Generalization + multi-site replication unknown.\n- **Any RCT evidence that improving sleep lowers hard CV events / BP / mortality?** The confirmed set has none (CBT-I and sleep extension only touch surrogates/depression). True gap vs out-of-scope-search — unclear.\n- **Is the CBT-I anti-inflammatory effect sleep-specific?** Tai Chi Chih produced more durable cellular effects than CBT-I in the same trial — suggests the inflammation benefit may be a general behavioral-intervention effect, not sleep per se.\n- **Short-sleep causality** — the two biggest meta-analyses disagree on whether <7h raises mortality at all; MR-insomnia suggests *some* causal cardiometabolic effect, but the duration-specific causal magnitude is unresolved."
+    },
+    "stress-social": {
+      "slug": "stress-social",
+      "name": "Stress & Social",
+      "status": "pending",
+      "scope": "Chronic stress, loneliness, social connection, sense of purpose. Mortality effect sizes rival physical risk factors.\n\n- In:\n- Out (and where it lives instead):",
+      "claims": [],
+      "dose": "",
+      "actions": "- [ ]",
+      "caveats": "",
+      "openQuestions": ""
+    },
+    "substances": {
+      "slug": "substances",
+      "name": "Substances",
+      "status": "complete",
+      "scope": "Tobacco, alcohol, other recreational/psychoactive substances. The single largest modifiable mortality cluster.\n\n- In: cigarette smoking (incl. low-intensity), smokeless tobacco, alcohol, nicotine vaping (attempted), cannabis (attempted).\n- Out (and where it lives instead): caffeine → `nutrition-metabolic`; substance use as a stress-coping mechanism / social drinking dynamics → `stress-social`; medication/polypharmacy → `medical-screening`; oral cancer screening & dental effects of tobacco → ticked in `oral-sensory` but the mortality claim stays here.",
+      "claims": [
+        {
+          "number": 1,
+          "text": "Lifelong cigarette smoking roughly triples all-cause mortality",
+          "systems": "Cardio, Immune, Neuro, Renal/Hep",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "HR ~2.7–3.0 vs never-smokers (Jha 3.0♀/2.8♂; Cho 2.8♀/2.7♂; Inoue-Choi exclusive-current 2.23)",
+          "reversibility": "SLOW (mortality risk falls after quitting; some damage IRREVERSIBLE — see #8)",
+          "confidence": "H",
+          "sources": [
+            "S001",
+            "S002",
+            "S003"
+          ]
+        },
+        {
+          "number": 2,
+          "text": "Lifelong smoking costs ~10–13 years of life expectancy",
+          "systems": "Cardio, Immune, Neuro",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "−10 to −13 yrs vs never-smokers (Cho: 12♀/13♂ yrs lost over ages 40–79)",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S001",
+            "S002"
+          ]
+        },
+        {
+          "number": 3,
+          "text": "No risk-free smoking intensity: even <1 cig/day raises mortality",
+          "systems": "Cardio, Immune",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "<1 CPD HR 1.64 (CI 1.07–2.51); 1–10 CPD HR 1.87 (1.64–2.13). 1–10 CPD cause-specific: lung cancer HR 11.6, respiratory 6.0, CVD 1.50",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S004"
+          ]
+        },
+        {
+          "number": 4,
+          "text": "Quitting before age 40 averts ~90% of smoking's excess mortality",
+          "systems": "Cardio, Immune, Neuro",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "Pre-40 cessation cuts excess death ~90% (Jha); residual HR ~1.2 vs 3.0 continued. Cho: 95%♀/90%♂ under-40; 81/61% at 40–49; 63/54% at 50–59",
+          "reversibility": "SLOW (this IS the reversal)",
+          "confidence": "H",
+          "sources": [
+            "S001",
+            "S002"
+          ]
+        },
+        {
+          "number": 5,
+          "text": "Cessation benefit emerges fast — detectable ~3 years after quitting",
+          "systems": "Cardio, Immune",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "Benefit evident by 3 yrs post-cessation; ≥10 yrs quit → survival ≈ never-smoker (Cho)",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S002"
+          ]
+        },
+        {
+          "number": 6,
+          "text": "Recovery after quitting is substantial but incomplete",
+          "systems": "Cardio, Immune, Neuro",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "Former smokers HR ~1.33 (1.28–1.37) vs never-users — far below current 2.23, above 1.0",
+          "reversibility": "SLOW (floor never fully returns to never-smoker)",
+          "confidence": "H",
+          "sources": [
+            "S003",
+            "S002"
+          ]
+        },
+        {
+          "number": 7,
+          "text": "Cessation still helps in older age, with diminishing returns",
+          "systems": "Cardio, Immune",
+          "tier": "T1 (life-table model)",
+          "tierGroup": "primary",
+          "effect": "Quitting at 35/45/55/65/75 avoids losing 8.0/5.6/3.4/1.7/0.7 yrs; P(gain ≥1 yr) = 23.4% at 65, 14.2% at 75",
+          "reversibility": "SLOW",
+          "confidence": "M (modeled, not observed)",
+          "sources": [
+            "S005"
+          ]
+        },
+        {
+          "number": 8,
+          "text": "Smokeless tobacco: real but much smaller all-cause penalty than smoking",
+          "systems": "Cardio, Immune, Renal/Hep",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "Exclusive current SLT all-cause HR 1.36 (1.17–1.59) vs never-tobacco",
+          "reversibility": "SLOW",
+          "confidence": "M",
+          "sources": [
+            "S003",
+            "S006"
+          ]
+        },
+        {
+          "number": 9,
+          "text": "Alcohol intake minimizing total health harm is ZERO drinks/week",
+          "systems": "Cardio, Neuro, Renal/Hep, Immune",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "Harm-minimizing level = 0 (95% UI 0.0–0.8) std drinks/wk across all outcomes combined (GBD 2016)",
+          "reversibility": "SLOW (liver/CV recover; some cancer/neuro risk IRREVERSIBLE)",
+          "confidence": "H",
+          "sources": [
+            "S007"
+          ]
+        },
+        {
+          "number": 10,
+          "text": "A true protective J-curve exists for ischaemic heart disease *only*, but is swamped by rising cancer",
+          "systems": "Cardio (benefit); Immune/cancer (harm)",
+          "tier": "T1",
+          "tierGroup": "primary",
+          "effect": "IHD min RR 0.86 (0.80–0.96) ♂ @0.83 drinks/d; 0.82 ♀ @0.92 drinks/d. Offset by monotonically rising cancer risk",
+          "reversibility": "n/a",
+          "confidence": "H (for the net conclusion)",
+          "sources": [
+            "S007"
+          ]
+        },
+        {
+          "number": 11,
+          "text": "**Vaping** vs NEVER-use: modest composite-CVD signal; MI & stroke not significant",
+          "systems": "Cardio",
+          "tier": "T2 (ceiling — see #16/#17)",
+          "tierGroup": "primary",
+          "effect": "Pooled AOR 1.31 (1.05–1.62) composite CVD; MI 0.86 (NS); stroke 1.44 (NS). PATH cohort exclusive vapers HR 1.00 (0.69–1.45) any CVD — null but underpowered (822 users, ~4 yr)",
+          "reversibility": "unknown (too new)",
+          "confidence": "L",
+          "sources": [
+            "S008",
+            "S010"
+          ]
+        },
+        {
+          "number": 12,
+          "text": "Vaping's MI signal is driven by FORMER smokers, not exclusive never-smoker vapers",
+          "systems": "Cardio",
+          "tier": "T2",
+          "tierGroup": "primary",
+          "effect": "2025 meta MI OR 1.53 (1.17–1.89) → 1.24 (1.11–1.37) after adjusting for smoking. Former-smoker vapers MI OR 2.52; **exclusive never-smoker vapers OR ~0.97 (NS)**",
+          "reversibility": "—",
+          "confidence": "M",
+          "sources": [
+            "S012"
+          ]
+        },
+        {
+          "number": 13,
+          "text": "Vaping vs NEVER-use raises respiratory symptoms (surrogate endpoint)",
+          "systems": "Immune/respiratory",
+          "tier": "T2",
+          "tierGroup": "primary",
+          "effect": "Incident respiratory-symptom RR 1.90 (1.28–2.83) vs never-users",
+          "reversibility": "SLOW",
+          "confidence": "M",
+          "sources": [
+            "S013"
+          ]
+        },
+        {
+          "number": 14,
+          "text": "Vaping is meaningfully LESS harmful than continued smoking — but not \"safe,\" not 95%",
+          "systems": "Cardio, Immune",
+          "tier": "T2",
+          "tierGroup": "primary",
+          "effect": "vs smoking: composite CVD HR 0.66 (0.46–0.94); 107-study meta CVD 0.81 & stroke 0.73 (both NS), COPD 0.53, asthma 0.84; respiratory RR 0.75 (0.64–0.89)",
+          "reversibility": "SLOW",
+          "confidence": "M",
+          "sources": [
+            "S008",
+            "S011",
+            "S013"
+          ]
+        },
+        {
+          "number": 15,
+          "text": "Dual use (smoke + vape) confers NO benefit over smoking alone",
+          "systems": "Cardio, Immune",
+          "tier": "T2",
+          "tierGroup": "primary",
+          "effect": "All-cause mortality HR 1.06 (0.83–1.37) vs exclusive smoking (= no difference); respiratory RR 0.97 (= smokers); COPD RR 3.86 vs never-users",
+          "reversibility": "SLOW",
+          "confidence": "M",
+          "sources": [
+            "S009",
+            "S013"
+          ]
+        },
+        {
+          "number": 16,
+          "text": "**Cannabis**: composite adverse CV events elevated vs non-users — but individual endpoints shaky",
+          "systems": "Cardio",
+          "tier": "T2 (observational, confounded)",
+          "tierGroup": "primary",
+          "effect": "Composite CV RR 1.48 (1.16–1.90) sig (Sebastian 2025, 17 cohorts, 1.9M). MI 1.25 & stroke 1.38 NS *in same analysis*; a larger ACC 2025 meta found MI OR 1.38 (1.14–1.68) sig — genuinely conflicting",
+          "reversibility": "unknown",
+          "confidence": "L–M",
+          "sources": [
+            "S017",
+            "S018"
+          ]
+        },
+        {
+          "number": 17,
+          "text": "Cannabis CV/mortality estimates are NOT adjusted for tobacco co-use — blocks causal reading",
+          "systems": "Cardio",
+          "tier": "T2 (confounding caveat)",
+          "tierGroup": "primary",
+          "effect": "Key meta-analyses don't isolate cannabis from co-smoked tobacco (a dominant ASCVD driver); no never-tobacco pooled estimate exists",
+          "reversibility": "—",
+          "confidence": "M",
+          "sources": [
+            "S017",
+            "S019"
+          ]
+        },
+        {
+          "number": 18,
+          "text": "Adult-ONSET use: no measured harm to long-term cognitive decline (scope-limited)",
+          "systems": "Neuro",
+          "tier": "T2",
+          "tierGroup": "primary",
+          "effect": "Danish cohort 5,162 men, ~44 yr: age-of-initiation & heavy use NS; users declined slightly *less* (confounding, not protection). BUT all-male, 92% former/abstinent, healthy-survivor bias — does NOT cover current heavy users or women",
+          "reversibility": "SLOW",
+          "confidence": "M",
+          "sources": [
+            "S020"
+          ]
+        },
+        {
+          "number": 19,
+          "text": "Adolescent-ONSET *persistent* use predicts IQ decline — real coefficient, CONTESTED causality",
+          "systems": "Neuro",
+          "tier": "T2 (cohort) / causality disputed",
+          "tierGroup": "primary",
+          "effect": "Dunedin: β −0.152 for persistent adolescent-onset use, not explained by childhood self-control. Rogeberg argues residual SES confounding; the authors' \"SES doesn't confound\" rebuttals did NOT survive our verification → unresolved",
+          "reversibility": "IRREVERSIBLE if causal (developing brain)",
+          "confidence": "L–M",
+          "sources": [
+            "S021",
+            "S022"
+          ]
+        },
+        {
+          "number": 20,
+          "text": "\"Vaping is 95% less harmful than smoking\" is an expert ESTIMATE, not a measured result",
+          "systems": "—",
+          "tier": "T4 (provenance)",
+          "tierGroup": "informational",
+          "effect": "PHE 2015 \"best estimate\" from expert elicitation (McNeill/Hajek); critics tie the underlying figure to an industry-linked report. No cohort derivation",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S014",
+            "S015"
+          ]
+        },
+        {
+          "number": 21,
+          "text": "No long-term hard-endpoint mortality cohort on vaping EXISTS yet",
+          "systems": "—",
+          "tier": "evidence-maturity",
+          "tierGroup": "informational",
+          "effect": "Longest cohorts ~3.5 yr median follow-up; as of 2023 effects on cancer/CVD/most respiratory disease \"not known.\" This is why #11–#15 are capped at T2",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S009",
+            "S016"
+          ]
+        },
+        {
+          "number": 22,
+          "text": "Complete switch cigarettes→vaping *may* lower mortality vs continued smoking — CONTESTED",
+          "systems": "Cardio",
+          "tier": "T3 (split verdict)",
+          "tierGroup": "informational",
+          "effect": "HR 0.64 (0.41–0.99) confirmed from one framing but the SAME claim was REFUTED 0–3 from the PubMed mirror of the study. Unresolved — do not rely on it",
+          "reversibility": "—",
+          "confidence": "L",
+          "sources": [
+            "S009"
+          ]
+        },
+        {
+          "number": 23,
+          "text": "SLT heart-disease mortality signal may be null (no significant excess)",
+          "systems": "Cardio",
+          "tier": "T3 (contested, industry-affiliated)",
+          "tierGroup": "informational",
+          "effect": "Fisher/Altria: HR 1.07 & 1.20 (both NS). But other NHIS analyses find HR 1.63 (1.27–2.09). Genuinely mixed",
+          "reversibility": "—",
+          "confidence": "L",
+          "sources": [
+            "S006"
+          ]
+        },
+        {
+          "number": 24,
+          "text": "Mendelian-randomization may erase even the IHD protection of alcohol",
+          "systems": "Cardio",
+          "tier": "T3 (disputed; refuted in our verification)",
+          "tierGroup": "informational",
+          "effect": "Claim that genetically-predicted alcohol shows mostly-null CV association did NOT survive 3-vote check (1–2)",
+          "reversibility": "—",
+          "confidence": "L",
+          "sources": []
+        },
+        {
+          "number": 25,
+          "text": "Cannabis acute MI *triggering*: ~4.8× in the hour after SMOKING",
+          "systems": "Cardio",
+          "tier": "T3 (single small case-crossover)",
+          "tierGroup": "informational",
+          "effect": "Mittleman 2001 (n=3,882 MI), route-specific to smoking, wide CI; pooled *chronic* estimates NS. An acute-trigger story, not chronic risk",
+          "reversibility": "FAST (transient)",
+          "confidence": "L",
+          "sources": [
+            "S019"
+          ]
+        },
+        {
+          "number": 26,
+          "text": "Cannabis all-cause mortality RR ~1.53 — but LOW certainty",
+          "systems": "Cardio / all",
+          "tier": "T3 (low GRADE)",
+          "tierGroup": "informational",
+          "effect": "Alimoradi 2025, 14 cohorts: RR 1.53 (1.09–2.14) but I²=98%, unadjusted, author-graded LOW. The \"doubles mortality\" (RR 2.53 general-pop split) framing was REFUTED in our verification",
+          "reversibility": "unknown",
+          "confidence": "L",
+          "sources": [
+            "S024"
+          ]
+        },
+        {
+          "number": 27,
+          "text": "Adolescent cognitive deficits partially recover with abstinence",
+          "systems": "Neuro",
+          "tier": "T3 (small, n=40)",
+          "tierGroup": "informational",
+          "effect": "Verbal memory recovers ~2–3 wk abstinence; attention/vigilance deficits persisted across 3 wk. Adolescent-specific, surrogate endpoints only",
+          "reversibility": "SLOW (partial)",
+          "confidence": "L",
+          "sources": [
+            "S025"
+          ]
+        }
+      ],
+      "dose": "**The 80/20:** for both tobacco and alcohol the curve has **no safe floor for the net outcome** — the gain is almost entirely in *not starting* / *full cessation*, not in moderation.\n\n- **Tobacco:** dose-response is steep from the very first cigarette (<1 CPD already HR 1.64). There is no \"light smoking is basically fine\" tier. The single highest-value move is total cessation; intensity reduction helps far less than quitting.\n- **Cessation timing:** benefit is steeply front-loaded by age — quit-before-40 recovers ~90%, and benefit is *detectable within 3 years*. Returns diminish with age but stay positive into the 70s.\n- **Alcohol:** harm-minimizing intake across all outcomes = **0 drinks/week.** The only protective window (IHD) sits near ~1 drink/day and is wiped out by monotonically rising cancer risk. Treat \"moderate drinking is healthy\" as overturned at the net level. Practical floor for *meaningfully lower* (not zero) harm is roughly ≤1 drink/day, but lower is always better and the gradient never reverses for cancer.\n- **Vaping:** not a dose question so much as a *comparator* question. vs **smoking**, it's clearly less harmful (esp. respiratory/COPD) — but the famous \"95% safer\" number is a 2015 expert estimate, not measured, and the real CVD gap is more like 30–40%, not 95%. vs **never-use**, it is NOT harm-free (composite-CVD AOR ~1.31, respiratory RR ~1.90). Crucially, the scary MI signals are concentrated in *former smokers* who vape; exclusive never-smoker vapers show little MI elevation. And no long-term mortality cohort exists yet, so all of this is T2-capped. Net: a harm-*reduction* tool for smokers, not a health-neutral habit for non-smokers.\n- **Cannabis:** the dose/threshold picture is genuinely thin and the harm is **population-specific, not universal**. The two axes that matter:\n  - *Age of onset.* The credible cognitive-harm signal is for **adolescent-onset, persistent/heavy** use (Dunedin IQ decline — though causality is contested on SES-confounding grounds). The one large **adult-onset** cohort found *no* measured cognitive harm. If there's a \"minimum-harm\" rule, it's \"don't start young, don't use heavily during brain development.\"\n  - *Cardiovascular.* Chronic-use signals are real but modest, observational, and **not adjusted for tobacco co-use** — so the independent effect of cannabis is unquantified. The dramatic numbers (acute MI ~4.8× in the hour after *smoking*; \"doubles CV death\") are either a transient trigger from a single small study or a low-certainty/refuted framing. Route matters but isn't quantified for hard endpoints; combustion is the suspected driver. Net: occasional adult use shows little measured hard-endpoint harm; the caution is heavy/chronic use, smoking as the route, and anyone with existing CVD.",
+      "actions": "- [ ] Don't smoke. If you do: quit — this is the single highest-leverage action in the entire project. (Benefit detectable in 3 yrs; ~90% recovery if done before 40.)\n- [ ] Avoid smokeless tobacco as a \"safe\" substitute — smaller penalty than cigarettes but still HR ~1.36.\n- [ ] Treat alcohol as a net-negative with no health-justified floor. Anchor on ≤1 drink/day as a harm-*reduction* ceiling, understanding 0 is optimal for total health.\n- [ ] Don't take up vaping as a non-smoker — it is not harm-free and its long-term risks are literally unmeasured.\n- [ ] If you're a smoker who can't quit outright, a *complete* switch to vaping (not dual use) is a defensible harm-reduction step — but it's a cessation tactic, not a safe habit. Dual use buys nothing.\n- [ ] Cannabis: occasional adult use is low-measured-harm on hard endpoints. Keep it occasional (not heavy/daily), avoid the *smoked* route if using, and treat existing CVD as a contraindication. The real red line is adolescent/young-brain heavy use — not applicable to you, but relevant for anyone you'd advise.",
+      "caveats": "- **Smoking HRs** are adjusted for age, education, adiposity, and alcohol — these are the substance's own effect, not lifestyle confounds.\n- **Finding #7 (older-age cessation) is a life-table SIMULATION** (CPS-II relative risks + 2018 prevalence), not directly observed cohort deltas. Tagged T1-input but confidence M.\n- **Smokeless tobacco heart-disease** evidence is genuinely unsettled; the \"no excess\" result leans on an Altria-affiliated study (rows #8/#11). All-cause penalty (#8) is solid; the cardiac-specific magnitude is not.\n- **Alcohol \"zero is optimal\"** is the robust *net-across-outcomes* conclusion. The 2022 GBD update added age-specific thresholds suggesting a small possible net benefit for *some older adults* — so this is not \"one drink will kill you,\" it's \"there is no population-level health reason to start or maintain drinking.\" The IHD-specific protection (#10) is real but is the least causally-secure piece (MR debate ongoing).\n- **Reverse causation** (\"sick-quitter\" effect) can inflate short-term mortality in some late-quitter subgroups; it does not overturn the 3-year benefit signal or the core cessation conclusions.\n- All cessation \"years averted/restored\" figures are observational (\"potentially averted\"), not RCT-derived.\n- **Vaping evidence is immature and largely cross-sectional.** Hard-endpoint claims (#11–#15) are T2-capped because no long-term cohort exists and most data can't establish causality/temporality (reverse causation: people may switch to vaping *after* a cardiac event). The MI signal is confounded by smoking history. Do not let vaping's T2 rows outrank tobacco/alcohol T1 conclusions.\n- **EVALI ≠ regulated nicotine vaping.** The 2019 lung-injury outbreak was traced to illicit THC cartridges with vitamin-E-acetate, not regulated nicotine e-liquid — relevant context but a separate phenomenon (not separately verified here; sources noted in `_meta/sources.md`).\n- **Cannabis evidence is observational and confounder-dominated.** No RCTs exist for cannabis vs MI/stroke/death. Tobacco co-use is the dominant unadjusted confounder; the flagship 2025 CV meta-analysis doesn't even mention smoking adjustment. The CV literature is *internally* conflicting (same meta: composite significant, MI/stroke null; a larger meta: MI significant). The mortality RR 1.53 is author-graded LOW certainty (I²=98%). Do not let cannabis's T2/T3 rows imply T1-grade certainty.\n- **Cannabis harm is population-specific.** The adolescent-onset IQ signal does NOT transfer to adult occasional users; the adult \"no harm\" cohort (Danish men, 92% abstinent, healthy-survivor-biased) does NOT transfer to current heavy users or women. Match the claim to the population.",
+      "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **Nicotine vaping** — RESOLVED to T2 (patch 2026-06-18, rows #11–#18). Remaining sub-question: the long-term (decadal) hard-endpoint mortality data simply doesn't exist yet — revisit when a long-horizon cohort matures. Treat Certainty as capped until then.\n- **Cannabis** — RESOLVED to T2 (run 2026-06-18, rows #16–#19, #25–#27). Residual unknowns: (a) does the CV/mortality signal survive proper tobacco-co-use adjustment? — no never-tobacco pooled estimate exists; (b) is the Dunedin adolescent-IQ effect causal or SES/genetically confounded? — unresolved dispute; (c) no head-to-head route comparison (smoked vs edible vs vaporized) on hard endpoints. These are refinements, not blockers for ranking.\n- Is the smokeless-tobacco heart-disease signal truly null or modestly elevated, once industry-affiliation bias is reconciled across independent cohorts?\n- Does the 2022 GBD age-specific alcohol threshold (possible small net benefit for older adults) hold up against Mendelian-randomization evidence, and at what age/sex?\n- Long-time-since-quitting mortality recovery for *light* smoking specifically (a contested HR ~1.42 for ≥50-yr-ago light-smoking quitters was refuted in verification — needs cleaner data)."
+    },
+    "sun-skin": {
+      "slug": "sun-skin",
+      "name": "Sun & Skin",
+      "status": "pending",
+      "scope": "UV exposure, photoaging, skin cancer. Photodamage is irreversible.\n\n- In:\n- Out (and where it lives instead):",
+      "claims": [],
+      "dose": "",
+      "actions": "- [ ]",
+      "caveats": "",
+      "openQuestions": ""
+    }
+  },
+  "sources": {
+    "S001": {
+      "id": "S001",
+      "citation": "Jha et al., NEJM 2013;368:341 — \"21st-Century Hazards of Smoking and Benefits of Cessation in the US.\" ~217k NHIS adults.",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa1211128",
+      "tier": "T1"
+    },
+    "S002": {
+      "id": "S002",
+      "citation": "Cho et al., NEJM Evidence 2024 — pooled 1.48M adults (US/UK/Norway/Canada), 122,697 deaths.",
+      "url": "https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272",
+      "tier": "T1"
+    },
+    "S003": {
+      "id": "S003",
+      "citation": "Inoue-Choi et al., JNCI Cancer Spectrum 2019;3(3):pkz036 — 165,335 US adults.",
+      "url": "https://academic.oup.com/jncics/article/3/3/pkz036/5490836",
+      "tier": "T1"
+    },
+    "S004": {
+      "id": "S004",
+      "citation": "Inoue-Choi et al., JAMA Intern Med 2017 — NIH-AARP, n=290,215.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5555224/",
+      "tier": "T1"
+    },
+    "S005": {
+      "id": "S005",
+      "citation": "Le, Mendez & Warner, AJPM 2024;S0749-3797(24)00217-4 — life-table model (CPS-II RRs + 2018 NHIS/Census).00217-4/fulltext)",
+      "url": "https://www.ajpmonline.org/article/S0749-3797(24",
+      "tier": "T1 (model)"
+    },
+    "S006": {
+      "id": "S006",
+      "citation": "Fisher et al. 2019 (Altria-affiliated) — NLMS & NHIS cohorts.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6458834/",
+      "tier": "T3"
+    },
+    "S007": {
+      "id": "S007",
+      "citation": "GBD 2016 Alcohol Collaborators, Lancet 2018;392:1015 — \"Alcohol use and burden for 195 countries.\"31310-2/fulltext)",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18",
+      "tier": "T1"
+    },
+    "S008": {
+      "id": "S008",
+      "citation": "Berlowitz et al., Circulation 2022;145 — PATH cohort (24,027 adults).",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.057369",
+      "tier": "T2"
+    },
+    "S009": {
+      "id": "S009",
+      "citation": "NHIS-mortality cohort, AJPM Prev Med 2024;S0091743524000987 (= PMID 38552720), 145,390 adults, 3.5yr median FU.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0091743524000987",
+      "tier": "T2"
+    },
+    "S010": {
+      "id": "S010",
+      "citation": "E-cigarette CVD meta-analysis, PMC12412302 (11 studies, mostly cross-sectional).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12412302/",
+      "tier": "T2"
+    },
+    "S011": {
+      "id": "S011",
+      "citation": "Glantz et al. meta-analysis (107 studies), NEJM Evidence 2024;EVIDoa2300229.",
+      "url": "https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300229",
+      "tier": "T2"
+    },
+    "S012": {
+      "id": "S012",
+      "citation": "E-cigarette & MI meta-analysis 2025, BMC Public Health;s12889-025-25161-2 (~430k for MI).",
+      "url": "https://link.springer.com/article/10.1186/s12889-025-25161-2",
+      "tier": "T2"
+    },
+    "S013": {
+      "id": "S013",
+      "citation": "Respiratory health effects of vaping — systematic review (119 studies), Tobacco Induced Diseases 2025.",
+      "url": "https://www.tobaccoinduceddiseases.org/Evidence-update-on-the-respiratory-health-effects-of-vaping-e-cigarettes-A-systematic,209954,0,2.html",
+      "tier": "T2"
+    },
+    "S014": {
+      "id": "S014",
+      "citation": "Public Health England 2015 press release — \"e-cigarettes around 95% less harmful.\"",
+      "url": "https://www.gov.uk/government/news/e-cigarettes-around-95-less-harmful-than-tobacco-estimates-landmark-review",
+      "tier": "T4 (provenance)"
+    },
+    "S015": {
+      "id": "S015",
+      "citation": "UCSF critique of the PHE 95% figure (industry-linked underlying report).",
+      "url": "https://tobacco.ucsf.edu/uk-report-claiming-e-cigs-95-safer-cigs-based-one-industry-linked-report-questions-phes-scientific-credibilty",
+      "tier": "secondary"
+    },
+    "S016": {
+      "id": "S016",
+      "citation": "Vaping clinical-effects review 2023, PMC10396413.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10396413/",
+      "tier": "T2/review"
+    },
+    "S017": {
+      "id": "S017",
+      "citation": "Sebastian et al. 2025, Current Problems in Cardiology — 17 cohorts, 1,902,481 adults.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39800612/",
+      "tier": "T2"
+    },
+    "S018": {
+      "id": "S018",
+      "citation": "ACC 2025 meta-analysis press release (26 studies, ~72.5M).",
+      "url": "https://www.acc.org/About-ACC/Press-Releases/2025/03/17/15/35/Cannabis-Users-Face-Substantially-Higher-Risk",
+      "tier": "secondary"
+    },
+    "S019": {
+      "id": "S019",
+      "citation": "Dadrass et al. 2023, Toxicology Reports — PMC10165401.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10165401/",
+      "tier": "T2"
+    },
+    "S020": {
+      "id": "S020",
+      "citation": "Hoeg et al. 2024, Brain and Behavior — PMC11541857 (5,162 Danish men, ~44 yr).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11541857/",
+      "tier": "T2"
+    },
+    "S021": {
+      "id": "S021",
+      "citation": "Meier/Moffitt/Caspi/Poulton 2013 PNAS reply (Dunedin) — PMC3600438.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3600438/",
+      "tier": "T2"
+    },
+    "S022": {
+      "id": "S022",
+      "citation": "Rogeberg 2013 PNAS + PMC3600466 (stratified reanalysis).",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1215678110",
+      "tier": "T2"
+    },
+    "S024": {
+      "id": "S024",
+      "citation": "Alimoradi et al. 2025, Health Science Reports (Wiley) — PMC12464731 (14 cohorts).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12464731/",
+      "tier": "T3 (low GRADE)"
+    },
+    "S025": {
+      "id": "S025",
+      "citation": "Hanson et al. 2010, Addictive Behaviors — PMC2933185 (n=40 adolescents).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2933185/",
+      "tier": "T3"
+    },
+    "S026": {
+      "id": "S026",
+      "citation": "Cardiorespiratory fitness & mortality — umbrella review 2024, BJSM (199 cohorts, 20.9M observations).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11103301/",
+      "tier": "T1"
+    },
+    "S027": {
+      "id": "S027",
+      "citation": "Kodama et al. 2009, JAMA — CRF & mortality meta-analysis (33 studies, 102,980 adults, 6,910 deaths).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19454641/",
+      "tier": "T1"
+    },
+    "S028": {
+      "id": "S028",
+      "citation": "Wang / López-Bueno et al. 2023, JAMA Internal Medicine — NHIS prospective cohort (500,705 US adults, 56,148 deaths, ~10 yr).",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2807854",
+      "tier": "T1"
+    },
+    "S029": {
+      "id": "S029",
+      "citation": "Wang et al. 2025, PeerJ — vigorous-activity dose-response meta-analysis (20 prospective cohorts, PROSPERO-registered).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12145088/",
+      "tier": "T1"
+    },
+    "S030": {
+      "id": "S030",
+      "citation": "Weekend-warrior vs regularly-active meta-analysis 2025, BMC Public Health (21 studies).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12604259/",
+      "tier": "T1"
+    },
+    "S031": {
+      "id": "S031",
+      "citation": "Zhang et al. 2026, BJSM — resistance training & mortality, 3 Harvard cohorts (HPFS/NHS/NHS II, n=147,374, up to 30 yr, 35,798 deaths).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42230125/",
+      "tier": "T1"
+    },
+    "S032": {
+      "id": "S032",
+      "citation": "Wu et al. 2017, JAMDA — grip strength & mortality meta-analysis (42 cohorts, 3,002,203 participants).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28549705/",
+      "tier": "T1 (predictor)"
+    },
+    "S033": {
+      "id": "S033",
+      "citation": "Leong et al. 2015 (PURE), The Lancet — grip strength in 139,691 adults, 17 countries.62000-6/abstract)",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14",
+      "tier": "T1 (predictor)"
+    },
+    "S034": {
+      "id": "S034",
+      "citation": "Hertfordshire Cohort Study — grip strength & mortality (n=909, ~18 yr).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11057971/",
+      "tier": "T1 (predictor)"
+    },
+    "S035": {
+      "id": "S035",
+      "citation": "Araujo et al. 2022, BJSM — 10-second one-leg stance & mortality (CLINIMEX cohort, n=1,702, ages 51–75, ~7 yr).",
+      "url": "https://www.immediatecaretraining.ie/Plugin/Papers/assets/pdf/ICT-Successful-10-second-one-legged.pdf",
+      "tier": "T1 (predictor)"
+    },
+    "S036": {
+      "id": "S036",
+      "citation": "Pavasini et al. 2016, BMC Medicine — SPPB & mortality meta-analysis (17 studies, 16,534 participants, mean age 76).",
+      "url": "https://link.springer.com/article/10.1186/s12916-016-0763-7",
+      "tier": "T1 (predictor)"
+    },
+    "S037": {
+      "id": "S037",
+      "citation": "Resistance-training dose-response meta-analysis (Momma-type, 16 cohorts).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35599175/",
+      "tier": "T2"
+    },
+    "S038": {
+      "id": "S038",
+      "citation": "Wiedenmann/Hortobágyi et al. 2023 — falls-prevention network meta-analysis (66 RCTs, 47,420 participants), Eur Rev Aging Phys Act.",
+      "url": "https://link.springer.com/article/10.1186/s11556-023-00311-w",
+      "tier": "T1 (RCT NMA)"
+    },
+    "S039": {
+      "id": "S039",
+      "citation": "Pillay et al. 2024 — systematic review + NMA of fall-prevention exercise (219 RCTs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11590344/",
+      "tier": "T1 (RCT NMA)"
+    },
+    "S040": {
+      "id": "S040",
+      "citation": "Multi-component physical activity & balance meta-analysis 2025 (51 studies, 2,743 participants), Eur Rev Aging Phys Act.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12070723/",
+      "tier": "T1/T2 (surrogate)"
+    },
+    "S041": {
+      "id": "S041",
+      "citation": "Dyer/Sherrington et al. 2023 — exercise for falls in residential aged care, meta-analysis (19 RCTs), Age and Ageing (afad217).",
+      "url": "https://academic.oup.com/ageing/article/52/12/afad217/7469353",
+      "tier": "T1 (RCT meta)"
+    },
+    "S042": {
+      "id": "S042",
+      "citation": "Wang et al. 2020 — exercise & fracture prevention meta-analysis (20 RCTs, 7,704 participants, 428 events).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7650290/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S043": {
+      "id": "S043",
+      "citation": "Kemmler/von Stengel et al. 2022, JBMR — exercise & fracture, supervised vs unsupervised subgroup (20 studies, 23,111 participant-yrs).",
+      "url": "https://academic.oup.com/jbmr/article/37/11/2132/7512369",
+      "tier": "T1/T2"
+    },
+    "S044": {
+      "id": "S044",
+      "citation": "Kemmler et al. 2022, Osteoporos Int — major osteoporotic fracture & exercise meta-analysis (11 trials, ~19,307 participant-yrs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9813248/",
+      "tier": "T1/T2"
+    },
+    "S045": {
+      "id": "S045",
+      "citation": "2025 review, Current Osteoporosis Reports — exercise, BMD, fracture & detraining.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11985624/",
+      "tier": "T2 (review)"
+    },
+    "S046": {
+      "id": "S046",
+      "citation": "HiRIT vs moderate-intensity resistance/impact BMD comparison (3 RCTs, n=240).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9615132/",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    "S047": {
+      "id": "S047",
+      "citation": "Lu et al. 2023, Frontiers Public Health — resistance-exercise BMD network meta-analysis (19 RCTs, 919 subjects).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9941565/",
+      "tier": "T2 (RCT NMA, surrogate)"
+    },
+    "S048": {
+      "id": "S048",
+      "citation": "Sleep-duration & all-cause mortality meta-analysis 2025, GeroScience (79 cohorts).",
+      "url": "https://link.springer.com/article/10.1007/s11357-025-01592-y",
+      "tier": "T1"
+    },
+    "S049": {
+      "id": "S049",
+      "citation": "NHANES sleep-duration & mortality 2023, Front Cardiovasc Med (n=26,977).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10301724/",
+      "tier": "T1"
+    },
+    "S050": {
+      "id": "S050",
+      "citation": "Kwok et al. 2018, JAHA — sleep & cardiovascular/mortality dose-response meta (74 cohorts, 3.34M).",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.118.008552",
+      "tier": "T1"
+    },
+    "S051": {
+      "id": "S051",
+      "citation": "Sleep duration & CVD/cerebrovascular U-shape meta 2022, Front Cardiovasc Med (71 cohorts, 3.8M).",
+      "url": "https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2022.907990/full",
+      "tier": "T1"
+    },
+    "S052": {
+      "id": "S052",
+      "citation": "Sleep & stroke incidence/mortality meta 2025, GeroScience (43 studies).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12181169/",
+      "tier": "T1"
+    },
+    "S053": {
+      "id": "S053",
+      "citation": "Insomnia & cardiovascular outcomes meta 2023, PLoS One (21 studies, 388,906 cases).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10513332/",
+      "tier": "T1/T2"
+    },
+    "S054": {
+      "id": "S054",
+      "citation": "Sleep Regularity Index & mortality 2023, eLife — UK Biobank (n=88,975, objective accelerometry).",
+      "url": "https://elifesciences.org/articles/88359",
+      "tier": "T1"
+    },
+    "S055": {
+      "id": "S055",
+      "citation": "Mendelian-randomization meta of insomnia & cardiovascular disease 2024, JCSM (9 MR studies).",
+      "url": "https://jcsm.aasm.org/doi/10.5664/jcsm.11326",
+      "tier": "T1 (MR — causal)"
+    },
+    "S056": {
+      "id": "S056",
+      "citation": "OSA cardiovascular risk & CPAP review 2025, Medicina.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12654527/",
+      "tier": "T1 (cohort)"
+    },
+    "S057": {
+      "id": "S057",
+      "citation": "CPAP & hard cardiovascular endpoints — RCT meta-analysis 2024 (6 RCTs, n=4,493).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11273881/",
+      "tier": "T1 (RCT)"
+    },
+    "S058": {
+      "id": "S058",
+      "citation": "Sleep & dementia lag-analysis cohort (LASA, n=2,218) + MR context, PMC12184010.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12184010/",
+      "tier": "T1/T2"
+    },
+    "S059": {
+      "id": "S059",
+      "citation": "Henry et al. 2019, Int J Epidemiol — MR of sleep traits & Alzheimer's.",
+      "url": "https://academic.oup.com/ije/article/48/3/849/5486060",
+      "tier": "T1 (MR)"
+    },
+    "S060": {
+      "id": "S060",
+      "citation": "Anderson et al. 2021, Int J Epidemiol — MR sleep & neurodegeneration.",
+      "url": "https://academic.oup.com/ije/article/50/3/817/5956327",
+      "tier": "T1 (MR)"
+    },
+    "S061": {
+      "id": "S061",
+      "citation": "Shokri-Kojori et al. 2018, PNAS — one-night sleep deprivation & brain amyloid-beta (n=20).",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1721694115",
+      "tier": "T2/T3 (surrogate)"
+    },
+    "S062": {
+      "id": "S062",
+      "citation": "Ju et al. 2017, Brain — slow-wave disruption & CSF amyloid-beta.",
+      "url": "https://academic.oup.com/brain/article/140/8/2104/3933862",
+      "tier": "T2/T3 (surrogate)"
+    },
+    "S063": {
+      "id": "S063",
+      "citation": "van der Zweerde et al. 2019 — CBT-I efficacy meta-analysis (30 RCTs).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31491656/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S064": {
+      "id": "S064",
+      "citation": "Zhang et al. 2022 — CBT-I in older adults meta-analysis (14 RCTs).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35968818/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S065": {
+      "id": "S065",
+      "citation": "Fully-automated digital CBT-I meta-analysis 2025, npj Digital Medicine (29 RCTs, n=9,475).",
+      "url": "https://www.nature.com/articles/s41746-025-01514-4",
+      "tier": "T1 (RCT meta)"
+    },
+    "S066": {
+      "id": "S066",
+      "citation": "AASM 2026 clinical guideline — CBT-I as first-line for chronic insomnia.",
+      "url": "https://aasm.org/combination-treatment-chronic-insomnia-guideline/",
+      "tier": "T1 (guideline)"
+    },
+    "S067": {
+      "id": "S067",
+      "citation": "Irwin et al. 2022, JAMA Psychiatry — CBT-I & depression prevention RCT (n=291, ≥60yr, 36-mo).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8733847/",
+      "tier": "T1 (RCT, hard endpoint)"
+    },
+    "S068": {
+      "id": "S068",
+      "citation": "Irwin et al. 2015, Biological Psychiatry — CBT-I/Tai-Chi & inflammation RCT (n=123).00079-7/abstract)",
+      "url": "https://www.biologicalpsychiatryjournal.com/article/S0006-3223(15",
+      "tier": "T2 (single RCT, surrogate)"
+    },
+    "S069": {
+      "id": "S069",
+      "citation": "Tasali et al. 2022, JAMA Internal Medicine — sleep-extension RCT (n=80, 2 wk).",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2788694",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    "S070": {
+      "id": "S070",
+      "citation": "CBT sleep-extension RCT in short sleepers 2021, J Sleep Res (n=18, 6 wk).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34459060/",
+      "tier": "T2 (small RCT)"
+    },
+    "S071": {
+      "id": "S071",
+      "citation": "Eleftheriou et al. 2018, Br J Nutr — Mediterranean diet & all-cause mortality meta-analysis (30 cohorts, 225,600 deaths).",
+      "url": "https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/mediterranean-diet-and-its-components-in-relation-to-allcause-mortality-metaanalysis/81EB9EF4D5B7AD5BC3ADC8AEC86371E1",
+      "tier": "T1 (obs)"
+    },
+    "S072": {
+      "id": "S072",
+      "citation": "Karam et al. 2021, Nutrients — MedDiet in secondary-prevention (CVD) cohorts (7 studies).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8400615/",
+      "tier": "T1 (obs)"
+    },
+    "S073": {
+      "id": "S073",
+      "citation": "Hall et al. 2019, Cell Metabolism — ultra-processed food inpatient RCT (n=20, 2 wk).30248-7)",
+      "url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(19",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    "S074": {
+      "id": "S074",
+      "citation": "Suksatan et al. 2022, Nutrients — UPF & mortality meta-analysis (7 cohorts, 207,291).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747520/",
+      "tier": "T1 (obs)"
+    },
+    "S075": {
+      "id": "S075",
+      "citation": "Chen et al. 2023, Diabetes Care — UPF & type-2 diabetes meta-analysis (415,554).",
+      "url": "https://diabetesjournals.org/care/article/46/7/1335/148548/Ultra-Processed-Food-Consumption-and-Risk-of-Type",
+      "tier": "T1 (obs)"
+    },
+    "S076": {
+      "id": "S076",
+      "citation": "Mo et al. 2025, Front Nutr — plant-based diet indices & mortality (11 cohorts, 977,763).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11788165/",
+      "tier": "T1 (obs)"
+    },
+    "S077": {
+      "id": "S077",
+      "citation": "Orlich et al. 2013, JAMA Intern Med — Adventist Health Study-2 vegetarian mortality (n=73,308).",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1710093",
+      "tier": "T1 (obs)"
+    },
+    "S078": {
+      "id": "S078",
+      "citation": "Key et al. — EPIC-Oxford vegetarian/vegan mortality review (UK, ~18yr).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7613518/",
+      "tier": "T1 (obs)"
+    },
+    "S079": {
+      "id": "S079",
+      "citation": "Dybvik et al. 2023, Eur J Nutr — vegetarian/vegan & CVD meta-analysis (13 cohorts, 844,175).",
+      "url": "https://link.springer.com/article/10.1007/s00394-022-02942-8",
+      "tier": "T1 (obs)"
+    },
+    "S081": {
+      "id": "S081",
+      "citation": "Wang et al. 2016, Public Health Nutrition — red/processed meat & mortality meta (17 cohorts, 150,328 deaths).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26143683/",
+      "tier": "T1 (obs)"
+    },
+    "S082": {
+      "id": "S082",
+      "citation": "WHO/IARC Monograph 114 — carcinogenicity of red & processed meat.",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/cancer-carcinogenicity-of-the-consumption-of-red-meat-and-processed-meat",
+      "tier": "T1 (classification)"
+    },
+    "S083": {
+      "id": "S083",
+      "citation": "Bradbury et al. 2020, Int J Epidemiol — UK Biobank meat & colorectal cancer (n=474,996).",
+      "url": "https://academic.oup.com/ije/article/49/5/1540/5894731",
+      "tier": "T1 (obs)"
+    },
+    "S084": {
+      "id": "S084",
+      "citation": "Johnston et al. 2019, Annals Intern Med (NutriRECS) — GRADE review of meat reduction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31569235/",
+      "tier": "T1 (GRADE)"
+    },
+    "S085": {
+      "id": "S085",
+      "citation": "SSB & cardiometabolic mortality meta-analyses (Frontiers Nutr 2023; Nutrients 2021; 2024 update).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10050372/",
+      "tier": "T1 (obs)"
+    },
+    "S086": {
+      "id": "S086",
+      "citation": "Ma et al. 2023, BMJ — SSB & mortality in type-2 diabetics (Harvard cohorts + meta).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37076174/",
+      "tier": "T1 (obs)"
+    },
+    "S087": {
+      "id": "S087",
+      "citation": "Saneei et al. 2014, Nutr Metab Cardiovasc Dis — DASH & blood pressure RCT meta (17 RCTs, n=2,561).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25149893/",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    "S088": {
+      "id": "S088",
+      "citation": "Reynolds et al. 2019, The Lancet — carbohydrate quality / fiber & health (185 cohorts + 58 RCTs).31809-9/fulltext)",
+      "url": "https://www.thelancet.com/article/S0140-6736(18",
+      "tier": "T1 (obs + RCT-surrogate)"
+    },
+    "S089": {
+      "id": "S089",
+      "citation": "Huang et al. 2015, BMC Medicine — NIH-AARP whole grains/cereal fiber & mortality (n=367,442).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4371798/",
+      "tier": "T1 (obs)"
+    },
+    "S090": {
+      "id": "S090",
+      "citation": "Hu et al. 2019, JAHA — marine omega-3 supplements & CV outcomes meta (13 RCTs, 127,477).",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.013543",
+      "tier": "T1 (RCT meta)"
+    },
+    "S091": {
+      "id": "S091",
+      "citation": "Gencer et al. 2021, Circulation — omega-3 supplements & atrial fibrillation (7 RCTs, 81,210).",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.055654",
+      "tier": "T1 (RCT meta)"
+    },
+    "S092": {
+      "id": "S092",
+      "citation": "REDUCE-IT vs STRENGTH review — high-dose EPA & the mineral-oil-placebo controversy.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11697285/",
+      "tier": "T1 (RCT)"
+    },
+    "S093": {
+      "id": "S093",
+      "citation": "Kim/Je/Giovannucci 2019, Eur J Epidemiol — coffee & mortality meta (40 cohorts, 3.85M).",
+      "url": "https://link.springer.com/article/10.1007/s10654-019-00524-3",
+      "tier": "T1 (obs)"
+    },
+    "S094": {
+      "id": "S094",
+      "citation": "Coffee Mendelian-randomization & hard endpoints (up to 223,414).",
+      "url": "https://academic.oup.com/ije/article/45/6/1938/2731240",
+      "tier": "T1 (MR)"
+    },
+    "S095": {
+      "id": "S095",
+      "citation": "CALERIE-2 caloric-restriction RCT in non-obese humans.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7727025/",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    "S096": {
+      "id": "S096",
+      "citation": "CALERIE telomere analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11296136/",
+      "tier": "T2"
+    },
+    "S097": {
+      "id": "S097",
+      "citation": "Intermittent fasting vs continuous caloric restriction RCT meta-analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11930668/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S098": {
+      "id": "S098",
+      "citation": "Lowe et al. 2020, JAMA Intern Med (TREAT) — time-restricted eating RCT.",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2771095",
+      "tier": "T1 (RCT)"
+    },
+    "S099": {
+      "id": "S099",
+      "citation": "Berrington de Gonzalez et al. 2010, NEJM (NCI Cohort Consortium, n=1.46M) + Global BMI Mortality Collaboration 2016 (~10.6M).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3066051/",
+      "tier": "T1 (pooled cohorts)"
+    },
+    "S100": {
+      "id": "S100",
+      "citation": "Stokes & Preston 2015, Int J Epidemiol — obesity paradox as collider/reverse-causation artifact.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4701612/",
+      "tier": "T1 (methodological)"
+    },
+    "S101": {
+      "id": "S101",
+      "citation": "UK individual-participant waist/WHR meta-analysis (9 cohorts, 82,864).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4170776/",
+      "tier": "T1 (obs)"
+    },
+    "S102": {
+      "id": "S102",
+      "citation": "Korean NHIS waist-circumference & mortality cohort (>23M adults).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6352259/",
+      "tier": "T1 (obs)"
+    },
+    "S103": {
+      "id": "S103",
+      "citation": "Look AHEAD — intensive lifestyle weight loss & CV events RCT (n=5,145 T2D).30162-0/abstract)",
+      "url": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(16",
+      "tier": "T1 (RCT, hard endpoint)"
+    },
+    "S104": {
+      "id": "S104",
+      "citation": "Levine & Longo 2014, Cell Metabolism — protein intake & mortality (NHANES III).00062-X)",
+      "url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(14",
+      "tier": "T3 (single confounded cohort)"
+    },
+    "S105": {
+      "id": "S105",
+      "citation": "Naghshi et al. 2020, BMJ — dietary protein & mortality meta (32 cohorts, 715,128).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7374797/",
+      "tier": "T1 (obs)"
+    }
+  }
+}
