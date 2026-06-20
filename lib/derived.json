@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T19:01:18.481Z",
+  "generatedAt": "2026-06-20T00:12:03.486Z",
   "levers": {
     "exercise": {
       "slug": "exercise",
@@ -16,8 +16,8 @@
     "nutrition-metabolic": {
       "slug": "nutrition-metabolic",
       "name": "Nutrition & Metabolic",
-      "status": "in-progress",
-      "claims": 0
+      "status": "complete",
+      "claims": 19
     },
     "oral-sensory": {
       "slug": "oral-sensory",
@@ -51,9 +51,9 @@
     }
   },
   "totals": {
-    "leversComplete": 3,
+    "leversComplete": 4,
     "leversTotal": 8,
     "sourcesTotal": 69,
-    "claimsTotal": 63
+    "claimsTotal": 82
   }
 }
