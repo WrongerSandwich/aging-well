@@ -13,4 +13,9 @@ describe("StatusSection", () => {
       screen.getByLabelText(/research levers complete/i),
     ).toBeInTheDocument();
   });
+  it("links researched lever rows to their detail page", () => {
+    render(<StatusSection />);
+    const link = screen.getByRole("link", { name: /substances/i });
+    expect(link).toHaveAttribute("href", "/levers/substances");
+  });
 });

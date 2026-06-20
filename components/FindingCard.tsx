@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { Finding } from "@/lib/content";
 
 function tierClass(f: Finding): string {
@@ -24,7 +25,9 @@ export default function FindingCard({ finding, hidden }: { finding: Finding; hid
     <article className={cardClass} data-category={finding.category}>
       <div className="finding-top">
         <span className={tierClass(finding)}>{finding.tierLabel}</span>
-        <span className="lever">{finding.lever}</span>
+        <Link className="lever" href={`/levers/${finding.category}`}>
+          {finding.lever}
+        </Link>
       </div>
       <p className="finding-number">{finding.number}</p>
       <h3>
