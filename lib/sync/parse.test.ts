@@ -114,3 +114,109 @@ describe("buildDerived", () => {
     expect(out.levers["nutrition-metabolic"].status).toBe("in-progress");
   });
 });
+
+import {
+  parseClaimsDetailed,
+  parseSection,
+  parseSources,
+  parseLeverDetail,
+} from "./parse";
+
+const DETAIL_MD = `# Lever: Sleep
+
+> Status: RESEARCHED — session 3 (2026-06-18). Covered.
+
+## Scope
+Sleep duration, timing, quality.
+
+- In: duration, insomnia, OSA.
+- Out: caffeine → \`nutrition-metabolic\`.
+
+## Claims table
+| # | Claim | Systems touched | Tier | Effect size (vs. comparator) | Reversibility | Confidence | Source(s) |
+|---|-------|-----------------|------|------------------------------|---------------|------------|-----------|
+| 1 | Sleep ~7.5h is the mortality nadir | Cardio, Neuro | T1 (observational) | Short <7h HR **1.14** | SLOW | H | [S048][S049] |
+| 2 | CBT-I prevents depression | Neuro | T1 (RCT) | HR **0.51** (NNT 7.3) | n/a | H | [S067] |
+| | **— T3/T4 below — informational only — does not rank —** | | | | | | |
+| 3 | Glymphatic amyloid clearance is surrogate-only | Neuro | T3 (surrogate) | ~5% PET shift | unknown | L | [S061] |
+
+## Dose / threshold
+Aim for **~7–7.5h** with consistent timing.
+
+## Actions (behavioral, checkable)
+- [ ] Keep a regular sleep schedule.
+- [ ] Use CBT-I for chronic insomnia.
+
+## Caveats / population modifiers
+Shift workers differ.
+
+## Open questions
+Is short sleep causally harmful at all?
+`;
+
+const SOURCES_MD = `# Sources
+| ID | Source (citation) | Tier | Notes / what it's good for |
+|----|-------------------|------|----------------------------|
+| S048 | Smith et al., Lancet 2020. [link](https://example.com/s048) | T1 | Anchor cohort. |
+| S067 | Irwin et al., JAMA Psych 2022. [link](https://example.com/s067) | T1 | CBT-I depression RCT. |
+`;
+
+describe("parseClaimsDetailed", () => {
+  it("extracts structured claim records, skipping the divider and placeholder rows", () => {
+    const claims = parseClaimsDetailed(DETAIL_MD);
+    expect(claims).toHaveLength(3);
+    expect(claims[0]).toEqual({
+      number: 1,
+      text: "Sleep ~7.5h is the mortality nadir",
+      systems: "Cardio, Neuro",
+      tier: "T1 (observational)",
+      tierGroup: "primary",
+      effect: "Short <7h HR **1.14**",
+      reversibility: "SLOW",
+      confidence: "H",
+      sources: ["S048", "S049"],
+    });
+  });
+  it("classifies T3/T4 rows as informational", () => {
+    const claims = parseClaimsDetailed(DETAIL_MD);
+    expect(claims[1].tierGroup).toBe("primary"); // T1 (RCT)
+    expect(claims[2].tierGroup).toBe("informational"); // T3
+  });
+});
+
+describe("parseSection", () => {
+  it("returns the body between a heading and the next ## heading", () => {
+    expect(parseSection(DETAIL_MD, "Dose / threshold")).toBe(
+      "Aim for **~7–7.5h** with consistent timing.",
+    );
+  });
+  it("returns an empty string for a missing heading", () => {
+    expect(parseSection(DETAIL_MD, "Nonexistent")).toBe("");
+  });
+});
+
+describe("parseSources", () => {
+  it("parses id, citation (link stripped), url, and tier", () => {
+    const sources = parseSources(SOURCES_MD);
+    expect(sources).toHaveLength(2);
+    expect(sources[0]).toEqual({
+      id: "S048",
+      citation: "Smith et al., Lancet 2020.",
+      url: "https://example.com/s048",
+      tier: "T1",
+    });
+  });
+});
+
+describe("parseLeverDetail", () => {
+  it("assembles a full LeverDetail record", () => {
+    const d = parseLeverDetail("sleep", DETAIL_MD);
+    expect(d.slug).toBe("sleep");
+    expect(d.name).toBe("Sleep");
+    expect(d.status).toBe("complete");
+    expect(d.scope).toContain("Sleep duration, timing, quality.");
+    expect(d.claims).toHaveLength(3);
+    expect(d.actions).toContain("Keep a regular sleep schedule.");
+    expect(d.openQuestions).toBe("Is short sleep causally harmful at all?");
+  });
+});
