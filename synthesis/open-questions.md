@@ -31,6 +31,11 @@ contaminate the ranking with low-certainty noise.
 | Nutrition: any HUMAN causal evidence for protein-restriction / mTOR longevity? | Entirely rodent/mechanistic (T3); the one human cohort (Levine) is confounded & contested | Muscle-preservation (adequate protein) beats restriction-for-longevity | T3 | Low priority — adequate-protein guidance is the safer default |
 | Nutrition: fiber dose-response shape (the 25–29 g "plateau" was refuted)? | Clean threshold didn't survive verification | Monotonic-with-attenuation, no proven ceiling | T1 obs | Low priority |
 
+| Medical: COVID-19 vaccine mortality benefit (project-tier verified)? | Crowded out of verification across 3 runs; large pandemic-era benefit is established externally but not re-derived here | Large severe-disease/mortality benefit (well-established) | T1 external (un-verified here) | Low priority — included in actions on external consensus |
+| Medical: polypharmacy→harm and what deprescribing RCTs show on hard endpoints? | The "less is more" arm produced no surviving claims | Polypharmacy assoc w/ falls/ADEs (confounded by indication); deprescribing safe, reduces inappropriate meds, limited mortality evidence | observational + small RCTs | Useful for older-adult guidance; revisit if ranking values it |
+| Medical: MCED (Galleri) / whole-body-MRI quantified false-positive & overdiagnosis harms? | No mortality RCT exists yet (NHS-Galleri pending); no verified claims this run | Net-harmful in asymptomatic average-risk (incidentaloma cascade); no outcome data | T4 (no outcome data) | When NHS-Galleri or outcome data matures |
+| Medical: below what baseline CVD risk do primary-prevention statins stop extending life? | The risk threshold for negligible absolute benefit wasn't pinned | Benefit scales with risk; marginal in low-risk young adults | T1 (magnitude unclear) | At ranking if statins sit near a boundary |
+
 ## Speculative / hype-adjacent (T3–T4 holding pen)
 Longevity-influencer and supplement claims live here until/unless real human outcome
 data promotes them. Do NOT let these into the ranked list on mechanistic plausibility

@@ -1,28 +1,65 @@
 # Lever: Medical & Screening
 
-> Status: STUB — not yet researched. Fill using `_meta/research-template.md`.
+> Status: RESEARCH IN PROGRESS — session 4 (2026-06-19). Split into 3 runs (one-topic-per-run): (1) cancer screening, (2) CV/metabolic primary prevention, (3) vaccination + polypharmacy. Transcribe across all three when they land.
 
 ## Scope
-Vaccination, age-appropriate cancer screening, baseline physician relationship, biomarker monitoring.
+Vaccination, age-appropriate cancer screening, pharmacologic primary prevention, biomarker monitoring. The "catch-it-early / prevent-with-a-pill" lever — where the key tension is disease-specific vs all-cause mortality, overdiagnosis, and screening-hype.
 
-- In:
-- Out (and where it lives instead):
+- In: age-appropriate cancer screening (colorectal, breast, cervical, lung-LDCT, prostate-PSA) — mortality benefit, NNS, overdiagnosis; cardiovascular & metabolic PHARMACOLOGIC primary prevention (statins, antihypertensives, aspirin, lipid/BP targets, coronary-artery-calcium scoring, diabetes/HbA1c screening) — routed here from `nutrition-metabolic`; adult VACCINATION (influenza, shingles/Shingrix, pneumococcal, RSV, COVID); biomarker monitoring & the executive-physical / full-body-MRI / multi-cancer-early-detection (Galleri) hype; polypharmacy / deprescribing; baseline physician relationship.
+- Out (and where it lives instead): the behavioral levers that reduce the NEED for screening/drugs (diet → `nutrition-metabolic`, exercise → `exercise`, smoking → `substances`); disease *treatment* beyond primary prevention (out of project scope); dental screening → `oral-sensory`; skin-cancer screening & dermatology → noted here only if it shares a mortality endpoint, else `sun-skin`; hearing/vision screening → `oral-sensory`/sensory.
 
 ## Claims table
+One row per discrete claim. T1/T2 above the divider; T3/T4 below (informational only).
+**The cross-cutting filter: disease-specific vs ALL-CAUSE mortality, and benefit vs harm.** Three categories emerge — (a) **genuinely extends life** (BP treatment, Shingrix/RSV, statins in higher-risk people, colorectal/cervical/lung screening); (b) **real but oversold** (most cancer screening reduces *disease-specific* but rarely *all-cause* mortality; flu-vaccine mortality claims are confounded); (c) **less-is-more / avoid** (routine aspirin, whole-body-MRI/MCED hype, polypharmacy). The throughline: value is in a *few* high-yield RCT-backed items, not maximal scanning/pill-stacking.
+
 | # | Claim | Systems touched | Tier | Effect size (vs. comparator) | Reversibility | Confidence | Source(s) |
 |---|-------|-----------------|------|------------------------------|---------------|------------|-----------|
-| 1 |  |  | T? |  |  | H/M/L |  |
+| 1 | **[RCT] Colorectal screening** has the best benefit-harm ratio — but even colonoscopy's ITT all-cause mortality was null | Immune (cancer), Renal/Hep | T1 (RCT) | NordICC colonoscopy: CRC **incidence RR 0.82** (NNS 455) but CRC-mortality RR 0.90 (NS) & **all-cause RR 0.99 (null)** at 10yr ITT (~42% screened; per-protocol larger). FOBT: CRC-mortality RR 0.86 (14%↓), all-cause null | n/a (prevents/catches disease) | H | [S106][S107] |
+| 2 | **[RCT] Lung LDCT** (heavy smokers only) is the rare screen with a small ALL-CAUSE benefit | Immune (cancer) | T1 (RCT) | NLST lung-cancer mortality **−20%** + all-cause **IRR 0.93** (significant, but entirely attributable to lung-cancer deaths; fragile); NELSON −24% (men). Cost: ~26%/round false-positive, PPV ~3.5% | n/a | H (smokers); N/A non-smokers | [S108][S109] |
+| 3 | **Cervical (HPV/cytology) screening** is among the strongest by magnitude — but the mortality figure is modeled | Immune (cancer) | T1 (USPSTF Grade A) / T2 (mortality modeled) | Primary hrHPV q5y modeled **~97% lower** cervical-cancer death; USPSTF Grade A. Real-world programs show ~60–90% incidence reductions. No all-cause RCT (a single-screen Indian RCT claim was refuted) | n/a | H (incidence); M (mortality modeled) | [S111] |
+| 4 | **The all-cause mortality critique** (Bretthauer 2023): common cancer screens have NOT been shown to extend overall life | Immune (cancer) | T1 (RCT meta, 18 trials, ~2.1M) | Lifetime gained: **only sigmoidoscopy significant (110 days)**; mammography 0, PSA 37, colonoscopy 37, FOBT 0, lung-CT 107 — all **NS**. (Counter: individual trials underpowered for all-cause; "NS" ≠ "zero") | n/a | H (the finding); contested interpretation | [S110] |
+| 5 | Screening's apparent *survival* benefits are inflated by lead-time & length bias; overdiagnosis is real | Immune (cancer) | T1 (epidemiology) | Why mortality (not survival) is the endpoint. Overdiagnosis: breast DCIS up to **37% non-progressive** (prevalence screen); indolent prostate (PSA) substantial. Healthy-screenee confounding live | n/a | H | [S112][S113] |
+| 6 | **[RCT] Statins (primary prevention)** reduce vascular events robustly; all-cause mortality benefit is real but modest | Cardio | T1 (RCT meta) | **~20% fewer major vascular events per 1 mmol/L LDL** (RR 0.81), NNT ~91 over 5yr (low-risk); all-cause RR ~0.90 (modest; the strong "no mortality benefit" claim was **refuted**). Relative benefit constant across baseline risk → absolute benefit scales with risk | n/a (ongoing Rx) | H (events); M (all-cause magnitude) | [S114] |
+| 7 | Statin muscle symptoms are **largely a nocebo effect** | Musculo | T1 (n-of-1 RCTs) | SAMSON/StatinWISE: muscle-symptom scores on statin ≈ placebo (1.68 vs 1.85, NS). "Statin intolerance" is mostly symptom *attribution*, not pharmacology. (Real myopathy rare; new diabetes ~0.2%/yr) | — | H | [S115] |
+| 8 | **[RCT] Blood-pressure lowering** is the prevention drug class with the clearest all-cause mortality benefit — but age-dependent | Cardio, Neuro, Renal/Hep | T1 (RCT) | Per 5 mmHg systolic: CV-events HR **0.82** (<55yr) → 0.91 (55–84) → **NS at 85+**. **SPRINT** intensive (<120): all-cause **HR 0.73** (NNT 90), CV HR 0.75 (NNT 61); harm: AKI HR 1.64 (NNH ~67). Only class with a mortality signal in 2025 NMA | n/a (ongoing Rx) | H | [S116][S117] |
+| 9 | **[RCT] Shingrix/RZV** is one of the most effective adult vaccines — strong, durable | Immune, Neuro (PHN) | T1 (RCT) | Herpes-zoster efficacy **97.2%** (50+) / 89.8% (70+); postherpetic neuralgia ~89–91%; durable to **~11 years**. Disease-incidence endpoint, no healthy-vaccinee confounding (placebo-controlled) | n/a (prevents disease) | H | [S120] |
+| 10 | **[RCT] RSV vaccines** (Arexvy/Abrysvo/mResvia, 60+) are genuinely high-efficacy against severe RSV — but wane | Immune | T1/T2 | ~**73–83%** vs RSV hospitalization (real-world TND); mResvia ~80% vs symptomatic RSV early. **Wanes** 80%→56%(12mo)→34%(18mo) → timing/revax matters | n/a | H | [S122] |
+| 11 | **[RCT] Pneumococcal PCV13** works against vaccine-type disease but shows NO mortality benefit | Immune | T1 (RCT) | CAPiTA (n=84,496): **45.6%** vs vaccine-type pneumonia, **75%** vs vaccine-type IPD; but infection-death VE 14.7% (NS); all-cause pneumonia benefit much weaker | n/a | H | [S121] |
 | | **— T3/T4 below — informational only — does not rank —** | | | | | | |
-| | | | | | | | |
+| 12 | **Aspirin for primary prevention: the REVERSAL** — net-neutral, a "less is more" lesson | Cardio | T1 (RCT, but a null/harm) | ARRIVE/ASCEND/ASPREE: small CV-event reduction **offset by major bleeding**; **no all-cause mortality benefit** (RR ~0.98; ASPREE showed a *non-significant mortality increase* in healthy elderly). Guidelines reversed. Don't take routinely without specific indication | — | H | [S118] |
+| 13 | **Influenza vaccine: the healthy-vaccinee calibration lesson** — observational mortality claims are confounded fiction | Immune | T2 (obs, biased) → T1 (RCT null) | Observational "~47–50% all-cause winter mortality reduction" is **mathematically impossible** (flu <10% of deaths); the "effect" appears *outside* flu season (proves confounding); 83% of obs studies high-bias. **Cochrane RCT all-cause RR 1.02 (null)**; real benefit is modest (lab-confirmed flu ↓, hospitalization OR ~0.71). Still worth getting — just not a mortality lever | n/a | H | [S123][S124] |
+| 14 | **Coronary-artery-calcium (CAC) & diabetes screening** are risk-STRATIFIERS, not life-savers | Cardio, Metabolic | T2 (predictor/surrogate) | CAC reclassifies risk (CAC=0 → low; high → up) but **no RCT** shows CAC-guided treatment saves lives. Screening asymptomatic adults for T2D: **ADDITION trial null** for all-cause mortality (HR 1.06). Useful for *deciding* on statins, not an outcome in itself | — | M | [S119] |
+| 15 | **Screening/test HYPE — no mortality evidence** (flagged T4; not independently verified this session) | — | T4 (hype, no outcome data) | Multi-cancer early-detection blood tests (Galleri/GRAIL) & whole-body-MRI "executive physical" scans: **no mortality RCT exists**, high false-positive/incidentaloma/overdiagnosis cascade risk. The general principle (more screening ≠ better) is supported by #4–#5; specific debunk un-sourced here | — | — (qualitative) | — |
 
 ## Dose / threshold
+**The 80/20 here is "a short list of high-yield prevention, done — not a long list of scans, done maximally."** The value concentrates in a handful of RCT-backed items; most of the "more medicine" reflex (extra scans, routine aspirin, pill-stacking) adds harm or cost without extending life.
 
+- **The genuinely life-extending core:** treat **high blood pressure** (the clearest all-cause win, esp. <85yr), take a **statin if your baseline CVD risk is meaningful** (benefit scales with risk — high-yield in higher-risk, marginal in low-risk), get **Shingrix** (≥50), **RSV** (≥60–75) and seasonal **flu/COVID** vaccines (for morbidity/hospitalization, not as a mortality play), and do **age-appropriate colorectal + cervical (+ lung if a heavy smoker)** screening.
+- **Screening reality check:** most cancer screens reduce *dying of that cancer* modestly but have **not** been shown to extend overall life (competing risks, small absolute numbers, screening harms). This is a reason to do the high-value ones and **not** to chase maximal/whole-body screening.
+- **Where "less is more":** skip **routine aspirin** (reversed), skip **whole-body MRI / MCED blood tests** (no outcome evidence, incidentaloma cascades), and in older age **deprescribe** (polypharmacy is a real harm — see open questions).
+- **Risk tools ≠ treatments:** CAC and diabetes screening help *decide* whether to treat (esp. statin decisions), but the test itself doesn't save lives — the *treatment* does.
 
 ## Actions (behavioral, checkable)
-- [ ]
+- [ ] **Know and treat your blood pressure** — the clearest causal life-extender in this lever (target individualized; intensive control helps under ~80–85 but watch for hypotension/kidney effects).
+- [ ] **Get your CVD risk assessed and take a statin if risk is meaningful** — benefit scales with baseline risk; don't refuse over "statin intolerance" myths (largely nocebo). Consider a CAC score to refine a borderline statin decision.
+- [ ] **Get the high-value adult vaccines:** Shingrix (≥50), RSV (≥60–75), annual flu + COVID. (Pneumococcal per age/risk — protects against disease, not mortality.)
+- [ ] **Do age-appropriate cancer screening that has the best benefit-harm ratio:** colorectal (start ~45) and cervical (HPV-based); lung LDCT **only** if a heavy current/former smoker. Understand these mostly prevent *cancer death*, not necessarily *earlier overall death*.
+- [ ] **Don't** take daily aspirin for primary prevention, get whole-body MRI / multi-cancer blood tests, or accumulate medications without review. Periodically **deprescribe** with a clinician.
+- [ ] Keep a **baseline physician relationship** to enact the above — but treat "more tests" with healthy skepticism.
 
 ## Caveats / population modifiers
-
+- **Disease-specific ≠ all-cause mortality.** The lever's central lesson: a screen/vaccine/drug can reduce deaths from *one* cause without measurably extending overall life. Cancer screens (#1–#4) reduce cancer deaths modestly but rarely show all-cause benefit; BP/statin treatment (#6, #8) is where the all-cause RCT evidence actually is.
+- **Benefit scales with baseline risk** for the drugs — statins/BP are high-yield in higher-risk (and older-but-not-very-old) people, marginal in genuinely low-risk young adults. Personalize; don't treat a 30-year-old like a 65-year-old.
+- **Healthy-user/healthy-vaccinee confounding** inflates observational estimates here just as in nutrition — most starkly for flu-vaccine all-cause mortality (#13). Trust RCTs over administrative-database cohort claims.
+- **Overdiagnosis is a real harm**, not a technicality — screen-detected DCIS and indolent prostate cancer lead to treatment of disease that would never have caused symptoms (#5). More sensitive tests (MCED, whole-body MRI) amplify this.
+- **Age cutoffs matter:** BP benefit fades at 85+; screening benefit requires enough life expectancy to realize it (don't start screens late in life with <10yr expectancy); RSV/Shingrix are age-targeted.
+- **This lever is mostly "n/a" on reversibility** — it's about *preventing/catching* disease, not a state that reverses. The relevant axis is benefit-vs-harm and absolute magnitude.
 
 ## Open questions
+*(also copied to `synthesis/open-questions.md`)*
+- **COVID-19 vaccine mortality benefit** — crowded out of verification; the large pandemic-era severe-disease/mortality benefit is well-established but **not independently verified in project tiers** this session. (Included in actions on established external consensus, flagged.)
+- **Polypharmacy & deprescribing** — the "less is more" arm produced no surviving claims; the observational polypharmacy→falls/mortality association (confounded by indication) and what deprescribing RCTs show on hard endpoints remain unquantified here. Genuinely useful gap for older-adult guidance.
+- **MCED (Galleri) / whole-body MRI** — no verified outcome data (that's the point: no mortality RCT exists yet; NHS-Galleri pending). Quantified false-positive/overdiagnosis harms would sharpen the #15 debunk.
+- **Prostate PSA overdiagnosis** specific rate (~20–50% indolent) wasn't verified; only the non-significant 37-day lifetime-gain is documented.
+- **Where exactly does baseline risk make statins stop extending life?** The threshold below which primary-prevention statins offer negligible absolute benefit wasn't pinned.
 
