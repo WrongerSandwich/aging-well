@@ -36,6 +36,11 @@ contaminate the ranking with low-certainty noise.
 | Medical: MCED (Galleri) / whole-body-MRI quantified false-positive & overdiagnosis harms? | No mortality RCT exists yet (NHS-Galleri pending); no verified claims this run | Net-harmful in asymptomatic average-risk (incidentaloma cascade); no outcome data | T4 (no outcome data) | When NHS-Galleri or outcome data matures |
 | Medical: below what baseline CVD risk do primary-prevention statins stop extending life? | The risk threshold for negligible absolute benefit wasn't pinned | Benefit scales with risk; marginal in low-risk young adults | T1 (magnitude unclear) | At ranking if statins sit near a boundary |
 
+| Oral-sensory: no RCT of cataract surgery / refractive correction on dementia/falls/mortality | Vision lever rests on observational + negative-control inference; 2024 metas conflict (RR 0.74 vs 0.85 NS) | ~25% dementia reduction plausible but unproven | T2 (no RCT) | If vision ranks near a boundary |
+| Oral-sensory: which dementia PAF is right (hearing 8% vs ~5%; vision 19% vs 2%)? | Older estimates inflated; newer cohorts lower | Direction robust, magnitude smaller than headlines | T1/T2 contested | Materially affects ranking of sensory levers |
+| Oral-sensory: does treating hearing loss cut dementia INCIDENCE (not just slow cognitive-test decline), beyond the high-risk subgroup? | ACHIEVE was 3yr, surrogate endpoint, subgroup benefit only | Likely helps at-risk; unproven for incidence/general pop | T1 (one RCT) | If hearing ranks high |
+| Oral-sensory: falls from hearing/vision impairment (a mortality pathway) — HRs? | No hazard ratio survived verification; falls *intervention* evidence lives in exercise lever | Plausible contributor | un-quantified | Low priority |
+
 ## Speculative / hype-adjacent (T3–T4 holding pen)
 Longevity-influencer and supplement claims live here until/unless real human outcome
 data promotes them. Do NOT let these into the ranked list on mechanistic plausibility
