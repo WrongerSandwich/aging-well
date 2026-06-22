@@ -1,6 +1,6 @@
 # Lever: Oral & Sensory
 
-> Status: RESEARCH IN PROGRESS — session 4 (2026-06-21). Split into 2 runs: (1) hearing loss + hearing aids + dementia (the high-value, RCT-backed piece), (2) vision (cataract/AMD/refractive) + oral/periodontal. Transcribe when both land.
+> Status: RESEARCHED — session 4 (2026-06-21). 3 runs (hearing / vision / oral-periodontal). 17 rows, sources S125–S142. The "irreversible hardware" lever + first real dementia-prevention foothold: hearing loss = largest modifiable dementia PAF (~5–8%), [RCT] ACHIEVE aids help at-risk; cataract surgery near-causal (HR 0.71); oral→systemic is [MR]-null (keep teeth for function/nutrition). Axis = irreversibility → prevent + correct early.
 
 ## Scope
 Teeth/enamel/gums, hearing, vision. **The "irreversible hardware" lever** — cochlear hair cells, retinal/optic neurons, tooth enamel, and alveolar bone don't regenerate, so prevention & timely correction dominate. Hearing loss is the single largest *modifiable* dementia risk factor.

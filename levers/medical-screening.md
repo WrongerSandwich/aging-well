@@ -1,6 +1,6 @@
 # Lever: Medical & Screening
 
-> Status: RESEARCH IN PROGRESS — session 4 (2026-06-19). Split into 3 runs (one-topic-per-run): (1) cancer screening, (2) CV/metabolic primary prevention, (3) vaccination + polypharmacy. Transcribe across all three when they land.
+> Status: RESEARCHED — session 4 (2026-06-19). 3 runs (cancer screening / CV-metabolic primary prevention / vaccination+polypharmacy). 15 rows, sources S106–S124. Three-way split: genuinely-extends-life (BP Rx, statins-by-risk, Shingrix/RSV, colorectal+cervical+lung screening) · real-but-oversold (most cancer screening = disease-specific not all-cause; flu mortality claims confounded) · less-is-more (aspirin reversed, whole-body-MRI/MCED hype). Gaps parked: COVID-vaccine, polypharmacy.
 
 ## Scope
 Vaccination, age-appropriate cancer screening, pharmacologic primary prevention, biomarker monitoring. The "catch-it-early / prevent-with-a-pill" lever — where the key tension is disease-specific vs all-cause mortality, overdiagnosis, and screening-hype.
