@@ -187,8 +187,10 @@ export const findings: Finding[] = [
   {
     number: "14",
     tierLabel: "T1",
+    tierModifier: "inverse",
     lever: "Medical",
     category: "medical-screening",
+    cardModifier: "dark",
     titleLines: ["Treat your blood", "pressure."],
     summary:
       "The prevention drug class with the clearest all-cause mortality benefit — though the benefit fades past 85. Statins help too, scaled to your baseline cardiovascular risk.",
@@ -325,7 +327,7 @@ export interface Question {
 export const questions: Question[] = [
   { number: "01", text: "Where exactly does baseline cardiovascular risk make primary-prevention statins stop extending life?" },
   { number: "02", text: "Does treating hearing loss reduce dementia incidence, not just slow cognitive-test decline?" },
-  { number: "03", text: "Would an RCT replicate cataract surgery's ~25% dementia signal? (2024 meta-analyses conflict.)" },
+  { number: "03", text: "Would an RCT replicate cataract surgery’s ~25% dementia signal? (2024 meta-analyses conflict.)" },
 ];
 
 // The two right-hand metric cards are static; the two count cards are derived.
