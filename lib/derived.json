@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T00:38:33.493Z",
+  "generatedAt": "2026-06-23T00:47:02.773Z",
   "levers": {
     "exercise": {
       "slug": "exercise",
@@ -10,8 +10,8 @@
     "medical-screening": {
       "slug": "medical-screening",
       "name": "Medical & Screening",
-      "status": "in-progress",
-      "claims": 0
+      "status": "complete",
+      "claims": 15
     },
     "nutrition-metabolic": {
       "slug": "nutrition-metabolic",
@@ -22,8 +22,8 @@
     "oral-sensory": {
       "slug": "oral-sensory",
       "name": "Oral & Sensory",
-      "status": "pending",
-      "claims": 0
+      "status": "complete",
+      "claims": 17
     },
     "sleep": {
       "slug": "sleep",
@@ -51,9 +51,9 @@
     }
   },
   "totals": {
-    "leversComplete": 4,
+    "leversComplete": 6,
     "leversTotal": 8,
-    "sourcesTotal": 103,
-    "claimsTotal": 82
+    "sourcesTotal": 140,
+    "claimsTotal": 114
   }
 }
