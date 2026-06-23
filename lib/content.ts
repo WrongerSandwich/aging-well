@@ -323,9 +323,9 @@ export interface Question {
   text: string;
 }
 export const questions: Question[] = [
-  { number: "01", text: "Does cannabis cardiovascular risk survive proper adjustment for tobacco co-use?" },
-  { number: "02", text: "What are the verified intervention effects of resistance training on muscle mass and function?" },
-  { number: "03", text: "Where exactly does resistance-training benefit plateau?" },
+  { number: "01", text: "Where exactly does baseline cardiovascular risk make primary-prevention statins stop extending life?" },
+  { number: "02", text: "Does treating hearing loss reduce dementia incidence, not just slow cognitive-test decline?" },
+  { number: "03", text: "Would an RCT replicate cataract surgery's ~25% dementia signal? (2024 meta-analyses conflict.)" },
 ];
 
 // The two right-hand metric cards are static; the two count cards are derived.
