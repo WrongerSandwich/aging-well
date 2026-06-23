@@ -18,4 +18,9 @@ describe("StatusSection", () => {
     const link = screen.getByRole("link", { name: /substances/i });
     expect(link).toHaveAttribute("href", "/levers/substances");
   });
+  it("lists oral-sensory as a researched lever linking to its page", () => {
+    render(<StatusSection />);
+    const link = screen.getByRole("link", { name: /oral & sensory/i });
+    expect(link).toHaveAttribute("href", "/levers/oral-sensory");
+  });
 });
