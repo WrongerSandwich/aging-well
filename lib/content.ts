@@ -3,7 +3,7 @@ export interface Finding {
   tierLabel: string;
   tierModifier?: "inverse";
   lever: string;
-  category: "substances" | "exercise" | "sleep" | "nutrition-metabolic";
+  category: "substances" | "exercise" | "sleep" | "nutrition-metabolic" | "medical-screening" | "oral-sensory";
   titleLines: string[];
   summary: string;
   stat?: { value: string; labelLines: string[] };
@@ -184,13 +184,91 @@ export const findings: Finding[] = [
     summary:
       "Fish-oil pills don’t replace fish (and raise atrial-fibrillation risk); fasting, caloric restriction, and time-restricted eating add nothing beyond the calories they cut. Coffee (≤3–4 cups) is fine.",
   },
+  {
+    number: "14",
+    tierLabel: "T1",
+    lever: "Medical",
+    category: "medical-screening",
+    titleLines: ["Treat your blood", "pressure."],
+    summary:
+      "The prevention drug class with the clearest all-cause mortality benefit — though the benefit fades past 85. Statins help too, scaled to your baseline cardiovascular risk.",
+    stat: { value: "0.73×", labelLines: ["all-cause mortality", "intensive control (SPRINT)"] },
+    detail: {
+      body: "Per 5 mmHg systolic drop, cardiovascular events fall about 18%; SPRINT intensive control cut all-cause mortality (NNT 90). Watch for hypotension and kidney effects in older adults.",
+      source: "RCT (SPRINT) · hard endpoints · high confidence",
+    },
+  },
+  {
+    number: "15",
+    tierLabel: "T1",
+    lever: "Medical",
+    category: "medical-screening",
+    cardModifier: "feature",
+    titleLines: ["Most cancer screening", "doesn’t extend overall life."],
+    summary:
+      "Screens cut deaths from one cancer modestly, but a meta-analysis of 18 trials (~2.1M people) found almost none measurably extend total lifespan. Do the few high-yield ones — colorectal, cervical, lung-if-a-smoker — and skip the rest.",
+    stat: { value: "110 days", labelLines: ["the only significant", "lifespan gain (sigmoidoscopy)"] },
+    detail: {
+      body: "Lead-time and length bias inflate survival statistics; overdiagnosis is real — up to 37% of screen-detected DCIS never progresses. Value concentrates in a few RCT-backed screens, not maximal scanning.",
+      source: "RCT meta · 18 trials · contested interpretation",
+    },
+  },
+  {
+    number: "16",
+    tierLabel: "T2",
+    lever: "Medical",
+    category: "medical-screening",
+    cardModifier: "compact muted",
+    titleLines: ["Skip the aspirin", "and whole-body scans."],
+    summary:
+      "Daily aspirin for primary prevention was reversed — bleeding cancels the benefit, with no mortality gain. Whole-body MRI and multi-cancer blood tests have no outcome evidence and cascade into incidentalomas. The real wins are Shingrix and the RSV vaccine (~97% efficacy, durable).",
+  },
+  {
+    number: "17",
+    tierLabel: "T1",
+    lever: "Sensory",
+    category: "oral-sensory",
+    cardModifier: "feature",
+    titleLines: ["Treat hearing", "loss early."],
+    summary:
+      "Hearing loss is the largest single modifiable dementia risk factor. The ACHIEVE RCT showed aids slowed cognitive decline — but only in higher-risk older adults, not the worried-well. Cochlear damage is permanent, so protect against noise and correct early.",
+    stat: { value: "48%", labelLines: ["slower cognitive decline", "in at-risk elders (ACHIEVE)"] },
+    detail: {
+      body: "Overall the trial was null; the benefit was a prespecified higher-risk subgroup (top risk-quartile, 58–62% slower decline). The lever is prevention plus early amplification, since hair cells don’t regenerate.",
+      source: "RCT · prespecified subgroup · high confidence (subgroup-specific)",
+    },
+  },
+  {
+    number: "18",
+    tierLabel: "T2",
+    lever: "Sensory",
+    category: "oral-sensory",
+    titleLines: ["Fix cataracts;", "wear your glasses."],
+    summary:
+      "Cataract surgery is the strongest near-causal sensory lever — restoring vision tracks about 25% lower dementia, and a negative control (glaucoma surgery, which doesn’t restore vision) showed nothing. AMD and glaucoma are irreversible, so there the lever is prevention.",
+    stat: { value: "0.71×", labelLines: ["dementia hazard", "after cataract surgery"] },
+    detail: {
+      body: "An elegant design: vision-restoring surgery lowered dementia while non-restoring eye surgery did not, arguing for restoration over a healthy-user effect. Contested — a 2024 meta was non-significant, and no RCT exists yet.",
+      source: "Near-causal observational · negative-control · no RCT",
+    },
+  },
+  {
+    number: "19",
+    tierLabel: "T2",
+    lever: "Sensory",
+    category: "oral-sensory",
+    cardModifier: "compact muted",
+    titleLines: ["Keep your teeth for chewing,", "not your heart."],
+    summary:
+      "The “gum disease causes heart attacks and dementia” pitch is Mendelian-randomization null — the associations are confounding, not causation. Keep functional teeth, and use dentures if you lose them, for nutrition and quality of life. That’s the real, independent reason.",
+  },
 ];
 
 export const heroEyebrow = "Research in progress";
 
 export interface Filter {
   label: string;
-  value: "all" | "substances" | "exercise" | "sleep" | "nutrition-metabolic";
+  value: "all" | "substances" | "exercise" | "sleep" | "nutrition-metabolic" | "medical-screening" | "oral-sensory";
 }
 export const findingsFilters: Filter[] = [
   { label: "All findings", value: "all" },
@@ -198,6 +276,8 @@ export const findingsFilters: Filter[] = [
   { label: "Exercise", value: "exercise" },
   { label: "Sleep", value: "sleep" },
   { label: "Nutrition", value: "nutrition-metabolic" },
+  { label: "Medical & screening", value: "medical-screening" },
+  { label: "Oral & sensory", value: "oral-sensory" },
 ];
 
 export interface Tier {

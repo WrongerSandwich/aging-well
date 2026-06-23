@@ -31,4 +31,30 @@ describe("Findings", () => {
     );
     expect(visibleExercise?.className).not.toContain("hidden");
   });
+
+  it("renders the new oral-sensory cards and the new filter pills", () => {
+    render(<Findings />);
+    expect(
+      screen.getByRole("button", { name: "Medical & screening" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Oral & sensory" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Treat hearing/)).toBeInTheDocument();
+    expect(screen.getByText(/Treat your blood/)).toBeInTheDocument();
+  });
+
+  it("filters to oral-sensory and hides medical-screening cards", async () => {
+    const user = userEvent.setup();
+    const { container } = render(<Findings />);
+    await user.click(screen.getByRole("button", { name: "Oral & sensory" }));
+    const sensory = container.querySelector(
+      '.finding[data-category="oral-sensory"]',
+    );
+    expect(sensory?.className).not.toContain("hidden");
+    const medical = container.querySelector(
+      '.finding[data-category="medical-screening"]',
+    );
+    expect(medical?.className).toContain("hidden");
+  });
 });
