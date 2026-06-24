@@ -49,6 +49,25 @@ model split — not estimated here.
 | **This-session subtotal (2 levers)** | **215,837,817** | |
 | Earlier 19 runs (6 levers, prior sessions) | 649,400,622 | |
 
-*Per-lever totals for the earlier 6 levers aren't split out here — the run→lever mapping
-is unambiguous only for runs launched in-context; a precise per-lever breakdown can be
-recovered by extracting each run's research question from its transcript if wanted.*
+## Per-lever breakdown (all 8 levers)
+Each run mapped to its lever by extracting the verbatim research question from its
+transcript (not keyword-guessed). Run counts match the research log exactly.
+
+| Lever | Runs | Sub-agents | Output tok | TOTAL tok |
+|---|---:|---:|---:|---:|
+| Nutrition/Metabolic | 5 | 758 | 1,959,719 | 177,660,682 |
+| Sleep | 3 | 422 | 1,382,729 | 118,120,044 |
+| Medical-screening | 3 | 552 | 1,295,732 | 112,604,150 |
+| Stress-social | 4 | 543 | 1,158,888 | 109,414,955 |
+| Sun-skin | 3 | 323 | 1,023,026 | 106,422,862 |
+| Oral-sensory | 3 | 447 | 1,136,534 | 103,356,841 |
+| Substances | 3 | 314 | 949,683 | 75,849,558 |
+| Exercise | 2 | 318 | 777,791 | 61,809,347 |
+| **TOTAL** | **26** | **3,677** | **9,684,102** | **865,238,439** |
+
+Spend tracked run-count, not lever complexity: **Nutrition** (5 runs — patterns, meat/
+sugar/sodium, fiber/fish, CR/fasting/protein, adiposity/anchors) was the most expensive;
+**Exercise** (2 runs) the cheapest. The early all-Opus runs (Nutrition, Sleep, Medical,
+Oral-sensory, ~200+ agents/run) cost more per run than the later hybrid runs (Stress-
+social, Sun-skin, ~105–125 agents/run) — visible in the lower agent counts for the same
+or more topics.
