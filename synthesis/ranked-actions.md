@@ -10,7 +10,7 @@ This file is the **general, evidence-based ranking** — safe to publish. It is 
 > **Personalization is decoupled.** The full `Priority = Evidence-only × Tractability`
 > view depends on who you are and what you'll actually sustain — so Tractability is NOT
 > scored here. Each reader applies it themselves (see *Personalizing this list* below).
-> Evan's personal overlay lives in `personal/` (gitignored, never published).
+> A personal overlay lives in `personal/` (gitignored, never published).
 
 ## Scoring conventions (audit these)
 - **Certainty = evidence tier:** T1 (RCT / large cohort / meta, hard endpoint) = 5; T2 = 4; T3 = 2; T4 = 1. Where a *large association lacks causal support* (no RCT, null/again MR), certainty is marked down to reflect the causal evidence, not the association size.
@@ -68,7 +68,7 @@ The evidence ranking above is universal. To turn it into *your* do-this-first li
 
 A large gap between an action's Evidence-only rank and its Priority rank is a signal: strong evidence + low Tractability → invest in habit design rather than dropping it (see `_meta/scoring-rubric.md`).
 
-*(Evan's personal overlay — Tractability values, profile, and personalized Priority — lives in `personal/` and is gitignored so this file stays publishable.)*
+*(A personal overlay — Tractability values, profile, and personalized Priority — lives in `personal/` and is gitignored so this file stays publishable.)*
 
 ## Stopping rule check
 - [x] ≥5 lever sessions complete *(all 8 done)*

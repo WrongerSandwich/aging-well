@@ -60,7 +60,7 @@ One row per discrete claim. T1/T2 above the divider; T3/T4 below (informational 
 - [ ] Treat alcohol as a net-negative with no health-justified floor. Anchor on ≤1 drink/day as a harm-*reduction* ceiling, understanding 0 is optimal for total health.
 - [ ] Don't take up vaping as a non-smoker — it is not harm-free and its long-term risks are literally unmeasured.
 - [ ] If you're a smoker who can't quit outright, a *complete* switch to vaping (not dual use) is a defensible harm-reduction step — but it's a cessation tactic, not a safe habit. Dual use buys nothing.
-- [ ] Cannabis: occasional adult use is low-measured-harm on hard endpoints. Keep it occasional (not heavy/daily), avoid the *smoked* route if using, and treat existing CVD as a contraindication. The real red line is adolescent/young-brain heavy use — not applicable to you, but relevant for anyone you'd advise.
+- [ ] Cannabis: occasional adult use is low-measured-harm on hard endpoints. Keep it occasional (not heavy/daily), avoid the *smoked* route if using, and treat existing CVD as a contraindication. The real red line is adolescent/young-brain heavy use — the harm signal concentrates there, so that's the key message for teens and young adults.
 
 ## Caveats / population modifiers
 - **Smoking HRs** are adjusted for age, education, adiposity, and alcohol — these are the substance's own effect, not lifestyle confounds.

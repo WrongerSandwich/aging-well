@@ -36,7 +36,7 @@ One row per discrete claim. T1/T2 above the divider; T3/T4 below (informational 
 ## Dose / threshold
 **The 80/20: prevent the permanent damage, and correct the *treatable* sensory losses early — especially if you're already at cognitive risk.** This lever has little "dose" and a lot of "fix it before it compounds."
 
-- **Hearing:** protect against noise (the damage is irreversible), and **get hearing aids early if you have loss** — the ACHIEVE RCT shows real cognitive benefit *in higher-risk older adults* (the people most likely to be reading this later in life), even though it didn't help healthy volunteers. Don't wait years to address hearing loss.
+- **Hearing:** protect against noise (the damage is irreversible), and **get hearing aids early if you have loss** — the ACHIEVE RCT shows real cognitive benefit *in higher-risk older adults*, even though it didn't help healthy volunteers. Don't wait years to address hearing loss.
 - **Vision:** correct refractive error (glasses) and **get cataracts removed** when they impair vision — the near-causal evidence (vision-restoration → lower dementia, glaucoma-surgery negative control) is the best in this lever, even if not RCT-proven. AMD/glaucoma/DR are irreversible, so the lever there is prevention/early detection (overlaps medical-screening).
 - **Oral:** keep your teeth via basic hygiene and regular dental care — but for the **right reason**: *chewing function and nutrition*, not because gum disease causes heart attacks or dementia (MR says it doesn't). If you do lose teeth, **use dentures** — restored function appears to matter.
 - **What NOT to believe:** "treat your gums to prevent heart disease/Alzheimer's." The treatment RCTs move only surrogates; MR is null; the P. gingivalis trial failed.
