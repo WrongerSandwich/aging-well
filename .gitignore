@@ -1,0 +1,9 @@
+# Personal / non-publishable overlay — never commit.
+# Tractability scores + health profile live here, decoupled from the
+# general evidence content so the rest of the repo stays publishable.
+personal/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
