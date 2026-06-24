@@ -10,9 +10,11 @@ import {
 } from "../lib/sync/parse";
 
 const root = resolve(__dirname, "..");
+// Co-located inside the aging-well repo: web/ sits at the repo root, so the
+// research content is the parent directory. Override with AGING_WELL_DIR.
 const agingWell = process.env.AGING_WELL_DIR
   ? resolve(process.env.AGING_WELL_DIR)
-  : resolve(root, "..", "aging-well");
+  : resolve(root, "..");
 
 const leversDir = join(agingWell, "levers");
 const sourcesPath = join(agingWell, "_meta", "sources.md");

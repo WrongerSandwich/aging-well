@@ -56,6 +56,17 @@ you'll sustain each action) — and resolve the conditional rows against your ow
 to clone the repo and walk through them with a coding agent. Your filled-in overlay lives in
 a gitignored `personal/` directory — never committed, never published.
 
+## The website (`web/`)
+
+The public dashboard that renders these findings lives in `web/` — a Next.js app
+co-located in this repo (history preserved from the former `aging-ui` repo). It reads
+the research files directly: `scripts/sync.ts` parses `levers/` and `_meta/sources.md`
+into committed `web/lib/derived.json` + `web/lib/detail.json`, and Vercel builds from
+those JSON snapshots. The sync **never reads `personal/`**, so the gitignored personal
+overlay is never bundled or served. After a research session, run `npm run sync` in
+`web/` to refresh the snapshot. See `web/README.md` for develop/deploy details (the
+Vercel project's Root Directory must be set to `web`).
+
 ## Evidence tier legend
 
 | Tier | Meaning |

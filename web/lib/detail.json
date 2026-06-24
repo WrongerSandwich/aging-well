@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T00:47:02.773Z",
+  "generatedAt": "2026-06-24T23:26:09.070Z",
   "levers": {
     "exercise": {
       "slug": "exercise",
@@ -976,7 +976,7 @@
           "sources": []
         }
       ],
-      "dose": "**The 80/20: prevent the permanent damage, and correct the *treatable* sensory losses early — especially if you're already at cognitive risk.** This lever has little \"dose\" and a lot of \"fix it before it compounds.\"\n\n- **Hearing:** protect against noise (the damage is irreversible), and **get hearing aids early if you have loss** — the ACHIEVE RCT shows real cognitive benefit *in higher-risk older adults* (the people most likely to be reading this later in life), even though it didn't help healthy volunteers. Don't wait years to address hearing loss.\n- **Vision:** correct refractive error (glasses) and **get cataracts removed** when they impair vision — the near-causal evidence (vision-restoration → lower dementia, glaucoma-surgery negative control) is the best in this lever, even if not RCT-proven. AMD/glaucoma/DR are irreversible, so the lever there is prevention/early detection (overlaps medical-screening).\n- **Oral:** keep your teeth via basic hygiene and regular dental care — but for the **right reason**: *chewing function and nutrition*, not because gum disease causes heart attacks or dementia (MR says it doesn't). If you do lose teeth, **use dentures** — restored function appears to matter.\n- **What NOT to believe:** \"treat your gums to prevent heart disease/Alzheimer's.\" The treatment RCTs move only surrogates; MR is null; the P. gingivalis trial failed.",
+      "dose": "**The 80/20: prevent the permanent damage, and correct the *treatable* sensory losses early — especially if you're already at cognitive risk.** This lever has little \"dose\" and a lot of \"fix it before it compounds.\"\n\n- **Hearing:** protect against noise (the damage is irreversible), and **get hearing aids early if you have loss** — the ACHIEVE RCT shows real cognitive benefit *in higher-risk older adults*, even though it didn't help healthy volunteers. Don't wait years to address hearing loss.\n- **Vision:** correct refractive error (glasses) and **get cataracts removed** when they impair vision — the near-causal evidence (vision-restoration → lower dementia, glaucoma-surgery negative control) is the best in this lever, even if not RCT-proven. AMD/glaucoma/DR are irreversible, so the lever there is prevention/early detection (overlaps medical-screening).\n- **Oral:** keep your teeth via basic hygiene and regular dental care — but for the **right reason**: *chewing function and nutrition*, not because gum disease causes heart attacks or dementia (MR says it doesn't). If you do lose teeth, **use dentures** — restored function appears to matter.\n- **What NOT to believe:** \"treat your gums to prevent heart disease/Alzheimer's.\" The treatment RCTs move only surrogates; MR is null; the P. gingivalis trial failed.",
       "actions": "- [ ] **Protect your hearing from loud noise** (the damage is permanent) — earplugs at concerts/power tools, volume limits.\n- [ ] **Get hearing tested and use hearing aids early if you have loss** — strongest cognitive benefit in those already at risk (ACHIEVE). Don't normalize years of untreated loss.\n- [ ] **Correct vision: wear your glasses, and get cataract surgery when cataracts impair you** — the best near-causal cognition lever here; also reduces falls.\n- [ ] **Keep functional teeth** (brush/floss, regular dental care) for chewing & nutrition; if you lose teeth, **get and wear dentures**.\n- [ ] **Don't** buy the \"gum disease causes heart disease/dementia, so periodontal treatment will prevent them\" pitch — keep your gums healthy for your *mouth*, and rely on the actual CV/dementia levers elsewhere.\n- [ ] Treat sensory correction as **cognitive-reserve maintenance**, especially from midlife on — these are among the few *modifiable* dementia levers.",
       "caveats": "- **Irreversibility is the defining axis.** Cochlear hair cells, retinal/optic neurons, and tooth enamel/alveolar bone don't regenerate — so unlike most levers, \"recovery\" isn't available; the value is in *prevention* and *compensation* (aids, surgery, dentures, glasses). This is why early action matters more here than dose.\n- **Causal evidence is thin and the probes narrow it.** The associations are large but mostly observational with heavy confounding/reverse causation. The three causal probes all *deflate*: ACHIEVE is null overall (benefit only in high-risk), cataract→dementia is contested with no RCT, and periodontitis→systemic is **MR-null**. Trust the probes over the raw HRs.\n- **Reverse causation is everywhere:** early dementia reduces auditory/visual engagement and oral self-care, so part of every sensory→dementia association runs backward. Washout analyses (hearing) and negative controls (cataract) partially address it but don't eliminate it.\n- **Benefit concentrates in the already-at-risk** (ACHIEVE's lesson) and in *midlife-onward* — these are dementia-prevention levers most relevant as you age, less so for a healthy young adult.\n- **Oral health's defensible rationale is function/nutrition** (chewing, malnutrition, QoL), which is real and independent of the debunked systemic-disease story — but even that evidence is mostly cross-sectional.\n- **Magnitudes are inflated in popular framing:** the \"hearing loss is 8% of dementia\" / \"vision 19%\" figures are upper bounds; newer data put them lower. The direction is solid; don't over-rank on the headline PAF.",
       "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **No RCT of cataract surgery or refractive correction on dementia/falls/mortality** exists — the vision lever rests entirely on observational + negative-control inference. Would an RCT replicate the ~25% signal, and why do the 2024 meta-analyses conflict (RR 0.74 vs 0.85 NS)?\n- **Falls** — vision (and hearing) impairment plausibly raise falls (a mortality pathway) but no hazard ratio survived verification; the falls-prevention *intervention* evidence lives in the exercise lever (balance training).\n- **Which PAF is right for ranking** — hearing 8% vs ~5% (newer); vision 19% (cross-sectional) vs 2% (Lancet)? The magnitude materially affects how high these rank.\n- **Does treating hearing loss reduce dementia *incidence* (not just slow cognitive-test decline)** over longer follow-up, and beyond the high-risk subgroup? ACHIEVE was 3 years on a cognitive-test surrogate.\n- **Periodontal treatment hard-endpoint RCT** — none exists; the surrogate effects (BP, HbA1c) are real but attenuate. Would a large/long trial show any hard-endpoint benefit, or is the MR-null the final word?"
@@ -1239,13 +1239,441 @@
     "stress-social": {
       "slug": "stress-social",
       "name": "Stress & Social",
-      "status": "pending",
-      "scope": "Chronic stress, loneliness, social connection, sense of purpose. Mortality effect sizes rival physical risk factors.\n\n- In:\n- Out (and where it lives instead):",
-      "claims": [],
-      "dose": "",
-      "actions": "- [ ]",
-      "caveats": "",
-      "openQuestions": ""
+      "status": "complete",
+      "scope": "Chronic stress, loneliness, social connection, sense of purpose. Mortality effect sizes rival physical risk factors *in observational data* — the central question is how much of that is causal and modifiable.\n\n- In: **social connection / social isolation / loneliness / living-alone** (distinct constructs) and their links to all-cause mortality, CVD/stroke, dementia/cognition; loneliness-reduction & social interventions (befriending, social prescribing, CBT-for-loneliness, volunteering); **chronic psychological stress** (job strain, caregiver stress, allostatic load) → mortality/CVD; **sense of purpose / meaning / psychological well-being / optimism** → mortality/dementia. The causal/interventional question is the whole point of this lever.\n- Out (and where it lives instead): clinical **depression/anxiety as diseases** and their drug/psychotherapy treatment — noted here as a dominant confounder/mediator but not the focus; **substance use as stress-coping / social drinking** → `substances`; **exercise as a stress/mood intervention** → `exercise` (mood benefit noted there); **sleep–stress bidirectionality** → `sleep`; bereavement-as-acute-event medical sequelae → noted only.",
+      "claims": [
+        {
+          "number": 1,
+          "text": "**Stronger social relationships ↔ ~50% greater survival** — the canonical association",
+          "systems": "Cardio, Neuro, Immune",
+          "tier": "T1 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "OR **1.50** (95% CI 1.42–1.59) for survival with adequate vs poor relationships. Holt-Lunstad 2010: **148 studies, 308,849 people**, mean 7.5 yr. Cited >10,000×. Observational, not causal",
+          "reversibility": "SLOW (modifiable exposure; risk-recovery unproven — #14)",
+          "confidence": "H (association)",
+          "sources": [
+            "S143"
+          ]
+        },
+        {
+          "number": 2,
+          "text": "**Isolation, loneliness, and living-alone are DISTINCT constructs**, each independently predicting mortality",
+          "systems": "Cardio, Neuro, Immune",
+          "tier": "T1 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "Fully-adjusted OR: social isolation **1.29**, loneliness **1.26**, living-alone **1.32** (Holt-Lunstad 2015: 70 studies, 3.4M). All CIs exclude 1.0. A claim they're \"statistically indistinguishable\" was *refuted* — don't conflate them",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S144"
+          ]
+        },
+        {
+          "number": 3,
+          "text": "The **\"as deadly as smoking / exceeds obesity\"** line is an OBSERVATIONAL magnitude analogy, not causal equivalence",
+          "systems": "— (framing)",
+          "tier": "T1 (but flag)",
+          "tierGroup": "primary",
+          "effect": "2010: effect \"comparable with quitting smoking… exceeds obesity, physical inactivity.\" 2015: \"greater than obesity (Grades 2–3).\" Holt-Lunstad's own 2023 benchmarking paper says the bare comparison **oversimplifies**. The popular \"15 cigarettes/day\" meme outruns the evidence",
+          "reversibility": "n/a",
+          "confidence": "H (for \"it's an analogy\")",
+          "sources": [
+            "S143",
+            "S144"
+          ]
+        },
+        {
+          "number": 4,
+          "text": "**Measurement drives the effect size** — crude proxies massively understate it",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "Complex social-integration index OR **1.91** (1.63–2.23) > social networks 1.45 > isolation 1.40 > binary **\"living alone\" 1.19 (0.99–1.44, NS)**. Single-item proxies bias toward null; construct conflation is a real hazard",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S143"
+          ]
+        },
+        {
+          "number": 5,
+          "text": "Independent meta-analysis corroborates the isolation→mortality signal",
+          "systems": "Cardio, Neuro, Immune",
+          "tier": "T1 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "Social isolation all-cause mortality HR **1.33** (1.26–1.41). Naito 2023: 27 cohorts, ~1.4M, mean 17 yr. Caveat: I²=76%; more-adjusted studies show lower estimates",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S146"
+          ]
+        },
+        {
+          "number": 6,
+          "text": "**CVD/stroke:** objective isolation carries more risk than subjective loneliness; signal is mostly stroke",
+          "systems": "Cardio",
+          "tier": "T1 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "Incident CVD: isolation HR **1.39** (1.15–1.68) > loneliness **1.09** (1.06–1.12). Pooled CVD **1.17** (1.10–1.25), driven by **stroke 1.23** (1.07–1.43); CHD & AMI **not significant**. Wang 2025: 6 cohorts, 5.25M. Heterogeneity I²=85–90%; isolation-vs-loneliness contrast is between non-overlapping subgroups (fragile)",
+          "reversibility": "SLOW",
+          "confidence": "M–H",
+          "sources": [
+            "S147"
+          ]
+        },
+        {
+          "number": 7,
+          "text": "**Dementia (isolation):** objective isolation survives full adjustment — *including polygenic risk*",
+          "systems": "Neuro",
+          "tier": "T2 (cohort)",
+          "tierGroup": "primary",
+          "effect": "Social isolation → incident dementia HR **1.34** (1.12–1.60) after adjusting for sociodemographics, behaviors, chronic illness, depression AND genetic risk. In the SAME UK Biobank cohort, **loneliness lost significance** (HR 1.03 / 0.95). Only 14.3% of isolated were lonely → distinct constructs",
+          "reversibility": "SLOW",
+          "confidence": "M",
+          "sources": [
+            "S148"
+          ]
+        },
+        {
+          "number": 8,
+          "text": "**Dementia (loneliness): genuinely CONFLICTING** across analyses of the same dataset",
+          "systems": "Neuro",
+          "tier": "T2 (cohort, contested)",
+          "tierGroup": "primary",
+          "effect": "A *larger* UK Biobank analysis (n=492,322, 7,475 cases): loneliness → all-cause dementia HR **1.59**, surviving adjustment for depression+isolation (1.37) and vascular/biomarker factors (1.45); strongest for **vascular dementia 1.82** > FTD 1.64 > Alzheimer's 1.40. Directly contradicts #7 on whether loneliness survives adjustment (differs by how depression is modeled). Larger meta-analyses side with loneliness mattering (RR ~1.23–1.31)",
+          "reversibility": "SLOW",
+          "confidence": "M (unresolved)",
+          "sources": [
+            "S149"
+          ]
+        },
+        {
+          "number": 9,
+          "text": "**Reverse causation** is partially mitigated but never excluded",
+          "systems": "Cardio, Neuro",
+          "tier": "T1/T2",
+          "tierGroup": "primary",
+          "effect": "Illness/frailty/prodromal dementia cause isolation too. Case-exclusion sensitivity helps (isolation→dementia HR ~1.30 excluding first 3 yr; loneliness→dementia 1.54 excluding <5 yr) but dementia's **10–20 yr prodrome** means <10 yr follow-up \"cannot fully rule it out.\" A claim that confounder-adjustment attenuation *proves* inflation was *refuted*",
+          "reversibility": "n/a",
+          "confidence": "H (for \"not excluded\")",
+          "sources": [
+            "S146",
+            "S148",
+            "S149"
+          ]
+        },
+        {
+          "number": 10,
+          "text": "**CAUSAL GAP — intervention RCTs move ONLY the surrogate; NO trial has measured a hard endpoint**",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (RCT meta)",
+          "tierGroup": "primary",
+          "effect": "Across **Masi 2011 (50 studies), Hoang 2022 (70 RCTs, 8,259 adults 65+), Veronese 2023, Zeas-Siguenza 2025** — every outcome is a self-reported loneliness scale (UCLA, De Jong Gierveld). **Zero** measured all-cause mortality, incident CVD, dementia, or objective cognition. RCT-grade surrogate effect itself is small: SMD **−0.20** (−0.32 to −0.08); non-randomized designs overstate it (−0.46)",
+          "reversibility": "— (intervention)",
+          "confidence": "H",
+          "sources": [
+            "S150",
+            "S151"
+          ]
+        },
+        {
+          "number": 11,
+          "text": "Only **social-cognitive (CBT-style)** interventions move even the surrogate; befriending/contact/social-prescribing are ~null",
+          "systems": "Neuro",
+          "tier": "T1 (RCT meta)",
+          "tierGroup": "primary",
+          "effect": "Masi: social-cognitive d up to −0.97 vs contact/access ~0 (d 0.004 to −0.13). Hoang: community \"social interventions\" (befriending, volunteer, discussion) SMD **−0.02** (−0.21 to 0.17, NS); significant effects only in special settings (animal therapy/videoconferencing in LTC). Targeting maladaptive cognition > adding contact",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S150",
+            "S151"
+          ]
+        },
+        {
+          "number": 12,
+          "text": "Even the surrogate benefit is **GRADE \"very low\" and publication-bias-fragile**, and doesn't rebuild objective networks",
+          "systems": "Neuro",
+          "tier": "T1 (RCT meta)",
+          "tierGroup": "primary",
+          "effect": "Hoang overall GRADE **very low**, I² 70–95%. Zeas-Siguenza: g 0.65 → **0.14 (NS, p=0.70)** after trim-and-fill. Veronese: interventions had **no effect on objective social isolation/support (SMD 0.00)** — they nudge self-report, not measured connection",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S151",
+            "S152",
+            "S153"
+          ]
+        },
+        {
+          "number": 13,
+          "text": "**Mendelian randomization (the only true causal line):** loneliness→CVD real but TRIVIAL; loneliness→Alzheimer's NULL",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (MR)",
+          "tierGroup": "primary",
+          "effect": "MR (81 SNPs, 455,364): essential hypertension OR 1.07 (1.03–1.12), atherosclerotic HD 1.04, MI 1.02 (lower bound at null) — authors: \"may **not be clinically relevant**.\" MR → Alzheimer's **null** (univariable OR 1.05 [0.72–3.65]; multivariable 1.04 [0.76–1.32]). Broader MR literature mixed/bidirectional",
+          "reversibility": "n/a",
+          "confidence": "M–H",
+          "sources": [
+            "S155",
+            "S156"
+          ]
+        },
+        {
+          "number": 14,
+          "text": "**Reversibility is UNRESOLVED** — persistence is worst, but recovery is unproven",
+          "systems": "Cardio, Neuro",
+          "tier": "T2 (cohort)",
+          "tierGroup": "primary",
+          "effect": "UK Biobank (n=18,258): *persistent* isolation vs never — all-cause mortality HR **1.42**, CVD mortality 1.53, incident CVD 1.17; persistent loneliness — all-cause 1.28. Implies a duration/cumulative pattern, BUT a claim that the data show *transitioning out* recovers risk was **refuted** — no study demonstrates that becoming un-lonely reverses excess hard-endpoint risk",
+          "reversibility": "SLOW (presumed); recovery UNPROVEN",
+          "confidence": "M",
+          "sources": [
+            "S157"
+          ]
+        },
+        {
+          "number": 15,
+          "text": "**Experience Corps** volunteering RCT — moved a brain-volume *surrogate*, men-only, unreplicated",
+          "systems": "Neuro",
+          "tier": "T3 (single small RCT, surrogate)",
+          "tierGroup": "informational",
+          "effect": "Baltimore Experience Corps (main N=702; brain substudy n=111, mean age 67): MRI cortical/hippocampal volume rose in **men only** (hippocampal +1.56% vs −3.52%, p≈0.04); women NS. **No hard endpoint** measured; the \"dose-dependent cognition\" abstract reports no effect sizes/CIs. Suggestive, not actionable",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S154"
+          ]
+        },
+        {
+          "number": 16,
+          "text": "Refuted / do-not-cite specifics",
+          "systems": "—",
+          "tier": "T4 (refuted)",
+          "tierGroup": "informational",
+          "effect": "Failed verification: \"loneliness as deadly as 15 cigarettes/day\" as a *causal* claim; that confounder-adjustment attenuation proves the association is confounding-inflation; that short-follow-up CVD studies prove reverse causation; that the persistence cohort tests reversibility; that intervention effects clearly persist at follow-up. Use the conservative rows above",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        },
+        {
+          "number": 17,
+          "text": "**Work/job strain → CHD is real but MODEST and SES-attenuated**",
+          "systems": "Cardio",
+          "tier": "T1 (IPD meta)",
+          "tierGroup": "primary",
+          "effect": "Job strain → incident CHD HR **1.23** (1.10–1.37), attenuating to ~**1.17** after SES adjustment (Kivimäki 2012: 197,473 people, 13 cohorts). **PAR only 3.4%** vs ~36% for smoking; authors: workplace-stress prevention \"would have a much smaller effect than… tackling standard risk factors\"",
+          "reversibility": "SLOW",
+          "confidence": "H",
+          "sources": [
+            "S158"
+          ]
+        },
+        {
+          "number": 18,
+          "text": "The job-strain literature is **publication-bias-inflated** — true effect at the low end",
+          "systems": "Cardio",
+          "tier": "T1 (meta)",
+          "tierGroup": "primary",
+          "effect": "Published studies HR **1.43** (1.15–1.77) vs unpublished **1.16** (1.02–1.32); pooled 1.23 sits between. The honest estimate is closer to 1.16",
+          "reversibility": "n/a",
+          "confidence": "H",
+          "sources": [
+            "S158"
+          ]
+        },
+        {
+          "number": 19,
+          "text": "**The \"caregiving kills\" headline (Schulz & Beach 1999) was a fragile subgroup that didn't replicate**",
+          "systems": "Cardio, Neuro",
+          "tier": "T2 (cohort, contested)",
+          "tierGroup": "primary",
+          "effect": "Strained spousal caregivers RR **1.63** but **CI 1.00–2.65 (lower bound exactly 1.00)**; non-strained caregivers no excess (1.08); overall caregiving NS (1.37, 0.90–2.07). Say \"didn't replicate,\" NOT \"disproven\" — a \"≥7 studies prove it's an artifact\" framing was *refuted* as overreach",
+          "reversibility": "n/a",
+          "confidence": "M",
+          "sources": [
+            "S159",
+            "S160"
+          ]
+        },
+        {
+          "number": 20,
+          "text": "**Caregivers actually have LOWER or equal mortality** in larger matched cohorts (comparator-dependent)",
+          "systems": "Cardio",
+          "tier": "T2 (cohort)",
+          "tierGroup": "primary",
+          "effect": "5 studies HR 0.74–0.83 (Brown 0.79, Fredman 0.74, Roth/REGARDS 0.82, O'Reilly 0.74, Ramsay 0.83). REGARDS propensity-matched **HR 0.82–0.835** (7.5% vs 9.0% deaths), no subgroup elevated. Nuance: high-strain caregivers show no excess vs *noncaregivers* (HR ~1.00–1.02) but elevated vs *no-strain caregivers* within-cohort (REGARDS 1.55). Likely \"healthy-caregiver\" selection",
+          "reversibility": "n/a",
+          "confidence": "M (assoc; selection-confounded)",
+          "sources": [
+            "S160",
+            "S161",
+            "S162"
+          ]
+        },
+        {
+          "number": 21,
+          "text": "**Subjective stress does NOT map onto mortality** — a key dissociation",
+          "systems": "Cardio",
+          "tier": "T2 (cohort)",
+          "tierGroup": "primary",
+          "effect": "REGARDS: caregivers had higher depressive symptoms & perceived stress (both p<.0001) yet **LOWER** mortality. Stress-buffering interaction: per-SD perceived stress raised mortality in noncaregivers (HR **1.22**) but **not in caregivers (HR 1.02, NS)**. Feeling stressed ≠ dying sooner",
+          "reversibility": "n/a",
+          "confidence": "M",
+          "sources": [
+            "S161"
+          ]
+        },
+        {
+          "number": 22,
+          "text": "**Allostatic load** predicts mortality — but the signal is largely repackaged cardiometabolic risk",
+          "systems": "Cardio, Metabolic",
+          "tier": "T2 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "High AL → all-cause mortality HR **1.22** (1.14–1.30), CVD mortality **1.31** (1.10–1.57) (Parker 2022); UK Biobank graded AL→CVD (AL≥6 HR 2.15). BUT observational, I²>90%, and **partly tautological** — AL is built from LDL/BP/HbA1c/waist/CRP, so it's mostly \"bad cardiometabolic markers predict CVD,\" not a stress-specific signal",
+          "reversibility": "SLOW (components modifiable)",
+          "confidence": "M (low for stress-specificity)",
+          "sources": [
+            "S164",
+            "S165"
+          ]
+        },
+        {
+          "number": 23,
+          "text": "**CAUSAL GAP — no RCT shows stress-reduction moves hard endpoints**",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (AHA/Cochrane)",
+          "tierGroup": "primary",
+          "effect": "AHA scientific statement + Cochrane: **no properly conducted RCT** shows meditation/stress-reduction reduces CVD mortality or hard endpoints; trials move only surrogates (perceived stress, BP, cortisol, anxiety). The lone \"81% CVD-mortality reduction\" TM trial was flagged for validity (3-mo intervention; mortality assessed 3–8 yr later)",
+          "reversibility": "— (intervention)",
+          "confidence": "H (for the gap)",
+          "sources": [
+            "S166"
+          ]
+        },
+        {
+          "number": 24,
+          "text": "Refuted / do-not-cite & un-surfaced (stress)",
+          "systems": "—",
+          "tier": "T4",
+          "tierGroup": "informational",
+          "effect": "\"Caregiving kills\" as a general claim; \"≥7 studies prove the Schulz finding is an artifact\" (overreach — use \"didn't replicate\"); the TM 81%-CVD-mortality trial as valid evidence. Also NOT surfaced in verification (parked as gaps): **INTERHEART** psychosocial-stress PAR for MI, and any **MR / quasi-experimental** causal stress→CVD/mortality evidence",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        },
+        {
+          "number": 25,
+          "text": "**Sense of purpose/meaning → lower all-cause mortality & CVD events** (pooled)",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "High vs low purpose: all-cause mortality RR **0.83** (0.75–0.91) and CV-events RR **0.83** (0.75–0.92) — ~17% each (Cohen 2016, 10 studies, n=136,265). Observational; ~6/9 used single-item purpose measures; reverse causation/depression confounding unresolved",
+          "reversibility": "SLOW (purpose is modifiable)",
+          "confidence": "H (association)",
+          "sources": [
+            "S167"
+          ]
+        },
+        {
+          "number": 26,
+          "text": "**Purpose/meaning → lower incident DEMENTIA — and it survives depression adjustment**",
+          "systems": "Neuro",
+          "tier": "T1 (cohort meta)",
+          "tierGroup": "primary",
+          "effect": "Incident dementia HR **0.76–0.77** (~24% lower): Sutin 2021 (N=53,499) HR 0.77; 2022 expanded (8 cohorts, N=214,270, I²=6%) HR 0.76, 0.80 in fully-adjusted subset; UK Biobank HR 0.75 fully adjusted incl. depression. **<10% attenuation** after depression/behaviors → not merely \"absence of depression.\" Caveat: ~5-yr follow-up leaves prodromal-dementia reverse causation",
+          "reversibility": "SLOW",
+          "confidence": "H (association)",
+          "sources": [
+            "S168",
+            "S169"
+          ]
+        },
+        {
+          "number": 27,
+          "text": "**Dispositional optimism → longer lifespan & exceptional longevity (85+)** — also depression-robust",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (cohort)",
+          "tierGroup": "primary",
+          "effect": "Lee 2019 PNAS (NHS 69,744 women / NAS 1,429 men): top vs bottom optimism = **11–15% longer lifespan**, OR **1.5–1.7** for reaching 85+, surviving depression adjustment (\"not simply absence of distress\"). Koga 2022 WHI (~159k women) 5.4% longer lifespan. BUT ~40% of the lifespan effect is **mediated by health behaviors**",
+          "reversibility": "SLOW (optimism partly modifiable)",
+          "confidence": "M–H (association)",
+          "sources": [
+            "S170",
+            "S171"
+          ]
+        },
+        {
+          "number": 28,
+          "text": "**Optimism→mortality ATTENUATES with full adjustment — sometimes to null** (the confounding/mediation problem)",
+          "systems": "Cardio",
+          "tier": "T1 (cohort)",
+          "tierGroup": "primary",
+          "effect": "Kim 2017 (NHS, n=70,021): HR 0.71 demographic-adj → **0.91** fully adjusted. ASPREE (70+, n=11,701): HR 0.63 unadj → **0.78 NS** (p=0.11), significant only in oldest-old 77+. Behaviors are confounders AND mediators, so fully-adjusted estimates may *over*-adjust toward null. Both raw and adjusted can mislead",
+          "reversibility": "n/a",
+          "confidence": "H (for the attenuation)",
+          "sources": [
+            "S172",
+            "S173"
+          ]
+        },
+        {
+          "number": 29,
+          "text": "**MR — the lever's ONLY supportive causal probe:** mental well-being → healthspan & lifespan",
+          "systems": "Cardio, Neuro, Metabolic",
+          "tier": "T1 (MR)",
+          "tierGroup": "primary",
+          "effect": "Ye 2024 (Nature Human Behaviour), two-sample MR: per 1-SD higher well-being → healthspan OR **1.23–1.35**, parental lifespan **+1.77 to +2.95 yr**, surviving multivariable MR for income/education/occupation. CAVEATS: single MR; instrument-validity & pleiotropy; genetic overlap with depression; lower CI barely excludes 0; the specific anti-reverse-causation sensitivity-method claim was *refuted* in verification",
+          "reversibility": "n/a",
+          "confidence": "M",
+          "sources": [
+            "S174"
+          ]
+        },
+        {
+          "number": 30,
+          "text": "**CAUSAL GAP — no RCT shows raising purpose/optimism moves a hard endpoint**",
+          "systems": "Cardio, Neuro",
+          "tier": "T1 (absence)",
+          "tierGroup": "primary",
+          "effect": "Every hard-endpoint result is observational (or the one MR). No purpose-/positive-psychology intervention RCT (meaning-centered therapy, life-review/reminiscence, volunteering-for-purpose) has moved mortality/CVD/dementia — they move only surrogates (well-being/purpose/depression scales). The Blue Zones/ikigai \"purpose adds years\" *causal* framing outruns the data",
+          "reversibility": "— (intervention)",
+          "confidence": "H (for the gap)",
+          "sources": [
+            "S167",
+            "S170",
+            "S174"
+          ]
+        },
+        {
+          "number": 31,
+          "text": "Large single-cohort / ikigai HRs that feed popular framing — real but fragile & minimally adjusted",
+          "systems": "Neuro, Cardio",
+          "tier": "T3 (single cohort)",
+          "tierGroup": "informational",
+          "effect": "Japanese ikigai (Akita, 13.3 yr): strong-purpose men all-cause HR **0.62**, stroke HR 0.28 — but wide CIs/few events, combined-CVD NS, and \"significant only in men\" was *refuted* (a power artifact: only 54 female deaths). These big single-cohort HRs (and \"HR ~2.4\" purpose-mortality figures) are minimally adjusted; the robust pooled estimate is RR 0.83. Blue Zones data quality is itself contested",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S175"
+          ]
+        },
+        {
+          "number": 32,
+          "text": "Refuted / do-not-cite (purpose)",
+          "systems": "—",
+          "tier": "T4 (refuted)",
+          "tierGroup": "informational",
+          "effect": "\"Purpose effect is significant only in men\" (power artifact, not a real sex difference); the Ye-2024 MR specific sensitivity-analysis methodology claim (directionality not fully verified — treat the MR as supportive, not definitive). Use the conservative rows above",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        }
+      ],
+      "dose": "### Social connection\n**The 80/20 here is counterintuitive: the association is one of the strongest in the project, but it is the *least causally validated* lever so far — so treat social connection as a high-value-but-unproven target, and don't expect a \"dose\" to buy measurable longevity.**\n\n- **Quality > quantity > living arrangement.** The effect lives in rich, multidimensional integration (OR 1.91), not in the crude fact of living with someone (OR 1.19, NS). Aim for *engaged* relationships, not just co-residence or headcount.\n- **If you intervene, target social *cognition*, not just contact.** The only intervention class that reliably moves loneliness is CBT-style work on maladaptive social thinking; \"just add a befriending program / social prescription\" is ~null on the surrogate and untested on anything that matters.\n- **Don't over-promise the payoff.** No RCT has shown that fixing loneliness lowers mortality/CVD/dementia, and MR says the causal CVD effect is tiny and the Alzheimer's effect is zero. The honest framing: social connection is plausibly protective, clearly good for well-being, and *worth maintaining* — but the hard-endpoint causal case is unproven.\n- **Persistence is the worst state.** The highest observational risk is in *chronically* isolated/lonely people; avoiding sustained isolation is the most defensible target even if \"recovery\" isn't proven.\n\n### Chronic stress\n**The 80/20: chronic stress is a *small* lever dressed up as a big one. The hard-endpoint effects are modest, mostly route through standard cardiometabolic risk factors, and no stress-reduction intervention has been shown to extend life — so manage stress for quality of life, and get the longevity payoff from the standard risk factors it travels with.**\n\n- **Don't over-weight \"stress\" as an independent killer.** Job strain's causal share of CHD is ~3.4% (vs ~36% for smoking) and the literature overstates even that. The biggest stress-adjacent wins are the *downstream* targets that already have their own levers: blood pressure, lipids, glucose, smoking, sleep, activity.\n- **Feeling stressed is not the same as being at risk.** Subjective stress and mortality dissociate (caregivers feel worse, live longer). Use stress-management for *how you feel and function*, not as a presumed mortality intervention.\n- **Stress-reduction (MBSR/meditation/CBT) is worth doing for well-being, BP, and anxiety — but treat the hard-endpoint benefit as unproven.** No RCT shows it cuts CVD events/mortality; it does modestly move surrogates (perceived stress, BP, cortisol). It overlaps the `sleep` (CBT-I) and `exercise` (mood) levers.\n- **If stress is harming sleep, diet, drinking, or activity, fix *those* (they're the high-certainty levers).** The most defensible \"stress\" action is preventing it from degrading the behaviors that demonstrably matter.\n\n### Purpose & well-being\n**The 80/20: of the three sub-levers, purpose/optimism has the best evidence — robust, depression-independent associations (especially with dementia) plus one supportive MR — so it's the one most worth treating as a real, if unproven, longevity-adjacent target, not just a quality-of-life nicety.**\n\n- **Cultivate a sense of purpose** (goals, engagement, something that gives life meaning) — the dementia association (HR ~0.76) survives depression adjustment and is consistent across large cohorts, and it's the construct with the only causal probe pointing the right way.\n- **Optimism counts, but don't over-read it** — the longevity signal is real but ~40% runs through health behaviors and can vanish under full adjustment. Treat \"stay engaged and forward-looking\" as supportive of the behaviors that matter, not a standalone life-extender.\n- **Don't buy the \"ikigai adds years\" causal pitch.** The big single-cohort HRs are minimally adjusted; the honest pooled effect is ~17% (RR 0.83), no RCT proves causation, and Blue Zones data quality is contested. Pursue purpose because it's robustly *associated* with better aging and is good in itself — not because a trial showed it adds years.",
+      "actions": "*(Sub-levers 1–3.)*\n\n### Social connection\n- [ ] **Maintain a few high-quality, active relationships** (the \"complex integration\" that carries the real signal) rather than optimizing for living arrangement or contact count.\n- [ ] **Avoid sliding into *persistent* isolation/loneliness** — the chronic state carries the steepest risk; treat re-connection as worth doing even though risk-reversal isn't proven.\n- [ ] If loneliness is a problem, **prefer approaches that address how you think about social situations (CBT-style)** over passive \"more contact\" programs — that's the only class with RCT support (on self-report).\n- [ ] **Calibrate expectations:** value connection for well-being and probable (not proven) health benefit; don't treat \"cure loneliness → live longer\" as established, and discount the \"as deadly as smoking\" framing.\n\n### Chronic stress\n- [ ] **Don't treat \"stress\" as a top-tier longevity lever** — its independent causal footprint is small; put that effort into BP/lipids/glucose/smoking/sleep/activity (their own levers), which is where stress's damage actually routes.\n- [ ] **Use stress-reduction (MBSR / CBT / meditation / exercise) for well-being, BP, and anxiety** — real surrogate benefits — without expecting a proven mortality payoff.\n- [ ] **Protect the high-certainty behaviors from stress spillover** (sleep, diet, drinking, activity) — that's the most defensible stress-related action.\n- [ ] **Don't fear caregiving as a death sentence** — the \"caregiver strain kills\" claim didn't replicate; caregivers as a group live as long or longer. Address caregiver *distress* for its own sake.\n\n### Purpose & well-being\n- [ ] **Cultivate and protect a sense of purpose** (goals, meaningful activity, engagement) — the best-evidenced construct in this lever, with a depression-robust dementia association.\n- [ ] **Stay engaged/forward-looking**, but treat optimism's longevity benefit as partly behavior-mediated — channel it into the high-certainty behaviors (activity, sleep, not smoking).\n- [ ] **Pursue purpose for its own sake and its robust associations — not because a trial proved it adds years** (it hasn't). Discount \"ikigai/Blue Zones adds X years\" causal claims.",
+      "caveats": "### Social connection\n- **This is the project's clearest association ≠ causation lever.** Observational signal is enormous and consistent (millions of participants); causal/interventional support is nearly absent (surrogate-only RCTs, trivial/null MR). Trust the probes over the raw HRs.\n- **Depression is the load-bearing confounder/mediator** and is handled inconsistently across studies — it drives the conflicting loneliness→dementia results (#7 vs #8). Whether depression is a confounder, mediator, or collider determines whether loneliness is an \"independent\" risk factor.\n- **Reverse causation is everywhere** (illness/frailty/prodromal dementia → isolation); partially mitigated, never excluded, especially for dementia's long prodrome.\n- **UK Biobank dominance + heterogeneity:** much of the dementia/reversibility data is one healthier-than-average volunteer cohort; meta-analytic I² is frequently 85–95%.\n- **Constructs are not interchangeable:** objective isolation generally has the more robust hard-endpoint associations; subjective loneliness is weaker and dataset-dependent; \"living alone\" is the weakest proxy.\n\n### Chronic stress\n- **Effect sizes are modest and inflated by the literature.** Job strain→CHD is HR ~1.23 (likely ~1.16 once publication bias is accounted for), PAR 3.4%. This is a *small* lever; the \"stress kills\" narrative substantially outruns the data.\n- **Comparator choice flips the caregiver result** — high-strain caregivers show no excess vs noncaregivers but do vs no-strain caregivers within-cohort. The caregiver-survival advantage is widely attributed to the **\"healthy caregiver effect\"** (selection: healthier people can provide care), so don't read it as \"caregiving protects\" either.\n- **Allostatic load is partly circular:** the AL score is largely conventional cardiometabolic biomarkers, so \"AL predicts CVD\" is mostly the standard risk factors talking — it does NOT isolate a stress-specific physiological pathway, and doesn't show reducing AL reduces events.\n- **The causal cupboard is bare:** no MR or quasi-experimental evidence on chronic stress→hard endpoints surfaced; the only T1 *interventional* evidence is a **negative** finding (no RCT moves hard endpoints).\n- **Acute vs chronic:** this lever is about *chronic* stress; acute-stress events (bereavement, Takotsubo, MI triggers) are real but out of scope here and not the longevity question.\n\n### Purpose & well-being\n- **Strongest sub-lever, but still observational + one MR.** The associations survive depression adjustment (genuinely \"not just absence of depression\") and the dementia signal is consistent — but there is still **no RCT** on hard endpoints, so causation rests on cohorts + a single, caveated MR (Ye 2024).\n- **Reverse causation & over-/under-adjustment cut both ways.** Prodromal illness (esp. preclinical dementia, ~5-yr windows) lowers reported purpose, inflating associations; meanwhile health behaviors are confounders *and* mediators, so \"fully adjusted\" HRs may over-correct toward null. Both raw and adjusted estimates can mislead.\n- **Magnitude is adjustment-dependent and over-hyped:** popular \"HR ~2.4\" / \"ikigai adds years\" figures are minimally adjusted single-cohort results; the robust pooled mortality effect is ~17% (RR 0.83).\n- **Generalizability:** much optimism evidence is women-only / high-SES Western cohorts (NHS, WHI); ASPREE suggests the optimism–mortality effect may concentrate in the oldest-old and can disappear after full adjustment.\n- **Overlaps depression and the other sub-levers.** Purpose, optimism, low loneliness, and low depression travel together; their \"independent\" effects are only as clean as the (usually single, brief) depression screen used to separate them.",
+      "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **Has any RCT/quasi-experiment powered for a HARD endpoint** (mortality, incident CVD, incident dementia) of a social/loneliness intervention ever been run or registered? The entire causal case hinges on this gap — currently empty.\n- **Does transitioning OUT of loneliness/isolation recover excess risk, and over what timeframe?** Only persistent-vs-never contrasts exist; no transition-with-hard-endpoint analysis.\n- **Why do two UK Biobank analyses disagree** on whether loneliness→dementia survives depression adjustment — i.e., is depression a confounder, mediator, or collider here?\n- **Is the loneliness↔depression relationship causal and in which direction** (bidirectional MR was requested but not resolved)?\n- **(Stress) Is there ANY MR / quasi-experimental evidence that chronic stress causally drives CVD/mortality?** None surfaced — the central causal-inference gap.\n- **(Stress) Do stress-reduction interventions move hard endpoints in *secondary* prevention** (recurrent cardiac events, dementia incidence), or is the surrogate-only verdict universal? Verified evidence only covered primary-prevention CVD mortality.\n- **(Stress) INTERHEART psychosocial-stress PAR for MI** (~30%, the famous high figure) did not survive verification this run — re-derive if stress sits near a ranking boundary, but note it's case-control (weaker than the prospective HR 1.23).\n- **(Stress) Does cortisol/HPA-axis dysregulation *specifically* predict hard endpoints** independent of conventional cardiometabolic risk, or is allostatic load just repackaging standard risk factors?\n- **(Purpose) Does ANY RCT of a purpose-/positive-psychology intervention move a HARD endpoint**, or have all such trials reported only surrogates? (Same gap as the other two sub-levers — needs a trial-registry search to confirm.)\n- **(Purpose) Does the dementia association survive longer follow-up / landmark analyses** that exclude prodromal cases beyond the ~5-yr UK Biobank window, and adjustment for baseline cognition?\n- **(Purpose) Can the Ye 2024 MR be replicated** with cleaner well-being instruments separated from depression genetics, with MR-Egger/weighted-median confirming directionality (the disputed methodology)?\n- **(Purpose) Is the optimism benefit concentrated in the oldest-old** (ASPREE 77+) vs a general adult effect, and does it generalize beyond female/high-SES Western cohorts?"
     },
     "substances": {
       "slug": "substances",
@@ -1619,20 +2047,360 @@
         }
       ],
       "dose": "**The 80/20:** for both tobacco and alcohol the curve has **no safe floor for the net outcome** — the gain is almost entirely in *not starting* / *full cessation*, not in moderation.\n\n- **Tobacco:** dose-response is steep from the very first cigarette (<1 CPD already HR 1.64). There is no \"light smoking is basically fine\" tier. The single highest-value move is total cessation; intensity reduction helps far less than quitting.\n- **Cessation timing:** benefit is steeply front-loaded by age — quit-before-40 recovers ~90%, and benefit is *detectable within 3 years*. Returns diminish with age but stay positive into the 70s.\n- **Alcohol:** harm-minimizing intake across all outcomes = **0 drinks/week.** The only protective window (IHD) sits near ~1 drink/day and is wiped out by monotonically rising cancer risk. Treat \"moderate drinking is healthy\" as overturned at the net level. Practical floor for *meaningfully lower* (not zero) harm is roughly ≤1 drink/day, but lower is always better and the gradient never reverses for cancer.\n- **Vaping:** not a dose question so much as a *comparator* question. vs **smoking**, it's clearly less harmful (esp. respiratory/COPD) — but the famous \"95% safer\" number is a 2015 expert estimate, not measured, and the real CVD gap is more like 30–40%, not 95%. vs **never-use**, it is NOT harm-free (composite-CVD AOR ~1.31, respiratory RR ~1.90). Crucially, the scary MI signals are concentrated in *former smokers* who vape; exclusive never-smoker vapers show little MI elevation. And no long-term mortality cohort exists yet, so all of this is T2-capped. Net: a harm-*reduction* tool for smokers, not a health-neutral habit for non-smokers.\n- **Cannabis:** the dose/threshold picture is genuinely thin and the harm is **population-specific, not universal**. The two axes that matter:\n  - *Age of onset.* The credible cognitive-harm signal is for **adolescent-onset, persistent/heavy** use (Dunedin IQ decline — though causality is contested on SES-confounding grounds). The one large **adult-onset** cohort found *no* measured cognitive harm. If there's a \"minimum-harm\" rule, it's \"don't start young, don't use heavily during brain development.\"\n  - *Cardiovascular.* Chronic-use signals are real but modest, observational, and **not adjusted for tobacco co-use** — so the independent effect of cannabis is unquantified. The dramatic numbers (acute MI ~4.8× in the hour after *smoking*; \"doubles CV death\") are either a transient trigger from a single small study or a low-certainty/refuted framing. Route matters but isn't quantified for hard endpoints; combustion is the suspected driver. Net: occasional adult use shows little measured hard-endpoint harm; the caution is heavy/chronic use, smoking as the route, and anyone with existing CVD.",
-      "actions": "- [ ] Don't smoke. If you do: quit — this is the single highest-leverage action in the entire project. (Benefit detectable in 3 yrs; ~90% recovery if done before 40.)\n- [ ] Avoid smokeless tobacco as a \"safe\" substitute — smaller penalty than cigarettes but still HR ~1.36.\n- [ ] Treat alcohol as a net-negative with no health-justified floor. Anchor on ≤1 drink/day as a harm-*reduction* ceiling, understanding 0 is optimal for total health.\n- [ ] Don't take up vaping as a non-smoker — it is not harm-free and its long-term risks are literally unmeasured.\n- [ ] If you're a smoker who can't quit outright, a *complete* switch to vaping (not dual use) is a defensible harm-reduction step — but it's a cessation tactic, not a safe habit. Dual use buys nothing.\n- [ ] Cannabis: occasional adult use is low-measured-harm on hard endpoints. Keep it occasional (not heavy/daily), avoid the *smoked* route if using, and treat existing CVD as a contraindication. The real red line is adolescent/young-brain heavy use — not applicable to you, but relevant for anyone you'd advise.",
+      "actions": "- [ ] Don't smoke. If you do: quit — this is the single highest-leverage action in the entire project. (Benefit detectable in 3 yrs; ~90% recovery if done before 40.)\n- [ ] Avoid smokeless tobacco as a \"safe\" substitute — smaller penalty than cigarettes but still HR ~1.36.\n- [ ] Treat alcohol as a net-negative with no health-justified floor. Anchor on ≤1 drink/day as a harm-*reduction* ceiling, understanding 0 is optimal for total health.\n- [ ] Don't take up vaping as a non-smoker — it is not harm-free and its long-term risks are literally unmeasured.\n- [ ] If you're a smoker who can't quit outright, a *complete* switch to vaping (not dual use) is a defensible harm-reduction step — but it's a cessation tactic, not a safe habit. Dual use buys nothing.\n- [ ] Cannabis: occasional adult use is low-measured-harm on hard endpoints. Keep it occasional (not heavy/daily), avoid the *smoked* route if using, and treat existing CVD as a contraindication. The real red line is adolescent/young-brain heavy use — the harm signal concentrates there, so that's the key message for teens and young adults.",
       "caveats": "- **Smoking HRs** are adjusted for age, education, adiposity, and alcohol — these are the substance's own effect, not lifestyle confounds.\n- **Finding #7 (older-age cessation) is a life-table SIMULATION** (CPS-II relative risks + 2018 prevalence), not directly observed cohort deltas. Tagged T1-input but confidence M.\n- **Smokeless tobacco heart-disease** evidence is genuinely unsettled; the \"no excess\" result leans on an Altria-affiliated study (rows #8/#11). All-cause penalty (#8) is solid; the cardiac-specific magnitude is not.\n- **Alcohol \"zero is optimal\"** is the robust *net-across-outcomes* conclusion. The 2022 GBD update added age-specific thresholds suggesting a small possible net benefit for *some older adults* — so this is not \"one drink will kill you,\" it's \"there is no population-level health reason to start or maintain drinking.\" The IHD-specific protection (#10) is real but is the least causally-secure piece (MR debate ongoing).\n- **Reverse causation** (\"sick-quitter\" effect) can inflate short-term mortality in some late-quitter subgroups; it does not overturn the 3-year benefit signal or the core cessation conclusions.\n- All cessation \"years averted/restored\" figures are observational (\"potentially averted\"), not RCT-derived.\n- **Vaping evidence is immature and largely cross-sectional.** Hard-endpoint claims (#11–#15) are T2-capped because no long-term cohort exists and most data can't establish causality/temporality (reverse causation: people may switch to vaping *after* a cardiac event). The MI signal is confounded by smoking history. Do not let vaping's T2 rows outrank tobacco/alcohol T1 conclusions.\n- **EVALI ≠ regulated nicotine vaping.** The 2019 lung-injury outbreak was traced to illicit THC cartridges with vitamin-E-acetate, not regulated nicotine e-liquid — relevant context but a separate phenomenon (not separately verified here; sources noted in `_meta/sources.md`).\n- **Cannabis evidence is observational and confounder-dominated.** No RCTs exist for cannabis vs MI/stroke/death. Tobacco co-use is the dominant unadjusted confounder; the flagship 2025 CV meta-analysis doesn't even mention smoking adjustment. The CV literature is *internally* conflicting (same meta: composite significant, MI/stroke null; a larger meta: MI significant). The mortality RR 1.53 is author-graded LOW certainty (I²=98%). Do not let cannabis's T2/T3 rows imply T1-grade certainty.\n- **Cannabis harm is population-specific.** The adolescent-onset IQ signal does NOT transfer to adult occasional users; the adult \"no harm\" cohort (Danish men, 92% abstinent, healthy-survivor-biased) does NOT transfer to current heavy users or women. Match the claim to the population.",
       "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **Nicotine vaping** — RESOLVED to T2 (patch 2026-06-18, rows #11–#18). Remaining sub-question: the long-term (decadal) hard-endpoint mortality data simply doesn't exist yet — revisit when a long-horizon cohort matures. Treat Certainty as capped until then.\n- **Cannabis** — RESOLVED to T2 (run 2026-06-18, rows #16–#19, #25–#27). Residual unknowns: (a) does the CV/mortality signal survive proper tobacco-co-use adjustment? — no never-tobacco pooled estimate exists; (b) is the Dunedin adolescent-IQ effect causal or SES/genetically confounded? — unresolved dispute; (c) no head-to-head route comparison (smoked vs edible vs vaporized) on hard endpoints. These are refinements, not blockers for ranking.\n- Is the smokeless-tobacco heart-disease signal truly null or modestly elevated, once industry-affiliation bias is reconciled across independent cohorts?\n- Does the 2022 GBD age-specific alcohol threshold (possible small net benefit for older adults) hold up against Mendelian-randomization evidence, and at what age/sex?\n- Long-time-since-quitting mortality recovery for *light* smoking specifically (a contested HR ~1.42 for ≥50-yr-ago light-smoking quitters was refuted in verification — needs cleaner data)."
     },
     "sun-skin": {
       "slug": "sun-skin",
       "name": "Sun & Skin",
-      "status": "pending",
-      "scope": "UV exposure, photoaging, skin cancer. Photodamage is irreversible.\n\n- In:\n- Out (and where it lives instead):",
-      "claims": [],
-      "dose": "",
-      "actions": "- [ ]",
-      "caveats": "",
-      "openQuestions": ""
+      "status": "complete",
+      "scope": "UV exposure, photoaging, skin cancer. **Photodamage is irreversible** — the reversibility axis is load-bearing here (like oral-sensory), so prevention dominates.\n\n- In: **UV/sun exposure** (intermittent/recreational *and* cumulative/occupational), **sunburns**, **indoor tanning** → melanoma + keratinocyte carcinoma (BCC/SCC) incidence *and* mortality; **photoaging**; **sun protection** (sunscreen RCTs, clothing/shade behavior) [Section 2]; the **vitamin-D / sun-avoidance net risk–benefit** incl. UV non-cancer effects (BP/nitric-oxide, mood) and vitamin-D supplementation hard-endpoint RCTs [Section 3]; the **irreversibility** framing.\n- Out (and where it lives instead): **vitamin D as a bone/falls nutrient/supplement** → `nutrition-metabolic` / `medical-screening` (but the *sun-avoidance→mortality* and *VitD-RCT-for-mortality* questions live here, as the counterweight to sun-protection advice); **skin-cancer screening / total-body exams** → `medical-screening` (noted only); **cosmetic dermatology treatments** (retinoids, lasers) → noted, not the focus; **smoking's contribution to skin aging** → `substances`.",
+      "claims": [
+        {
+          "number": 1,
+          "text": "**Sunburn / intermittent UV → ~doubled melanoma incidence**, dose-responsive across life",
+          "systems": "Skin",
+          "tier": "T1 (CC/cohort meta)",
+          "tierGroup": "primary",
+          "effect": "Pooled sunburn–melanoma RR **2.03** (Gandini, 57 studies, 38,671 cases); childhood ever-sunburned OR **1.91**; per-5-sunburns dose-response childhood **1.79** > adult 1.48 > lifetime 1.26 (\"only childhood matters\" is wrong). Caveats: recall bias (vague \"severe sunburn\"), phenotype confounding (fair skin/nevi), publication bias (Begg p<0.01)",
+          "reversibility": "IRREVERSIBLE (cumulative DNA damage)",
+          "confidence": "H (association)",
+          "sources": [
+            "S176",
+            "S177"
+          ]
+        },
+        {
+          "number": 2,
+          "text": "**The melanoma–sunburn link is CAUSAL** — MR triangulates with the observational estimate",
+          "systems": "Skin",
+          "tier": "T1 (MR)",
+          "tierGroup": "primary",
+          "effect": "MR childhood sunburn→melanoma OR **2.42** (1.43–4.10), robust across IVW / weighted-median 2.27 / MR-Egger 2.90, no directional pleiotropy (intercept p=0.63); concurs with obs 2.03. Caveat: instrument may partly proxy pigmentation/sun-sensitivity; European-ancestry; self-reported exposure",
+          "reversibility": "IRREVERSIBLE",
+          "confidence": "H",
+          "sources": [
+            "S178"
+          ]
+        },
+        {
+          "number": 3,
+          "text": "**Melanoma is HIGH-INCIDENCE but LOW-MORTALITY** — the decision-critical reframe",
+          "systems": "Skin",
+          "tier": "T1 (registry)",
+          "tierGroup": "primary",
+          "effect": "~112,000 US invasive cases/yr vs **8,510 deaths** (~7.6% case-fatality; **94.7%** 5-yr relative survival). 5.3% of new cancers but only **1.4% of cancer deaths** (~4× incidence-to-mortality gap). Stage-dependent: 100% localized → 76% regional → 34% distant",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S179"
+          ]
+        },
+        {
+          "number": 4,
+          "text": "**Melanoma incidence is RISING while mortality FALLS** — heavy overdiagnosis",
+          "systems": "Skin",
+          "tier": "T1 (registry)",
+          "tierGroup": "primary",
+          "effect": "Incidence **+1.1%/yr** (2014–23) vs mortality **−2.2%/yr** (2015–24, ~−30%/decade, tracking 10+ immunotherapy approvals). Overdiagnosis ~**50–65%** of invasive cases (85–89% for in situ); biopsies up 1.9× while incidence up 2.5×. Rising incidence **overstates** the true mortality-relevant burden",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S179",
+            "S180"
+          ]
+        },
+        {
+          "number": 5,
+          "text": "**Keratinocyte carcinomas (BCC/SCC) track CUMULATIVE/occupational UV** — SCC stronger & dose-responsive",
+          "systems": "Skin",
+          "tier": "T1 (CC/cohort meta)",
+          "tierGroup": "primary",
+          "effect": "Occupational UV: **SCC OR 1.77** (1.40–2.22; 16/18 studies +, dose-response ↑ at lower latitude); **BCC weaker/heterogeneous OR 1.43** (~1.10–1.20 in low-bias studies; 5 studies showed non-sig *reduction*). SCC may be twenties-exposure-sensitive. Phenotype adjustment attenuates sunburn ORs to NS",
+          "reversibility": "IRREVERSIBLE",
+          "confidence": "H (SCC) / M (BCC)",
+          "sources": [
+            "S181"
+          ]
+        },
+        {
+          "number": 6,
+          "text": "**Keratinocyte carcinomas are ubiquitous but almost never lethal** — the extreme incidence–mortality gap",
+          "systems": "Skin",
+          "tier": "T1 (registry/meta)",
+          "tierGroup": "primary",
+          "effect": "~**5.4M NMSC treated/yr** (US) but only ~**3,100 deaths/yr** → case-fatality ~**0.05%**. **BCC relative mortality 0.92** (NOT elevated vs general pop); SCC ~1.25, 5-yr survival ~95%. For a *longevity* ranking the NMSC mortality burden (~1/100,000) is trivial",
+          "reversibility": "IRREVERSIBLE (lesions) but ≈no mortality",
+          "confidence": "H",
+          "sources": [
+            "S182",
+            "S183"
+          ]
+        },
+        {
+          "number": 7,
+          "text": "**Indoor tanning is an IARC Group 1 carcinogen** → melanoma, especially early use",
+          "systems": "Skin",
+          "tier": "T1 (meta + IARC)",
+          "tierGroup": "primary",
+          "effect": "Ever-use melanoma RR **1.27** (1.16–1.39); early-onset (<50) RR **1.75**; first use before age 35 RR ~1.75 (the IARC Group 1 basis). Observational/recall + phenotype caveats, but the causal classification is authoritative",
+          "reversibility": "IRREVERSIBLE",
+          "confidence": "H",
+          "sources": [
+            "S184"
+          ]
+        },
+        {
+          "number": 8,
+          "text": "UV molecular signature (BRAF V600E T>A) — mechanistic causal support for melanoma",
+          "systems": "Skin",
+          "tier": "T3 (yeast model)",
+          "tierGroup": "informational",
+          "effect": "UV-photoproduct **T>A 3.6× enriched** in skin cancers (COSMIC); experimental UVB/UVC induce V600E-mimicking mutations at 138–148×10⁻¹⁰ vs ~1×10⁻¹⁰ background. Yeast reversion assay, *not* human melanocytes; adjacent atypical-photoproduct claims (≈50%, AC>TT 2000×) were *refuted*",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S185"
+          ]
+        },
+        {
+          "number": 9,
+          "text": "**Photoaging: UVA-dominant; \"~80–90% of facial aging is UV\" is widely cited but UNVERIFIED here**",
+          "systems": "Skin",
+          "tier": "T3 (low confidence)",
+          "tierGroup": "informational",
+          "effect": "UV (esp. UVA, deeper dermal penetration) is the dominant driver of *extrinsic* aging (wrinkles, solar elastosis, pigmentation); the ~80% figure (Flament 2013) is dermatology consensus but **no claim survived adversarial verification** this run. Direction solid; exact fraction & reversibility unverified. Cosmetic/QoL, **not a mortality endpoint**",
+          "reversibility": "IRREVERSIBLE (largely)",
+          "confidence": "L",
+          "sources": []
+        },
+        {
+          "number": 10,
+          "text": "Refuted / do-not-cite (harm side)",
+          "systems": "—",
+          "tier": "T4 (refuted)",
+          "tierGroup": "informational",
+          "effect": "Failed verification: GBD-style DALY/ASIR/ASDR burden figures (e.g. BCC ASDR 0.02, melanoma 58% of DALYs — all 0-3); the sailor SCC \"RR 10.1\" (modeled from n=1 dosimeter); atypical-photoproduct ≈50% / AC>TT 2000× mechanistic claims; \"cumulative exposure drives keratinocyte risk *comparably* to intermittent.\" Use the conservative rows above",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        },
+        {
+          "number": 11,
+          "text": "**[RCT] Daily sunscreen REDUCES MELANOMA** — rare RCT-grade proof an intervention prevents a cancer",
+          "systems": "Skin",
+          "tier": "T1 (RCT)",
+          "tierGroup": "primary",
+          "effect": "Nambour RCT (Green 2011, n=1,621): daily sunscreen → overall melanoma HR **0.50** (borderline, p=0.051; 11 vs 22 cases at 10-yr follow-up); **invasive melanoma HR 0.27** (0.08–0.97, ~73% ↓); in-situ null. Benefit emerged ~10 yr later. Single trial, one high-UV white population",
+          "reversibility": "IRREVERSIBLE (prevention)",
+          "confidence": "M–H (one RCT)",
+          "sources": [
+            "S186"
+          ]
+        },
+        {
+          "number": 12,
+          "text": "**[RCT] Sunscreen reduces SCC ~40% long-term** — strongest hard-endpoint result",
+          "systems": "Skin",
+          "tier": "T1 (RCT follow-up)",
+          "tierGroup": "primary",
+          "effect": "Nambour: daily sunscreen → SCC RR **0.62** (0.38–0.99) at long-term follow-up (van der Pols 2006); within-trial SCC null (latency). Caveat: a claim the benefit \"persists ≥8 yr AFTER the trial without continued use\" was **refuted** — likely continued use, not durable biological effect",
+          "reversibility": "IRREVERSIBLE (prevention)",
+          "confidence": "H",
+          "sources": [
+            "S187"
+          ]
+        },
+        {
+          "number": 13,
+          "text": "**Sunscreen does NOT prevent BCC** — protection is melanoma/SCC-specific",
+          "systems": "Skin",
+          "tier": "T1 (RCT + Cochrane)",
+          "tierGroup": "primary",
+          "effect": "Nambour BCC HR **1.04** (0.79–1.45, Pandeya 2005); Cochrane RR 1.03; repeat-BCC tumours trend HR 0.82 (NS). BCC — the commonest, least-lethal skin cancer — is not reduced",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S188",
+            "S189"
+          ]
+        },
+        {
+          "number": 14,
+          "text": "**[RCT] Sunscreen slows PHOTOAGING ~24%** (surrogate)",
+          "systems": "Skin",
+          "tier": "T1 (RCT, surrogate)",
+          "tierGroup": "primary",
+          "effect": "Hughes 2013 (n=903, 4.5 yr): daily vs discretionary sunscreen → **24% less** skin aging (microtopography odds 0.76, 0.59–0.98). RCT-grade but a surrogate (skin-aging casts), cosmetic not mortality",
+          "reversibility": "SLOW/preventable (cosmetic)",
+          "confidence": "H (for the surrogate)",
+          "sources": [
+            "S190"
+          ]
+        },
+        {
+          "number": 15,
+          "text": "Sun protection reduces NEVUS counts in children (a melanoma risk *marker*)",
+          "systems": "Skin",
+          "tier": "T2 (RCT, surrogate)",
+          "tierGroup": "primary",
+          "effect": "SPF-30 sunscreen reduced new nevus acquisition in white children (Gallagher 2000), concentrated in freckled children; UPF clothing similarly cut nevi. Nevus count is a risk marker, not a cancer endpoint",
+          "reversibility": "—",
+          "confidence": "M",
+          "sources": [
+            "S191"
+          ]
+        },
+        {
+          "number": 16,
+          "text": "**USPSTF: counseling helps — but graded on SURROGATES, not cancer incidence**",
+          "systems": "Skin",
+          "tier": "T1 (USPSTF)",
+          "tierGroup": "primary",
+          "effect": "Grade **B** for sun-protection counseling (6mo–21yr & fair-skinned young adults), Grade **C** older adults; based on improved sun-protective *behavior* / fewer sunburns / nevi — **no direct evidence it lowers cancer incidence**. Intervention sound; hard-endpoint chain inferred",
+          "reversibility": "—",
+          "confidence": "M (surrogate-graded)",
+          "sources": [
+            "S192"
+          ]
+        },
+        {
+          "number": 17,
+          "text": "Causal caveats (why the RCT matters; real-world efficacy)",
+          "systems": "—",
+          "tier": "T2 (caveat)",
+          "tierGroup": "primary",
+          "effect": "**\"Sunscreen paradox\":** observational sunscreen-users often get MORE sun (confounding) — why Nambour's RCT design matters. **Under-application:** people apply ~25–50% of the 2 mg/cm² SPF-test density, so real-world SPF is far below label. **Generalizability:** Nambour is one high-UV white Australian cohort; Cochrane certainty LOW",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": [
+            "S186"
+          ]
+        },
+        {
+          "number": 18,
+          "text": "Refuted / low-grade (protection)",
+          "systems": "—",
+          "tier": "T3/T4",
+          "tierGroup": "informational",
+          "effect": "*Refuted:* sunscreen benefit \"persists ≥8 yr after stopping use\" (0-3). *Low-grade/unsettled — NOT hard-endpoint harms:* chemical-filter systemic absorption (detectable in blood, clinical significance unestablished), hormone/coral concerns. Keep tiered as speculative, not reasons to avoid protection",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        },
+        {
+          "number": 19,
+          "text": "**[Observational] Sun AVOIDANCE → ~2× all-cause mortality, dose-dependent** — but heavily confounded",
+          "systems": "Skin, Cardio",
+          "tier": "T2 (single cohort)",
+          "tierGroup": "primary",
+          "effect": "MISS (29,518 Swedish women, 20 yr, 2,545 deaths): avoiders all-cause HR **2.0** (1.6–2.5) vs highest-exposure; moderate exposure 1.4; LE **0.6–2.1 yr** shorter; PAR 3%. Benefit was lower CVD + noncancer/non-CVD death (cancer-specific HR ~1.02, NS — the higher cancer *share* is a competing-risk artifact). Single self-reported cohort; avoiders plausibly sicker/poorer/housebound",
+          "reversibility": "n/a",
+          "confidence": "M (assoc); causality contested",
+          "sources": [
+            "S193",
+            "S194"
+          ]
+        },
+        {
+          "number": 20,
+          "text": "**\"Sun avoidance is as bad as smoking\" is the authors' own framing — NOT causally established**",
+          "systems": "Skin",
+          "tier": "T2 (flag)",
+          "tierGroup": "primary",
+          "effect": "Verbatim MISS: nonsmoking avoiders ≈ life expectancy of smokers in the highest-exposure group. But one observational cohort; the \"no sun\" group was small/older/sicker; authors conceded avoidance \"could be a predictive marker of chronic disease.\" Reverse causation live; SCHEER/RSC 2017 judged the literature too weak to change guidance",
+          "reversibility": "n/a",
+          "confidence": "H (for \"it's an analogy, not causal\")",
+          "sources": [
+            "S194"
+          ]
+        },
+        {
+          "number": 21,
+          "text": "**[RCT] Vitamin-D supplementation does NOT reduce mortality** — the decisive causal test",
+          "systems": "Immune, Cardio",
+          "tier": "T1 (RCT)",
+          "tierGroup": "primary",
+          "effect": "D-Health (n=21,315, 60k IU/mo): all-cause mortality HR **~1.04** (0.93–1.18), null; VITAL (n=25,871) null on mortality/CVD/cancer. Supplementation fails even where observational data predicted benefit → **low vitamin D is a MARKER, not a cause** of ill health",
+          "reversibility": "— (intervention)",
+          "confidence": "H",
+          "sources": [
+            "S195",
+            "S196"
+          ]
+        },
+        {
+          "number": 22,
+          "text": "**[MR] No causal vitamin D → mortality/CVD at ANY level**, including deficiency (corrected Lancet)",
+          "systems": "Cardio, Immune",
+          "tier": "T1 (MR)",
+          "tierGroup": "primary",
+          "effect": "Zhou 2023 (386,406 genetic / 500,962 obs): strong observational inverse associations, but MR **null** — all-cause mortality OR 0.99/10 nmol/L, CHD 0.98, stroke 1.01 — even at severe deficiency. \"Substantial reductions… unlikely even if targeted at low-vitamin-D individuals.\" *Cite the CORRECTED 2023 version — the 2021 original was retracted for a stats error*",
+          "reversibility": "—",
+          "confidence": "H",
+          "sources": [
+            "S197"
+          ]
+        },
+        {
+          "number": 23,
+          "text": "MR on a vitamin-D mortality signal is MIXED — any causal benefit confined at most to severe deficiency",
+          "systems": "Cardio, Immune",
+          "tier": "T1 (MR, conflicting)",
+          "tierGroup": "primary",
+          "effect": "Afzal 2014 (Danish, n=95,766): genetic low vit D → all-cause OR **1.30** (1.05–1.61), cancer 1.43, but CV **null**. NOT replicated by larger MR (Huang 2019: 99k Chinese + 107k European = null; a UK Biobank nonlinear-MR deficiency claim was *refuted* this run). Net: at most a severe-deficiency effect, not in replete people",
+          "reversibility": "—",
+          "confidence": "M",
+          "sources": [
+            "S198",
+            "S199"
+          ]
+        },
+        {
+          "number": 24,
+          "text": "**UV has a non-vitamin-D BP mechanism (nitric oxide) — but T3, ACUTE only**",
+          "systems": "Skin, Cardio",
+          "tier": "T3 (mechanistic, acute)",
+          "tierGroup": "informational",
+          "effect": "UVA mobilizes cutaneous photolabile NO stores → acute **~11% BP drop** at 30 min, independent of vitamin D (too fast for D synthesis) (Weller/Oplander 2009). BUT transient — a single daily UVA dose does NOT sustain hypotension (2022 follow-up); no hard-endpoint evidence",
+          "reversibility": "n/a",
+          "confidence": "M (real but acute/unproven)",
+          "sources": [
+            "S200"
+          ]
+        },
+        {
+          "number": 25,
+          "text": "**NET SYNTHESIS: moderate sun is plausibly net-neutral-to-positive at high latitude/fair skin — but NOT via vitamin D, and it INVERTS in high-UV regions / darker skin**",
+          "systems": "Skin, Cardio",
+          "tier": "T2/T3 (synthesis)",
+          "tierGroup": "primary",
+          "effect": "The avoidance–mortality signal is real-but-confounded; the vitamin-D causal channel is closed (null RCTs + corrected MR). What remains: avoidance-as-illness-marker, residual NO/BP/mood (T3), or genuine-but-unproven benefit. Specific to low-solar-intensity fair-skinned settings; does NOT generalize where skin-cancer harm dominates. **Practical: don't be a sun-AVOIDER, don't sun-SEEK/BURN, and don't supplement vitamin D expecting longevity**",
+          "reversibility": "n/a",
+          "confidence": "M",
+          "sources": [
+            "S193",
+            "S195",
+            "S197"
+          ]
+        },
+        {
+          "number": 26,
+          "text": "Refuted / do-not-cite (net benefit)",
+          "systems": "—",
+          "tier": "T4 (refuted)",
+          "tierGroup": "informational",
+          "effect": "Refuted: UK Biobank nonlinear-MR \"severe vitamin-D deficiency causally raises all-cause/CVD/cancer/respiratory mortality (L-shaped)\" (M21-3324, 0-3/1-2); \"vitamin-D supplementation substantially cuts mortality\"; the **retracted 2021 Lancet MR** (use corrected 2023). Don't cite smoking-equivalence as causal",
+          "reversibility": "—",
+          "confidence": "—",
+          "sources": []
+        }
+      ],
+      "dose": "### UV harm\n**The 80/20 of the harm side: the causal target is intermittent UV / sunburns / tanning beds (melanoma) and cumulative UV (keratinocyte) — but for *longevity* specifically, the mortality stakes are smaller than the \"skin cancer epidemic\" framing implies.**\n\n- **Avoid sunburns and tanning beds** — this is the highest-value, best-causally-supported piece (melanoma MR OR 2.42; tanning IARC Group 1), and the damage is irreversible/cumulative. Early-life and early-tanning-use exposure matter most but adult sunburns still count.\n- **Keep mortality in perspective:** melanoma is ~1.4% of cancer deaths and falling; keratinocyte carcinomas essentially don't kill. Sun protection is well-justified, but its *life-extension* payoff is modest vs the top levers (smoking, BP, fitness) — its bigger returns are morbidity/cosmetic/QoL (avoiding surgeries, scarring, photoaging).\n- **Overdiagnosis caveat:** much of the \"rising melanoma\" signal is indolent-lesion detection — a reason to avoid sunburns, not a reason to panic about incidence statistics.\n- *(The net \"how much sun is optimal\" dose awaits Section 3 — strict avoidance has its own apparent mortality cost, so the harm side alone shouldn't set the dose.)*\n\n### Sun protection\n**The 80/20 of protection: daily sunscreen + not burning is RCT-proven to cut melanoma and SCC (not BCC) and to slow photoaging — a genuinely *causal* lever, but one whose mortality yield is modest given how rarely these cancers kill. Apply enough (real-world use is far below label) and treat it as cheap insurance, not a major life-extender.**\n\n- **Daily broad-spectrum sunscreen on routinely-exposed skin** is the protection with hard-endpoint RCT support (melanoma + SCC). Apply generously — real-world under-application (~25–50% of test density) means actual SPF is much lower than the label.\n- **Sunscreen won't prevent BCC** (the commonest skin cancer) — so don't expect it to stop *all* skin cancer; pair with not-burning and avoiding tanning beds (the melanoma levers).\n- **Behavior (shade, hats, UPF clothing, timing) complements sunscreen** and is what counseling bodies actually endorse — though even USPSTF grades it on behavior change, not proven cancer-incidence reduction.\n- **Right-size the effort:** this is proven and cheap, but its *longevity* payoff is modest (low cancer mortality) — its bigger wins are avoided surgeries/scarring and photoaging. Don't let it crowd out the top mortality levers, and don't let protection zeal pre-empt the Section-3 vitamin-D/sun-avoidance balance.\n\n### Net (all sections — the integrated dose)\n**The whole-lever 80/20: aim for the MIDDLE. Don't burn / don't tan / don't sun-seek (the proven cancer levers), but don't be a strict sun-AVOIDER either (the avoidance-mortality signal, even if confounded, plus the closed vitamin-D channel mean avoidance buys little and may cost). And don't reach for vitamin-D supplements as a longevity move — that's the one clearly-settled negative.**\n\n- **Avoid the extremes, both directions.** Intermittent burning/tanning is the causal melanoma risk; strict avoidance is at best unhelpful (and tracks higher mortality, likely as an illness-marker). Casual everyday sun + not-burning is the defensible target.\n- **Latitude & skin type set the dial.** High-UV-index regions / fair skin → tilt toward protection (cancer harm dominates). High-latitude / low-solar-intensity → avoidance has less upside and the protection payoff is smaller. Darker skin → far lower cancer risk, so protection is less load-bearing.\n- **Don't supplement vitamin D for longevity.** RCTs (D-Health, VITAL) and corrected MR are null — low vitamin D is a marker of ill health, not a fixable cause of death. (Supplementation for diagnosed deficiency/bone is a separate `medical-screening`/`nutrition` question.)\n- **Overall lever weight for longevity: modest.** Strong causation, small mortality stakes, and a net recommendation that's \"be moderate.\" Its biggest *certain* returns are morbidity/cosmetic (fewer skin-cancer surgeries, less photoaging), not years of life.",
+      "actions": "### UV harm\n- [ ] **Don't get sunburned** (the best-evidenced, causal melanoma target) — hat/shade/clothing/timing; sunscreen efficacy itself is Section 2.\n- [ ] **Never use tanning beds** — IARC Group 1 carcinogen; risk concentrates in early/young use.\n- [ ] **Be sensible about cumulative/occupational sun** (keratinocyte carcinoma) — but weight it as a morbidity/cosmetic issue, not a major mortality one.\n- [ ] **Don't over-rank skin-cancer fear for longevity** — protect skin for morbidity/cosmetic reasons; the mortality math is modest and the optimal-sun-dose question is unresolved until Section 3.\n\n### Sun protection\n- [ ] **Use daily broad-spectrum sunscreen on exposed skin, applied generously** — RCT-proven for melanoma + SCC; most people under-apply, so err toward more.\n- [ ] **Add behavior** — shade, broad-brim hat, UPF clothing, avoid midday peak — complements sunscreen and is what counseling bodies endorse.\n- [ ] **Don't assume sunscreen covers everything** — it doesn't prevent BCC; not-burning and no tanning beds remain the melanoma levers.\n- [ ] **Keep it proportionate** — cheap proven insurance against morbidity/photoaging, but a modest *mortality* lever.\n\n### Net (integrated)\n- [ ] **Aim for the middle: routine casual sun without burning** — neither tan/sun-seek nor strictly avoid.\n- [ ] **Set the protection dial by latitude & skin type** — more protection in high-UV regions / fair skin; less avoidance upside at high latitude / darker skin.\n- [ ] **Don't take vitamin-D supplements for longevity** — null in RCTs and MR (separate from treating diagnosed deficiency/bone health).\n- [ ] **Rank this lever modestly for lifespan** — protect for morbidity/cosmetic reasons; spend your top effort on the high-mortality levers.",
+      "caveats": "### UV harm\n- **Strong causation, modest mortality** is the defining feature — unusual for this project (most levers were the reverse). Take UV→skin-cancer *causation* seriously; take the *longevity* magnitude with proportion.\n- **Phenotype confounding is pervasive and partly unresolved:** fair skin (Fitzpatrick I–II) and high nevus count drive both sun-seeking behavior *and* cancer risk; full phenotype adjustment attenuated keratinocyte sunburn ORs to non-significance, and the melanoma MR instrument may partly proxy pigmentation. People with darker skin have far lower absolute risk (but worse-prognosis melanomas when they occur — a detection issue).\n- **Overdiagnosis/surveillance bias** inflates melanoma incidence (~50–65%), so incidence trends overstate the mortality-relevant burden.\n- **Recall bias** inflates self-reported \"severe sunburn\" associations.\n- **Incidence ≠ mortality** must be kept separate for ranking: keratinocyte carcinoma is a high-frequency/near-zero-mortality morbidity issue; melanoma is the only meaningfully lethal one and even its burden is small and shrinking.\n\n### Sun protection\n- **The hard-endpoint case rests on ONE trial** (Nambour) in a high-UV white Australian population, which Cochrane rates LOW certainty. Strong for what it is, but not replicated — and generalizability to lower-UV settings / darker skin is uncertain.\n- **Protection is cancer-type-specific:** melanoma + SCC reduced, **BCC not**. \"Sunscreen prevents skin cancer\" is true only partially.\n- **Counseling evidence is surrogate-graded:** USPSTF endorses behavior change, but there's no direct trial showing counseling lowers cancer *incidence* — the chain to hard endpoints is inferred.\n- **Real-world efficacy < label:** chronic under-application (~25–50% of test density) and the \"sunscreen paradox\" (protection enabling longer exposure) mean observational data understate true efficacy and the RCT is the cleaner guide.\n- **Safety scare-stories are low-grade:** chemical-filter blood absorption is detectable but of unestablished clinical significance; hormone/coral concerns are speculative — none are hard-endpoint harms and none outweigh proven protection.\n\n### Net / vitamin-D\n- **Marker vs cause is the whole story.** Sun avoidance and low vitamin D look bad observationally but fail every causal test (null supplementation RCTs, corrected null MR). Don't infer \"get more sun / take vitamin D\" from the avoidance-mortality correlation.\n- **The avoidance signal is one confounded cohort** (MISS — fair-skinned Swedish women, self-reported baseline exposure, avoiders likely sicker). The \"as bad as smoking\" line is the authors' framing, not causal.\n- **Geography & skin type invert the conclusion.** Net-neutral-to-positive moderate sun applies to low-solar-intensity / fair-skinned settings; in high-UV regions and for darker skin the trade-off shifts (cancer harm up, deficiency risk differs).\n- **Retraction hazard noted:** the key null MR is the *corrected 2023* Lancet paper; the 2021 original was retracted. UK Biobank nonlinear-MR deficiency claims did not survive verification.\n- **Boundary with other levers:** vitamin-D supplementation for *diagnosed deficiency, bone, or falls* is a `nutrition-metabolic`/`medical-screening` question; here the verdict is narrowly \"supplementing does not extend life.\"",
+      "openQuestions": "*(also copied to `synthesis/open-questions.md`)*\n- **Photoaging:** what fraction of extrinsic facial aging is truly UV-attributable (the ~80–90% figure didn't survive verification), and how reversible is established photodamage? Low longevity-relevance (cosmetic) — likely **not worth a dedicated run** unless QoL is weighted.\n- **How much of the melanoma–UV association is residual phenotype confounding** (pigmentation/nevi) vs direct UV, given MR-instrument and adjustment caveats?\n- **The true vs overdiagnosed split** in rising melanoma incidence — how much UV-attributable melanoma is actually life-threatening vs indolent (affects the lever's longevity weight)?\n- **UVA vs UVB** relative contributions across endpoints (UVB→keratinocyte mutations; UVA→dermal photoaging & possibly melanoma) — needed to connect this to the Section 2 sunscreen-efficacy question (UVA/UVB protection differ).\n- **Does sunscreen prevent melanoma beyond the single Nambour RCT?** All hard-endpoint protection evidence is one trial (Cochrane certainty LOW); no replication exists or is likely (an RCT is now arguably unethical).\n- **If vitamin D isn't the mediator, what drives any residual sun-mortality benefit** — nitric-oxide/BP, circadian/mood, immune, or pure confounding (healthier/wealthier people get more sun)?\n- **Where is the latitude/UV-index/skin-type threshold** at which moderate sun flips from net-positive (avoidance signal dominates) to net-negative (skin-cancer harm dominates)?\n- **Is there ANY hard-endpoint RCT of controlled sun/UV EXPOSURE** (not vitamin-D supplementation) on mortality/CVD? All causal-test evidence to date substitutes a supplement for the actual exposure."
     }
   },
   "sources": {
@@ -2475,6 +3243,354 @@
       "citation": "Tooth loss / edentulism & malnutrition meta-analysis.",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11267674/",
       "tier": "T2 (mostly cross-sectional)"
+    },
+    "S143": {
+      "id": "S143",
+      "citation": "Holt-Lunstad, Smith & Layton 2010, PLoS Medicine — social relationships & mortality meta-analysis (148 studies, 308,849).",
+      "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316",
+      "tier": "T1 (cohort meta)"
+    },
+    "S144": {
+      "id": "S144",
+      "citation": "Holt-Lunstad et al. 2015, Perspectives on Psychological Science — isolation/loneliness/living-alone & mortality (70 studies, 3.4M).",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/1745691614568352",
+      "tier": "T1 (cohort meta)"
+    },
+    "S145": {
+      "id": "S145",
+      "citation": "Holt-Lunstad 2021, Current Directions in Psychological Science — Bradford Hill / causality argument.",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0963721421999630",
+      "tier": "T1 (review)"
+    },
+    "S146": {
+      "id": "S146",
+      "citation": "Naito et al. 2023, PLoS ONE — social isolation & all-cause mortality meta (27 cohorts, ~1.4M).",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0280308",
+      "tier": "T1 (cohort meta)"
+    },
+    "S147": {
+      "id": "S147",
+      "citation": "Wang et al. 2025, BMC Public Health — isolation/loneliness & incident CVD meta (6 cohorts, 5.25M).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12462301/",
+      "tier": "T1 (cohort meta)"
+    },
+    "S148": {
+      "id": "S148",
+      "citation": "Elovainio/Shen et al., UK Biobank — isolation/loneliness & incident dementia (n=155,070).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8867309/",
+      "tier": "T2 (cohort)"
+    },
+    "S149": {
+      "id": "S149",
+      "citation": "Sutin/Tan et al., UK Biobank — loneliness & incident dementia (n=492,322, 7,475 cases).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10198800/",
+      "tier": "T2 (cohort)"
+    },
+    "S150": {
+      "id": "S150",
+      "citation": "Masi et al. 2011 — meta-analysis of loneliness-reduction interventions (~50 studies).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3865701/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S151": {
+      "id": "S151",
+      "citation": "Hoang et al. 2022, JAMA Network Open — interventions for loneliness/isolation in adults 65+ (70 RCTs, 8,259).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9577679/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S152": {
+      "id": "S152",
+      "citation": "Zeas-Siguenza et al. 2025 — meta-analysis of loneliness interventions (16 RCTs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12293955/",
+      "tier": "T1 (RCT meta)"
+    },
+    "S153": {
+      "id": "S153",
+      "citation": "Veronese et al. 2023, European J Public Health — overview of reviews, interventions for social isolation/loneliness (60+).",
+      "url": "https://academic.oup.com/eurpub/article/33/2/235/7074489",
+      "tier": "T1 (overview)"
+    },
+    "S154": {
+      "id": "S154",
+      "citation": "Carlson et al. 2015, Baltimore Experience Corps Trial brain substudy (n=111).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5179033/",
+      "tier": "T3 (small RCT, surrogate)"
+    },
+    "S155": {
+      "id": "S155",
+      "citation": "Two-sample Mendelian randomization 2024, J Geriatr Cardiol — loneliness/isolation → CVD (81 SNPs, 455,364).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11040057/",
+      "tier": "T1 (MR)"
+    },
+    "S156": {
+      "id": "S156",
+      "citation": "Mendelian randomization — loneliness → Alzheimer's disease.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11714305/",
+      "tier": "T1 (MR)"
+    },
+    "S157": {
+      "id": "S157",
+      "citation": "UK Biobank persistence cohort — persistent isolation/loneliness & mortality/CVD (n=18,258, 8.3 yr).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11442883/",
+      "tier": "T2 (cohort)"
+    },
+    "S158": {
+      "id": "S158",
+      "citation": "Kivimäki et al. 2012, Lancet — job strain & incident CHD IPD meta-analysis (197,473, 13 European cohorts).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3486012/",
+      "tier": "T1 (IPD meta)"
+    },
+    "S159": {
+      "id": "S159",
+      "citation": "Schulz & Beach 1999, JAMA — Caregiver Health Effects Study (spousal caregivers).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10605972/",
+      "tier": "T2 (cohort)"
+    },
+    "S160": {
+      "id": "S160",
+      "citation": "Roth et al. 2015, The Gerontologist — reappraisal of caregiving & mortality.",
+      "url": "https://academic.oup.com/gerontologist/article/55/2/309/656865",
+      "tier": "T2 (review/reanalysis)"
+    },
+    "S161": {
+      "id": "S161",
+      "citation": "Roth et al. 2018 — REGARDS caregiver distress, perceived stress & mortality (3,580 matched pairs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6002922/",
+      "tier": "T2 (cohort)"
+    },
+    "S162": {
+      "id": "S162",
+      "citation": "Roth et al. 2013, Am J Epidemiology — REGARDS caregiving & all-cause mortality (propensity-matched).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24091890/",
+      "tier": "T2 (cohort)"
+    },
+    "S163": {
+      "id": "S163",
+      "citation": "Brown et al. 2009, Psychological Science — caregiving intensity & mortality (HRS/AHEAD, N=3,376).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2865652/",
+      "tier": "T2 (cohort)"
+    },
+    "S164": {
+      "id": "S164",
+      "citation": "Parker et al. 2022, Am J Preventive Medicine — allostatic load & mortality meta-analysis.00116-7/abstract)",
+      "url": "https://www.ajpmonline.org/article/S0749-3797(22",
+      "tier": "T2 (cohort meta)"
+    },
+    "S165": {
+      "id": "S165",
+      "citation": "Xu et al. 2026, Frontiers in Cardiovascular Medicine — allostatic load & incident CVD (UK Biobank, n=205,504).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12813168/",
+      "tier": "T2 (cohort)"
+    },
+    "S166": {
+      "id": "S166",
+      "citation": "Levine et al. 2017, J Am Heart Assoc — AHA scientific statement on meditation & CVD (cites Cochrane Hartley 2014).",
+      "url": "https://www.ahajournals.org/doi/10.1161/jaha.117.002218",
+      "tier": "T1 (statement + Cochrane)"
+    },
+    "S167": {
+      "id": "S167",
+      "citation": "Cohen, Bavishi & Rozanski 2016, Psychosomatic Medicine — purpose in life & mortality/CV events meta (10 studies, n=136,265).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26630073/",
+      "tier": "T1 (cohort meta)"
+    },
+    "S168": {
+      "id": "S168",
+      "citation": "Sutin et al. 2021 — purpose/meaning & incident dementia meta (6 samples, N=53,499).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8887819/",
+      "tier": "T1 (cohort meta)"
+    },
+    "S169": {
+      "id": "S169",
+      "citation": "Sutin et al. 2022, Archives of Gerontology & Geriatrics — expanded purpose & dementia meta (8 cohorts, N=214,270) incl. UK Biobank.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10015423/",
+      "tier": "T1 (cohort meta)"
+    },
+    "S170": {
+      "id": "S170",
+      "citation": "Lee et al. 2019, PNAS — optimism & exceptional longevity (NHS 69,744 women; NAS 1,429 men).",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1900712116",
+      "tier": "T1 (cohort)"
+    },
+    "S171": {
+      "id": "S171",
+      "citation": "Koga et al. 2022 — optimism & lifespan/longevity, Women's Health Initiative (~159k postmenopausal women).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9588526/",
+      "tier": "T1 (cohort)"
+    },
+    "S172": {
+      "id": "S172",
+      "citation": "Kim et al. 2017 — optimism & cause-specific mortality, Nurses' Health Study (n=70,021 women).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5209589/",
+      "tier": "T1 (cohort)"
+    },
+    "S173": {
+      "id": "S173",
+      "citation": "ASPREE/ALSOP — optimism & mortality in adults 70+ (n=11,701).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8490272/",
+      "tier": "T1 (cohort)"
+    },
+    "S174": {
+      "id": "S174",
+      "citation": "Ye et al. 2024, Nature Human Behaviour — Mendelian randomization, mental well-being → healthspan/lifespan.",
+      "url": "https://www.nature.com/articles/s41562-024-01905-9",
+      "tier": "T1 (MR)"
+    },
+    "S175": {
+      "id": "S175",
+      "citation": "Sone et al. — ikigai (sense of purpose) & mortality, Ohsaki/Akita Japanese cohort (n=1,618, 13.3 yr).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4771589/",
+      "tier": "T3 (single cohort)"
+    },
+    "S176": {
+      "id": "S176",
+      "citation": "Gandini et al. 2005, Eur J Cancer — sun exposure & melanoma meta (57 studies, 38,671 cases).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15617990",
+      "tier": "T1 (CC/cohort meta)"
+    },
+    "S177": {
+      "id": "S177",
+      "citation": "Dennis et al. 2008 — sunburn & melanoma meta (51 study populations).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2873840/",
+      "tier": "T1 (CC/cohort meta)"
+    },
+    "S178": {
+      "id": "S178",
+      "citation": "Zhong et al. 2023, Cancer Science — Mendelian randomization, childhood sunburn → melanoma (UKB GWAS, sunburn n=346,955 / melanoma n=262,288).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10728005/",
+      "tier": "T1 (MR)"
+    },
+    "S179": {
+      "id": "S179",
+      "citation": "NCI SEER — Melanoma of the Skin, Cancer Stat Facts.",
+      "url": "https://seer.cancer.gov/statfacts/html/melan.html",
+      "tier": "T1 (registry)"
+    },
+    "S180": {
+      "id": "S180",
+      "citation": "Melanoma overdiagnosis & incidence–mortality divergence analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9187775/",
+      "tier": "T1 (epi analysis)"
+    },
+    "S181": {
+      "id": "S181",
+      "citation": "Schmitt/Fartasch et al. 2012 — occupational UV & keratinocyte carcinoma meta.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3498471/",
+      "tier": "T1 (CC/cohort meta)"
+    },
+    "S182": {
+      "id": "S182",
+      "citation": "NMSC mortality analysis 2026, BMC Cancer (CDC WONDER, n=68,223 NMSC deaths 1999–2020).",
+      "url": "https://link.springer.com/article/10.1186/s12885-026-15953-z",
+      "tier": "T1 (registry)"
+    },
+    "S183": {
+      "id": "S183",
+      "citation": "BCC relative-mortality meta-analysis (464,230 BCC patients).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5886016/",
+      "tier": "T1 (meta)"
+    },
+    "S184": {
+      "id": "S184",
+      "citation": "An/Suppa et al. 2021 — indoor tanning & melanoma systematic review/meta (36 studies, ~14,583 cases).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8656707/",
+      "tier": "T1 (meta + IARC)"
+    },
+    "S185": {
+      "id": "S185",
+      "citation": "UV molecular signature / BRAF V600E mechanism (yeast reversion assay).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7709870/",
+      "tier": "T3 (model system)"
+    },
+    "S186": {
+      "id": "S186",
+      "citation": "Green et al. 2011, J Clin Oncol — Nambour sunscreen RCT, melanoma endpoints (n=1,621, Australia).",
+      "url": "https://ascopubs.org/doi/abs/10.1200/JCO.2010.28.7078",
+      "tier": "T1 (RCT)"
+    },
+    "S187": {
+      "id": "S187",
+      "citation": "van der Pols et al. 2006 — Nambour sunscreen RCT long-term follow-up, SCC/BCC.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17132769/",
+      "tier": "T1 (RCT follow-up)"
+    },
+    "S188": {
+      "id": "S188",
+      "citation": "Pandeya et al. 2005, Am J Epidemiology — Nambour, sunscreen & BCC.",
+      "url": "https://academic.oup.com/aje/article/161/8/748/184975",
+      "tier": "T1 (RCT analysis)"
+    },
+    "S189": {
+      "id": "S189",
+      "citation": "Cochrane 2016 (Sánchez et al.) — sun protection/sunscreen to prevent BCC & SCC.",
+      "url": "https://www.cochrane.org/CD011161/SKIN_sun-protection-including-sunscreens-prevent-basal-cell-carcinoma-and-cutaneous-squamous-cell",
+      "tier": "T1 (Cochrane)"
+    },
+    "S190": {
+      "id": "S190",
+      "citation": "Hughes et al. 2013, Annals of Internal Medicine — sunscreen & skin aging RCT (n=903, Australia, 4.5 yr).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23732711/",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    "S191": {
+      "id": "S191",
+      "citation": "Gallagher et al. 2000, JAMA — sunscreen & nevus development in children RCT (n=309, Canada, 3 yr).",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/192780",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    "S192": {
+      "id": "S192",
+      "citation": "USPSTF 2018 — Behavioral Counseling for Skin Cancer Prevention.",
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/skin-cancer-counseling",
+      "tier": "T1 (USPSTF)"
+    },
+    "S193": {
+      "id": "S193",
+      "citation": "Lindqvist et al. 2014, J Internal Medicine — sun avoidance & all-cause mortality, MISS cohort (29,518 Swedish women, 20 yr).",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/joim.12251",
+      "tier": "T2 (single cohort)"
+    },
+    "S194": {
+      "id": "S194",
+      "citation": "Lindqvist et al. 2016, J Internal Medicine — MISS competing-risk + life-expectancy (+ 2017 reply joim.12612).",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/joim.12496",
+      "tier": "T2 (single cohort)"
+    },
+    "S195": {
+      "id": "S195",
+      "citation": "Neale et al. 2022, Lancet Diabetes & Endocrinol — D-Health Trial, vitamin D & all-cause mortality (n=21,315).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6402378/",
+      "tier": "T1 (RCT)"
+    },
+    "S196": {
+      "id": "S196",
+      "citation": "Manson et al. 2019, NEJM — VITAL trial, vitamin D for cancer/CVD/mortality (n=25,871).",
+      "url": "https://www.tctmd.com/news/vital-no-benefits-vitamin-d-and-omega-3s-reducing-major-cv-events-cancer",
+      "tier": "T1 (RCT)"
+    },
+    "S197": {
+      "id": "S197",
+      "citation": "Zhou et al. 2023 (CORRECTED), Lancet Diabetes & Endocrinol — Mendelian randomization, vitamin D & mortality/CVD (386,406 genetic / 500,962 obs).00287-5/fulltext)",
+      "url": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(23",
+      "tier": "T1 (MR)"
+    },
+    "S198": {
+      "id": "S198",
+      "citation": "Afzal et al. 2014, BMJ — Mendelian randomization, low vitamin D & mortality, Copenhagen cohorts (n=95,766).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4238742/",
+      "tier": "T1 (MR, isolated)"
+    },
+    "S199": {
+      "id": "S199",
+      "citation": "Huang et al. 2019, BMC Medicine — Mendelian randomization, vitamin D & mortality/vascular disease (99,012 Chinese + 106,911 European).",
+      "url": "https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-019-1401-y",
+      "tier": "T1 (MR)"
+    },
+    "S200": {
+      "id": "S200",
+      "citation": "Oplander/Weller et al. 2009, Circulation Research — UVA, nitric oxide & blood pressure.",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/circresaha.109.207019",
+      "tier": "T3 (mechanistic, acute)"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T00:47:02.773Z",
+  "generatedAt": "2026-06-24T23:26:09.070Z",
   "levers": {
     "exercise": {
       "slug": "exercise",
@@ -34,8 +34,8 @@
     "stress-social": {
       "slug": "stress-social",
       "name": "Stress & Social",
-      "status": "pending",
-      "claims": 0
+      "status": "complete",
+      "claims": 32
     },
     "substances": {
       "slug": "substances",
@@ -46,14 +46,14 @@
     "sun-skin": {
       "slug": "sun-skin",
       "name": "Sun & Skin",
-      "status": "pending",
-      "claims": 0
+      "status": "complete",
+      "claims": 26
     }
   },
   "totals": {
-    "leversComplete": 6,
+    "leversComplete": 8,
     "leversTotal": 8,
-    "sourcesTotal": 140,
-    "claimsTotal": 114
+    "sourcesTotal": 198,
+    "claimsTotal": 172
   }
 }
