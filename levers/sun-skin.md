@@ -1,28 +1,136 @@
 # Lever: Sun & Skin
 
-> Status: STUB — not yet researched. Fill using `_meta/research-template.md`.
+> Status: RESEARCHED — session 6 (2026-06-23). All 3 sections done: **UV HARM** (rows 1–10, S176–S185), **SUN PROTECTION / sunscreen RCTs** (rows 11–18, S186–S192), **VITAMIN-D / SUN-AVOIDANCE NET RISK-BENEFIT** (rows 19–26, S193–S200). 3 deep-research runs (no resumes needed). 26 claim rows.
+> Headline: a lever where **causation is unusually solid** but **mortality magnitude is modest and the net direction is nuanced**. (1) UV causally drives skin cancer (melanoma MR-confirmed; tanning IARC Group 1) — but melanoma is high-incidence/low-mortality (1.4% of cancer deaths, falling, ~50–65% overdiagnosed) and keratinocyte carcinomas barely kill (case-fatality ~0.05%). (2) Sun protection is **RCT-proven** to cut melanoma (HR 0.27 invasive) & SCC (~40%) and slow photoaging — but NOT BCC, from one trial. (3) The counterweight: sun *avoidance* tracks ~2× mortality observationally, but the **vitamin-D causal channel is closed** (null RCTs + corrected MR — low vit D is a marker, not a cause). **Net: don't be a sun-AVOIDER, don't sun-SEEK/BURN, and don't supplement vitamin D for longevity; the harm/benefit balance flips with latitude & skin type.** For a longevity ranking this is a *real-but-modest-mortality* lever whose biggest certain wins are morbidity/cosmetic.
 
 ## Scope
-UV exposure, photoaging, skin cancer. Photodamage is irreversible.
+UV exposure, photoaging, skin cancer. **Photodamage is irreversible** — the reversibility axis is load-bearing here (like oral-sensory), so prevention dominates.
 
-- In:
-- Out (and where it lives instead):
+- In: **UV/sun exposure** (intermittent/recreational *and* cumulative/occupational), **sunburns**, **indoor tanning** → melanoma + keratinocyte carcinoma (BCC/SCC) incidence *and* mortality; **photoaging**; **sun protection** (sunscreen RCTs, clothing/shade behavior) [Section 2]; the **vitamin-D / sun-avoidance net risk–benefit** incl. UV non-cancer effects (BP/nitric-oxide, mood) and vitamin-D supplementation hard-endpoint RCTs [Section 3]; the **irreversibility** framing.
+- Out (and where it lives instead): **vitamin D as a bone/falls nutrient/supplement** → `nutrition-metabolic` / `medical-screening` (but the *sun-avoidance→mortality* and *VitD-RCT-for-mortality* questions live here, as the counterweight to sun-protection advice); **skin-cancer screening / total-body exams** → `medical-screening` (noted only); **cosmetic dermatology treatments** (retinoids, lasers) → noted, not the focus; **smoking's contribution to skin aging** → `substances`.
 
 ## Claims table
+One row per discrete claim. T1/T2 above the divider; T3/T4 below (informational only).
+**Section 1: UV HARM (skin cancer + photoaging).** The defining tension is **strong causation but modest mortality**: UV causally drives all three skin cancers (melanoma MR-confirmed; tanning IARC Group 1), yet melanoma mortality is small-and-falling (heavily overdiagnosed) and keratinocyte-carcinoma mortality is near-zero. Reversibility = **IRREVERSIBLE** (cumulative DNA/dermal damage) → the lever is prevention, not repair.
+
 | # | Claim | Systems touched | Tier | Effect size (vs. comparator) | Reversibility | Confidence | Source(s) |
 |---|-------|-----------------|------|------------------------------|---------------|------------|-----------|
-| 1 |  |  | T? |  |  | H/M/L |  |
+| 1 | **Sunburn / intermittent UV → ~doubled melanoma incidence**, dose-responsive across life | Skin | T1 (CC/cohort meta) | Pooled sunburn–melanoma RR **2.03** (Gandini, 57 studies, 38,671 cases); childhood ever-sunburned OR **1.91**; per-5-sunburns dose-response childhood **1.79** > adult 1.48 > lifetime 1.26 ("only childhood matters" is wrong). Caveats: recall bias (vague "severe sunburn"), phenotype confounding (fair skin/nevi), publication bias (Begg p<0.01) | IRREVERSIBLE (cumulative DNA damage) | H (association) | [S176][S177] |
+| 2 | **The melanoma–sunburn link is CAUSAL** — MR triangulates with the observational estimate | Skin | T1 (MR) | MR childhood sunburn→melanoma OR **2.42** (1.43–4.10), robust across IVW / weighted-median 2.27 / MR-Egger 2.90, no directional pleiotropy (intercept p=0.63); concurs with obs 2.03. Caveat: instrument may partly proxy pigmentation/sun-sensitivity; European-ancestry; self-reported exposure | IRREVERSIBLE | H | [S178] |
+| 3 | **Melanoma is HIGH-INCIDENCE but LOW-MORTALITY** — the decision-critical reframe | Skin | T1 (registry) | ~112,000 US invasive cases/yr vs **8,510 deaths** (~7.6% case-fatality; **94.7%** 5-yr relative survival). 5.3% of new cancers but only **1.4% of cancer deaths** (~4× incidence-to-mortality gap). Stage-dependent: 100% localized → 76% regional → 34% distant | — | H | [S179] |
+| 4 | **Melanoma incidence is RISING while mortality FALLS** — heavy overdiagnosis | Skin | T1 (registry) | Incidence **+1.1%/yr** (2014–23) vs mortality **−2.2%/yr** (2015–24, ~−30%/decade, tracking 10+ immunotherapy approvals). Overdiagnosis ~**50–65%** of invasive cases (85–89% for in situ); biopsies up 1.9× while incidence up 2.5×. Rising incidence **overstates** the true mortality-relevant burden | — | H | [S179][S180] |
+| 5 | **Keratinocyte carcinomas (BCC/SCC) track CUMULATIVE/occupational UV** — SCC stronger & dose-responsive | Skin | T1 (CC/cohort meta) | Occupational UV: **SCC OR 1.77** (1.40–2.22; 16/18 studies +, dose-response ↑ at lower latitude); **BCC weaker/heterogeneous OR 1.43** (~1.10–1.20 in low-bias studies; 5 studies showed non-sig *reduction*). SCC may be twenties-exposure-sensitive. Phenotype adjustment attenuates sunburn ORs to NS | IRREVERSIBLE | H (SCC) / M (BCC) | [S181] |
+| 6 | **Keratinocyte carcinomas are ubiquitous but almost never lethal** — the extreme incidence–mortality gap | Skin | T1 (registry/meta) | ~**5.4M NMSC treated/yr** (US) but only ~**3,100 deaths/yr** → case-fatality ~**0.05%**. **BCC relative mortality 0.92** (NOT elevated vs general pop); SCC ~1.25, 5-yr survival ~95%. For a *longevity* ranking the NMSC mortality burden (~1/100,000) is trivial | IRREVERSIBLE (lesions) but ≈no mortality | H | [S182][S183] |
+| 7 | **Indoor tanning is an IARC Group 1 carcinogen** → melanoma, especially early use | Skin | T1 (meta + IARC) | Ever-use melanoma RR **1.27** (1.16–1.39); early-onset (<50) RR **1.75**; first use before age 35 RR ~1.75 (the IARC Group 1 basis). Observational/recall + phenotype caveats, but the causal classification is authoritative | IRREVERSIBLE | H | [S184] |
 | | **— T3/T4 below — informational only — does not rank —** | | | | | | |
-| | | | | | | | |
+| 8 | UV molecular signature (BRAF V600E T>A) — mechanistic causal support for melanoma | Skin | T3 (yeast model) | UV-photoproduct **T>A 3.6× enriched** in skin cancers (COSMIC); experimental UVB/UVC induce V600E-mimicking mutations at 138–148×10⁻¹⁰ vs ~1×10⁻¹⁰ background. Yeast reversion assay, *not* human melanocytes; adjacent atypical-photoproduct claims (≈50%, AC>TT 2000×) were *refuted* | — | — | [S185] |
+| 9 | **Photoaging: UVA-dominant; "~80–90% of facial aging is UV" is widely cited but UNVERIFIED here** | Skin | T3 (low confidence) | UV (esp. UVA, deeper dermal penetration) is the dominant driver of *extrinsic* aging (wrinkles, solar elastosis, pigmentation); the ~80% figure (Flament 2013) is dermatology consensus but **no claim survived adversarial verification** this run. Direction solid; exact fraction & reversibility unverified. Cosmetic/QoL, **not a mortality endpoint** | IRREVERSIBLE (largely) | L | [—] |
+| 10 | Refuted / do-not-cite (harm side) | — | T4 (refuted) | Failed verification: GBD-style DALY/ASIR/ASDR burden figures (e.g. BCC ASDR 0.02, melanoma 58% of DALYs — all 0-3); the sailor SCC "RR 10.1" (modeled from n=1 dosimeter); atypical-photoproduct ≈50% / AC>TT 2000× mechanistic claims; "cumulative exposure drives keratinocyte risk *comparably* to intermittent." Use the conservative rows above | — | — | — |
+
+**Section 2: SUN PROTECTION (sunscreen, clothing, behavior).** The causal-protection payoff — and the rare lever-section in this project with genuine **RCT evidence that an intervention prevents a cancer**. The whole hard-endpoint case rests on **one trial** (Nambour, sub-tropical Australia; Cochrane rates certainty LOW), and protection is cancer-type-specific (melanoma + SCC yes, BCC no). Counseling bodies grade the *behavior*, not proven cancer-incidence reduction.
+
+| # | Claim | Systems touched | Tier | Effect size (vs. comparator) | Reversibility | Confidence | Source(s) |
+|---|-------|-----------------|------|------------------------------|---------------|------------|-----------|
+| 11 | **[RCT] Daily sunscreen REDUCES MELANOMA** — rare RCT-grade proof an intervention prevents a cancer | Skin | T1 (RCT) | Nambour RCT (Green 2011, n=1,621): daily sunscreen → overall melanoma HR **0.50** (borderline, p=0.051; 11 vs 22 cases at 10-yr follow-up); **invasive melanoma HR 0.27** (0.08–0.97, ~73% ↓); in-situ null. Benefit emerged ~10 yr later. Single trial, one high-UV white population | IRREVERSIBLE (prevention) | M–H (one RCT) | [S186] |
+| 12 | **[RCT] Sunscreen reduces SCC ~40% long-term** — strongest hard-endpoint result | Skin | T1 (RCT follow-up) | Nambour: daily sunscreen → SCC RR **0.62** (0.38–0.99) at long-term follow-up (van der Pols 2006); within-trial SCC null (latency). Caveat: a claim the benefit "persists ≥8 yr AFTER the trial without continued use" was **refuted** — likely continued use, not durable biological effect | IRREVERSIBLE (prevention) | H | [S187] |
+| 13 | **Sunscreen does NOT prevent BCC** — protection is melanoma/SCC-specific | Skin | T1 (RCT + Cochrane) | Nambour BCC HR **1.04** (0.79–1.45, Pandeya 2005); Cochrane RR 1.03; repeat-BCC tumours trend HR 0.82 (NS). BCC — the commonest, least-lethal skin cancer — is not reduced | — | H | [S188][S189] |
+| 14 | **[RCT] Sunscreen slows PHOTOAGING ~24%** (surrogate) | Skin | T1 (RCT, surrogate) | Hughes 2013 (n=903, 4.5 yr): daily vs discretionary sunscreen → **24% less** skin aging (microtopography odds 0.76, 0.59–0.98). RCT-grade but a surrogate (skin-aging casts), cosmetic not mortality | SLOW/preventable (cosmetic) | H (for the surrogate) | [S190] |
+| 15 | Sun protection reduces NEVUS counts in children (a melanoma risk *marker*) | Skin | T2 (RCT, surrogate) | SPF-30 sunscreen reduced new nevus acquisition in white children (Gallagher 2000), concentrated in freckled children; UPF clothing similarly cut nevi. Nevus count is a risk marker, not a cancer endpoint | — | M | [S191] |
+| 16 | **USPSTF: counseling helps — but graded on SURROGATES, not cancer incidence** | Skin | T1 (USPSTF) | Grade **B** for sun-protection counseling (6mo–21yr & fair-skinned young adults), Grade **C** older adults; based on improved sun-protective *behavior* / fewer sunburns / nevi — **no direct evidence it lowers cancer incidence**. Intervention sound; hard-endpoint chain inferred | — | M (surrogate-graded) | [S192] |
+| | **— T3/T4 below — informational only — does not rank —** | | | | | | |
+| 17 | Causal caveats (why the RCT matters; real-world efficacy) | — | T2 (caveat) | **"Sunscreen paradox":** observational sunscreen-users often get MORE sun (confounding) — why Nambour's RCT design matters. **Under-application:** people apply ~25–50% of the 2 mg/cm² SPF-test density, so real-world SPF is far below label. **Generalizability:** Nambour is one high-UV white Australian cohort; Cochrane certainty LOW | — | — | [S186] |
+| 18 | Refuted / low-grade (protection) | — | T3/T4 | *Refuted:* sunscreen benefit "persists ≥8 yr after stopping use" (0-3). *Low-grade/unsettled — NOT hard-endpoint harms:* chemical-filter systemic absorption (detectable in blood, clinical significance unestablished), hormone/coral concerns. Keep tiered as speculative, not reasons to avoid protection | — | — | — |
+
+**Section 3: VITAMIN-D / SUN-AVOIDANCE NET RISK-BENEFIT (the counterweight).** The decisive "is moderate sun net-positive?" evidence, and a clean **marker-vs-cause** teaching case: sun avoidance and low vitamin D look dangerous *observationally* but the causal tests (hard-endpoint RCTs + corrected MR) close the vitamin-D channel. Note boundary: vitamin-D-as-supplement also touches `nutrition-metabolic`/`medical-screening`; it lives here as the counterweight to sun-protection advice.
+
+| # | Claim | Systems touched | Tier | Effect size (vs. comparator) | Reversibility | Confidence | Source(s) |
+|---|-------|-----------------|------|------------------------------|---------------|------------|-----------|
+| 19 | **[Observational] Sun AVOIDANCE → ~2× all-cause mortality, dose-dependent** — but heavily confounded | Skin, Cardio | T2 (single cohort) | MISS (29,518 Swedish women, 20 yr, 2,545 deaths): avoiders all-cause HR **2.0** (1.6–2.5) vs highest-exposure; moderate exposure 1.4; LE **0.6–2.1 yr** shorter; PAR 3%. Benefit was lower CVD + noncancer/non-CVD death (cancer-specific HR ~1.02, NS — the higher cancer *share* is a competing-risk artifact). Single self-reported cohort; avoiders plausibly sicker/poorer/housebound | n/a | M (assoc); causality contested | [S193][S194] |
+| 20 | **"Sun avoidance is as bad as smoking" is the authors' own framing — NOT causally established** | Skin | T2 (flag) | Verbatim MISS: nonsmoking avoiders ≈ life expectancy of smokers in the highest-exposure group. But one observational cohort; the "no sun" group was small/older/sicker; authors conceded avoidance "could be a predictive marker of chronic disease." Reverse causation live; SCHEER/RSC 2017 judged the literature too weak to change guidance | n/a | H (for "it's an analogy, not causal") | [S194] |
+| 21 | **[RCT] Vitamin-D supplementation does NOT reduce mortality** — the decisive causal test | Immune, Cardio | T1 (RCT) | D-Health (n=21,315, 60k IU/mo): all-cause mortality HR **~1.04** (0.93–1.18), null; VITAL (n=25,871) null on mortality/CVD/cancer. Supplementation fails even where observational data predicted benefit → **low vitamin D is a MARKER, not a cause** of ill health | — (intervention) | H | [S195][S196] |
+| 22 | **[MR] No causal vitamin D → mortality/CVD at ANY level**, including deficiency (corrected Lancet) | Cardio, Immune | T1 (MR) | Zhou 2023 (386,406 genetic / 500,962 obs): strong observational inverse associations, but MR **null** — all-cause mortality OR 0.99/10 nmol/L, CHD 0.98, stroke 1.01 — even at severe deficiency. "Substantial reductions… unlikely even if targeted at low-vitamin-D individuals." *Cite the CORRECTED 2023 version — the 2021 original was retracted for a stats error* | — | H | [S197] |
+| 23 | MR on a vitamin-D mortality signal is MIXED — any causal benefit confined at most to severe deficiency | Cardio, Immune | T1 (MR, conflicting) | Afzal 2014 (Danish, n=95,766): genetic low vit D → all-cause OR **1.30** (1.05–1.61), cancer 1.43, but CV **null**. NOT replicated by larger MR (Huang 2019: 99k Chinese + 107k European = null; a UK Biobank nonlinear-MR deficiency claim was *refuted* this run). Net: at most a severe-deficiency effect, not in replete people | — | M | [S198][S199] |
+| 24 | **UV has a non-vitamin-D BP mechanism (nitric oxide) — but T3, ACUTE only** | Skin, Cardio | T3 (mechanistic, acute) | UVA mobilizes cutaneous photolabile NO stores → acute **~11% BP drop** at 30 min, independent of vitamin D (too fast for D synthesis) (Weller/Oplander 2009). BUT transient — a single daily UVA dose does NOT sustain hypotension (2022 follow-up); no hard-endpoint evidence | n/a | M (real but acute/unproven) | [S200] |
+| | **— T3/T4 below — informational only — does not rank —** | | | | | | |
+| 25 | **NET SYNTHESIS: moderate sun is plausibly net-neutral-to-positive at high latitude/fair skin — but NOT via vitamin D, and it INVERTS in high-UV regions / darker skin** | Skin, Cardio | T2/T3 (synthesis) | The avoidance–mortality signal is real-but-confounded; the vitamin-D causal channel is closed (null RCTs + corrected MR). What remains: avoidance-as-illness-marker, residual NO/BP/mood (T3), or genuine-but-unproven benefit. Specific to low-solar-intensity fair-skinned settings; does NOT generalize where skin-cancer harm dominates. **Practical: don't be a sun-AVOIDER, don't sun-SEEK/BURN, and don't supplement vitamin D expecting longevity** | n/a | M | [S193][S195][S197] |
+| 26 | Refuted / do-not-cite (net benefit) | — | T4 (refuted) | Refuted: UK Biobank nonlinear-MR "severe vitamin-D deficiency causally raises all-cause/CVD/cancer/respiratory mortality (L-shaped)" (M21-3324, 0-3/1-2); "vitamin-D supplementation substantially cuts mortality"; the **retracted 2021 Lancet MR** (use corrected 2023). Don't cite smoking-equivalence as causal | — | — | — |
 
 ## Dose / threshold
 
+### UV harm
+**The 80/20 of the harm side: the causal target is intermittent UV / sunburns / tanning beds (melanoma) and cumulative UV (keratinocyte) — but for *longevity* specifically, the mortality stakes are smaller than the "skin cancer epidemic" framing implies.**
+
+- **Avoid sunburns and tanning beds** — this is the highest-value, best-causally-supported piece (melanoma MR OR 2.42; tanning IARC Group 1), and the damage is irreversible/cumulative. Early-life and early-tanning-use exposure matter most but adult sunburns still count.
+- **Keep mortality in perspective:** melanoma is ~1.4% of cancer deaths and falling; keratinocyte carcinomas essentially don't kill. Sun protection is well-justified, but its *life-extension* payoff is modest vs the top levers (smoking, BP, fitness) — its bigger returns are morbidity/cosmetic/QoL (avoiding surgeries, scarring, photoaging).
+- **Overdiagnosis caveat:** much of the "rising melanoma" signal is indolent-lesion detection — a reason to avoid sunburns, not a reason to panic about incidence statistics.
+- *(The net "how much sun is optimal" dose awaits Section 3 — strict avoidance has its own apparent mortality cost, so the harm side alone shouldn't set the dose.)*
+
+### Sun protection
+**The 80/20 of protection: daily sunscreen + not burning is RCT-proven to cut melanoma and SCC (not BCC) and to slow photoaging — a genuinely *causal* lever, but one whose mortality yield is modest given how rarely these cancers kill. Apply enough (real-world use is far below label) and treat it as cheap insurance, not a major life-extender.**
+
+- **Daily broad-spectrum sunscreen on routinely-exposed skin** is the protection with hard-endpoint RCT support (melanoma + SCC). Apply generously — real-world under-application (~25–50% of test density) means actual SPF is much lower than the label.
+- **Sunscreen won't prevent BCC** (the commonest skin cancer) — so don't expect it to stop *all* skin cancer; pair with not-burning and avoiding tanning beds (the melanoma levers).
+- **Behavior (shade, hats, UPF clothing, timing) complements sunscreen** and is what counseling bodies actually endorse — though even USPSTF grades it on behavior change, not proven cancer-incidence reduction.
+- **Right-size the effort:** this is proven and cheap, but its *longevity* payoff is modest (low cancer mortality) — its bigger wins are avoided surgeries/scarring and photoaging. Don't let it crowd out the top mortality levers, and don't let protection zeal pre-empt the Section-3 vitamin-D/sun-avoidance balance.
+
+### Net (all sections — the integrated dose)
+**The whole-lever 80/20: aim for the MIDDLE. Don't burn / don't tan / don't sun-seek (the proven cancer levers), but don't be a strict sun-AVOIDER either (the avoidance-mortality signal, even if confounded, plus the closed vitamin-D channel mean avoidance buys little and may cost). And don't reach for vitamin-D supplements as a longevity move — that's the one clearly-settled negative.**
+
+- **Avoid the extremes, both directions.** Intermittent burning/tanning is the causal melanoma risk; strict avoidance is at best unhelpful (and tracks higher mortality, likely as an illness-marker). Casual everyday sun + not-burning is the defensible target.
+- **Latitude & skin type set the dial.** High-UV-index regions / fair skin → tilt toward protection (cancer harm dominates). High-latitude / low-solar-intensity → avoidance has less upside and the protection payoff is smaller. Darker skin → far lower cancer risk, so protection is less load-bearing.
+- **Don't supplement vitamin D for longevity.** RCTs (D-Health, VITAL) and corrected MR are null — low vitamin D is a marker of ill health, not a fixable cause of death. (Supplementation for diagnosed deficiency/bone is a separate `medical-screening`/`nutrition` question.)
+- **Overall lever weight for longevity: modest.** Strong causation, small mortality stakes, and a net recommendation that's "be moderate." Its biggest *certain* returns are morbidity/cosmetic (fewer skin-cancer surgeries, less photoaging), not years of life.
 
 ## Actions (behavioral, checkable)
-- [ ]
+
+### UV harm
+- [ ] **Don't get sunburned** (the best-evidenced, causal melanoma target) — hat/shade/clothing/timing; sunscreen efficacy itself is Section 2.
+- [ ] **Never use tanning beds** — IARC Group 1 carcinogen; risk concentrates in early/young use.
+- [ ] **Be sensible about cumulative/occupational sun** (keratinocyte carcinoma) — but weight it as a morbidity/cosmetic issue, not a major mortality one.
+- [ ] **Don't over-rank skin-cancer fear for longevity** — protect skin for morbidity/cosmetic reasons; the mortality math is modest and the optimal-sun-dose question is unresolved until Section 3.
+
+### Sun protection
+- [ ] **Use daily broad-spectrum sunscreen on exposed skin, applied generously** — RCT-proven for melanoma + SCC; most people under-apply, so err toward more.
+- [ ] **Add behavior** — shade, broad-brim hat, UPF clothing, avoid midday peak — complements sunscreen and is what counseling bodies endorse.
+- [ ] **Don't assume sunscreen covers everything** — it doesn't prevent BCC; not-burning and no tanning beds remain the melanoma levers.
+- [ ] **Keep it proportionate** — cheap proven insurance against morbidity/photoaging, but a modest *mortality* lever.
+
+### Net (integrated)
+- [ ] **Aim for the middle: routine casual sun without burning** — neither tan/sun-seek nor strictly avoid.
+- [ ] **Set the protection dial by latitude & skin type** — more protection in high-UV regions / fair skin; less avoidance upside at high latitude / darker skin.
+- [ ] **Don't take vitamin-D supplements for longevity** — null in RCTs and MR (separate from treating diagnosed deficiency/bone health).
+- [ ] **Rank this lever modestly for lifespan** — protect for morbidity/cosmetic reasons; spend your top effort on the high-mortality levers.
 
 ## Caveats / population modifiers
 
+### UV harm
+- **Strong causation, modest mortality** is the defining feature — unusual for this project (most levers were the reverse). Take UV→skin-cancer *causation* seriously; take the *longevity* magnitude with proportion.
+- **Phenotype confounding is pervasive and partly unresolved:** fair skin (Fitzpatrick I–II) and high nevus count drive both sun-seeking behavior *and* cancer risk; full phenotype adjustment attenuated keratinocyte sunburn ORs to non-significance, and the melanoma MR instrument may partly proxy pigmentation. People with darker skin have far lower absolute risk (but worse-prognosis melanomas when they occur — a detection issue).
+- **Overdiagnosis/surveillance bias** inflates melanoma incidence (~50–65%), so incidence trends overstate the mortality-relevant burden.
+- **Recall bias** inflates self-reported "severe sunburn" associations.
+- **Incidence ≠ mortality** must be kept separate for ranking: keratinocyte carcinoma is a high-frequency/near-zero-mortality morbidity issue; melanoma is the only meaningfully lethal one and even its burden is small and shrinking.
+
+### Sun protection
+- **The hard-endpoint case rests on ONE trial** (Nambour) in a high-UV white Australian population, which Cochrane rates LOW certainty. Strong for what it is, but not replicated — and generalizability to lower-UV settings / darker skin is uncertain.
+- **Protection is cancer-type-specific:** melanoma + SCC reduced, **BCC not**. "Sunscreen prevents skin cancer" is true only partially.
+- **Counseling evidence is surrogate-graded:** USPSTF endorses behavior change, but there's no direct trial showing counseling lowers cancer *incidence* — the chain to hard endpoints is inferred.
+- **Real-world efficacy < label:** chronic under-application (~25–50% of test density) and the "sunscreen paradox" (protection enabling longer exposure) mean observational data understate true efficacy and the RCT is the cleaner guide.
+- **Safety scare-stories are low-grade:** chemical-filter blood absorption is detectable but of unestablished clinical significance; hormone/coral concerns are speculative — none are hard-endpoint harms and none outweigh proven protection.
+
+### Net / vitamin-D
+- **Marker vs cause is the whole story.** Sun avoidance and low vitamin D look bad observationally but fail every causal test (null supplementation RCTs, corrected null MR). Don't infer "get more sun / take vitamin D" from the avoidance-mortality correlation.
+- **The avoidance signal is one confounded cohort** (MISS — fair-skinned Swedish women, self-reported baseline exposure, avoiders likely sicker). The "as bad as smoking" line is the authors' framing, not causal.
+- **Geography & skin type invert the conclusion.** Net-neutral-to-positive moderate sun applies to low-solar-intensity / fair-skinned settings; in high-UV regions and for darker skin the trade-off shifts (cancer harm up, deficiency risk differs).
+- **Retraction hazard noted:** the key null MR is the *corrected 2023* Lancet paper; the 2021 original was retracted. UK Biobank nonlinear-MR deficiency claims did not survive verification.
+- **Boundary with other levers:** vitamin-D supplementation for *diagnosed deficiency, bone, or falls* is a `nutrition-metabolic`/`medical-screening` question; here the verdict is narrowly "supplementing does not extend life."
 
 ## Open questions
-
+*(also copied to `synthesis/open-questions.md`)*
+- **Photoaging:** what fraction of extrinsic facial aging is truly UV-attributable (the ~80–90% figure didn't survive verification), and how reversible is established photodamage? Low longevity-relevance (cosmetic) — likely **not worth a dedicated run** unless QoL is weighted.
+- **How much of the melanoma–UV association is residual phenotype confounding** (pigmentation/nevi) vs direct UV, given MR-instrument and adjustment caveats?
+- **The true vs overdiagnosed split** in rising melanoma incidence — how much UV-attributable melanoma is actually life-threatening vs indolent (affects the lever's longevity weight)?
+- **UVA vs UVB** relative contributions across endpoints (UVB→keratinocyte mutations; UVA→dermal photoaging & possibly melanoma) — needed to connect this to the Section 2 sunscreen-efficacy question (UVA/UVB protection differ).
+- **Does sunscreen prevent melanoma beyond the single Nambour RCT?** All hard-endpoint protection evidence is one trial (Cochrane certainty LOW); no replication exists or is likely (an RCT is now arguably unethical).
+- **If vitamin D isn't the mediator, what drives any residual sun-mortality benefit** — nitric-oxide/BP, circadian/mood, immune, or pure confounding (healthier/wealthier people get more sun)?
+- **Where is the latitude/UV-index/skin-type threshold** at which moderate sun flips from net-positive (avoidance signal dominates) to net-negative (skin-cancer harm dominates)?
+- **Is there ANY hard-endpoint RCT of controlled sun/UV EXPOSURE** (not vitamin-D supplementation) on mortality/CVD? All causal-test evidence to date substitutes a supplement for the actual exposure.
