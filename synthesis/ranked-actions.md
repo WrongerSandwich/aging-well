@@ -68,7 +68,11 @@ The evidence ranking above is universal. To turn it into *your* do-this-first li
 
 A large gap between an action's Evidence-only rank and its Priority rank is a signal: strong evidence + low Tractability → invest in habit design rather than dropping it (see `_meta/scoring-rubric.md`).
 
-*(A personal overlay — Tractability values, profile, and personalized Priority — lives in `personal/` and is gitignored so this file stays publishable.)*
+**Full method + templates:** `synthesis/personalize.md` walks through all of this and points
+to two copy-and-fill scaffolds — `_meta/profile.template.md` and
+`_meta/ranked-actions.personal.template.md`. The fastest path is to clone the repo and work
+through them with a coding agent; your filled-in overlay lives in a gitignored `personal/`
+directory, so nothing about you is ever committed or published.
 
 ## Stopping rule check
 - [x] ≥5 lever sessions complete *(all 8 done)*

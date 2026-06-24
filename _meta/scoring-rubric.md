@@ -42,6 +42,10 @@ If the two views disagree sharply for some action, that's a signal: either the
 evidence is strong and you should invest in raising its Tractability (habit design,
 social structure, fixed schedule), or it's not worth forcing.
 
+For the step-by-step personalization method (build a profile, score Tractability,
+compute Priority, resolve conditional rows) and the reusable templates, see
+`synthesis/personalize.md`.
+
 ## Worked example (illustrative — confirm with real research)
 
 | Action | Impact | Certainty | Rev. | Tract. | Priority | Evidence-only |

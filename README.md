@@ -46,6 +46,16 @@ pitfalls and protecting the hardware that doesn't come back.
 stopping rule can fire early): substances → exercise → sleep → nutrition/metabolic
 → medical-screening → the rest.
 
+## Personalizing it for yourself
+
+`synthesis/ranked-actions.md` is the **universal, evidence-only** ranking. To turn it into
+*your* do-this-first list, add the one personal factor — **Tractability** (how realistically
+you'll sustain each action) — and resolve the conditional rows against your own profile.
+`synthesis/personalize.md` documents the method; `_meta/profile.template.md` and
+`_meta/ranked-actions.personal.template.md` are copy-and-fill scaffolds. The easiest path is
+to clone the repo and walk through them with a coding agent. Your filled-in overlay lives in
+a gitignored `personal/` directory — never committed, never published.
+
 ## Evidence tier legend
 
 | Tier | Meaning |
