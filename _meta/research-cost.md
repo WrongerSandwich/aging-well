@@ -1,73 +1,77 @@
 # Research cost / methodology transparency
 
-How this corpus was produced, and what it cost in tokens. Captured 2026-06-24 by
-aggregating the per-agent usage in the deep-research workflow transcripts.
+How this corpus was produced, what it cost in tokens, and the API-list-price dollar
+equivalent. Figures from aggregating per-agent usage in the deep-research workflow
+transcripts (deduplicated by message ID — see note). Captured 2026-06-24.
 
 ## Method
 Each lever was researched with a **hybrid deep-research workflow** (fan-out web search →
 fetch → adversarial multi-vote verification → synthesis). Cheap stages (scope/search/
-fetch) ran on Sonnet; verification/synthesis ran on Opus. Several runs were **resumed
-after hitting usage limits** (cached agents replay for free, only unfinished agents
-re-run).
+fetch) ran on **Sonnet 4.6**; verification/synthesis ran on **Opus 4.8**. Several runs were
+**resumed after hitting usage limits** (cached agents replay for free; only unfinished
+agents re-run).
 
-- **26 distinct workflow runs** across the 8 levers (several resumed; sprawling levers
-  used multiple scoped runs — nutrition ~5, stress-social 5, sleep 3, etc.).
-- **~3,677 sub-agent calls** total (one transcript each).
+- **26 distinct workflow runs** across the 8 levers (sprawling levers used multiple scoped
+  runs — nutrition 5, stress-social 4, sleep 3, medical 3, oral-sensory 3, substances 3,
+  sun-skin 3, exercise 2).
+- **~3,677 sub-agent calls** total.
 
-## Token totals (all research sub-agents)
+> **Counting note.** Each agent message is logged as multiple streaming snapshots (plus a
+> duplicated `iterations` block). A naive sum triple-counts. All figures below are
+> **deduplicated by message ID** (final snapshot per message). An earlier draft of this
+> file reported ~865M tokens by summing snapshots; the real deduplicated total is **~352M**.
 
-| Category | Tokens | Note |
-|---|---:|---|
-| Output | 9,684,102 | the generated text — most expensive per token |
-| Input (uncached) | 50,762,865 | fresh context |
-| Cache creation | 146,840,225 | context written to cache (~1.25× input price) |
-| Cache read | 657,951,247 | cached context replayed (~0.1× input price) — **76% of the total** |
-| **TOTAL processed** | **865,238,439** | ~865M |
+## Token totals (all research sub-agents, deduplicated, by model)
 
-**Caveat — the headline is dominated by cheap cache reads.** Three-quarters of the 865M
-is cached-context replay (the same lever/prompt context re-read by each of ~3,677 agents),
-billed at roughly a tenth of input price. The "expensive" core is ~**9.7M output + ~50.8M
-fresh input**. A true dollar figure needs current Sonnet/Opus pricing and the per-stage
-model split — not estimated here.
+| Model | Output | Input (uncached) | Cache write | Cache read |
+|---|---:|---:|---:|---:|
+| Opus 4.8 (verify/synthesize) | 3,952,019 | 18,792,249 | 44,102,181 | 204,202,436 |
+| Sonnet 4.6 (scope/search/fetch) | 883,540 | 13,578 | 10,237,244 | 69,384,627 |
+| **Total** | **4,835,559** | **18,805,827** | **54,339,425** | **273,587,063** |
 
-## Per-run scale
-- Average run: **~33M tokens processed**, ~140 sub-agents.
-- Later **hybrid** runs (~105–115 agents) ran ~22–41M each; the earliest **all-Opus** runs
-  (~200–224 agents) ran ~38–51M each — i.e., the hybrid fork roughly halved agent count
-  and trimmed per-run spend, as intended.
+**Grand total: ~351.6M tokens processed.** Cache reads (273.6M, ~78%) dominate — the same
+lever/prompt context replayed by each of ~3,677 agents, billed at ~0.1× input price. The
+expensive core is ~4.8M output + ~18.8M fresh input.
 
-## This session (stress-social + sun-skin) — precisely mapped
-| Run | Tokens | Sub-agents |
-|---|---:|---:|
-| Social connection (run 1 + resume) | 25,612,622 | 124 |
-| Social — causal/intervention re-run (1b) | 22,520,638 | 111 |
-| Chronic stress (run + resume) | 38,621,404 | 199 |
-| Purpose / meaning / wellbeing | 22,660,291 | 109 |
-| Sun-skin — UV harm | 24,477,657 | 112 |
-| Sun-skin — sun protection RCTs | 41,442,320 | 105 |
-| Sun-skin — vitamin-D / sun-avoidance net | 40,502,885 | 106 |
-| **This-session subtotal (2 levers)** | **215,837,817** | |
-| Earlier 19 runs (6 levers, prior sessions) | 649,400,622 | |
+## Cost estimate (API list prices)
+Not what it actually cost (this ran on a Claude subscription) — the equivalent if billed at
+public API rates. Prices per million tokens: **Opus 4.8** $5 in / $25 out; **Sonnet 4.6**
+$3 in / $15 out. Cache **write** = 1.25× input (5-minute TTL, which the workflow uses);
+cache **read** = 0.1× input.
 
-## Per-lever breakdown (all 8 levers)
+| Model | Output | Input | Cache write | Cache read | **Subtotal** |
+|---|---:|---:|---:|---:|---:|
+| Opus 4.8 | $98.80 | $93.96 | $275.64 | $102.10 | **$570.50** |
+| Sonnet 4.6 | $13.25 | $0.04 | $38.39 | $20.82 | **$72.50** |
+| **Total** | | | | | **≈ $643** |
+
+Where the money went: **cache writes are the single biggest line ($314)** — every agent
+writes the lever context to cache once — followed by Opus output+input ($193). The hybrid
+fork paid off: Sonnet did ~85% of the *agent-count* work for ~11% of the cost ($72 of $643),
+because the expensive Opus verify/synthesis stage is where the output tokens (priced 5×
+input) concentrate. An all-Opus run would have cost materially more.
+
+**Caveats:** (1) counts research sub-agents only — excludes the main orchestration loop
+(this assistant's own session tokens), which would add to the total. (2) Assumes 5-minute
+cache TTL throughout. (3) List prices; Batch API (−50%) or 1-hour cache TTL would shift it.
+
+## Per-lever breakdown (deduplicated)
 Each run mapped to its lever by extracting the verbatim research question from its
 transcript (not keyword-guessed). Run counts match the research log exactly.
 
-| Lever | Runs | Sub-agents | Output tok | TOTAL tok |
+| Lever | Runs | Output tok | Total tok | **API $ (list)** |
 |---|---:|---:|---:|---:|
-| Nutrition/Metabolic | 5 | 758 | 1,959,719 | 177,660,682 |
-| Sleep | 3 | 422 | 1,382,729 | 118,120,044 |
-| Medical-screening | 3 | 552 | 1,295,732 | 112,604,150 |
-| Stress-social | 4 | 543 | 1,158,888 | 109,414,955 |
-| Sun-skin | 3 | 323 | 1,023,026 | 106,422,862 |
-| Oral-sensory | 3 | 447 | 1,136,534 | 103,356,841 |
-| Substances | 3 | 314 | 949,683 | 75,849,558 |
-| Exercise | 2 | 318 | 777,791 | 61,809,347 |
-| **TOTAL** | **26** | **3,677** | **9,684,102** | **865,238,439** |
+| Nutrition/Metabolic | 5 | 979,005 | 72,144,478 | $125.32 |
+| Stress-social | 4 | 581,178 | 47,002,079 | $88.68 |
+| Medical-screening | 3 | 649,069 | 45,036,065 | $86.80 |
+| Sleep | 3 | 688,807 | 45,717,664 | $81.93 |
+| Oral-sensory | 3 | 566,435 | 42,364,742 | $78.91 |
+| Sun-skin | 3 | 512,405 | 44,948,941 | $67.55 |
+| Substances | 3 | 470,903 | 29,596,533 | $63.43 |
+| Exercise | 2 | 387,757 | 24,757,372 | $50.39 |
+| **Total** | **26** | **4,835,559** | **351,567,874** | **≈ $643** |
 
-Spend tracked run-count, not lever complexity: **Nutrition** (5 runs — patterns, meat/
-sugar/sodium, fiber/fish, CR/fasting/protein, adiposity/anchors) was the most expensive;
-**Exercise** (2 runs) the cheapest. The early all-Opus runs (Nutrition, Sleep, Medical,
-Oral-sensory, ~200+ agents/run) cost more per run than the later hybrid runs (Stress-
-social, Sun-skin, ~105–125 agents/run) — visible in the lower agent counts for the same
-or more topics.
+Spend tracked **run count**, not lever importance: **Nutrition** (5 runs) was the most
+expensive at ~$125; **Exercise** (2 runs) the cheapest at ~$50 — yet exercise produced some
+of the strongest causal findings in the project. This-session levers (stress-social +
+sun-skin) ≈ $156 of the $643; the earlier 6 levers ≈ $487.
