@@ -1,0 +1,34 @@
+import type { Claim, Source } from "@/lib/sync/parse";
+import { renderClaim } from "@/lib/renderClaim";
+import Citations from "./Citations";
+
+function tierClass(tier: string): string {
+  if (/^T2/.test(tier)) return "tier tier-2";
+  if (/^T[34]/.test(tier)) return "tier tier-info";
+  return "tier tier-1";
+}
+
+export default function ClaimCard({
+  claim,
+  sources,
+}: {
+  claim: Claim;
+  sources: Record<string, Source>;
+}) {
+  return (
+    <article className="claim">
+      <div className="claim-head">
+        <span className="claim-number">{String(claim.number).padStart(2, "0")}</span>
+        <span className={tierClass(claim.tier)}>{claim.tier}</span>
+      </div>
+      <p className="claim-text">{renderClaim(claim.text, sources)}</p>
+      <dl className="claim-meta">
+        <div><dt>Systems</dt><dd>{claim.systems || "—"}</dd></div>
+        <div><dt>Effect</dt><dd>{renderClaim(claim.effect, sources)}</dd></div>
+        <div><dt>Reversibility</dt><dd>{claim.reversibility || "—"}</dd></div>
+        <div><dt>Confidence</dt><dd>{claim.confidence || "—"}</dd></div>
+      </dl>
+      <Citations ids={claim.sources} sources={sources} />
+    </article>
+  );
+}
