@@ -184,3 +184,65 @@ export function parseLeverDetail(slug: string, md: string): LeverDetail {
     openQuestions: parseSection(md, "Open questions"),
   };
 }
+
+const LEVER_SLUG_MAP: Record<string, string> = {
+  substances: "substances",
+  exercise: "exercise",
+  sleep: "sleep",
+  nutrition: "nutrition-metabolic",
+  "nutrition-metabolic": "nutrition-metabolic",
+  medical: "medical-screening",
+  "medical-screening": "medical-screening",
+  sun: "sun-skin",
+  "sun-skin": "sun-skin",
+  stress: "stress-social",
+  "stress-social": "stress-social",
+  oral: "oral-sensory",
+  "oral-sensory": "oral-sensory",
+};
+
+export function leverSlug(display: string): string {
+  const key = display
+    .toLowerCase()
+    .replace(/&/g, "")
+    .replace(/[\s/]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return LEVER_SLUG_MAP[key] ?? key;
+}
+
+export type MatrixCell = "strong" | "moderate" | "minor" | "none";
+export interface MatrixRow {
+  lever: string;
+  slug: string;
+  cells: MatrixCell[];
+}
+export interface LeverSystemMatrix {
+  systems: string[];
+  rows: MatrixRow[];
+}
+
+const GLYPH: Record<string, MatrixCell> = {
+  "●": "strong",
+  "◐": "moderate",
+  "○": "minor",
+  "": "none",
+};
+
+export function parseMatrix(md: string): LeverSystemMatrix {
+  const lines = md.split("\n");
+  const tableRows = lines.filter((l) => l.trim().startsWith("|"));
+  // First table row is the header; second is the |:--:| separator; rest are data.
+  const header = tableRows[0]
+    .split("|")
+    .slice(2, -1) // drop leading label col + outer empties
+    .map((c) => c.trim());
+  const rows: MatrixRow[] = [];
+  for (const line of tableRows.slice(2)) {
+    const cells = line.split("|").map((c) => c.trim());
+    const lever = cells[1];
+    if (!lever) continue;
+    const cellValues = cells.slice(2, 2 + header.length).map((c) => GLYPH[c] ?? "none");
+    rows.push({ lever, slug: leverSlug(lever), cells: cellValues });
+  }
+  return { systems: header, rows };
+}

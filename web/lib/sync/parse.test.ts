@@ -6,6 +6,8 @@ import {
   countSources,
   parseLever,
   buildDerived,
+  leverSlug,
+  parseMatrix,
 } from "./parse";
 
 const RESEARCHED = `# Lever: Substances
@@ -218,5 +220,46 @@ describe("parseLeverDetail", () => {
     expect(d.claims).toHaveLength(3);
     expect(d.actions).toContain("Keep a regular sleep schedule.");
     expect(d.openQuestions).toBe("Is short sleep causally harmful at all?");
+  });
+});
+
+const MATRIX = `# Lever × System matrix
+
+Cells = effect strength.
+
+|                      | Cardio | Neuro | Skin |
+|----------------------|:------:|:-----:|:----:|
+| Substances           |   ●    |   ◐   |  ○   |
+| Sun/Skin             |        |       |  ●   |
+| Oral/Sensory         |        |   ●   |      |
+
+## Reading the matrix
+`;
+
+describe("leverSlug", () => {
+  it("normalizes display names to slugs", () => {
+    expect(leverSlug("Nutrition/Metabolic")).toBe("nutrition-metabolic");
+    expect(leverSlug("Medical")).toBe("medical-screening");
+    expect(leverSlug("Sun/Skin")).toBe("sun-skin");
+    expect(leverSlug("Oral/Sensory")).toBe("oral-sensory");
+    expect(leverSlug("Substances")).toBe("substances");
+  });
+});
+
+describe("parseMatrix", () => {
+  it("parses the systems header and one row per lever", () => {
+    const m = parseMatrix(MATRIX);
+    expect(m.systems).toEqual(["Cardio", "Neuro", "Skin"]);
+    expect(m.rows).toHaveLength(3);
+  });
+  it("maps glyphs to strengths and assigns slugs", () => {
+    const m = parseMatrix(MATRIX);
+    expect(m.rows[0]).toEqual({
+      lever: "Substances",
+      slug: "substances",
+      cells: ["strong", "moderate", "minor"],
+    });
+    expect(m.rows[1].cells).toEqual(["none", "none", "strong"]);
+    expect(m.rows[2].slug).toBe("oral-sensory");
   });
 });
