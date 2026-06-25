@@ -3,9 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Finding } from "@/lib/content";
+import { tierClass as baseTierClass } from "@/lib/tier";
 
 function tierClass(f: Finding): string {
-  return ["tier", f.tierLabel === "T2" ? "tier-2" : "tier-1", f.tierModifier === "inverse" ? "inverse" : ""]
+  return [baseTierClass(f.tierLabel), f.tierModifier === "inverse" ? "inverse" : ""]
     .filter(Boolean)
     .join(" ");
 }

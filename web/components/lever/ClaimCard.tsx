@@ -1,12 +1,7 @@
 import type { Claim, Source } from "@/lib/sync/parse";
 import { renderClaim } from "@/lib/renderClaim";
+import { tierClass } from "@/lib/tier";
 import Citations from "./Citations";
-
-function tierClass(tier: string): string {
-  if (/^T2/.test(tier)) return "tier tier-2";
-  if (/^T[34]/.test(tier)) return "tier tier-info";
-  return "tier tier-1";
-}
 
 export default function ClaimCard({
   claim,

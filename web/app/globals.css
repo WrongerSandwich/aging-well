@@ -68,7 +68,7 @@ blockquote { font-size: 36px; line-height: 1.05; letter-spacing: -.025em; margin
 .metrics-grid > div:last-child { border-right: 1px solid var(--line); }
 .metrics strong { font: 500 40px var(--serif); }
 .metrics strong span { font-size: 22px; color: var(--muted); }
-.metrics p { margin: 6px 0 0; font: 10px var(--mono); text-transform: uppercase; color: var(--muted); letter-spacing: .07em; }
+.metrics p { margin: 6px 0 0; font: 10px var(--mono); text-transform: uppercase; color: #46514b; letter-spacing: .07em; }
 
 .section { padding-block: 120px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
@@ -88,12 +88,15 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .finding-top { display: flex; justify-content: space-between; align-items: center; }
 .tier { padding: 5px 8px; background: var(--forest); color: white; font: 10px var(--mono); }
 .tier-2 { background: var(--rust); }
-.tier-info { background: var(--paper-deep); color: var(--muted); }
+.tier-info { background: var(--paper-deep); color: #46514b; }
 /* On dark cards a forest badge would vanish; use a light chip so the TIER HUE
    stays legible and invariant: T1 reads forest, T2 reads rust, never lime. */
 .tier.inverse { background: var(--paper-deep); color: var(--forest); }
 .tier-2.inverse { color: var(--rust-ink); }
-.lever { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; opacity: .65; }
+.tier-info.inverse { color: #46514b; }
+.lever { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: #46514b; }
+.finding.feature .lever { color: var(--forest); }
+.finding.dark .lever { color: #c7d2cc; }
 .finding-number { margin: 38px 0 12px; font: 10px var(--mono); color: var(--muted); }
 .dark .finding-number { color: #b8c7c0; }
 .finding h3 { margin: 0; font-size: 42px; line-height: 1; font-weight: 500; letter-spacing: -.03em; }
@@ -240,7 +243,19 @@ a.citation:hover { text-decoration: underline; }
 .actions-section h2, .oq-group h2 { font-size: 30px; margin: 0 0 6px; font-weight: 600; letter-spacing: -0.03em; }
 
 /* Tables share a printerly, hairline-ruled treatment with a forest header band. */
-.table-scroll { overflow-x: auto; }
+/* Scroll-shadow affordance: an edge shadow shows only while more table is
+   off-screen in that direction, so the hidden score columns are discoverable. */
+.table-scroll {
+  overflow-x: auto;
+  background:
+    linear-gradient(to right, var(--paper) 30%, transparent) left center,
+    linear-gradient(to left, var(--paper) 30%, transparent) right center,
+    radial-gradient(farthest-side at left center, rgba(27, 37, 33, 0.22), transparent) left center,
+    radial-gradient(farthest-side at right center, rgba(27, 37, 33, 0.22), transparent) right center;
+  background-repeat: no-repeat;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
 .ranked-table, .sources-table, .matrix-table {
   width: 100%;
   border-collapse: collapse;

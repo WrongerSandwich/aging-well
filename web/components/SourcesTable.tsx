@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Source } from "@/lib/sync/parse";
+import { tierClass } from "@/lib/tier";
 
 const TIERS = ["all", "T1", "T2", "T3", "T4"] as const;
 
@@ -44,7 +45,7 @@ export default function SourcesTable({ sources }: { sources: Source[] }) {
                     s.citation
                   )}
                 </td>
-                <td>{s.tier}</td>
+                <td><span className={tierClass(s.tier)}>{s.tier}</span></td>
               </tr>
             ))}
           </tbody>
