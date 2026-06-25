@@ -338,6 +338,78 @@ a.citation:hover { text-decoration: underline; }
 .personalize-callout code { font: 13px var(--mono); background: rgba(255,255,255,0.1); padding: 1px 5px; color: var(--lime); }
 .personalize-callout .primary-link { color: white; border-color: var(--lime); margin-top: 8px; }
 
+/* Sources controls: square search field + a dateless year-sort toggle, sitting
+   above the tier chips. Inputs stay hairline-ruled with 0 radius per DESIGN.md. */
+.sources-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: stretch;
+  margin: 30px 0 14px;
+}
+.source-search { flex: 1 1 280px; display: flex; }
+.source-search input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper);
+  padding: 10px 14px;
+  font: 13px var(--mono);
+  color: var(--ink);
+}
+.source-search input::placeholder { color: var(--muted); }
+.source-search input:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
+
+.sort-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: 500 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+.sort-toggle:hover { border-color: var(--forest); color: var(--ink); }
+.sort-toggle.active { background: var(--forest); border-color: var(--forest); color: white; }
+
+/* Header cells become sort buttons; the glyph carries asc/desc/idle state. */
+.sources-table thead th { padding: 0; }
+.sources-table .col-sort {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+}
+.sources-table .col-sort:hover { background: rgba(255, 255, 255, 0.08); }
+.sort-glyph { font-size: 9px; opacity: 0.7; line-height: 1; }
+.sort-toggle:not(.active) .sort-glyph,
+.sources-table th[aria-sort="none"] .sort-glyph { opacity: 0.4; }
+
+.source-count {
+  margin: 0 0 14px;
+  font: 500 10px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
 /* Filter chips reuse the same forest-fill toggle vocabulary as home's .filter. */
 .filter-chip {
   border: 1px solid var(--line);
