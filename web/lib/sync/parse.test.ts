@@ -6,6 +6,10 @@ import {
   countSources,
   parseLever,
   buildDerived,
+  leverSlug,
+  parseMatrix,
+  parseRankedActions,
+  parseOpenQuestions,
 } from "./parse";
 
 const RESEARCHED = `# Lever: Substances
@@ -218,5 +222,169 @@ describe("parseLeverDetail", () => {
     expect(d.claims).toHaveLength(3);
     expect(d.actions).toContain("Keep a regular sleep schedule.");
     expect(d.openQuestions).toBe("Is short sleep causally harmful at all?");
+  });
+});
+
+const MATRIX = `# Lever × System matrix
+
+Cells = effect strength.
+
+|                      | Cardio | Neuro | Skin |
+|----------------------|:------:|:-----:|:----:|
+| Substances           |   ●    |   ◐   |  ○   |
+| Sun/Skin             |        |       |  ●   |
+| Oral/Sensory         |        |   ●   |      |
+
+## Reading the matrix
+`;
+
+describe("leverSlug", () => {
+  it("normalizes display names to slugs", () => {
+    expect(leverSlug("Nutrition/Metabolic")).toBe("nutrition-metabolic");
+    expect(leverSlug("Medical")).toBe("medical-screening");
+    expect(leverSlug("Sun/Skin")).toBe("sun-skin");
+    expect(leverSlug("Oral/Sensory")).toBe("oral-sensory");
+    expect(leverSlug("Substances")).toBe("substances");
+  });
+});
+
+describe("parseMatrix", () => {
+  it("parses the systems header and one row per lever", () => {
+    const m = parseMatrix(MATRIX);
+    expect(m.systems).toEqual(["Cardio", "Neuro", "Skin"]);
+    expect(m.rows).toHaveLength(3);
+  });
+  it("maps glyphs to strengths and assigns slugs", () => {
+    const m = parseMatrix(MATRIX);
+    expect(m.rows[0]).toEqual({
+      lever: "Substances",
+      slug: "substances",
+      cells: ["strong", "moderate", "minor"],
+    });
+    expect(m.rows[1].cells).toEqual(["none", "none", "strong"]);
+    expect(m.rows[2].slug).toBe("oral-sensory");
+  });
+});
+
+const RANKED = `# Ranked actions
+
+| Rank | Action | Lever | Impact | Certainty | Rev | **Evidence-only** |
+|:----:|--------|-------|:------:|:---------:|:---:|:-----------------:|
+| 1 | **Don't smoke** (quit ASAP if you do) | Substances | 5 | 5 | 3 | **75** |
+| 3 | **Treat high blood pressure to target** *(conditional)* | Medical | 5 | 5 | 3 | **75** |
+
+### Do NOT bother / actively avoid (negative or unproven — keep OFF the list)
+These scored low or reversed:
+- **Daily aspirin for primary prevention** — reversed (bleeding ≥ benefit) [medical-screening #12]
+- **Strict sun avoidance** — no proven upside [sun-skin #19–25]
+
+## Personalizing this list (the Tractability overlay)
+ignore me
+
+## The actual list (top items, plain language)
+The evidence says:
+
+1. **Don't smoke, and keep alcohol low.** The biggest single mortality lever.
+2. **Be fit and strong** — regular cardio, lifting, balance work.
+`;
+
+describe("parseRankedActions", () => {
+  it("parses ranked rows with numeric columns and slugs", () => {
+    const r = parseRankedActions(RANKED);
+    expect(r.rows).toHaveLength(2);
+    expect(r.rows[0]).toEqual({
+      rank: 1,
+      action: "Don't smoke (quit ASAP if you do)",
+      lever: "Substances",
+      slug: "substances",
+      impact: 5,
+      certainty: 5,
+      rev: 3,
+      evidenceOnly: 75,
+      conditional: false,
+    });
+    expect(r.rows[1].conditional).toBe(true);
+    expect(r.rows[1].action).toBe("Treat high blood pressure to target");
+    expect(r.rows[1].slug).toBe("medical-screening");
+  });
+  it("extracts do-not-bother items with refs", () => {
+    const r = parseRankedActions(RANKED);
+    expect(r.doNotBother).toHaveLength(2);
+    expect(r.doNotBother[0]).toEqual({
+      text: "Daily aspirin for primary prevention — reversed (bleeding ≥ benefit)",
+      refs: "medical-screening #12",
+    });
+  });
+  it("extracts the plain-language list in order", () => {
+    const r = parseRankedActions(RANKED);
+    expect(r.plainLanguage).toHaveLength(2);
+    expect(r.plainLanguage[0]).toMatch(/^Don't smoke, and keep alcohol low\./);
+  });
+});
+
+const OPEN_Q = `# Open questions
+
+## Unresolved / contested
+| Question | Why unresolved | Best current guess | Tier of available evidence | Revisit when |
+|----------|----------------|--------------------|----------------------------|--------------|
+| ~~Cannabis: CV effects?~~ RESOLVED to T2 | — | modest signal | T2 | — |
+| Sleep: is short-sleep causally harmful? | metas disagree | small real effect | T1, conflicting | at synthesis |
+
+| Sun-skin: UV-attributable aging fraction? | no verified claim | UVA-dominant | T3 | cosmetic |
+
+## Speculative / hype-adjacent (T3–T4 holding pen)
+| Claim | Current evidence tier | What would promote it |
+|-------|-----------------------|-----------------------|
+|  |  |  |
+`;
+
+const OPEN_Q_EMPHASIS = `# Open questions
+
+## Unresolved / contested
+| Question | Why unresolved | Best current guess | Tier of available evidence | Revisit when |
+|----------|----------------|--------------------|----------------------------|--------------|
+| ~~Stress: does loneliness matter?~~ **RESOLVED to T1** | *contested* data | *quantifiably* real | **T1** | — |
+| Exercise: does *function* or *longevity* dominate? | hard to disentangle | *small* but real | T2 | new RCTs |
+`;
+
+describe("parseOpenQuestions", () => {
+  it("groups questions by lever and flags resolved ones", () => {
+    const r = parseOpenQuestions(OPEN_Q);
+    const sleep = r.groups.find((g) => g.lever === "Sleep");
+    expect(sleep?.questions[0].resolved).toBe(false);
+    expect(sleep?.questions[0].question).toMatch(/short-sleep/);
+    const subs = r.groups.find((g) => g.lever === "Substances");
+    expect(subs?.questions[0].resolved).toBe(true);
+  });
+  it("skips blank rows from the speculative holding pen", () => {
+    const r = parseOpenQuestions(OPEN_Q);
+    const all = r.groups.flatMap((g) => g.questions);
+    expect(all).toHaveLength(3);
+    expect(r.groups.find((g) => g.lever === "Sun-skin")).toBeTruthy();
+  });
+  it("strips ** and * markdown emphasis from all fields", () => {
+    const r = parseOpenQuestions(OPEN_Q_EMPHASIS);
+    const stress = r.groups.find((g) => g.lever === "Stress-social");
+    expect(stress).toBeTruthy();
+    const resolved = stress!.questions[0];
+    expect(resolved.resolved).toBe(true);
+    // ** and * removed from question text
+    expect(resolved.question).not.toMatch(/\*/);
+    expect(resolved.question).toContain("RESOLVED to T1");
+    // * removed from whyUnresolved
+    expect(resolved.whyUnresolved).toBe("contested data");
+    // * removed from bestGuess
+    expect(resolved.bestGuess).toBe("quantifiably real");
+    // ** removed from tier
+    expect(resolved.tier).toBe("T1");
+    const exercise = r.groups.find((g) => g.lever === "Exercise");
+    expect(exercise).toBeTruthy();
+    const q2 = exercise!.questions[0];
+    // * removed from question (function, longevity)
+    expect(q2.question).not.toMatch(/\*/);
+    expect(q2.question).toContain("function");
+    expect(q2.question).toContain("longevity");
+    // * removed from bestGuess (small)
+    expect(q2.bestGuess).toBe("small but real");
   });
 });

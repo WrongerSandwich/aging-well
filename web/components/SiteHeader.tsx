@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { derived } from "@/lib/derived";
 
 function formatSnapshot(iso: string): string {
@@ -13,9 +14,11 @@ export default function SiteHeader() {
         <span>Aging Well</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#takeaways">Takeaways</a>
-        <a href="#evidence">Evidence</a>
-        <a href="#status">Status</a>
+        <a href="/#takeaways">Takeaways</a>
+        <Link href="/actions">Ranking</Link>
+        <a href="/#evidence">Evidence</a>
+        <Link href="/sources">Sources</Link>
+        <Link href="/open-questions">Questions</Link>
       </nav>
       <span className="snapshot">Snapshot · {formatSnapshot(derived.generatedAt)}</span>
     </header>

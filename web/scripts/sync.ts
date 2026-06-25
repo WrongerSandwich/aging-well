@@ -5,6 +5,9 @@ import {
   parseLever,
   parseLeverDetail,
   parseSources,
+  parseMatrix,
+  parseRankedActions,
+  parseOpenQuestions,
   type LeverData,
   type LeverDetail,
 } from "../lib/sync/parse";
@@ -18,6 +21,10 @@ const agingWell = process.env.AGING_WELL_DIR
 
 const leversDir = join(agingWell, "levers");
 const sourcesPath = join(agingWell, "_meta", "sources.md");
+const synthesisDir = join(agingWell, "synthesis");
+const rankedPath = join(synthesisDir, "ranked-actions.md");
+const matrixPath = join(synthesisDir, "lever-system-matrix.md");
+const openQuestionsPath = join(synthesisDir, "open-questions.md");
 
 function leverFiles(): { slug: string; md: string }[] {
   return readdirSync(leversDir)
@@ -51,11 +58,28 @@ function main(): void {
   const detailPath = join(root, "lib", "detail.json");
   writeFileSync(detailPath, JSON.stringify(detail, null, 2) + "\n", "utf8");
 
+  // Synthesis artifacts: ranked-actions, matrix, open-questions.
+  const synthesis = {
+    generatedAt,
+    rankedActions: parseRankedActions(readFileSync(rankedPath, "utf8")),
+    matrix: parseMatrix(readFileSync(matrixPath, "utf8")),
+    openQuestions: parseOpenQuestions(readFileSync(openQuestionsPath, "utf8")),
+  };
+  const synthesisPath = join(root, "lib", "synthesis.json");
+  writeFileSync(synthesisPath, JSON.stringify(synthesis, null, 2) + "\n", "utf8");
+
+  // Global sources index.
+  const sourcesOut = { generatedAt, sources };
+  const sourcesOutPath = join(root, "lib", "sources.json");
+  writeFileSync(sourcesOutPath, JSON.stringify(sourcesOut, null, 2) + "\n", "utf8");
+
   const claimTotal = details.reduce((n, d) => n + d.claims.length, 0);
   console.log(
-    `Wrote ${derivedPath} and ${detailPath}: ` +
+    `Wrote ${derivedPath}, ${detailPath}, ${synthesisPath}, ${sourcesOutPath}: ` +
       `${derived.totals.leversComplete}/${derived.totals.leversTotal} levers complete, ` +
-      `${sources.length} sources, ${claimTotal} detailed claims.`,
+      `${sources.length} sources, ${claimTotal} detailed claims, ` +
+      `${synthesis.rankedActions.rows.length} ranked actions, ` +
+      `${synthesis.openQuestions.groups.reduce((n, g) => n + g.questions.length, 0)} open questions.`,
   );
 }
 

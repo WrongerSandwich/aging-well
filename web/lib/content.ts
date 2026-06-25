@@ -3,7 +3,7 @@ export interface Finding {
   tierLabel: string;
   tierModifier?: "inverse";
   lever: string;
-  category: "substances" | "exercise" | "sleep" | "nutrition-metabolic" | "medical-screening" | "oral-sensory";
+  category: "substances" | "exercise" | "sleep" | "nutrition-metabolic" | "medical-screening" | "oral-sensory" | "sun-skin" | "stress-social";
   titleLines: string[];
   summary: string;
   stat?: { value: string; labelLines: string[] };
@@ -264,13 +264,92 @@ export const findings: Finding[] = [
     summary:
       "The “gum disease causes heart attacks and dementia” pitch is Mendelian-randomization null — the associations are confounding, not causation. Keep functional teeth, and use dentures if you lose them, for nutrition and quality of life. That’s the real, independent reason.",
   },
+  {
+    number: "20",
+    tierLabel: "T1",
+    lever: "Sun & skin",
+    category: "sun-skin",
+    cardModifier: "feature",
+    titleLines: ["Don’t sunburn;", "never tan indoors."],
+    summary:
+      "Sun-skin’s 80/20 is avoiding burns and tanning beds — the one clearly lethal skin cancer (melanoma) is the target, and the harm is cumulative and irreversible.",
+    stat: { value: "Rank 9", labelLines: ["of 30 actions", "(Evidence-only 45)"] },
+    detail: {
+      body: "UV damage accumulates and photoaging doesn’t fully reverse. Tanning beds have no defensible upside. Much of “rising melanoma” is indolent overdiagnosis, but the lethal fraction is real and UV-driven.",
+      source: "Cohorts + MR · hard endpoint for melanoma · high confidence on burns",
+    },
+  },
+  {
+    number: "21",
+    tierLabel: "T2",
+    lever: "Sun & skin",
+    category: "sun-skin",
+    titleLines: ["Wear daily", "broad-spectrum sunscreen."],
+    summary:
+      "Cheap, low-effort, and the one skin-cancer-prevention RCT (Nambour) supports it — though that evidence is a single sub-tropical Australian trial, so treat it as best-available, not airtight.",
+    stat: { value: "Rank 21", labelLines: ["of 30 actions", "(Evidence-only 24)"] },
+    detail: {
+      body: "Protects against both melanoma (one RCT) and photoaging (mechanistic + UVA). Replication is unlikely since a placebo arm is now arguably unethical.",
+      source: "One RCT (Nambour) · Cochrane certainty low · mechanism solid",
+    },
+  },
+  {
+    number: "22",
+    tierLabel: "T2",
+    lever: "Sun & skin",
+    category: "sun-skin",
+    cardModifier: "compact muted",
+    titleLines: ["Skip strict sun-avoidance and the D/omega-3 hype."],
+    summary:
+      "Once the vitamin-D channel is closed (null supplement RCTs), there’s no proven upside to strict sun avoidance and a possible downside. Supplements don’t replace the behaviors.",
+  },
+  {
+    number: "23",
+    tierLabel: "T2",
+    lever: "Stress & social",
+    category: "stress-social",
+    cardModifier: "dark",
+    tierModifier: "inverse",
+    titleLines: ["Cultivate a", "sense of purpose."],
+    summary:
+      "The strongest-ranked stress-social action — purpose tracks lower mortality and dementia — but the longevity evidence is observational and partly reverse-caused, so weight it as “good for you,” not a proven lever.",
+    stat: { value: "Rank 23", labelLines: ["of 30 actions", "(Evidence-only 18)"] },
+    detail: {
+      body: "No RCT powered for a hard endpoint exists for any social/purpose intervention — the entire causal case rests on surrogates. Real signal, soft proof.",
+      source: "Large cohorts + one MR · observational · reverse-causation caveats",
+    },
+  },
+  {
+    number: "24",
+    tierLabel: "T2",
+    lever: "Stress & social",
+    category: "stress-social",
+    titleLines: ["Keep quality", "social connection."],
+    summary:
+      "Social isolation is a more robust risk signal than self-reported loneliness. Worth protecting for well-being; the hard-endpoint causal evidence is a genuine gap.",
+    stat: { value: "Rank 28", labelLines: ["of 30 actions", "(Evidence-only 12)"] },
+    detail: {
+      body: "Two UK Biobank analyses disagree on whether loneliness survives depression adjustment; isolation (HR ~1.34) is the steadier signal. No outcome-powered intervention trial exists yet.",
+      source: "Cohorts · observational · confounding unresolved",
+    },
+  },
+  {
+    number: "25",
+    tierLabel: "T3",
+    lever: "Stress & social",
+    category: "stress-social",
+    cardModifier: "compact muted",
+    titleLines: ["Manage chronic stress — for well-being, not your heart."],
+    summary:
+      "No RCT shows stress reduction moves hard cardiac endpoints (AHA/Cochrane null in primary prevention). Any effect runs through standard cardiometabolic risk factors. Do it to feel better.",
+  },
 ];
 
-export const heroEyebrow = "Research in progress";
+export const heroEyebrow = "Research complete · 8 levers";
 
 export interface Filter {
   label: string;
-  value: "all" | "substances" | "exercise" | "sleep" | "nutrition-metabolic" | "medical-screening" | "oral-sensory";
+  value: "all" | "substances" | "exercise" | "sleep" | "nutrition-metabolic" | "medical-screening" | "oral-sensory" | "sun-skin" | "stress-social";
 }
 export const findingsFilters: Filter[] = [
   { label: "All findings", value: "all" },
@@ -280,6 +359,8 @@ export const findingsFilters: Filter[] = [
   { label: "Nutrition", value: "nutrition-metabolic" },
   { label: "Medical & screening", value: "medical-screening" },
   { label: "Oral & sensory", value: "oral-sensory" },
+  { label: "Sun & skin", value: "sun-skin" },
+  { label: "Stress & social", value: "stress-social" },
 ];
 
 export interface Tier {
@@ -312,22 +393,8 @@ export const statusRows: StatusRow[] = [
   { index: "04", label: "Nutrition & metabolic", slug: "nutrition-metabolic" },
   { index: "05", label: "Medical & screening", slug: "medical-screening" },
   { index: "06", label: "Oral & sensory", slug: "oral-sensory" },
-  {
-    index: "07–08",
-    label: "Sun & skin, Stress & social",
-    note: "Not yet researched",
-    statusLabel: "Pending",
-  },
-];
-
-export interface Question {
-  number: string;
-  text: string;
-}
-export const questions: Question[] = [
-  { number: "01", text: "Where exactly does baseline cardiovascular risk make primary-prevention statins stop extending life?" },
-  { number: "02", text: "Does treating hearing loss reduce dementia incidence, not just slow cognitive-test decline?" },
-  { number: "03", text: "Would an RCT replicate cataract surgery’s ~25% dementia signal? (2024 meta-analyses conflict.)" },
+  { index: "07", label: "Sun & skin", slug: "sun-skin" },
+  { index: "08", label: "Stress & social", slug: "stress-social" },
 ];
 
 // The two right-hand metric cards are static; the two count cards are derived.

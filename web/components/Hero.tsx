@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero shell">
       <div className="hero-copy">
         <p className="eyebrow">
-          <span className="live-dot"></span> {heroEyebrow}
+          <span className="done-dot" aria-hidden="true"></span> {heroEyebrow}
         </p>
         <h1>
           Protect what<br />
