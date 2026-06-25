@@ -397,16 +397,6 @@ export const statusRows: StatusRow[] = [
   { index: "08", label: "Stress & social", slug: "stress-social" },
 ];
 
-export interface Question {
-  number: string;
-  text: string;
-}
-export const questions: Question[] = [
-  { number: "01", text: "Where exactly does baseline cardiovascular risk make primary-prevention statins stop extending life?" },
-  { number: "02", text: "Does treating hearing loss reduce dementia incidence, not just slow cognitive-test decline?" },
-  { number: "03", text: "Would an RCT replicate cataract surgery’s ~25% dementia signal? (2024 meta-analyses conflict.)" },
-];
-
 // The two right-hand metric cards are static; the two count cards are derived.
 export interface MetricCard {
   value: string;
