@@ -338,6 +338,15 @@ const OPEN_Q = `# Open questions
 |  |  |  |
 `;
 
+const OPEN_Q_EMPHASIS = `# Open questions
+
+## Unresolved / contested
+| Question | Why unresolved | Best current guess | Tier of available evidence | Revisit when |
+|----------|----------------|--------------------|----------------------------|--------------|
+| ~~Stress: does loneliness matter?~~ **RESOLVED to T1** | *contested* data | *quantifiably* real | **T1** | — |
+| Exercise: does *function* or *longevity* dominate? | hard to disentangle | *small* but real | T2 | new RCTs |
+`;
+
 describe("parseOpenQuestions", () => {
   it("groups questions by lever and flags resolved ones", () => {
     const r = parseOpenQuestions(OPEN_Q);
@@ -352,5 +361,30 @@ describe("parseOpenQuestions", () => {
     const all = r.groups.flatMap((g) => g.questions);
     expect(all).toHaveLength(3);
     expect(r.groups.find((g) => g.lever === "Sun-skin")).toBeTruthy();
+  });
+  it("strips ** and * markdown emphasis from all fields", () => {
+    const r = parseOpenQuestions(OPEN_Q_EMPHASIS);
+    const stress = r.groups.find((g) => g.lever === "Stress-social");
+    expect(stress).toBeTruthy();
+    const resolved = stress!.questions[0];
+    expect(resolved.resolved).toBe(true);
+    // ** and * removed from question text
+    expect(resolved.question).not.toMatch(/\*/);
+    expect(resolved.question).toContain("RESOLVED to T1");
+    // * removed from whyUnresolved
+    expect(resolved.whyUnresolved).toBe("contested data");
+    // * removed from bestGuess
+    expect(resolved.bestGuess).toBe("quantifiably real");
+    // ** removed from tier
+    expect(resolved.tier).toBe("T1");
+    const exercise = r.groups.find((g) => g.lever === "Exercise");
+    expect(exercise).toBeTruthy();
+    const q2 = exercise!.questions[0];
+    // * removed from question (function, longevity)
+    expect(q2.question).not.toMatch(/\*/);
+    expect(q2.question).toContain("function");
+    expect(q2.question).toContain("longevity");
+    // * removed from bestGuess (small)
+    expect(q2.bestGuess).toBe("small but real");
   });
 });

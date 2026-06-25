@@ -23,7 +23,7 @@ export default function Matrix({ matrix }: { matrix: LeverSystemMatrix }) {
           <tr key={row.slug}>
             <th scope="row">{row.lever}</th>
             {row.cells.map((c, i) => (
-              <td key={i} className={`cell-${c}`} aria-label={c}>
+              <td key={i} className={`cell-${c}`} aria-label={c === "none" ? undefined : c}>
                 {GLYPH[c]}
               </td>
             ))}

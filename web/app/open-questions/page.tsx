@@ -14,7 +14,7 @@ export default function OpenQuestionsPage() {
         <h1>Open questions</h1>
         <p className="hero-intro">
           Contested evidence and unresolved questions, kept deliberately out of the ranking
-          so they don't contaminate it with low-certainty noise.
+          so they don’t contaminate it with low-certainty noise.
         </p>
       </header>
       <OpenQuestionsFull groups={synthesis.openQuestions.groups} />

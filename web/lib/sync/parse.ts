@@ -269,7 +269,12 @@ export interface RankedActions {
 }
 
 function stripMarkdown(s: string): string {
-  return s.replace(/\*\*/g, "").replace(/`/g, "").trim();
+  return s
+    .replace(/\*\*/g, "")
+    .replace(/`/g, "")
+    .replace(/\*(\S(?:[^*]*\S)?)\*/g, "$1")
+    .replace(/\*/g, "")
+    .trim();
 }
 
 export function parseRankedActions(md: string): RankedActions {
@@ -377,7 +382,7 @@ export function parseOpenQuestions(md: string): OpenQuestions {
     // Skip header rows, separator rows, and blank (speculative) rows.
     if (!q || /^Question$/i.test(q) || /^[-:]+$/.test(q) || /^Claim$/i.test(q)) continue;
     const resolved = q.includes("~~") || /RESOLVED/i.test(q);
-    const question = q.replace(/~~/g, "").trim();
+    const question = stripMarkdown(q.replace(/~~/g, ""));
     const lever = oqGroupFor(question);
     if (!byLever[lever]) {
       byLever[lever] = [];
@@ -386,10 +391,10 @@ export function parseOpenQuestions(md: string): OpenQuestions {
     byLever[lever].push({
       question,
       resolved,
-      whyUnresolved: cells[2],
-      bestGuess: cells[3],
-      tier: cells[4],
-      revisitWhen: cells[5],
+      whyUnresolved: stripMarkdown(cells[2]),
+      bestGuess: stripMarkdown(cells[3]),
+      tier: stripMarkdown(cells[4]),
+      revisitWhen: stripMarkdown(cells[5]),
     });
   }
   return { groups: order.map((lever) => ({ lever, questions: byLever[lever] })) };

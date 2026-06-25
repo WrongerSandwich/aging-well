@@ -36,7 +36,7 @@ export default function ActionsPage() {
 
       <section className="actions-section">
         <h2>Do NOT bother / actively avoid</h2>
-        <p className="claims-note">Scored low or reversed — listed so they don't creep back in.</p>
+        <p className="claims-note">Scored low or reversed — listed so they don’t creep back in.</p>
         <DoNotBother items={rankedActions.doNotBother} />
       </section>
 
@@ -50,7 +50,7 @@ export default function ActionsPage() {
         <h2>Make it yours</h2>
         <p>
           This ranking is universal. To turn it into your do-this-first list, add the one
-          personal factor — how realistically you'll sustain each action — and resolve the
+          personal factor — how realistically you’ll sustain each action — and resolve the
           conditional rows against your own profile. The method and copy-and-fill templates
           live in the repository (<code>synthesis/personalize.md</code>); your overlay stays
           local and is never published.

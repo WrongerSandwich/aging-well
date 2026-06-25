@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T00:52:41.291Z",
+  "generatedAt": "2026-06-25T01:05:01.733Z",
   "rankedActions": {
     "rows": [
       {
@@ -114,7 +114,7 @@
       },
       {
         "rank": 11,
-        "action": "Cervical cancer screening *(if applicable)*",
+        "action": "Cervical cancer screening (if applicable)",
         "lever": "Medical",
         "slug": "medical-screening",
         "impact": 3,
@@ -136,7 +136,7 @@
       },
       {
         "rank": 13,
-        "action": "Lung-cancer screening (LDCT) **",
+        "action": "Lung-cancer screening (LDCT)",
         "lever": "Medical",
         "slug": "medical-screening",
         "impact": 3,
@@ -351,7 +351,7 @@
         "refs": "nutrition #16"
       },
       {
-        "text": "Periodontal treatment to prevent heart disease/dementia — MR-null (keep teeth for *function*)",
+        "text": "Periodontal treatment to prevent heart disease/dementia — MR-null (keep teeth for function)",
         "refs": "oral-sensory #12"
       },
       {
@@ -367,7 +367,7 @@
       "Don't get sunburned, skip tanning beds (and wear sunscreen) — cheap, prevents the one lethal skin cancer.",
       "Eat to avoid the clearly-bad — minimize ultra-processed food and sugary drinks, don't become obese, DASH-style for blood pressure. Don't chase superfoods, supplements, or fasting.",
       "Protect the irreplaceable hardware — hearing (treat loss early), vision (cataract surgery), functional teeth.",
-      "Sleep ~7–7.5 h consistently; fix insomnia with CBT-I. Keep social connection and a sense of purpose — good for you, though the *longevity* evidence there is softer."
+      "Sleep ~7–7.5 h consistently; fix insomnia with CBT-I. Keep social connection and a sense of purpose — good for you, though the longevity evidence there is softer."
     ]
   },
   "matrix": {
@@ -563,7 +563,7 @@
         "lever": "Exercise",
         "questions": [
           {
-            "question": "Exercise: do resistance/balance TRAINING interventions move falls, fracture, BMD? **RESOLVED to T1 (RCT) — targeted patch 2026-06-18**",
+            "question": "Exercise: do resistance/balance TRAINING interventions move falls, fracture, BMD? RESOLVED to T1 (RCT) — targeted patch 2026-06-18",
             "resolved": true,
             "whyUnresolved": "—",
             "bestGuess": "YES, causal: balance training cuts rate of falls RaR 0.76 (Cochrane HIGH) & fractures ~−25–33% (RR 0.74); only HiRIT builds lumbar bone (+2–4%). Walking/flexibility/lifting-alone do NOT prevent falls",
@@ -581,13 +581,13 @@
           {
             "question": "Exercise: MUSCLE/strength detraining-retraining kinetics (bone kinetics now known: ~12 mo to baseline)?",
             "resolved": false,
-            "whyUnresolved": "Only *bone* detraining was quantified this session; muscle/strength kinetics didn't survive",
+            "whyUnresolved": "Only bone detraining was quantified this session; muscle/strength kinetics didn't survive",
             "bestGuess": "Physiologically SLOW-reversible; benefits need maintenance, not banked",
             "tier": "bone T2 confirmed; muscle un-pinned",
             "revisitWhen": "If reversibility weighting becomes decisive in ranking"
           },
           {
-            "question": "Exercise: is measured CRF a *quantifiably* stronger mortality predictor than self-reported activity, head-to-head?",
+            "question": "Exercise: is measured CRF a quantifiably stronger mortality predictor than self-reported activity, head-to-head?",
             "resolved": false,
             "whyUnresolved": "Data strongly suggest yes; no surviving claim makes the direct same-population comparison",
             "bestGuess": "Yes — measured CRF is the cleaner signal; self-report attenuates",
@@ -598,7 +598,7 @@
             "question": "Exercise: resistance-training dose optimum — plateau (~90–119 min/wk) or J-curve (peak 30–60 min/wk)?",
             "resolved": false,
             "whyUnresolved": "Two strong cohorts disagree (Zhang S031 vs Momma-type S037)",
-            "bestGuess": "Effective dose is *small* either way (~2 sessions/wk); exact optimum unsettled",
+            "bestGuess": "Effective dose is small either way (~2 sessions/wk); exact optimum unsettled",
             "tier": "T1/T2, conflicting",
             "revisitWhen": "Low priority — both point to \"~2×/wk is enough\""
           }
@@ -753,7 +753,7 @@
           {
             "question": "Oral-sensory: falls from hearing/vision impairment (a mortality pathway) — HRs?",
             "resolved": false,
-            "whyUnresolved": "No hazard ratio survived verification; falls *intervention* evidence lives in exercise lever",
+            "whyUnresolved": "No hazard ratio survived verification; falls intervention evidence lives in exercise lever",
             "bestGuess": "Plausible contributor",
             "tier": "un-quantified",
             "revisitWhen": "Low priority"
