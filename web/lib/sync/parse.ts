@@ -332,3 +332,65 @@ export function parseRankedActions(md: string): RankedActions {
 
   return { rows, doNotBother, plainLanguage };
 }
+
+export interface OpenQuestion {
+  question: string;
+  resolved: boolean;
+  whyUnresolved: string;
+  bestGuess: string;
+  tier: string;
+  revisitWhen: string;
+}
+export interface OpenQuestionGroup {
+  lever: string;
+  questions: OpenQuestion[];
+}
+export interface OpenQuestions {
+  groups: OpenQuestionGroup[];
+}
+
+const OQ_KEYWORDS: [RegExp, string][] = [
+  [/vaping|nicotine|cannabis|alcohol|smokeless|tobacco|substance/i, "Substances"],
+  [/exercise|resistance|strength|balance|sarcopenia|crf/i, "Exercise"],
+  [/sleep|insomnia|cbt-i|osa|apnea/i, "Sleep"],
+  [/nutrition|diet|protein|sodium|fiber|weight|predimed|mediterranean/i, "Nutrition"],
+  [/medical|statin|screening|galleri|vaccine|polypharmacy|mced|covid/i, "Medical"],
+  [/oral|sensory|hearing|vision|cataract|dental|dementia paf/i, "Oral-sensory"],
+  [/stress|social|loneliness|purpose|optimism|cortisol|well-being/i, "Stress-social"],
+  [/sun|skin|melanoma|sunscreen|\buv\b|photoaging/i, "Sun-skin"],
+];
+
+function oqGroupFor(question: string): string {
+  const prefix = question.split(":")[0];
+  for (const [re, name] of OQ_KEYWORDS) if (re.test(prefix)) return name;
+  return "General";
+}
+
+export function parseOpenQuestions(md: string): OpenQuestions {
+  const order: string[] = [];
+  const byLever: Record<string, OpenQuestion[]> = {};
+  for (const line of md.split("\n")) {
+    if (!line.trim().startsWith("|")) continue;
+    const cells = line.split("|").map((c) => c.trim());
+    if (cells.length < 7) continue; // 5 data columns => 7 split parts
+    const q = cells[1];
+    // Skip header rows, separator rows, and blank (speculative) rows.
+    if (!q || /^Question$/i.test(q) || /^[-:]+$/.test(q) || /^Claim$/i.test(q)) continue;
+    const resolved = q.includes("~~") || /RESOLVED/i.test(q);
+    const question = q.replace(/~~/g, "").trim();
+    const lever = oqGroupFor(question);
+    if (!byLever[lever]) {
+      byLever[lever] = [];
+      order.push(lever);
+    }
+    byLever[lever].push({
+      question,
+      resolved,
+      whyUnresolved: cells[2],
+      bestGuess: cells[3],
+      tier: cells[4],
+      revisitWhen: cells[5],
+    });
+  }
+  return { groups: order.map((lever) => ({ lever, questions: byLever[lever] })) };
+}

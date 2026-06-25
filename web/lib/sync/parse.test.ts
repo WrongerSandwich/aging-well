@@ -9,6 +9,7 @@ import {
   leverSlug,
   parseMatrix,
   parseRankedActions,
+  parseOpenQuestions,
 } from "./parse";
 
 const RESEARCHED = `# Lever: Substances
@@ -318,5 +319,38 @@ describe("parseRankedActions", () => {
     const r = parseRankedActions(RANKED);
     expect(r.plainLanguage).toHaveLength(2);
     expect(r.plainLanguage[0]).toMatch(/^Don't smoke, and keep alcohol low\./);
+  });
+});
+
+const OPEN_Q = `# Open questions
+
+## Unresolved / contested
+| Question | Why unresolved | Best current guess | Tier of available evidence | Revisit when |
+|----------|----------------|--------------------|----------------------------|--------------|
+| ~~Cannabis: CV effects?~~ RESOLVED to T2 | — | modest signal | T2 | — |
+| Sleep: is short-sleep causally harmful? | metas disagree | small real effect | T1, conflicting | at synthesis |
+
+| Sun-skin: UV-attributable aging fraction? | no verified claim | UVA-dominant | T3 | cosmetic |
+
+## Speculative / hype-adjacent (T3–T4 holding pen)
+| Claim | Current evidence tier | What would promote it |
+|-------|-----------------------|-----------------------|
+|  |  |  |
+`;
+
+describe("parseOpenQuestions", () => {
+  it("groups questions by lever and flags resolved ones", () => {
+    const r = parseOpenQuestions(OPEN_Q);
+    const sleep = r.groups.find((g) => g.lever === "Sleep");
+    expect(sleep?.questions[0].resolved).toBe(false);
+    expect(sleep?.questions[0].question).toMatch(/short-sleep/);
+    const subs = r.groups.find((g) => g.lever === "Substances");
+    expect(subs?.questions[0].resolved).toBe(true);
+  });
+  it("skips blank rows from the speculative holding pen", () => {
+    const r = parseOpenQuestions(OPEN_Q);
+    const all = r.groups.flatMap((g) => g.questions);
+    expect(all).toHaveLength(3);
+    expect(r.groups.find((g) => g.lever === "Sun-skin")).toBeTruthy();
   });
 });
