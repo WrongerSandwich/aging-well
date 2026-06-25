@@ -1,0 +1,1193 @@
+{
+  "generatedAt": "2026-06-25T00:13:16.351Z",
+  "sources": [
+    {
+      "id": "S001",
+      "citation": "Jha et al., NEJM 2013;368:341 — \"21st-Century Hazards of Smoking and Benefits of Cessation in the US.\" ~217k NHIS adults.",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa1211128",
+      "tier": "T1"
+    },
+    {
+      "id": "S002",
+      "citation": "Cho et al., NEJM Evidence 2024 — pooled 1.48M adults (US/UK/Norway/Canada), 122,697 deaths.",
+      "url": "https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300272",
+      "tier": "T1"
+    },
+    {
+      "id": "S003",
+      "citation": "Inoue-Choi et al., JNCI Cancer Spectrum 2019;3(3):pkz036 — 165,335 US adults.",
+      "url": "https://academic.oup.com/jncics/article/3/3/pkz036/5490836",
+      "tier": "T1"
+    },
+    {
+      "id": "S004",
+      "citation": "Inoue-Choi et al., JAMA Intern Med 2017 — NIH-AARP, n=290,215.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5555224/",
+      "tier": "T1"
+    },
+    {
+      "id": "S005",
+      "citation": "Le, Mendez & Warner, AJPM 2024;S0749-3797(24)00217-4 — life-table model (CPS-II RRs + 2018 NHIS/Census).00217-4/fulltext)",
+      "url": "https://www.ajpmonline.org/article/S0749-3797(24",
+      "tier": "T1 (model)"
+    },
+    {
+      "id": "S006",
+      "citation": "Fisher et al. 2019 (Altria-affiliated) — NLMS & NHIS cohorts.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6458834/",
+      "tier": "T3"
+    },
+    {
+      "id": "S007",
+      "citation": "GBD 2016 Alcohol Collaborators, Lancet 2018;392:1015 — \"Alcohol use and burden for 195 countries.\"31310-2/fulltext)",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18",
+      "tier": "T1"
+    },
+    {
+      "id": "S008",
+      "citation": "Berlowitz et al., Circulation 2022;145 — PATH cohort (24,027 adults).",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.057369",
+      "tier": "T2"
+    },
+    {
+      "id": "S009",
+      "citation": "NHIS-mortality cohort, AJPM Prev Med 2024;S0091743524000987 (= PMID 38552720), 145,390 adults, 3.5yr median FU.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0091743524000987",
+      "tier": "T2"
+    },
+    {
+      "id": "S010",
+      "citation": "E-cigarette CVD meta-analysis, PMC12412302 (11 studies, mostly cross-sectional).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12412302/",
+      "tier": "T2"
+    },
+    {
+      "id": "S011",
+      "citation": "Glantz et al. meta-analysis (107 studies), NEJM Evidence 2024;EVIDoa2300229.",
+      "url": "https://evidence.nejm.org/doi/full/10.1056/EVIDoa2300229",
+      "tier": "T2"
+    },
+    {
+      "id": "S012",
+      "citation": "E-cigarette & MI meta-analysis 2025, BMC Public Health;s12889-025-25161-2 (~430k for MI).",
+      "url": "https://link.springer.com/article/10.1186/s12889-025-25161-2",
+      "tier": "T2"
+    },
+    {
+      "id": "S013",
+      "citation": "Respiratory health effects of vaping — systematic review (119 studies), Tobacco Induced Diseases 2025.",
+      "url": "https://www.tobaccoinduceddiseases.org/Evidence-update-on-the-respiratory-health-effects-of-vaping-e-cigarettes-A-systematic,209954,0,2.html",
+      "tier": "T2"
+    },
+    {
+      "id": "S014",
+      "citation": "Public Health England 2015 press release — \"e-cigarettes around 95% less harmful.\"",
+      "url": "https://www.gov.uk/government/news/e-cigarettes-around-95-less-harmful-than-tobacco-estimates-landmark-review",
+      "tier": "T4 (provenance)"
+    },
+    {
+      "id": "S015",
+      "citation": "UCSF critique of the PHE 95% figure (industry-linked underlying report).",
+      "url": "https://tobacco.ucsf.edu/uk-report-claiming-e-cigs-95-safer-cigs-based-one-industry-linked-report-questions-phes-scientific-credibilty",
+      "tier": "secondary"
+    },
+    {
+      "id": "S016",
+      "citation": "Vaping clinical-effects review 2023, PMC10396413.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10396413/",
+      "tier": "T2/review"
+    },
+    {
+      "id": "S017",
+      "citation": "Sebastian et al. 2025, Current Problems in Cardiology — 17 cohorts, 1,902,481 adults.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39800612/",
+      "tier": "T2"
+    },
+    {
+      "id": "S018",
+      "citation": "ACC 2025 meta-analysis press release (26 studies, ~72.5M).",
+      "url": "https://www.acc.org/About-ACC/Press-Releases/2025/03/17/15/35/Cannabis-Users-Face-Substantially-Higher-Risk",
+      "tier": "secondary"
+    },
+    {
+      "id": "S019",
+      "citation": "Dadrass et al. 2023, Toxicology Reports — PMC10165401.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10165401/",
+      "tier": "T2"
+    },
+    {
+      "id": "S020",
+      "citation": "Hoeg et al. 2024, Brain and Behavior — PMC11541857 (5,162 Danish men, ~44 yr).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11541857/",
+      "tier": "T2"
+    },
+    {
+      "id": "S021",
+      "citation": "Meier/Moffitt/Caspi/Poulton 2013 PNAS reply (Dunedin) — PMC3600438.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3600438/",
+      "tier": "T2"
+    },
+    {
+      "id": "S022",
+      "citation": "Rogeberg 2013 PNAS + PMC3600466 (stratified reanalysis).",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1215678110",
+      "tier": "T2"
+    },
+    {
+      "id": "S024",
+      "citation": "Alimoradi et al. 2025, Health Science Reports (Wiley) — PMC12464731 (14 cohorts).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12464731/",
+      "tier": "T3 (low GRADE)"
+    },
+    {
+      "id": "S025",
+      "citation": "Hanson et al. 2010, Addictive Behaviors — PMC2933185 (n=40 adolescents).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2933185/",
+      "tier": "T3"
+    },
+    {
+      "id": "S026",
+      "citation": "Cardiorespiratory fitness & mortality — umbrella review 2024, BJSM (199 cohorts, 20.9M observations).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11103301/",
+      "tier": "T1"
+    },
+    {
+      "id": "S027",
+      "citation": "Kodama et al. 2009, JAMA — CRF & mortality meta-analysis (33 studies, 102,980 adults, 6,910 deaths).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19454641/",
+      "tier": "T1"
+    },
+    {
+      "id": "S028",
+      "citation": "Wang / López-Bueno et al. 2023, JAMA Internal Medicine — NHIS prospective cohort (500,705 US adults, 56,148 deaths, ~10 yr).",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2807854",
+      "tier": "T1"
+    },
+    {
+      "id": "S029",
+      "citation": "Wang et al. 2025, PeerJ — vigorous-activity dose-response meta-analysis (20 prospective cohorts, PROSPERO-registered).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12145088/",
+      "tier": "T1"
+    },
+    {
+      "id": "S030",
+      "citation": "Weekend-warrior vs regularly-active meta-analysis 2025, BMC Public Health (21 studies).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12604259/",
+      "tier": "T1"
+    },
+    {
+      "id": "S031",
+      "citation": "Zhang et al. 2026, BJSM — resistance training & mortality, 3 Harvard cohorts (HPFS/NHS/NHS II, n=147,374, up to 30 yr, 35,798 deaths).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42230125/",
+      "tier": "T1"
+    },
+    {
+      "id": "S032",
+      "citation": "Wu et al. 2017, JAMDA — grip strength & mortality meta-analysis (42 cohorts, 3,002,203 participants).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28549705/",
+      "tier": "T1 (predictor)"
+    },
+    {
+      "id": "S033",
+      "citation": "Leong et al. 2015 (PURE), The Lancet — grip strength in 139,691 adults, 17 countries.62000-6/abstract)",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14",
+      "tier": "T1 (predictor)"
+    },
+    {
+      "id": "S034",
+      "citation": "Hertfordshire Cohort Study — grip strength & mortality (n=909, ~18 yr).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11057971/",
+      "tier": "T1 (predictor)"
+    },
+    {
+      "id": "S035",
+      "citation": "Araujo et al. 2022, BJSM — 10-second one-leg stance & mortality (CLINIMEX cohort, n=1,702, ages 51–75, ~7 yr).",
+      "url": "https://www.immediatecaretraining.ie/Plugin/Papers/assets/pdf/ICT-Successful-10-second-one-legged.pdf",
+      "tier": "T1 (predictor)"
+    },
+    {
+      "id": "S036",
+      "citation": "Pavasini et al. 2016, BMC Medicine — SPPB & mortality meta-analysis (17 studies, 16,534 participants, mean age 76).",
+      "url": "https://link.springer.com/article/10.1186/s12916-016-0763-7",
+      "tier": "T1 (predictor)"
+    },
+    {
+      "id": "S037",
+      "citation": "Resistance-training dose-response meta-analysis (Momma-type, 16 cohorts).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35599175/",
+      "tier": "T2"
+    },
+    {
+      "id": "S038",
+      "citation": "Wiedenmann/Hortobágyi et al. 2023 — falls-prevention network meta-analysis (66 RCTs, 47,420 participants), Eur Rev Aging Phys Act.",
+      "url": "https://link.springer.com/article/10.1186/s11556-023-00311-w",
+      "tier": "T1 (RCT NMA)"
+    },
+    {
+      "id": "S039",
+      "citation": "Pillay et al. 2024 — systematic review + NMA of fall-prevention exercise (219 RCTs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11590344/",
+      "tier": "T1 (RCT NMA)"
+    },
+    {
+      "id": "S040",
+      "citation": "Multi-component physical activity & balance meta-analysis 2025 (51 studies, 2,743 participants), Eur Rev Aging Phys Act.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12070723/",
+      "tier": "T1/T2 (surrogate)"
+    },
+    {
+      "id": "S041",
+      "citation": "Dyer/Sherrington et al. 2023 — exercise for falls in residential aged care, meta-analysis (19 RCTs), Age and Ageing (afad217).",
+      "url": "https://academic.oup.com/ageing/article/52/12/afad217/7469353",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S042",
+      "citation": "Wang et al. 2020 — exercise & fracture prevention meta-analysis (20 RCTs, 7,704 participants, 428 events).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7650290/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S043",
+      "citation": "Kemmler/von Stengel et al. 2022, JBMR — exercise & fracture, supervised vs unsupervised subgroup (20 studies, 23,111 participant-yrs).",
+      "url": "https://academic.oup.com/jbmr/article/37/11/2132/7512369",
+      "tier": "T1/T2"
+    },
+    {
+      "id": "S044",
+      "citation": "Kemmler et al. 2022, Osteoporos Int — major osteoporotic fracture & exercise meta-analysis (11 trials, ~19,307 participant-yrs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9813248/",
+      "tier": "T1/T2"
+    },
+    {
+      "id": "S045",
+      "citation": "2025 review, Current Osteoporosis Reports — exercise, BMD, fracture & detraining.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11985624/",
+      "tier": "T2 (review)"
+    },
+    {
+      "id": "S046",
+      "citation": "HiRIT vs moderate-intensity resistance/impact BMD comparison (3 RCTs, n=240).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9615132/",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    {
+      "id": "S047",
+      "citation": "Lu et al. 2023, Frontiers Public Health — resistance-exercise BMD network meta-analysis (19 RCTs, 919 subjects).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9941565/",
+      "tier": "T2 (RCT NMA, surrogate)"
+    },
+    {
+      "id": "S048",
+      "citation": "Sleep-duration & all-cause mortality meta-analysis 2025, GeroScience (79 cohorts).",
+      "url": "https://link.springer.com/article/10.1007/s11357-025-01592-y",
+      "tier": "T1"
+    },
+    {
+      "id": "S049",
+      "citation": "NHANES sleep-duration & mortality 2023, Front Cardiovasc Med (n=26,977).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10301724/",
+      "tier": "T1"
+    },
+    {
+      "id": "S050",
+      "citation": "Kwok et al. 2018, JAHA — sleep & cardiovascular/mortality dose-response meta (74 cohorts, 3.34M).",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.118.008552",
+      "tier": "T1"
+    },
+    {
+      "id": "S051",
+      "citation": "Sleep duration & CVD/cerebrovascular U-shape meta 2022, Front Cardiovasc Med (71 cohorts, 3.8M).",
+      "url": "https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2022.907990/full",
+      "tier": "T1"
+    },
+    {
+      "id": "S052",
+      "citation": "Sleep & stroke incidence/mortality meta 2025, GeroScience (43 studies).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12181169/",
+      "tier": "T1"
+    },
+    {
+      "id": "S053",
+      "citation": "Insomnia & cardiovascular outcomes meta 2023, PLoS One (21 studies, 388,906 cases).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10513332/",
+      "tier": "T1/T2"
+    },
+    {
+      "id": "S054",
+      "citation": "Sleep Regularity Index & mortality 2023, eLife — UK Biobank (n=88,975, objective accelerometry).",
+      "url": "https://elifesciences.org/articles/88359",
+      "tier": "T1"
+    },
+    {
+      "id": "S055",
+      "citation": "Mendelian-randomization meta of insomnia & cardiovascular disease 2024, JCSM (9 MR studies).",
+      "url": "https://jcsm.aasm.org/doi/10.5664/jcsm.11326",
+      "tier": "T1 (MR — causal)"
+    },
+    {
+      "id": "S056",
+      "citation": "OSA cardiovascular risk & CPAP review 2025, Medicina.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12654527/",
+      "tier": "T1 (cohort)"
+    },
+    {
+      "id": "S057",
+      "citation": "CPAP & hard cardiovascular endpoints — RCT meta-analysis 2024 (6 RCTs, n=4,493).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11273881/",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S058",
+      "citation": "Sleep & dementia lag-analysis cohort (LASA, n=2,218) + MR context, PMC12184010.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12184010/",
+      "tier": "T1/T2"
+    },
+    {
+      "id": "S059",
+      "citation": "Henry et al. 2019, Int J Epidemiol — MR of sleep traits & Alzheimer's.",
+      "url": "https://academic.oup.com/ije/article/48/3/849/5486060",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S060",
+      "citation": "Anderson et al. 2021, Int J Epidemiol — MR sleep & neurodegeneration.",
+      "url": "https://academic.oup.com/ije/article/50/3/817/5956327",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S061",
+      "citation": "Shokri-Kojori et al. 2018, PNAS — one-night sleep deprivation & brain amyloid-beta (n=20).",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1721694115",
+      "tier": "T2/T3 (surrogate)"
+    },
+    {
+      "id": "S062",
+      "citation": "Ju et al. 2017, Brain — slow-wave disruption & CSF amyloid-beta.",
+      "url": "https://academic.oup.com/brain/article/140/8/2104/3933862",
+      "tier": "T2/T3 (surrogate)"
+    },
+    {
+      "id": "S063",
+      "citation": "van der Zweerde et al. 2019 — CBT-I efficacy meta-analysis (30 RCTs).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31491656/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S064",
+      "citation": "Zhang et al. 2022 — CBT-I in older adults meta-analysis (14 RCTs).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35968818/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S065",
+      "citation": "Fully-automated digital CBT-I meta-analysis 2025, npj Digital Medicine (29 RCTs, n=9,475).",
+      "url": "https://www.nature.com/articles/s41746-025-01514-4",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S066",
+      "citation": "AASM 2026 clinical guideline — CBT-I as first-line for chronic insomnia.",
+      "url": "https://aasm.org/combination-treatment-chronic-insomnia-guideline/",
+      "tier": "T1 (guideline)"
+    },
+    {
+      "id": "S067",
+      "citation": "Irwin et al. 2022, JAMA Psychiatry — CBT-I & depression prevention RCT (n=291, ≥60yr, 36-mo).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8733847/",
+      "tier": "T1 (RCT, hard endpoint)"
+    },
+    {
+      "id": "S068",
+      "citation": "Irwin et al. 2015, Biological Psychiatry — CBT-I/Tai-Chi & inflammation RCT (n=123).00079-7/abstract)",
+      "url": "https://www.biologicalpsychiatryjournal.com/article/S0006-3223(15",
+      "tier": "T2 (single RCT, surrogate)"
+    },
+    {
+      "id": "S069",
+      "citation": "Tasali et al. 2022, JAMA Internal Medicine — sleep-extension RCT (n=80, 2 wk).",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2788694",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    {
+      "id": "S070",
+      "citation": "CBT sleep-extension RCT in short sleepers 2021, J Sleep Res (n=18, 6 wk).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34459060/",
+      "tier": "T2 (small RCT)"
+    },
+    {
+      "id": "S071",
+      "citation": "Eleftheriou et al. 2018, Br J Nutr — Mediterranean diet & all-cause mortality meta-analysis (30 cohorts, 225,600 deaths).",
+      "url": "https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/mediterranean-diet-and-its-components-in-relation-to-allcause-mortality-metaanalysis/81EB9EF4D5B7AD5BC3ADC8AEC86371E1",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S072",
+      "citation": "Karam et al. 2021, Nutrients — MedDiet in secondary-prevention (CVD) cohorts (7 studies).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8400615/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S073",
+      "citation": "Hall et al. 2019, Cell Metabolism — ultra-processed food inpatient RCT (n=20, 2 wk).30248-7)",
+      "url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(19",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    {
+      "id": "S074",
+      "citation": "Suksatan et al. 2022, Nutrients — UPF & mortality meta-analysis (7 cohorts, 207,291).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8747520/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S075",
+      "citation": "Chen et al. 2023, Diabetes Care — UPF & type-2 diabetes meta-analysis (415,554).",
+      "url": "https://diabetesjournals.org/care/article/46/7/1335/148548/Ultra-Processed-Food-Consumption-and-Risk-of-Type",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S076",
+      "citation": "Mo et al. 2025, Front Nutr — plant-based diet indices & mortality (11 cohorts, 977,763).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11788165/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S077",
+      "citation": "Orlich et al. 2013, JAMA Intern Med — Adventist Health Study-2 vegetarian mortality (n=73,308).",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1710093",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S078",
+      "citation": "Key et al. — EPIC-Oxford vegetarian/vegan mortality review (UK, ~18yr).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7613518/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S079",
+      "citation": "Dybvik et al. 2023, Eur J Nutr — vegetarian/vegan & CVD meta-analysis (13 cohorts, 844,175).",
+      "url": "https://link.springer.com/article/10.1007/s00394-022-02942-8",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S081",
+      "citation": "Wang et al. 2016, Public Health Nutrition — red/processed meat & mortality meta (17 cohorts, 150,328 deaths).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26143683/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S082",
+      "citation": "WHO/IARC Monograph 114 — carcinogenicity of red & processed meat.",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/cancer-carcinogenicity-of-the-consumption-of-red-meat-and-processed-meat",
+      "tier": "T1 (classification)"
+    },
+    {
+      "id": "S083",
+      "citation": "Bradbury et al. 2020, Int J Epidemiol — UK Biobank meat & colorectal cancer (n=474,996).",
+      "url": "https://academic.oup.com/ije/article/49/5/1540/5894731",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S084",
+      "citation": "Johnston et al. 2019, Annals Intern Med (NutriRECS) — GRADE review of meat reduction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31569235/",
+      "tier": "T1 (GRADE)"
+    },
+    {
+      "id": "S085",
+      "citation": "SSB & cardiometabolic mortality meta-analyses (Frontiers Nutr 2023; Nutrients 2021; 2024 update).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10050372/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S086",
+      "citation": "Ma et al. 2023, BMJ — SSB & mortality in type-2 diabetics (Harvard cohorts + meta).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37076174/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S087",
+      "citation": "Saneei et al. 2014, Nutr Metab Cardiovasc Dis — DASH & blood pressure RCT meta (17 RCTs, n=2,561).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25149893/",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    {
+      "id": "S088",
+      "citation": "Reynolds et al. 2019, The Lancet — carbohydrate quality / fiber & health (185 cohorts + 58 RCTs).31809-9/fulltext)",
+      "url": "https://www.thelancet.com/article/S0140-6736(18",
+      "tier": "T1 (obs + RCT-surrogate)"
+    },
+    {
+      "id": "S089",
+      "citation": "Huang et al. 2015, BMC Medicine — NIH-AARP whole grains/cereal fiber & mortality (n=367,442).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4371798/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S090",
+      "citation": "Hu et al. 2019, JAHA — marine omega-3 supplements & CV outcomes meta (13 RCTs, 127,477).",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.013543",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S091",
+      "citation": "Gencer et al. 2021, Circulation — omega-3 supplements & atrial fibrillation (7 RCTs, 81,210).",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.121.055654",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S092",
+      "citation": "REDUCE-IT vs STRENGTH review — high-dose EPA & the mineral-oil-placebo controversy.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11697285/",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S093",
+      "citation": "Kim/Je/Giovannucci 2019, Eur J Epidemiol — coffee & mortality meta (40 cohorts, 3.85M).",
+      "url": "https://link.springer.com/article/10.1007/s10654-019-00524-3",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S094",
+      "citation": "Coffee Mendelian-randomization & hard endpoints (up to 223,414).",
+      "url": "https://academic.oup.com/ije/article/45/6/1938/2731240",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S095",
+      "citation": "CALERIE-2 caloric-restriction RCT in non-obese humans.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7727025/",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    {
+      "id": "S096",
+      "citation": "CALERIE telomere analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11296136/",
+      "tier": "T2"
+    },
+    {
+      "id": "S097",
+      "citation": "Intermittent fasting vs continuous caloric restriction RCT meta-analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11930668/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S098",
+      "citation": "Lowe et al. 2020, JAMA Intern Med (TREAT) — time-restricted eating RCT.",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2771095",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S099",
+      "citation": "Berrington de Gonzalez et al. 2010, NEJM (NCI Cohort Consortium, n=1.46M) + Global BMI Mortality Collaboration 2016 (~10.6M).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3066051/",
+      "tier": "T1 (pooled cohorts)"
+    },
+    {
+      "id": "S100",
+      "citation": "Stokes & Preston 2015, Int J Epidemiol — obesity paradox as collider/reverse-causation artifact.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4701612/",
+      "tier": "T1 (methodological)"
+    },
+    {
+      "id": "S101",
+      "citation": "UK individual-participant waist/WHR meta-analysis (9 cohorts, 82,864).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4170776/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S102",
+      "citation": "Korean NHIS waist-circumference & mortality cohort (>23M adults).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6352259/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S103",
+      "citation": "Look AHEAD — intensive lifestyle weight loss & CV events RCT (n=5,145 T2D).30162-0/abstract)",
+      "url": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(16",
+      "tier": "T1 (RCT, hard endpoint)"
+    },
+    {
+      "id": "S104",
+      "citation": "Levine & Longo 2014, Cell Metabolism — protein intake & mortality (NHANES III).00062-X)",
+      "url": "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(14",
+      "tier": "T3 (single confounded cohort)"
+    },
+    {
+      "id": "S105",
+      "citation": "Naghshi et al. 2020, BMJ — dietary protein & mortality meta (32 cohorts, 715,128).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7374797/",
+      "tier": "T1 (obs)"
+    },
+    {
+      "id": "S106",
+      "citation": "Bretthauer et al. 2022, NEJM (NordICC) — colonoscopy screening RCT (n=84,585, 10yr).",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2208375",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S107",
+      "citation": "FOBT colorectal screening evidence review.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3377532/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S108",
+      "citation": "NLST 2011, NEJM — low-dose CT lung screening RCT (heavy smokers).",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1102873",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S109",
+      "citation": "NELSON 2020, NEJM — LDCT lung screening RCT.",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1911793",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S110",
+      "citation": "Bretthauer et al. 2023, JAMA Internal Medicine — lifetime gained from cancer screening meta (18 RCTs, ~2.1M).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37639247/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S111",
+      "citation": "USPSTF — cervical cancer screening recommendation.",
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening",
+      "tier": "T1 (Grade A) / T2 (modeled)"
+    },
+    {
+      "id": "S112",
+      "citation": "Paci & Duffy / Yen Markov model — breast-screening overdiagnosis (Florence).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1410748/",
+      "tier": "T2 (modeling)"
+    },
+    {
+      "id": "S113",
+      "citation": "Duffy et al. 2008, Am J Epidemiol — lead-time & length bias in screening.",
+      "url": "https://academic.oup.com/aje/article/168/1/98/123920",
+      "tier": "T1 (methods)"
+    },
+    {
+      "id": "S114",
+      "citation": "Cholesterol Treatment Trialists' Collaboration — statins in people at low CVD risk.",
+      "url": "https://www.cttcollaboration.org/efficacy-web-page/people-at-low-risk-of-major-vascular-events",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S115",
+      "citation": "SAMSON / StatinWISE n-of-1 RCTs — statin muscle symptoms (nocebo).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7903384/",
+      "tier": "T1 (n-of-1 RCT)"
+    },
+    {
+      "id": "S116",
+      "citation": "SPRINT 2015, NEJM — intensive vs standard BP target RCT (n=9,361).",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1511939",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S117",
+      "citation": "Blood Pressure Lowering Treatment Trialists' Collaboration 2021, Lancet — BP lowering by age.01921-8/fulltext)",
+      "url": "https://www.thelancet.com/article/S0140-6736(21",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S118",
+      "citation": "Aspirin primary prevention — ARRIVE/ASCEND/ASPREE synthesis.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK617276/",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S119",
+      "citation": "CAC scoring & ADDITION diabetes-screening trial (Lancet 2012).61422-6/fulltext)",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(12",
+      "tier": "T2 (risk tool)"
+    },
+    {
+      "id": "S120",
+      "citation": "Lal 2015 / Cunningham 2016, NEJM (ZOE-50/ZOE-70) — Shingrix/RZV pooled.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10026829/",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S121",
+      "citation": "Bonten et al. 2015, NEJM (CAPiTA) — PCV13 pneumococcal RCT (n=84,496).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8778913/",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S122",
+      "citation": "CDC RSV adult vaccine clinical guidance (Arexvy/Abrysvo/mResvia) + Payne 2024 Lancet TND.",
+      "url": "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/adults.html",
+      "tier": "T1/T2"
+    },
+    {
+      "id": "S123",
+      "citation": "Remschmidt, Wichmann & Harder 2015, BMC Infect Dis — bias in observational flu-vaccine studies.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4609091/",
+      "tier": "T1 (bias review)"
+    },
+    {
+      "id": "S124",
+      "citation": "Campitelli et al. 2011, Vaccine — flu vaccine & off-season mortality (Ontario, n=25,922).",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264410X10015501",
+      "tier": "T2 (obs)"
+    },
+    {
+      "id": "S125",
+      "citation": "Lin et al. 2011, Arch Neurol — hearing loss & incident dementia (Baltimore cohort).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3277836/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S126",
+      "citation": "Livingston et al. 2020, Lancet — dementia prevention Commission.30367-6/fulltext)",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20",
+      "tier": "T1 (commission)"
+    },
+    {
+      "id": "S127",
+      "citation": "Hearing loss & dementia meta-analysis (14 cohorts, 726,900).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8295986/",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S128",
+      "citation": "Lin et al. 2023, Lancet (ACHIEVE) — hearing intervention RCT (n=977).01406-X/abstract)",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(23",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S129",
+      "citation": "ACHIEVE subgroup analyses (ARIC vs de novo).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10529382/",
+      "tier": "T1 (RCT subgroup)"
+    },
+    {
+      "id": "S130",
+      "citation": "Midlife hearing impairment & dementia — UK Biobank + Whitehall II 2025, Nature Aging.",
+      "url": "https://www.nature.com/articles/s43587-025-00914-1",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S131",
+      "citation": "Vision impairment & dementia 2024, BMC Medicine (UK Biobank + 31-study meta + MR).",
+      "url": "https://link.springer.com/article/10.1186/s12916-024-03748-7",
+      "tier": "T2 (cohort+MR)"
+    },
+    {
+      "id": "S132",
+      "citation": "Vision impairment & mortality 2021, Lancet Global Health (15-cohort meta).30549-0/fulltext)",
+      "url": "https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(20",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S133",
+      "citation": "Lee et al. 2022, JAMA Intern Med (ACT cohort) — cataract surgery & dementia.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/eci.14113",
+      "tier": "T2 (near-causal cohort)"
+    },
+    {
+      "id": "S134",
+      "citation": "Cataract surgery & dementia meta-analysis 2024 (5 cohorts, 720,075).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11623179/",
+      "tier": "T2 (cohort meta)"
+    },
+    {
+      "id": "S135",
+      "citation": "Retinal/optic-nerve irreversibility & vision-loss causes review.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11476551/",
+      "tier": "T1 (mechanistic)"
+    },
+    {
+      "id": "S136",
+      "citation": "Romandini et al. 2021, J Dent Res — periodontitis/edentulism & mortality meta (57 studies, 5.71M).",
+      "url": "https://journals.sagepub.com/doi/10.1177/0022034520952401",
+      "tier": "T2 (cohort meta)"
+    },
+    {
+      "id": "S137",
+      "citation": "Tooth loss & dementia/cognition meta-analysis 2023, Front Neurol (18 cohorts, 356,297).",
+      "url": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2023.1103052/full",
+      "tier": "T2 (cohort meta)"
+    },
+    {
+      "id": "S138",
+      "citation": "Bell et al. 2020, Atherosclerosis — periodontitis & CVD Mendelian randomization.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7660116/",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S139",
+      "citation": "Periodontitis & cognition/brain MR 2024 (BMC Oral Health + Brain & Behavior).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11100120/",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S140",
+      "citation": "Czesnikiewicz-Guzik et al. 2019, Eur Heart J — periodontal treatment & blood pressure RCT (n=101).",
+      "url": "https://academic.oup.com/eurheartj/article/40/42/3459/5556904",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    {
+      "id": "S141",
+      "citation": "Periodontal treatment & HbA1c meta-analysis 2025, Frontiers (~11 RCTs).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11893427/",
+      "tier": "T2 (RCT meta, surrogate)"
+    },
+    {
+      "id": "S142",
+      "citation": "Tooth loss / edentulism & malnutrition meta-analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11267674/",
+      "tier": "T2 (mostly cross-sectional)"
+    },
+    {
+      "id": "S143",
+      "citation": "Holt-Lunstad, Smith & Layton 2010, PLoS Medicine — social relationships & mortality meta-analysis (148 studies, 308,849).",
+      "url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S144",
+      "citation": "Holt-Lunstad et al. 2015, Perspectives on Psychological Science — isolation/loneliness/living-alone & mortality (70 studies, 3.4M).",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/1745691614568352",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S145",
+      "citation": "Holt-Lunstad 2021, Current Directions in Psychological Science — Bradford Hill / causality argument.",
+      "url": "https://journals.sagepub.com/doi/abs/10.1177/0963721421999630",
+      "tier": "T1 (review)"
+    },
+    {
+      "id": "S146",
+      "citation": "Naito et al. 2023, PLoS ONE — social isolation & all-cause mortality meta (27 cohorts, ~1.4M).",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0280308",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S147",
+      "citation": "Wang et al. 2025, BMC Public Health — isolation/loneliness & incident CVD meta (6 cohorts, 5.25M).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12462301/",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S148",
+      "citation": "Elovainio/Shen et al., UK Biobank — isolation/loneliness & incident dementia (n=155,070).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8867309/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S149",
+      "citation": "Sutin/Tan et al., UK Biobank — loneliness & incident dementia (n=492,322, 7,475 cases).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10198800/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S150",
+      "citation": "Masi et al. 2011 — meta-analysis of loneliness-reduction interventions (~50 studies).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3865701/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S151",
+      "citation": "Hoang et al. 2022, JAMA Network Open — interventions for loneliness/isolation in adults 65+ (70 RCTs, 8,259).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9577679/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S152",
+      "citation": "Zeas-Siguenza et al. 2025 — meta-analysis of loneliness interventions (16 RCTs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12293955/",
+      "tier": "T1 (RCT meta)"
+    },
+    {
+      "id": "S153",
+      "citation": "Veronese et al. 2023, European J Public Health — overview of reviews, interventions for social isolation/loneliness (60+).",
+      "url": "https://academic.oup.com/eurpub/article/33/2/235/7074489",
+      "tier": "T1 (overview)"
+    },
+    {
+      "id": "S154",
+      "citation": "Carlson et al. 2015, Baltimore Experience Corps Trial brain substudy (n=111).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5179033/",
+      "tier": "T3 (small RCT, surrogate)"
+    },
+    {
+      "id": "S155",
+      "citation": "Two-sample Mendelian randomization 2024, J Geriatr Cardiol — loneliness/isolation → CVD (81 SNPs, 455,364).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11040057/",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S156",
+      "citation": "Mendelian randomization — loneliness → Alzheimer's disease.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11714305/",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S157",
+      "citation": "UK Biobank persistence cohort — persistent isolation/loneliness & mortality/CVD (n=18,258, 8.3 yr).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11442883/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S158",
+      "citation": "Kivimäki et al. 2012, Lancet — job strain & incident CHD IPD meta-analysis (197,473, 13 European cohorts).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3486012/",
+      "tier": "T1 (IPD meta)"
+    },
+    {
+      "id": "S159",
+      "citation": "Schulz & Beach 1999, JAMA — Caregiver Health Effects Study (spousal caregivers).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10605972/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S160",
+      "citation": "Roth et al. 2015, The Gerontologist — reappraisal of caregiving & mortality.",
+      "url": "https://academic.oup.com/gerontologist/article/55/2/309/656865",
+      "tier": "T2 (review/reanalysis)"
+    },
+    {
+      "id": "S161",
+      "citation": "Roth et al. 2018 — REGARDS caregiver distress, perceived stress & mortality (3,580 matched pairs).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6002922/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S162",
+      "citation": "Roth et al. 2013, Am J Epidemiology — REGARDS caregiving & all-cause mortality (propensity-matched).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24091890/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S163",
+      "citation": "Brown et al. 2009, Psychological Science — caregiving intensity & mortality (HRS/AHEAD, N=3,376).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2865652/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S164",
+      "citation": "Parker et al. 2022, Am J Preventive Medicine — allostatic load & mortality meta-analysis.00116-7/abstract)",
+      "url": "https://www.ajpmonline.org/article/S0749-3797(22",
+      "tier": "T2 (cohort meta)"
+    },
+    {
+      "id": "S165",
+      "citation": "Xu et al. 2026, Frontiers in Cardiovascular Medicine — allostatic load & incident CVD (UK Biobank, n=205,504).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12813168/",
+      "tier": "T2 (cohort)"
+    },
+    {
+      "id": "S166",
+      "citation": "Levine et al. 2017, J Am Heart Assoc — AHA scientific statement on meditation & CVD (cites Cochrane Hartley 2014).",
+      "url": "https://www.ahajournals.org/doi/10.1161/jaha.117.002218",
+      "tier": "T1 (statement + Cochrane)"
+    },
+    {
+      "id": "S167",
+      "citation": "Cohen, Bavishi & Rozanski 2016, Psychosomatic Medicine — purpose in life & mortality/CV events meta (10 studies, n=136,265).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26630073/",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S168",
+      "citation": "Sutin et al. 2021 — purpose/meaning & incident dementia meta (6 samples, N=53,499).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8887819/",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S169",
+      "citation": "Sutin et al. 2022, Archives of Gerontology & Geriatrics — expanded purpose & dementia meta (8 cohorts, N=214,270) incl. UK Biobank.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10015423/",
+      "tier": "T1 (cohort meta)"
+    },
+    {
+      "id": "S170",
+      "citation": "Lee et al. 2019, PNAS — optimism & exceptional longevity (NHS 69,744 women; NAS 1,429 men).",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1900712116",
+      "tier": "T1 (cohort)"
+    },
+    {
+      "id": "S171",
+      "citation": "Koga et al. 2022 — optimism & lifespan/longevity, Women's Health Initiative (~159k postmenopausal women).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9588526/",
+      "tier": "T1 (cohort)"
+    },
+    {
+      "id": "S172",
+      "citation": "Kim et al. 2017 — optimism & cause-specific mortality, Nurses' Health Study (n=70,021 women).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5209589/",
+      "tier": "T1 (cohort)"
+    },
+    {
+      "id": "S173",
+      "citation": "ASPREE/ALSOP — optimism & mortality in adults 70+ (n=11,701).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8490272/",
+      "tier": "T1 (cohort)"
+    },
+    {
+      "id": "S174",
+      "citation": "Ye et al. 2024, Nature Human Behaviour — Mendelian randomization, mental well-being → healthspan/lifespan.",
+      "url": "https://www.nature.com/articles/s41562-024-01905-9",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S175",
+      "citation": "Sone et al. — ikigai (sense of purpose) & mortality, Ohsaki/Akita Japanese cohort (n=1,618, 13.3 yr).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4771589/",
+      "tier": "T3 (single cohort)"
+    },
+    {
+      "id": "S176",
+      "citation": "Gandini et al. 2005, Eur J Cancer — sun exposure & melanoma meta (57 studies, 38,671 cases).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15617990",
+      "tier": "T1 (CC/cohort meta)"
+    },
+    {
+      "id": "S177",
+      "citation": "Dennis et al. 2008 — sunburn & melanoma meta (51 study populations).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2873840/",
+      "tier": "T1 (CC/cohort meta)"
+    },
+    {
+      "id": "S178",
+      "citation": "Zhong et al. 2023, Cancer Science — Mendelian randomization, childhood sunburn → melanoma (UKB GWAS, sunburn n=346,955 / melanoma n=262,288).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10728005/",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S179",
+      "citation": "NCI SEER — Melanoma of the Skin, Cancer Stat Facts.",
+      "url": "https://seer.cancer.gov/statfacts/html/melan.html",
+      "tier": "T1 (registry)"
+    },
+    {
+      "id": "S180",
+      "citation": "Melanoma overdiagnosis & incidence–mortality divergence analysis.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9187775/",
+      "tier": "T1 (epi analysis)"
+    },
+    {
+      "id": "S181",
+      "citation": "Schmitt/Fartasch et al. 2012 — occupational UV & keratinocyte carcinoma meta.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3498471/",
+      "tier": "T1 (CC/cohort meta)"
+    },
+    {
+      "id": "S182",
+      "citation": "NMSC mortality analysis 2026, BMC Cancer (CDC WONDER, n=68,223 NMSC deaths 1999–2020).",
+      "url": "https://link.springer.com/article/10.1186/s12885-026-15953-z",
+      "tier": "T1 (registry)"
+    },
+    {
+      "id": "S183",
+      "citation": "BCC relative-mortality meta-analysis (464,230 BCC patients).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5886016/",
+      "tier": "T1 (meta)"
+    },
+    {
+      "id": "S184",
+      "citation": "An/Suppa et al. 2021 — indoor tanning & melanoma systematic review/meta (36 studies, ~14,583 cases).",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8656707/",
+      "tier": "T1 (meta + IARC)"
+    },
+    {
+      "id": "S185",
+      "citation": "UV molecular signature / BRAF V600E mechanism (yeast reversion assay).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7709870/",
+      "tier": "T3 (model system)"
+    },
+    {
+      "id": "S186",
+      "citation": "Green et al. 2011, J Clin Oncol — Nambour sunscreen RCT, melanoma endpoints (n=1,621, Australia).",
+      "url": "https://ascopubs.org/doi/abs/10.1200/JCO.2010.28.7078",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S187",
+      "citation": "van der Pols et al. 2006 — Nambour sunscreen RCT long-term follow-up, SCC/BCC.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17132769/",
+      "tier": "T1 (RCT follow-up)"
+    },
+    {
+      "id": "S188",
+      "citation": "Pandeya et al. 2005, Am J Epidemiology — Nambour, sunscreen & BCC.",
+      "url": "https://academic.oup.com/aje/article/161/8/748/184975",
+      "tier": "T1 (RCT analysis)"
+    },
+    {
+      "id": "S189",
+      "citation": "Cochrane 2016 (Sánchez et al.) — sun protection/sunscreen to prevent BCC & SCC.",
+      "url": "https://www.cochrane.org/CD011161/SKIN_sun-protection-including-sunscreens-prevent-basal-cell-carcinoma-and-cutaneous-squamous-cell",
+      "tier": "T1 (Cochrane)"
+    },
+    {
+      "id": "S190",
+      "citation": "Hughes et al. 2013, Annals of Internal Medicine — sunscreen & skin aging RCT (n=903, Australia, 4.5 yr).",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23732711/",
+      "tier": "T1 (RCT, surrogate)"
+    },
+    {
+      "id": "S191",
+      "citation": "Gallagher et al. 2000, JAMA — sunscreen & nevus development in children RCT (n=309, Canada, 3 yr).",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/192780",
+      "tier": "T2 (RCT, surrogate)"
+    },
+    {
+      "id": "S192",
+      "citation": "USPSTF 2018 — Behavioral Counseling for Skin Cancer Prevention.",
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/skin-cancer-counseling",
+      "tier": "T1 (USPSTF)"
+    },
+    {
+      "id": "S193",
+      "citation": "Lindqvist et al. 2014, J Internal Medicine — sun avoidance & all-cause mortality, MISS cohort (29,518 Swedish women, 20 yr).",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/joim.12251",
+      "tier": "T2 (single cohort)"
+    },
+    {
+      "id": "S194",
+      "citation": "Lindqvist et al. 2016, J Internal Medicine — MISS competing-risk + life-expectancy (+ 2017 reply joim.12612).",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/joim.12496",
+      "tier": "T2 (single cohort)"
+    },
+    {
+      "id": "S195",
+      "citation": "Neale et al. 2022, Lancet Diabetes & Endocrinol — D-Health Trial, vitamin D & all-cause mortality (n=21,315).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6402378/",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S196",
+      "citation": "Manson et al. 2019, NEJM — VITAL trial, vitamin D for cancer/CVD/mortality (n=25,871).",
+      "url": "https://www.tctmd.com/news/vital-no-benefits-vitamin-d-and-omega-3s-reducing-major-cv-events-cancer",
+      "tier": "T1 (RCT)"
+    },
+    {
+      "id": "S197",
+      "citation": "Zhou et al. 2023 (CORRECTED), Lancet Diabetes & Endocrinol — Mendelian randomization, vitamin D & mortality/CVD (386,406 genetic / 500,962 obs).00287-5/fulltext)",
+      "url": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(23",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S198",
+      "citation": "Afzal et al. 2014, BMJ — Mendelian randomization, low vitamin D & mortality, Copenhagen cohorts (n=95,766).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4238742/",
+      "tier": "T1 (MR, isolated)"
+    },
+    {
+      "id": "S199",
+      "citation": "Huang et al. 2019, BMC Medicine — Mendelian randomization, vitamin D & mortality/vascular disease (99,012 Chinese + 106,911 European).",
+      "url": "https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-019-1401-y",
+      "tier": "T1 (MR)"
+    },
+    {
+      "id": "S200",
+      "citation": "Oplander/Weller et al. 2009, Circulation Research — UVA, nitric oxide & blood pressure.",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/circresaha.109.207019",
+      "tier": "T3 (mechanistic, acute)"
+    }
+  ]
+}

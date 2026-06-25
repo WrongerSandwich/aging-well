@@ -1,0 +1,935 @@
+{
+  "generatedAt": "2026-06-25T00:13:16.351Z",
+  "rankedActions": {
+    "rows": [
+      {
+        "rank": 1,
+        "action": "Don't smoke (quit ASAP if you do)",
+        "lever": "Substances",
+        "slug": "substances",
+        "impact": 5,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 75,
+        "conditional": false
+      },
+      {
+        "rank": 2,
+        "action": "Build cardiorespiratory fitness (≥150 min/wk zone-2 + some vigorous)",
+        "lever": "Exercise",
+        "slug": "exercise",
+        "impact": 5,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 75,
+        "conditional": false
+      },
+      {
+        "rank": 3,
+        "action": "Treat high blood pressure to target",
+        "lever": "Medical",
+        "slug": "medical-screening",
+        "impact": 5,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 75,
+        "conditional": true
+      },
+      {
+        "rank": 4,
+        "action": "Keep alcohol minimal (toward zero)",
+        "lever": "Substances",
+        "slug": "substances",
+        "impact": 4,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 60,
+        "conditional": false
+      },
+      {
+        "rank": 5,
+        "action": "Resistance-train ≥2×/wk",
+        "lever": "Exercise",
+        "slug": "exercise",
+        "impact": 4,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 60,
+        "conditional": false
+      },
+      {
+        "rank": 6,
+        "action": "Balance training (esp. from midlife — falls/fracture prevention)",
+        "lever": "Exercise",
+        "slug": "exercise",
+        "impact": 4,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 60,
+        "conditional": false
+      },
+      {
+        "rank": 7,
+        "action": "Statins if elevated CVD risk",
+        "lever": "Medical",
+        "slug": "medical-screening",
+        "impact": 4,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 60,
+        "conditional": true
+      },
+      {
+        "rank": 8,
+        "action": "Colorectal cancer screening (from ~45–50)",
+        "lever": "Medical",
+        "slug": "medical-screening",
+        "impact": 4,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 60,
+        "conditional": false
+      },
+      {
+        "rank": 9,
+        "action": "Don't sunburn / never use tanning beds",
+        "lever": "Sun-skin",
+        "slug": "sun-skin",
+        "impact": 3,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 45,
+        "conditional": false
+      },
+      {
+        "rank": 10,
+        "action": "Get recommended adult vaccines (Shingrix, RSV, flu, COVID, pneumococcal)",
+        "lever": "Medical",
+        "slug": "medical-screening",
+        "impact": 3,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 45,
+        "conditional": false
+      },
+      {
+        "rank": 11,
+        "action": "Cervical cancer screening *(if applicable)*",
+        "lever": "Medical",
+        "slug": "medical-screening",
+        "impact": 3,
+        "certainty": 5,
+        "rev": 3,
+        "evidenceOnly": 45,
+        "conditional": false
+      },
+      {
+        "rank": 12,
+        "action": "Lift heavy for bone (HiRIT) if low BMD",
+        "lever": "Exercise",
+        "slug": "exercise",
+        "impact": 3,
+        "certainty": 4,
+        "rev": 3,
+        "evidenceOnly": 36,
+        "conditional": true
+      },
+      {
+        "rank": 13,
+        "action": "Lung-cancer screening (LDCT) **",
+        "lever": "Medical",
+        "slug": "medical-screening",
+        "impact": 3,
+        "certainty": 4,
+        "rev": 3,
+        "evidenceOnly": 36,
+        "conditional": true
+      },
+      {
+        "rank": 14,
+        "action": "Protect hearing + treat hearing loss early with aids",
+        "lever": "Oral-sensory",
+        "slug": "oral-sensory",
+        "impact": 3,
+        "certainty": 4,
+        "rev": 3,
+        "evidenceOnly": 36,
+        "conditional": false
+      },
+      {
+        "rank": 15,
+        "action": "Correct vision / cataract surgery when it impairs you",
+        "lever": "Oral-sensory",
+        "slug": "oral-sensory",
+        "impact": 3,
+        "certainty": 4,
+        "rev": 3,
+        "evidenceOnly": 36,
+        "conditional": false
+      },
+      {
+        "rank": 16,
+        "action": "Avoid ultra-processed food & sugary drinks",
+        "lever": "Nutrition",
+        "slug": "nutrition-metabolic",
+        "impact": 4,
+        "certainty": 4,
+        "rev": 2,
+        "evidenceOnly": 32,
+        "conditional": false
+      },
+      {
+        "rank": 17,
+        "action": "Avoid excess adiposity (don't become obese)",
+        "lever": "Nutrition",
+        "slug": "nutrition-metabolic",
+        "impact": 4,
+        "certainty": 4,
+        "rev": 2,
+        "evidenceOnly": 32,
+        "conditional": false
+      },
+      {
+        "rank": 18,
+        "action": "CBT-I if you have insomnia (prevents depression)",
+        "lever": "Sleep",
+        "slug": "sleep",
+        "impact": 3,
+        "certainty": 5,
+        "rev": 2,
+        "evidenceOnly": 30,
+        "conditional": false
+      },
+      {
+        "rank": 19,
+        "action": "DASH-style diet / lower sodium (for BP)",
+        "lever": "Nutrition",
+        "slug": "nutrition-metabolic",
+        "impact": 3,
+        "certainty": 5,
+        "rev": 2,
+        "evidenceOnly": 30,
+        "conditional": false
+      },
+      {
+        "rank": 20,
+        "action": "Sleep ~7–7.5 h on a consistent schedule",
+        "lever": "Sleep",
+        "slug": "sleep",
+        "impact": 3,
+        "certainty": 4,
+        "rev": 2,
+        "evidenceOnly": 24,
+        "conditional": false
+      },
+      {
+        "rank": 21,
+        "action": "Daily broad-spectrum sunscreen",
+        "lever": "Sun-skin",
+        "slug": "sun-skin",
+        "impact": 2,
+        "certainty": 4,
+        "rev": 3,
+        "evidenceOnly": 24,
+        "conditional": false
+      },
+      {
+        "rank": 22,
+        "action": "Adequate protein (preserve muscle, esp. older)",
+        "lever": "Nutrition",
+        "slug": "nutrition-metabolic",
+        "impact": 3,
+        "certainty": 3,
+        "rev": 2,
+        "evidenceOnly": 18,
+        "conditional": false
+      },
+      {
+        "rank": 23,
+        "action": "Cultivate a sense of purpose",
+        "lever": "Stress-social",
+        "slug": "stress-social",
+        "impact": 3,
+        "certainty": 3,
+        "rev": 2,
+        "evidenceOnly": 18,
+        "conditional": false
+      },
+      {
+        "rank": 24,
+        "action": "Keep functional teeth (hygiene + regular dental care)",
+        "lever": "Oral-sensory",
+        "slug": "oral-sensory",
+        "impact": 2,
+        "certainty": 3,
+        "rev": 3,
+        "evidenceOnly": 18,
+        "conditional": false
+      },
+      {
+        "rank": 25,
+        "action": "Limit processed / red meat",
+        "lever": "Nutrition",
+        "slug": "nutrition-metabolic",
+        "impact": 2,
+        "certainty": 4,
+        "rev": 2,
+        "evidenceOnly": 16,
+        "conditional": false
+      },
+      {
+        "rank": 26,
+        "action": "Treat OSA if symptomatic (symptoms, not MACE)",
+        "lever": "Sleep",
+        "slug": "sleep",
+        "impact": 2,
+        "certainty": 4,
+        "rev": 2,
+        "evidenceOnly": 16,
+        "conditional": false
+      },
+      {
+        "rank": 27,
+        "action": "Don't start vaping (if never-smoker)",
+        "lever": "Substances",
+        "slug": "substances",
+        "impact": 2,
+        "certainty": 4,
+        "rev": 2,
+        "evidenceOnly": 16,
+        "conditional": false
+      },
+      {
+        "rank": 28,
+        "action": "Maintain quality social connections",
+        "lever": "Stress-social",
+        "slug": "stress-social",
+        "impact": 3,
+        "certainty": 2,
+        "rev": 2,
+        "evidenceOnly": 12,
+        "conditional": false
+      },
+      {
+        "rank": 29,
+        "action": "Manage chronic stress (for well-being)",
+        "lever": "Stress-social",
+        "slug": "stress-social",
+        "impact": 2,
+        "certainty": 2,
+        "rev": 2,
+        "evidenceOnly": 8,
+        "conditional": false
+      },
+      {
+        "rank": 30,
+        "action": "Avoid heavy / adolescent-onset cannabis",
+        "lever": "Substances",
+        "slug": "substances",
+        "impact": 2,
+        "certainty": 2,
+        "rev": 2,
+        "evidenceOnly": 8,
+        "conditional": false
+      }
+    ],
+    "doNotBother": [
+      {
+        "text": "Daily aspirin for primary prevention — reversed (bleeding ≥ benefit)",
+        "refs": "medical-screening #12"
+      },
+      {
+        "text": "Whole-body MRI / multi-cancer-early-detection (Galleri) in average-risk — overdiagnosis, no outcome data",
+        "refs": "medical-screening"
+      },
+      {
+        "text": "Vitamin D / omega-3 / NAD+ / most longevity supplements — RCT-null on hard endpoints",
+        "refs": "sun-skin #21–22, nutrition #9"
+      },
+      {
+        "text": "Fasting / time-restricted eating / CR for longevity — human evidence surrogate-only",
+        "refs": "nutrition #16"
+      },
+      {
+        "text": "Periodontal treatment to prevent heart disease/dementia — MR-null (keep teeth for *function*)",
+        "refs": "oral-sensory #12"
+      },
+      {
+        "text": "Strict sun avoidance — no proven upside once the vitamin-D channel is closed; possible downside",
+        "refs": "sun-skin #19–25"
+      }
+    ],
+    "plainLanguage": [
+      "Don't smoke, and keep alcohol low. The biggest single mortality lever, with reversible benefit.",
+      "Be fit and strong — regular cardio for the heart, lifting for muscle, balance work so you don't fall and break something later.",
+      "Get blood pressure treated if it's high, and statins if your heart risk is up — the clearest causal life-extenders in medicine.",
+      "Do the screenings/vaccines that actually pay off — colorectal (and cervical) cancer screening; shingles/RSV/flu/COVID/pneumococcal vaccines.",
+      "Don't get sunburned, skip tanning beds (and wear sunscreen) — cheap, prevents the one lethal skin cancer.",
+      "Eat to avoid the clearly-bad — minimize ultra-processed food and sugary drinks, don't become obese, DASH-style for blood pressure. Don't chase superfoods, supplements, or fasting.",
+      "Protect the irreplaceable hardware — hearing (treat loss early), vision (cataract surgery), functional teeth.",
+      "Sleep ~7–7.5 h consistently; fix insomnia with CBT-I. Keep social connection and a sense of purpose — good for you, though the *longevity* evidence there is softer."
+    ]
+  },
+  "matrix": {
+    "systems": [
+      "Cardio",
+      "Neuro",
+      "Metabolic",
+      "Musculo",
+      "Immune",
+      "Sensory",
+      "Renal/Hep",
+      "Skin"
+    ],
+    "rows": [
+      {
+        "lever": "Substances",
+        "slug": "substances",
+        "cells": [
+          "strong",
+          "moderate",
+          "none",
+          "none",
+          "strong",
+          "minor",
+          "moderate",
+          "minor"
+        ]
+      },
+      {
+        "lever": "Exercise",
+        "slug": "exercise",
+        "cells": [
+          "strong",
+          "moderate",
+          "moderate",
+          "strong",
+          "none",
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "lever": "Sleep",
+        "slug": "sleep",
+        "cells": [
+          "moderate",
+          "moderate",
+          "minor",
+          "none",
+          "minor",
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "lever": "Nutrition/Metabolic",
+        "slug": "nutrition-metabolic",
+        "cells": [
+          "strong",
+          "none",
+          "strong",
+          "none",
+          "moderate",
+          "none",
+          "moderate",
+          "none"
+        ]
+      },
+      {
+        "lever": "Medical/Screening",
+        "slug": "medical-screening",
+        "cells": [
+          "strong",
+          "moderate",
+          "minor",
+          "none",
+          "strong",
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "lever": "Sun/Skin",
+        "slug": "sun-skin",
+        "cells": [
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none",
+          "strong"
+        ]
+      },
+      {
+        "lever": "Stress/Social",
+        "slug": "stress-social",
+        "cells": [
+          "minor",
+          "moderate",
+          "minor",
+          "none",
+          "none",
+          "none",
+          "none",
+          "none"
+        ]
+      },
+      {
+        "lever": "Oral/Sensory",
+        "slug": "oral-sensory",
+        "cells": [
+          "none",
+          "strong",
+          "none",
+          "none",
+          "none",
+          "strong",
+          "none",
+          "none"
+        ]
+      }
+    ]
+  },
+  "openQuestions": {
+    "groups": [
+      {
+        "lever": "Substances",
+        "questions": [
+          {
+            "question": "Nicotine vaping: risk vs never-use and vs continued smoking? RESOLVED to T2 (patch 2026-06-18)",
+            "resolved": true,
+            "whyUnresolved": "—",
+            "bestGuess": "<< cigarettes (esp. respiratory); NOT harm-free vs never-use (CVD AOR ~1.31); \"95%\" is an unmeasured 2015 estimate; MI signal driven by ex-smokers",
+            "tier": "T2 (no long-term cohort exists)",
+            "revisitWhen": "When a decadal hard-endpoint cohort matures"
+          },
+          {
+            "question": "Cannabis: CV + cognitive effects? RESOLVED to T2 (run 2026-06-18)",
+            "resolved": true,
+            "whyUnresolved": "—",
+            "bestGuess": "Modest observational CV/mortality signal, tobacco-confounded; cognitive harm credible only for adolescent-onset heavy use; adult occasional use ≈ low measured harm",
+            "tier": "T2/T3",
+            "revisitWhen": "—"
+          },
+          {
+            "question": "Cannabis: does the CV/mortality signal survive proper tobacco-co-use adjustment?",
+            "resolved": false,
+            "whyUnresolved": "No meta-analysis isolates cannabis from co-smoked tobacco; no never-tobacco pooled estimate",
+            "bestGuess": "Independent effect likely smaller than crude RRs suggest",
+            "tier": "T2 (none adjusted)",
+            "revisitWhen": "If/when a tobacco-stratified pooled analysis is published"
+          },
+          {
+            "question": "Cannabis: is the Dunedin adolescent-IQ decline causal or SES/genetically confounded?",
+            "resolved": false,
+            "whyUnresolved": "Rogeberg vs original authors dispute unresolved; a 2016 co-twin study (genetic confounding) wasn't adjudicated",
+            "bestGuess": "Real association; causal fraction uncertain. Moot for adult occasional use",
+            "tier": "T2, contested",
+            "revisitWhen": "If revisiting adolescent-specific guidance"
+          },
+          {
+            "question": "Cannabis: route differences (smoked vs edible vs vaporized) on hard endpoints?",
+            "resolved": false,
+            "whyUnresolved": "No head-to-head comparison verified; acute-MI data are smoking-specific",
+            "bestGuess": "Combustion suspected as main CV/respiratory driver",
+            "tier": "T3",
+            "revisitWhen": "Low priority"
+          },
+          {
+            "question": "Smokeless tobacco: is heart-disease mortality truly null or modestly elevated?",
+            "resolved": false,
+            "whyUnresolved": "Key \"null\" study is Altria-affiliated (S006); other cohorts find HR ~1.63",
+            "bestGuess": "Probably modestly elevated; all-cause penalty (HR 1.36) is solid",
+            "tier": "T1 (all-cause) / T3 (cardiac, conflicted)",
+            "revisitWhen": "If SLT becomes a personally relevant option"
+          },
+          {
+            "question": "Alcohol: does the 2022 GBD age-specific threshold (small net benefit for some older adults) survive Mendelian randomization?",
+            "resolved": false,
+            "whyUnresolved": "Active debate; IHD protection may be confounding/sick-quitter bias",
+            "bestGuess": "\"Zero optimal\" robust at net level; per-outcome IHD benefit least secure",
+            "tier": "T1, contested",
+            "revisitWhen": "Revisit at synthesis if alcohol ranks near a decision boundary"
+          }
+        ]
+      },
+      {
+        "lever": "Exercise",
+        "questions": [
+          {
+            "question": "Exercise: do resistance/balance TRAINING interventions move falls, fracture, BMD? **RESOLVED to T1 (RCT) — targeted patch 2026-06-18**",
+            "resolved": true,
+            "whyUnresolved": "—",
+            "bestGuess": "YES, causal: balance training cuts rate of falls RaR 0.76 (Cochrane HIGH) & fractures ~−25–33% (RR 0.74); only HiRIT builds lumbar bone (+2–4%). Walking/flexibility/lifting-alone do NOT prevent falls",
+            "tier": "T1 (falls/fracture RCT meta) / T2 (BMD surrogate)",
+            "revisitWhen": "— (see exercise.md #9–#14)"
+          },
+          {
+            "question": "Exercise: sarcopenia muscle-MASS / strength / gait-speed intervention magnitudes?",
+            "resolved": false,
+            "whyUnresolved": "The targeted patch covered falls/fracture/BMD but the RT effect-size numbers on muscle mass, strength, chair-stand did NOT survive verification",
+            "bestGuess": "Direction certain (RT builds muscle/strength); pooled magnitudes un-pinned",
+            "tier": "predictor + falls/fracture confirmed; muscle-mass magnitudes thin",
+            "revisitWhen": "Low priority — doesn't change the action (\"lift heavy ~2×/wk\")"
+          },
+          {
+            "question": "Exercise: MUSCLE/strength detraining-retraining kinetics (bone kinetics now known: ~12 mo to baseline)?",
+            "resolved": false,
+            "whyUnresolved": "Only *bone* detraining was quantified this session; muscle/strength kinetics didn't survive",
+            "bestGuess": "Physiologically SLOW-reversible; benefits need maintenance, not banked",
+            "tier": "bone T2 confirmed; muscle un-pinned",
+            "revisitWhen": "If reversibility weighting becomes decisive in ranking"
+          },
+          {
+            "question": "Exercise: is measured CRF a *quantifiably* stronger mortality predictor than self-reported activity, head-to-head?",
+            "resolved": false,
+            "whyUnresolved": "Data strongly suggest yes; no surviving claim makes the direct same-population comparison",
+            "bestGuess": "Yes — measured CRF is the cleaner signal; self-report attenuates",
+            "tier": "T1 (indirect)",
+            "revisitWhen": "Low priority — doesn't change the action"
+          },
+          {
+            "question": "Exercise: resistance-training dose optimum — plateau (~90–119 min/wk) or J-curve (peak 30–60 min/wk)?",
+            "resolved": false,
+            "whyUnresolved": "Two strong cohorts disagree (Zhang S031 vs Momma-type S037)",
+            "bestGuess": "Effective dose is *small* either way (~2 sessions/wk); exact optimum unsettled",
+            "tier": "T1/T2, conflicting",
+            "revisitWhen": "Low priority — both point to \"~2×/wk is enough\""
+          }
+        ]
+      },
+      {
+        "lever": "Sleep",
+        "questions": [
+          {
+            "question": "Sleep: reversibility tiers (FAST/SLOW/IRREVERSIBLE) — acute-debt recovery, sleep-banking, weekend catch-up, chronic-restriction normalization?",
+            "resolved": false,
+            "whyUnresolved": "No claim survived adversarial verification across two scoped attempts",
+            "bestGuess": "Acute debt ≈ FAST (largely recoverable, imperfect); chronic risk ≈ SLOW; \"sleep banking\" weak",
+            "tier": "none surviving",
+            "revisitWhen": "Low priority — actions don't change; revisit only if reversibility weighting becomes decisive"
+          },
+          {
+            "question": "Sleep: does CBT-I prevent depression in NON-elderly adults?",
+            "resolved": false,
+            "whyUnresolved": "The hard-endpoint RCT (Irwin, HR 0.51) is older-adults, single-site",
+            "bestGuess": "Likely generalizes; unproven",
+            "tier": "T1 (one population)",
+            "revisitWhen": "If CBT-I/depression ranks near a decision boundary"
+          },
+          {
+            "question": "Sleep: any RCT (vs observational) that improving sleep lowers hard CV events / BP / mortality?",
+            "resolved": false,
+            "whyUnresolved": "Confirmed set has none — CBT-I & sleep extension only move surrogates/depression",
+            "bestGuess": "Probably a true gap (cf. CPAP MACE null)",
+            "tier": "absent",
+            "revisitWhen": "Watch for large sleep-intervention outcome trials"
+          },
+          {
+            "question": "Sleep: is short-sleep (<7h) causally harmful for mortality at all?",
+            "resolved": false,
+            "whyUnresolved": "The two biggest meta-analyses disagree (GeroScience HR 1.14 vs Kwok NS); MR-insomnia suggests some causal cardiometabolic effect",
+            "bestGuess": "Small real effect, smaller than observational HRs",
+            "tier": "T1, conflicting",
+            "revisitWhen": "At synthesis if sleep ranks near a boundary"
+          }
+        ]
+      },
+      {
+        "lever": "Nutrition",
+        "questions": [
+          {
+            "question": "Nutrition: PREDIMED (the Mediterranean-diet RCT) specific numbers?",
+            "resolved": false,
+            "whyUnresolved": "Crowded out of verification across 5 runs (verify-cap) — not independently confirmed in project tiers",
+            "bestGuess": "Primary MACE HR ~0.69–0.72 in high-risk adults; consistent with the lever but unverified here",
+            "tier": "T1 RCT (known but un-verified)",
+            "revisitWhen": "If MedDiet ranks near a decision boundary; DASH-BP already anchors causal diet"
+          },
+          {
+            "question": "Nutrition: does sodium REDUCTION cut hard CVD events, and the PURE very-low-sodium J-curve?",
+            "resolved": false,
+            "whyUnresolved": "DASH/sodium lower BP (surrogate) but hard-endpoint + J-curve adjudication weren't verified",
+            "bestGuess": "Modest benefit likely; extreme-low-sodium harm contested",
+            "tier": "T1 contested",
+            "revisitWhen": "If sodium ranks near a boundary"
+          },
+          {
+            "question": "Nutrition: does the Look AHEAD weight-loss CV-null generalize beyond diabetics?",
+            "resolved": false,
+            "whyUnresolved": "No RCT of intentional weight loss powered for hard endpoints exists outside T2D",
+            "bestGuess": "Causal weight-loss→mortality benefit genuinely untested in non-diabetics",
+            "tier": "absent",
+            "revisitWhen": "Watch for new trials; affects how hard to weight \"lose weight\" as an action"
+          },
+          {
+            "question": "Nutrition: any HUMAN causal evidence for protein-restriction / mTOR longevity?",
+            "resolved": false,
+            "whyUnresolved": "Entirely rodent/mechanistic (T3); the one human cohort (Levine) is confounded & contested",
+            "bestGuess": "Muscle-preservation (adequate protein) beats restriction-for-longevity",
+            "tier": "T3",
+            "revisitWhen": "Low priority — adequate-protein guidance is the safer default"
+          },
+          {
+            "question": "Nutrition: fiber dose-response shape (the 25–29 g \"plateau\" was refuted)?",
+            "resolved": false,
+            "whyUnresolved": "Clean threshold didn't survive verification",
+            "bestGuess": "Monotonic-with-attenuation, no proven ceiling",
+            "tier": "T1 obs",
+            "revisitWhen": "Low priority"
+          }
+        ]
+      },
+      {
+        "lever": "Medical",
+        "questions": [
+          {
+            "question": "Medical: COVID-19 vaccine mortality benefit (project-tier verified)?",
+            "resolved": false,
+            "whyUnresolved": "Crowded out of verification across 3 runs; large pandemic-era benefit is established externally but not re-derived here",
+            "bestGuess": "Large severe-disease/mortality benefit (well-established)",
+            "tier": "T1 external (un-verified here)",
+            "revisitWhen": "Low priority — included in actions on external consensus"
+          },
+          {
+            "question": "Medical: polypharmacy→harm and what deprescribing RCTs show on hard endpoints?",
+            "resolved": false,
+            "whyUnresolved": "The \"less is more\" arm produced no surviving claims",
+            "bestGuess": "Polypharmacy assoc w/ falls/ADEs (confounded by indication); deprescribing safe, reduces inappropriate meds, limited mortality evidence",
+            "tier": "observational + small RCTs",
+            "revisitWhen": "Useful for older-adult guidance; revisit if ranking values it"
+          },
+          {
+            "question": "Medical: MCED (Galleri) / whole-body-MRI quantified false-positive & overdiagnosis harms?",
+            "resolved": false,
+            "whyUnresolved": "No mortality RCT exists yet (NHS-Galleri pending); no verified claims this run",
+            "bestGuess": "Net-harmful in asymptomatic average-risk (incidentaloma cascade); no outcome data",
+            "tier": "T4 (no outcome data)",
+            "revisitWhen": "When NHS-Galleri or outcome data matures"
+          },
+          {
+            "question": "Medical: below what baseline CVD risk do primary-prevention statins stop extending life?",
+            "resolved": false,
+            "whyUnresolved": "The risk threshold for negligible absolute benefit wasn't pinned",
+            "bestGuess": "Benefit scales with risk; marginal in low-risk young adults",
+            "tier": "T1 (magnitude unclear)",
+            "revisitWhen": "At ranking if statins sit near a boundary"
+          }
+        ]
+      },
+      {
+        "lever": "Oral-sensory",
+        "questions": [
+          {
+            "question": "Oral-sensory: no RCT of cataract surgery / refractive correction on dementia/falls/mortality",
+            "resolved": false,
+            "whyUnresolved": "Vision lever rests on observational + negative-control inference; 2024 metas conflict (RR 0.74 vs 0.85 NS)",
+            "bestGuess": "~25% dementia reduction plausible but unproven",
+            "tier": "T2 (no RCT)",
+            "revisitWhen": "If vision ranks near a boundary"
+          },
+          {
+            "question": "Oral-sensory: which dementia PAF is right (hearing 8% vs ~5%; vision 19% vs 2%)?",
+            "resolved": false,
+            "whyUnresolved": "Older estimates inflated; newer cohorts lower",
+            "bestGuess": "Direction robust, magnitude smaller than headlines",
+            "tier": "T1/T2 contested",
+            "revisitWhen": "Materially affects ranking of sensory levers"
+          },
+          {
+            "question": "Oral-sensory: does treating hearing loss cut dementia INCIDENCE (not just slow cognitive-test decline), beyond the high-risk subgroup?",
+            "resolved": false,
+            "whyUnresolved": "ACHIEVE was 3yr, surrogate endpoint, subgroup benefit only",
+            "bestGuess": "Likely helps at-risk; unproven for incidence/general pop",
+            "tier": "T1 (one RCT)",
+            "revisitWhen": "If hearing ranks high"
+          },
+          {
+            "question": "Oral-sensory: falls from hearing/vision impairment (a mortality pathway) — HRs?",
+            "resolved": false,
+            "whyUnresolved": "No hazard ratio survived verification; falls *intervention* evidence lives in exercise lever",
+            "bestGuess": "Plausible contributor",
+            "tier": "un-quantified",
+            "revisitWhen": "Low priority"
+          }
+        ]
+      },
+      {
+        "lever": "Stress-social",
+        "questions": [
+          {
+            "question": "Stress-social: has ANY RCT/quasi-experiment powered for a HARD endpoint (mortality, incident CVD/dementia) of a social/loneliness intervention been run?",
+            "resolved": false,
+            "whyUnresolved": "The entire causal case is empty — all intervention RCTs measured only self-reported loneliness",
+            "bestGuess": "True gap; surrogate-only field",
+            "tier": "absent (T1 RCT surrogate-only)",
+            "revisitWhen": "Watch for outcome-powered social-intervention trials; central to how high social connection can rank"
+          },
+          {
+            "question": "Stress-social: does transitioning OUT of loneliness/isolation recover excess risk, and over what timeframe?",
+            "resolved": false,
+            "whyUnresolved": "Only persistent-vs-never cohort contrasts exist; reversal claim was refuted",
+            "bestGuess": "Presumed reversible (SLOW) but unproven",
+            "tier": "T2 (no transition+hard-endpoint data)",
+            "revisitWhen": "If reversibility weighting becomes decisive"
+          },
+          {
+            "question": "Stress-social: why do two UK Biobank analyses disagree on whether loneliness→dementia survives depression adjustment?",
+            "resolved": false,
+            "whyUnresolved": "Depression handled as confounder vs mediator vs collider differs; isolation HR 1.34 robust, loneliness 1.03 vs 1.59",
+            "bestGuess": "Isolation effect more robust than loneliness; loneliness independence unsettled",
+            "tier": "T2 conflicting",
+            "revisitWhen": "Materially affects whether loneliness is an independent dementia risk factor"
+          },
+          {
+            "question": "Stress-social: is the loneliness↔depression relationship causal and in which direction?",
+            "resolved": false,
+            "whyUnresolved": "Bidirectional MR requested but not resolved in verified claims",
+            "bestGuess": "Likely bidirectional",
+            "tier": "MR (unresolved here)",
+            "revisitWhen": "Low-moderate priority"
+          },
+          {
+            "question": "Stress-social: any MR / quasi-experimental evidence that CHRONIC STRESS causally drives CVD/mortality?",
+            "resolved": false,
+            "whyUnresolved": "None surfaced; only T1 interventional evidence is a NEGATIVE finding (no RCT moves hard endpoints)",
+            "bestGuess": "Small real effect, mostly via standard cardiometabolic risk factors; not stress-specific",
+            "tier": "absent (causal)",
+            "revisitWhen": "Central causal gap; revisit if stress ranks near a boundary"
+          },
+          {
+            "question": "Stress-social: do stress-reduction RCTs (MBSR/CBT/meditation) move hard endpoints in SECONDARY prevention?",
+            "resolved": false,
+            "whyUnresolved": "Verified evidence only covered primary-prevention CVD mortality (AHA/Cochrane null)",
+            "bestGuess": "Probably surrogate-only there too",
+            "tier": "T1 (primary prevention only)",
+            "revisitWhen": "Watch for cardiac-rehab stress-intervention outcome trials"
+          },
+          {
+            "question": "Stress-social: INTERHEART psychosocial-stress PAR for MI (~30%)?",
+            "resolved": false,
+            "whyUnresolved": "Did not survive verification this run (case-control; crowded out)",
+            "bestGuess": "Real but case-control; weaker than the prospective HR 1.23 (PAR 3.4%)",
+            "tier": "T2 (case-control, un-verified here)",
+            "revisitWhen": "If stress ranks near a boundary"
+          },
+          {
+            "question": "Stress-social: does cortisol/HPA-axis dysregulation specifically predict hard endpoints, independent of cardiometabolic risk?",
+            "resolved": false,
+            "whyUnresolved": "Verified allostatic-load evidence is largely repackaged standard risk factors (tautological)",
+            "bestGuess": "No isolated stress-specific signal demonstrated",
+            "tier": "T2 (confounded)",
+            "revisitWhen": "Low priority"
+          },
+          {
+            "question": "Stress-social (purpose): any RCT of a purpose-/positive-psychology intervention that moves a HARD endpoint?",
+            "resolved": false,
+            "whyUnresolved": "None surfaced; interventions move only surrogates (well-being/purpose/depression scales)",
+            "bestGuess": "Likely a true gap (same as social/stress sub-levers)",
+            "tier": "absent",
+            "revisitWhen": "Trial-registry search; central to whether purpose can rank as causal"
+          },
+          {
+            "question": "Stress-social (purpose): does the dementia association (HR ~0.76) survive longer follow-up / landmark analyses excluding prodromal cases?",
+            "resolved": false,
+            "whyUnresolved": "UK Biobank window ~5 yr; reverse causation (preclinical dementia lowers reported purpose) not excluded",
+            "bestGuess": "Real but partly inflated by reverse causation",
+            "tier": "T1 obs (short follow-up)",
+            "revisitWhen": "If purpose ranks near a boundary"
+          },
+          {
+            "question": "Stress-social (purpose): can the Ye 2024 MR (well-being→healthspan/lifespan) be replicated with cleaner instruments, and is directionality confirmed?",
+            "resolved": false,
+            "whyUnresolved": "Single MR; sensitivity-method claim refuted; well-being genetics overlap depression",
+            "bestGuess": "Supportive but not definitive causal signal",
+            "tier": "T1 MR (one study)",
+            "revisitWhen": "Watch for replication MR"
+          },
+          {
+            "question": "Stress-social (purpose): is the optimism benefit general or concentrated in oldest-old / female high-SES cohorts?",
+            "resolved": false,
+            "whyUnresolved": "ASPREE 77+ effect; most evidence NHS/WHI women",
+            "bestGuess": "Possibly age-concentrated; generalizability unclear",
+            "tier": "T1 obs",
+            "revisitWhen": "If optimism ranks near a boundary"
+          }
+        ]
+      },
+      {
+        "lever": "Sun-skin",
+        "questions": [
+          {
+            "question": "Sun-skin (photoaging): what fraction of extrinsic facial aging is truly UV-attributable, and how reversible?",
+            "resolved": false,
+            "whyUnresolved": "The ~80–90% (Flament 2013) figure produced NO verified claim this run",
+            "bestGuess": "UVA-dominant direction solid; exact fraction/reversibility unverified",
+            "tier": "T3 (low)",
+            "revisitWhen": "Cosmetic/QoL — likely NOT worth a dedicated run unless QoL is weighted"
+          },
+          {
+            "question": "Sun-skin: how much of melanoma–UV is residual phenotype confounding (pigmentation/nevi) vs direct UV?",
+            "resolved": false,
+            "whyUnresolved": "MR instrument may proxy sun-sensitivity; full phenotype adjustment attenuated keratinocyte sunburn ORs to NS",
+            "bestGuess": "Real direct UV effect + some phenotype confounding",
+            "tier": "T1 (MR caveated)",
+            "revisitWhen": "If melanoma weighting becomes decisive"
+          },
+          {
+            "question": "Sun-skin: true-rising vs overdiagnosed split in melanoma incidence — how much UV-melanoma is life-threatening vs indolent?",
+            "resolved": false,
+            "whyUnresolved": "Overdiagnosis ~50–65% of invasive cases; incidence up, mortality down",
+            "bestGuess": "Much of \"rising melanoma\" is indolent overdiagnosis",
+            "tier": "T1",
+            "revisitWhen": "Affects the lever's longevity weight"
+          },
+          {
+            "question": "Sun-skin: UVA vs UVB relative contributions across endpoints?",
+            "resolved": false,
+            "whyUnresolved": "Not resolved this run; needed to connect harm-side to sunscreen-efficacy (Section 2)",
+            "bestGuess": "UVB→keratinocyte mutation; UVA→photoaging & possibly melanoma",
+            "tier": "T2/T3",
+            "revisitWhen": "When integrating Section 2 (sunscreen UVA/UVB protection differs)"
+          },
+          {
+            "question": "Sun-skin (protection): does sunscreen prevent melanoma beyond the single Nambour RCT?",
+            "resolved": false,
+            "whyUnresolved": "All hard-endpoint evidence is one sub-tropical Australian trial; Cochrane certainty LOW; no replication exists or is likely (RCT now arguably unethical)",
+            "bestGuess": "Real effect (RCT + mechanism), but unreplicated and population-specific",
+            "tier": "T1 (one RCT)",
+            "revisitWhen": "If sun-protection sits near a ranking boundary; otherwise accept as best-available"
+          },
+          {
+            "question": "Sun-skin (net): if vitamin D isn't the mediator, what drives any residual sun-avoidance→mortality signal?",
+            "resolved": false,
+            "whyUnresolved": "Vitamin-D channel closed (null RCTs + corrected MR); MISS is one confounded cohort",
+            "bestGuess": "Likely confounding (avoiders sicker) ± NO/BP/circadian; not vitamin D",
+            "tier": "T2/T3",
+            "revisitWhen": "If the sun-avoidance signal is given ranking weight"
+          },
+          {
+            "question": "Sun-skin (net): where is the latitude/UV-index/skin-type threshold where moderate sun flips net-positive↔net-negative?",
+            "resolved": false,
+            "whyUnresolved": "MISS is fair-skinned high-latitude; harm dominates in high-UV/darker skin",
+            "bestGuess": "Net-positive only at low solar intensity / fair skin",
+            "tier": "T2/T3 (synthesis)",
+            "revisitWhen": "When writing the personalized action (depends on the reader's locale/skin type)"
+          },
+          {
+            "question": "Sun-skin (net): any hard-endpoint RCT of controlled sun/UV EXPOSURE (not vitamin-D supplement) on mortality/CVD?",
+            "resolved": false,
+            "whyUnresolved": "All causal tests substitute a supplement for actual sun exposure",
+            "bestGuess": "None exists",
+            "tier": "absent",
+            "revisitWhen": "Watch literature; unlikely to be run"
+          }
+        ]
+      }
+    ]
+  }
+}
