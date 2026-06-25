@@ -21,6 +21,16 @@ export default function SiteHeader() {
         <Link href="/open-questions">Questions</Link>
       </nav>
       <span className="snapshot">Snapshot · {formatSnapshot(derived.generatedAt)}</span>
+      <details className="mobile-nav">
+        <summary aria-label="Open navigation menu">Menu</summary>
+        <nav aria-label="Primary navigation">
+          <a href="/#takeaways">Takeaways</a>
+          <Link href="/actions">Ranking</Link>
+          <a href="/#evidence">Evidence</a>
+          <Link href="/sources">Sources</Link>
+          <Link href="/open-questions">Questions</Link>
+        </nav>
+      </details>
     </header>
   );
 }

@@ -13,7 +13,7 @@ export default function Hero() {
         </h1>
         <p className="hero-intro">
           An evidence-tiered review of the few actions that matter most for aging well.
-          Built around hard outcomes, irreversibility, and a bias toward doing—not optimizing.
+          Built around hard outcomes, irreversibility, and a bias toward doing, not optimizing.
         </p>
         <a className="primary-link" href="#takeaways">
           See current takeaways <span>↓</span>

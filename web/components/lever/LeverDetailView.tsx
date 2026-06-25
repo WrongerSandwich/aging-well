@@ -57,7 +57,7 @@ export default function LeverDetailView({
             <section className="claims-section informational">
               <h2>Informational only</h2>
               <p className="claims-note">
-                T3–T4 evidence: mechanistic, small, conflicting, or speculative — does not enter the ranking.
+                T3–T4 evidence: mechanistic, small, conflicting, or speculative; it does not enter the ranking.
               </p>
               <div className="claims-list">
                 {informational.map((c) => (

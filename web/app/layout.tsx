@@ -9,7 +9,7 @@ const newsreader = Newsreader({ subsets: ["latin"], weight: ["500", "600"], styl
 const dmMono = DM_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
 
 export const metadata = {
-  title: "Aging Well — Research Brief",
+  title: "Aging Well · Research Brief",
   description:
     "A current snapshot of the Aging Well evidence review: findings, actions, and open questions.",
 };

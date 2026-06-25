@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-24T21:04:00-05:00",
+  "title": "Design System: Aging Well",
+  "extensions": {
+    "colorMeta": {
+      "rust": {
+        "role": "primary",
+        "displayName": "Rust",
+        "canonical": "#b84d2e",
+        "tonalRamp": ["oklch(0.15 0.05 38)", "oklch(0.25 0.08 38)", "oklch(0.35 0.11 38)", "oklch(0.45 0.13 38)", "oklch(0.55 0.13 38)", "oklch(0.68 0.10 38)", "oklch(0.80 0.06 38)", "oklch(0.93 0.03 38)"]
+      },
+      "forest": {
+        "role": "secondary",
+        "displayName": "Forest",
+        "canonical": "#173b31",
+        "tonalRamp": ["oklch(0.15 0.03 165)", "oklch(0.25 0.045 165)", "oklch(0.33 0.05 165)", "oklch(0.45 0.06 165)", "oklch(0.57 0.06 165)", "oklch(0.69 0.05 165)", "oklch(0.81 0.035 165)", "oklch(0.93 0.02 165)"]
+      },
+      "lime": {
+        "role": "tertiary",
+        "displayName": "Lime",
+        "canonical": "#d7ee75",
+        "tonalRamp": ["oklch(0.30 0.07 110)", "oklch(0.42 0.10 110)", "oklch(0.54 0.12 110)", "oklch(0.65 0.13 110)", "oklch(0.75 0.14 110)", "oklch(0.84 0.14 110)", "oklch(0.91 0.13 110)", "oklch(0.96 0.06 110)"]
+      },
+      "sage": {
+        "role": "tertiary",
+        "displayName": "Sage",
+        "canonical": "#a8bd9d",
+        "tonalRamp": ["oklch(0.25 0.02 140)", "oklch(0.37 0.03 140)", "oklch(0.49 0.035 140)", "oklch(0.60 0.04 140)", "oklch(0.70 0.04 140)", "oklch(0.77 0.04 140)", "oklch(0.86 0.03 140)", "oklch(0.94 0.015 140)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#f3f0e7",
+        "tonalRamp": ["oklch(0.22 0.008 90)", "oklch(0.34 0.01 90)", "oklch(0.47 0.012 90)", "oklch(0.60 0.012 90)", "oklch(0.72 0.012 90)", "oklch(0.83 0.01 90)", "oklch(0.91 0.009 90)", "oklch(0.95 0.008 90)"]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Warm Paper Deep",
+        "canonical": "#e9e4d8"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Field Ink",
+        "canonical": "#1b2521",
+        "tonalRamp": ["oklch(0.20 0.01 165)", "oklch(0.25 0.01 165)", "oklch(0.34 0.01 165)", "oklch(0.45 0.01 165)", "oklch(0.55 0.01 165)", "oklch(0.66 0.008 165)", "oklch(0.80 0.006 165)", "oklch(0.92 0.004 165)"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#657069"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(27, 37, 33, 0.18)"
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page H1 only. Tight, dramatic serif set close (line-height 0.82). Emphasized words turn rust." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s. The structural beats of a page." },
+      "title": { "displayName": "Title", "purpose": "Finding-card headlines and serif object titles; pull quotes use the same family italic." },
+      "body": { "displayName": "Body", "purpose": "Reading copy in Manrope. Measure capped at 65-75ch." },
+      "label": { "displayName": "Label / Mono", "purpose": "All metadata: tiers, sources, eyebrows, captions, nav. DM Mono, uppercase, letter-spaced." }
+    },
+    "shadows": [
+      { "name": "signature-offset", "value": "16px 16px 0 #a8bd9d", "purpose": "The only shadow in the system. Hard, blur-less sage offset under hero/feature cards. Reads as print registration, not elevation. Tightens to 8px 8px 0 on small screens." }
+    ],
+    "motion": [
+      { "name": "smooth-scroll", "value": "scroll-behavior: smooth", "purpose": "Anchor navigation; disabled under prefers-reduced-motion." },
+      { "name": "state-fade", "value": "transition: opacity 0.2s, background 0.2s", "purpose": "Filter chips and finding visibility. Restrained state-change feedback only, no choreography." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "850px" },
+      { "name": "sm", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Principle Card",
+      "kind": "card",
+      "refersTo": "principle-card",
+      "description": "The signature feature card: forest ground, lime mono labels, serif pull quote, and the one allowed hard offset shadow.",
+      "html": "<aside class=\"ds-principle-card\"><span class=\"ds-card-index\">01 / PRINCIPLE</span><blockquote class=\"ds-card-quote\">“Avoid catastrophic, irreversible errors first.”</blockquote><p class=\"ds-card-body\">Bone, neurons, enamel, hearing, vision, and accumulated damage do not fully recover.</p><div class=\"ds-card-rule\"><span>Evidence</span><span>×</span><span>Impact</span><span>×</span><span>Irreversibility</span></div></aside>",
+      "css": ".ds-principle-card { display: flex; flex-direction: column; background: #173b31; color: #fff; padding: 34px; min-height: 410px; box-shadow: 16px 16px 0 #a8bd9d; max-width: 340px; } .ds-card-index { font: 10px 'DM Mono', monospace; letter-spacing: 0.12em; color: #d7ee75; } .ds-card-quote { font-family: 'Newsreader', Georgia, serif; font-size: 36px; line-height: 1.05; letter-spacing: -0.025em; margin: 55px 0 22px; } .ds-card-body { color: #c7d2cc; font-size: 13px; line-height: 1.7; margin: 0; } .ds-card-rule { margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.2); display: flex; justify-content: space-between; font: 10px 'DM Mono', monospace; text-transform: uppercase; color: #d7ee75; }"
+    },
+    {
+      "name": "Tier Badge",
+      "kind": "chip",
+      "refersTo": "tier-badge",
+      "description": "Square mono badge encoding evidence certainty. Tier is never color-only: the label text always rides alongside.",
+      "html": "<span class=\"ds-tier ds-tier-1\">T1</span> <span class=\"ds-tier ds-tier-2\">T2</span> <span class=\"ds-tier ds-tier-info\">T3</span>",
+      "css": ".ds-tier { display: inline-block; padding: 5px 8px; font: 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; } .ds-tier-1 { background: #173b31; color: #fff; } .ds-tier-2 { background: #b84d2e; color: #fff; } .ds-tier-info { background: #e9e4d8; color: #657069; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "The one rounded element in the system. Hairline pill at rest; fills forest on hover/active. Selection by fill, never a colored stripe.",
+      "html": "<button class=\"ds-filter\">All levers</button><button class=\"ds-filter ds-filter-active\">Exercise</button>",
+      "css": ".ds-filter { border: 1px solid rgba(27,37,33,0.18); background: transparent; border-radius: 100px; padding: 9px 16px; cursor: pointer; font-size: 11px; color: #657069; font-family: 'Manrope', sans-serif; transition: background 0.2s, color 0.2s; } .ds-filter:hover, .ds-filter-active { color: #fff; border-color: #173b31; background: #173b31; } .ds-filter:focus-visible { outline: 2px solid #b84d2e; outline-offset: 2px; }"
+    },
+    {
+      "name": "Primary Link",
+      "kind": "button",
+      "refersTo": "primary-link",
+      "description": "The default call to action: an underlined mono link with a trailing glyph, not a filled button.",
+      "html": "<a class=\"ds-primary-link\" href=\"#takeaways\">See current takeaways <span>↓</span></a>",
+      "css": ".ds-primary-link { display: inline-flex; gap: 30px; align-items: center; text-decoration: none; color: #1b2521; border-bottom: 1px solid #1b2521; padding: 0 0 9px; font: 700 13px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em; } .ds-primary-link:hover { color: #b84d2e; border-color: #b84d2e; } .ds-primary-link:focus-visible { outline: 2px solid #b84d2e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Finding Card",
+      "kind": "card",
+      "refersTo": "finding-card",
+      "description": "A catalogue cell inside the hairline findings grid: square, flat, serif title, mono lever tag, rust lead stat.",
+      "html": "<article class=\"ds-finding\"><div class=\"ds-finding-top\"><span class=\"ds-tier ds-tier-1\">T1</span><span class=\"ds-lever\">Exercise</span></div><h3 class=\"ds-finding-title\">Move most days.</h3><div class=\"ds-stat\"><strong>30%</strong><span>lower all-cause<br>mortality</span></div></article>",
+      "css": ".ds-finding { display: flex; flex-direction: column; min-height: 300px; padding: 30px; border: 1px solid rgba(27,37,33,0.18); background: rgba(255,255,255,0.12); } .ds-finding-top { display: flex; justify-content: space-between; align-items: center; } .ds-tier { padding: 5px 8px; font: 10px 'DM Mono', monospace; text-transform: uppercase; } .ds-tier-1 { background: #173b31; color: #fff; } .ds-lever { font: 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.65; color: #1b2521; } .ds-finding-title { font-family: 'Newsreader', Georgia, serif; font-size: 42px; line-height: 1; font-weight: 500; letter-spacing: -0.03em; margin: 38px 0 12px; color: #1b2521; } .ds-stat { display: flex; align-items: flex-end; gap: 15px; margin-top: auto; padding-top: 28px; } .ds-stat strong { font: 500 43px 'Newsreader', serif; color: #b84d2e; } .ds-stat span { font-size: 10px; line-height: 1.35; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.68; padding-bottom: 6px; color: #1b2521; }"
+    },
+    {
+      "name": "Lever Row",
+      "kind": "nav",
+      "refersTo": "lever-row",
+      "description": "The catalogue index row: mono columns separated by hairlines; completed rows darken, the active row highlights lime.",
+      "html": "<div class=\"ds-lever-list\"><div class=\"ds-lever-row ds-complete\"><span>S001</span><strong>Exercise</strong><em>Complete</em><b>Ranked 1</b></div><div class=\"ds-lever-row ds-active\"><span>S050</span><strong>Sleep</strong><em>In progress</em><b>Pending</b></div></div>",
+      "css": ".ds-lever-list { border-bottom: 1px solid rgba(27,37,33,0.18); } .ds-lever-row { min-height: 76px; display: grid; grid-template-columns: 80px 1.5fr 1fr 100px; align-items: center; border-top: 1px solid rgba(27,37,33,0.18); color: #657069; } .ds-lever-row span, .ds-lever-row em, .ds-lever-row b { font: 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: 0.05em; } .ds-lever-row strong { font: 600 15px 'Manrope', sans-serif; } .ds-lever-row b { text-align: right; } .ds-complete { color: #1b2521; } .ds-complete b { color: #46715d; } .ds-active { background: #d7ee75; color: #1b2521; padding-inline: 18px; } .ds-active b { color: #b84d2e; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Naturalist's Almanac",
+    "overview": "This is a reference printed to last, not an app and not a campaign. Picture a well-set almanac on warm uncoated paper: botanical greens, a terracotta accent used sparingly, serif headlines with editorial confidence, and small monospace marginalia that read like a careful researcher's annotations. The aesthetic carries the project's strategic line: trust is earned by showing the evidence and admitting uncertainty, so the design favors legible structure and quiet authority over flourish. Density is editorial, not dashboard: generous vertical rhythm, large serif display type, and a strict hairline grid organizing findings like entries in a catalogue. The one piece of theater allowed is a hard, blur-less offset shadow on a feature card, a printerly block of sage that reads like ink registration, never soft web-glow.",
+    "keyCharacteristics": [
+      "Warm paper ground (#f3f0e7), never pure white, never dark mode.",
+      "Serif display (Newsreader) for voice; monospace (DM Mono) for evidence marginalia.",
+      "Restrained palette: forest + paper carry the surface, rust accent appears on under ~10%.",
+      "Sharp and printerly: 0px radius, hairline rules, square tier badges.",
+      "Flat by default, with one signature hard offset shadow as the only allowed elevation."
+    ],
+    "rules": [
+      { "name": "The Rare Rust Rule", "body": "Rust is the only accent and it appears on roughly <=10% of any screen. Use it for one emphasized word, one lead stat, or one badge, never as a fill across a region. If two rust elements compete for attention in the same view, one of them is wrong.", "section": "colors" },
+      { "name": "The No-White, No-Dark-Mode Rule", "body": "The ground is always warm paper (#f3f0e7). Never #fff, never #000, and never a dark theme. Depth comes from paper to paper-deep to forest, in that order.", "section": "colors" },
+      { "name": "The Mono Marginalia Rule", "body": "Anything that is metadata, not prose, is set in DM Mono, uppercase, letter-spaced: tiers, sources, indices, captions, status. Prose is never mono; mono is never a paragraph.", "section": "typography" },
+      { "name": "The Serif-Speaks Rule", "body": "Headlines, titles, claims, and pull quotes are always serif (Newsreader). Sans (Manrope) is for reading body and UI only. Never set a headline in sans.", "section": "typography" },
+      { "name": "The One Shadow Rule", "body": "The hard sage offset block is the only shadow permitted, and only on hero/feature cards. No box-shadow with a blur radius greater than 0 may appear anywhere. If you reach for a soft drop-shadow to separate two surfaces, use a hairline border or a tonal step instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the ground warm paper (#f3f0e7). Layer depth as paper to paper-deep (#e9e4d8) to forest (#173b31).",
+      "Do reserve rust (#b84d2e) for a single emphasis per view: one word, one stat, or one badge.",
+      "Do set all metadata (tiers, sources, captions, eyebrows, indices) in DM Mono, uppercase, letter-spaced.",
+      "Do set every headline, title, and pull quote in Newsreader serif.",
+      "Do separate cards with the 1px hairline grid and keep corners square (0 radius).",
+      "Do keep the one signature shadow (16px 16px 0 sage, no blur) for feature cards only.",
+      "Do label evidence tiers with text (T1-T4) alongside color, and cap reading measure at 65-75ch."
+    ],
+    "donts": [
+      "Don't evoke supplement / biohacker hype: no neon, no gradients, no urgency, no 'optimize everything' energy.",
+      "Don't drift toward clinical / WebMD sterility: no teal-and-white medical palette, no pure-white backgrounds, no stock photography.",
+      "Don't build a generic SaaS dashboard: no hero-metric template, no identical icon-card grid, no gradient accents, no dark mode.",
+      "Don't produce a dense academic PDF: rigor must stay legible; never a wall of text with no hierarchy.",
+      "Don't use any box-shadow with a blur radius (the only shadow is the hard sage offset).",
+      "Don't use a colored border-left/border-right stripe to mark a card, alert, or selection; use a full hairline, a tonal fill, or a forest fill instead.",
+      "Don't encode evidence tier or ranking strength by color alone; always include the label.",
+      "Don't set lime text on paper (it fails contrast); lime is for use on forest only."
+    ]
+  }
+}

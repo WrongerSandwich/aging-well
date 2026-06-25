@@ -2,7 +2,7 @@ import { synthesis } from "@/lib/synthesis";
 import OpenQuestionsFull from "@/components/OpenQuestionsFull";
 
 export const metadata = {
-  title: "Open questions — Aging Well",
+  title: "Open questions · Aging Well",
   description: "Contested and unresolved questions, grouped by lever. Kept out of the ranking.",
 };
 

@@ -2,7 +2,7 @@ import { sources } from "@/lib/sources";
 import SourcesTable from "@/components/SourcesTable";
 
 export const metadata = {
-  title: "Sources — Aging Well",
+  title: "Sources · Aging Well",
   description: "The full S001–S200 source index behind the research, filterable by evidence tier.",
 };
 

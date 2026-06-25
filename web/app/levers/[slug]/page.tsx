@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const lever = detail.levers[slug];
   return {
-    title: lever ? `${lever.name} — Aging Well` : "Aging Well",
+    title: lever ? `${lever.name} · Aging Well` : "Aging Well",
     description: lever?.scope?.slice(0, 150),
   };
 }

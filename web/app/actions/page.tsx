@@ -6,7 +6,7 @@ import DoNotBother from "@/components/actions/DoNotBother";
 import Matrix from "@/components/actions/Matrix";
 
 export const metadata = {
-  title: "Ranked actions — Aging Well",
+  title: "Ranked actions · Aging Well",
   description: "The evidence-only ranking of actions that matter most for aging well.",
 };
 
@@ -19,7 +19,7 @@ export default function ActionsPage() {
         <h1>Ranked actions</h1>
         <p className="hero-intro">
           Sorted by <strong>Evidence-only</strong> = Impact × Certainty × Reversibility
-          (max 75). The personal Tractability factor is deliberately excluded — apply it
+          (max 75). The personal Tractability factor is deliberately excluded, so apply it
           yourself.
         </p>
       </header>
@@ -31,18 +31,44 @@ export default function ActionsPage() {
 
       <section className="actions-section">
         <h2>The ranking</h2>
+        <dl className="score-legend" aria-label="How the score is built">
+          <div>
+            <dt>Impact</dt>
+            <dd>How much it moves a hard outcome. Scored 1 to 5.</dd>
+          </div>
+          <div>
+            <dt>Certainty</dt>
+            <dd>Strength of the evidence behind it. Scored 1 to 5.</dd>
+          </div>
+          <div>
+            <dt>Rev</dt>
+            <dd>Reversibility: how permanent the damage it prevents. Scored 1 to 3.</dd>
+          </div>
+          <div>
+            <dt>Evidence-only</dt>
+            <dd>Impact × Certainty × Rev, so the ceiling is 5 × 5 × 3 = 75.</dd>
+          </div>
+        </dl>
         <RankedTable rows={rankedActions.rows} />
       </section>
 
       <section className="actions-section">
         <h2>Do NOT bother / actively avoid</h2>
-        <p className="claims-note">Scored low or reversed — listed so they don’t creep back in.</p>
+        <p className="claims-note">Scored low or reversed; listed so they don’t creep back in.</p>
         <DoNotBother items={rankedActions.doNotBother} />
       </section>
 
       <section className="actions-section">
         <h2>Lever × system matrix</h2>
-        <p className="claims-note">● strong · ◐ moderate · ○ minor — intervention value, not just association.</p>
+        <p className="claims-note">
+          Intervention value (does acting on this lever help the system?), not just association.
+        </p>
+        <ul className="matrix-legend" aria-label="Matrix symbol key">
+          <li><span className="legend-glyph cell-strong" aria-hidden="true">●</span> Strong</li>
+          <li><span className="legend-glyph cell-moderate" aria-hidden="true">◐</span> Moderate</li>
+          <li><span className="legend-glyph cell-minor" aria-hidden="true">○</span> Minor</li>
+          <li><span className="legend-glyph legend-none" aria-hidden="true">·</span> None</li>
+        </ul>
         <Matrix matrix={matrix} />
       </section>
 
@@ -50,7 +76,7 @@ export default function ActionsPage() {
         <h2>Make it yours</h2>
         <p>
           This ranking is universal. To turn it into your do-this-first list, add the one
-          personal factor — how realistically you’ll sustain each action — and resolve the
+          personal factor (how realistically you’ll sustain each action) and resolve the
           conditional rows against your own profile. The method and copy-and-fill templates
           live in the repository (<code>synthesis/personalize.md</code>); your overlay stays
           local and is never published.

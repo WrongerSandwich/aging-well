@@ -42,6 +42,9 @@ export default function Findings() {
           />
         ))}
       </div>
+      {active !== "all" && !findings.some((f) => f.category === active) && (
+        <p className="empty-note">No completed findings for this lever yet.</p>
+      )}
     </section>
   );
 }

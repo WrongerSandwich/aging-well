@@ -24,30 +24,35 @@ export default function SourcesTable({ sources }: { sources: Source[] }) {
           </button>
         ))}
       </div>
-      <table className="sources-table">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Source</th>
-            <th scope="col">Tier</th>
-          </tr>
-        </thead>
-        <tbody>
-          {visible.map((s) => (
-            <tr key={s.id}>
-              <td>{s.id}</td>
-              <td>
-                {s.url ? (
-                  <a href={s.url} target="_blank" rel="noopener noreferrer">{s.citation}</a>
-                ) : (
-                  s.citation
-                )}
-              </td>
-              <td>{s.tier}</td>
+      <div className="table-scroll">
+        <table className="sources-table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Source</th>
+              <th scope="col">Tier</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {visible.map((s) => (
+              <tr key={s.id}>
+                <td>{s.id}</td>
+                <td>
+                  {s.url ? (
+                    <a href={s.url} target="_blank" rel="noopener noreferrer">{s.citation}</a>
+                  ) : (
+                    s.citation
+                  )}
+                </td>
+                <td>{s.tier}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {visible.length === 0 && (
+        <p className="empty-note">No sources at this tier yet.</p>
+      )}
     </div>
   );
 }
