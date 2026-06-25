@@ -8,6 +8,7 @@ import {
   buildDerived,
   leverSlug,
   parseMatrix,
+  parseRankedActions,
 } from "./parse";
 
 const RESEARCHED = `# Lever: Substances
@@ -261,5 +262,61 @@ describe("parseMatrix", () => {
     });
     expect(m.rows[1].cells).toEqual(["none", "none", "strong"]);
     expect(m.rows[2].slug).toBe("oral-sensory");
+  });
+});
+
+const RANKED = `# Ranked actions
+
+| Rank | Action | Lever | Impact | Certainty | Rev | **Evidence-only** |
+|:----:|--------|-------|:------:|:---------:|:---:|:-----------------:|
+| 1 | **Don't smoke** (quit ASAP if you do) | Substances | 5 | 5 | 3 | **75** |
+| 3 | **Treat high blood pressure to target** *(conditional)* | Medical | 5 | 5 | 3 | **75** |
+
+### Do NOT bother / actively avoid (negative or unproven — keep OFF the list)
+These scored low or reversed:
+- **Daily aspirin for primary prevention** — reversed (bleeding ≥ benefit) [medical-screening #12]
+- **Strict sun avoidance** — no proven upside [sun-skin #19–25]
+
+## Personalizing this list (the Tractability overlay)
+ignore me
+
+## The actual list (top items, plain language)
+The evidence says:
+
+1. **Don't smoke, and keep alcohol low.** The biggest single mortality lever.
+2. **Be fit and strong** — regular cardio, lifting, balance work.
+`;
+
+describe("parseRankedActions", () => {
+  it("parses ranked rows with numeric columns and slugs", () => {
+    const r = parseRankedActions(RANKED);
+    expect(r.rows).toHaveLength(2);
+    expect(r.rows[0]).toEqual({
+      rank: 1,
+      action: "Don't smoke (quit ASAP if you do)",
+      lever: "Substances",
+      slug: "substances",
+      impact: 5,
+      certainty: 5,
+      rev: 3,
+      evidenceOnly: 75,
+      conditional: false,
+    });
+    expect(r.rows[1].conditional).toBe(true);
+    expect(r.rows[1].action).toBe("Treat high blood pressure to target");
+    expect(r.rows[1].slug).toBe("medical-screening");
+  });
+  it("extracts do-not-bother items with refs", () => {
+    const r = parseRankedActions(RANKED);
+    expect(r.doNotBother).toHaveLength(2);
+    expect(r.doNotBother[0]).toEqual({
+      text: "Daily aspirin for primary prevention — reversed (bleeding ≥ benefit)",
+      refs: "medical-screening #12",
+    });
+  });
+  it("extracts the plain-language list in order", () => {
+    const r = parseRankedActions(RANKED);
+    expect(r.plainLanguage).toHaveLength(2);
+    expect(r.plainLanguage[0]).toMatch(/^Don't smoke, and keep alcohol low\./);
   });
 });

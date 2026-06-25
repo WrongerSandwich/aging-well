@@ -246,3 +246,89 @@ export function parseMatrix(md: string): LeverSystemMatrix {
   }
   return { systems: header, rows };
 }
+
+export interface RankedAction {
+  rank: number;
+  action: string;
+  lever: string;
+  slug: string;
+  impact: number;
+  certainty: number;
+  rev: number;
+  evidenceOnly: number;
+  conditional: boolean;
+}
+export interface DoNotBotherItem {
+  text: string;
+  refs: string;
+}
+export interface RankedActions {
+  rows: RankedAction[];
+  doNotBother: DoNotBotherItem[];
+  plainLanguage: string[];
+}
+
+function stripMarkdown(s: string): string {
+  return s.replace(/\*\*/g, "").replace(/`/g, "").trim();
+}
+
+export function parseRankedActions(md: string): RankedActions {
+  const lines = md.split("\n");
+
+  // Ranked table rows: first cell is a number.
+  const rows: RankedAction[] = [];
+  for (const line of lines) {
+    if (!/^\|\s*\d+\s*\|/.test(line)) continue;
+    const cells = line.split("|").map((c) => c.trim());
+    if (cells.length < 9) continue;
+    const actionRaw = cells[2];
+    const conditional = /\(conditional/i.test(actionRaw);
+    const action = stripMarkdown(actionRaw)
+      .replace(/\*\(conditional\)\*/gi, "")
+      .replace(/\(conditional[^)]*\)/gi, "")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+    const lever = cells[3];
+    rows.push({
+      rank: Number(cells[1]),
+      action,
+      lever,
+      slug: leverSlug(lever),
+      impact: Number(cells[4]),
+      certainty: Number(cells[5]),
+      rev: Number(cells[6]),
+      evidenceOnly: Number(stripMarkdown(cells[7])),
+      conditional,
+    });
+  }
+
+  // Do-not-bother bullets live under the "### Do NOT bother" heading.
+  const doNotBother: DoNotBotherItem[] = [];
+  const dnbStart = lines.findIndex((l) => /^###\s+Do NOT bother/i.test(l));
+  if (dnbStart !== -1) {
+    for (let i = dnbStart + 1; i < lines.length; i++) {
+      const l = lines[i];
+      if (l.startsWith("## ") || l.startsWith("### ")) break;
+      if (!l.trim().startsWith("- ")) continue;
+      const body = l.trim().replace(/^- /, "");
+      const refMatch = body.match(/\[([^\]]+)\]\s*$/);
+      const refs = refMatch ? refMatch[1] : "";
+      const text = stripMarkdown(body.replace(/\s*\[[^\]]+\]\s*$/, ""));
+      doNotBother.push({ text, refs });
+    }
+  }
+
+  // Plain-language numbered list under "## The actual list".
+  const plainLanguage: string[] = [];
+  const plStart = lines.findIndex((l) => /^##\s+The actual list/i.test(l));
+  if (plStart !== -1) {
+    for (let i = plStart + 1; i < lines.length; i++) {
+      const l = lines[i];
+      if (l.startsWith("## ")) break;
+      const m = l.match(/^\d+\.\s+(.*)$/);
+      if (m) plainLanguage.push(stripMarkdown(m[1]));
+    }
+  }
+
+  return { rows, doNotBother, plainLanguage };
+}
