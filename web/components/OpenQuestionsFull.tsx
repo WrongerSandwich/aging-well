@@ -1,5 +1,5 @@
 import type { OpenQuestionGroup } from "@/lib/sync/parse";
-import { tierClass } from "@/lib/tier";
+import { tierClass, tierText } from "@/lib/tier";
 
 export default function OpenQuestionsFull({ groups }: { groups: OpenQuestionGroup[] }) {
   return (
@@ -14,7 +14,7 @@ export default function OpenQuestionsFull({ groups }: { groups: OpenQuestionGrou
                 {q.bestGuess && q.bestGuess !== "—" && (
                   <p className="oq-guess"><strong>Best guess:</strong> {q.bestGuess}</p>
                 )}
-                {q.tier && <span className={tierClass(q.tier)}>{q.tier}</span>}
+                {q.tier && <span className={tierClass(q.tier)}>{tierText(q.tier)}</span>}
               </li>
             ))}
           </ul>

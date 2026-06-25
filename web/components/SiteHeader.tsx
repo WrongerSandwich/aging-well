@@ -9,10 +9,10 @@ function formatSnapshot(iso: string): string {
 export default function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Aging Well home">
+      <Link className="brand" href="/" aria-label="Aging Well home">
         <span className="brand-mark" aria-hidden="true"></span>
         <span>Aging Well</span>
-      </a>
+      </Link>
       <nav aria-label="Primary navigation">
         <a href="/#takeaways">Takeaways</a>
         <Link href="/actions">Ranking</Link>

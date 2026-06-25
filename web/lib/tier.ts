@@ -7,3 +7,10 @@ export function tierClass(tier: string): string {
   if (/^T[34]/.test(tier)) return "tier tier-info";
   return "tier tier-1";
 }
+
+// Tier labels are categorical, but the source data decorates some with markdown
+// (e.g. "T1 (as *predictor*)", "T1 (obs) + **[RCT]**"). Strip it for badge display
+// so asterisks never leak into the rendered chip.
+export function tierText(tier: string): string {
+  return tier.replace(/\*+/g, "");
+}
