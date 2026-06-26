@@ -7,7 +7,7 @@ import OpenQuestions from "@/components/OpenQuestions";
 
 export default function Home() {
   return (
-    <main id="top">
+    <main id="top" tabIndex={-1}>
       <Hero />
       <Metrics />
       <Findings />

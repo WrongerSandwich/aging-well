@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function SourcesPage() {
   return (
-    <main className="sources-page shell" id="top">
+    <main className="sources-page shell" id="top" tabIndex={-1}>
       <header className="lever-header">
         <p className="eyebrow">Evidence base</p>
         <h1>Sources</h1>

@@ -16,7 +16,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
 button, a { font: inherit; }
 a { color: inherit; }
@@ -25,17 +25,41 @@ a { color: inherit; }
 :focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
 .principle-card :focus-visible, .evidence-section :focus-visible, .finding.dark :focus-visible,
 .personalize-callout :focus-visible, footer :focus-visible { outline-color: var(--lime); }
+/* The skip-link target is a structural region focused programmatically; the
+   visible affordance is the skip link itself, not a box around all of main. */
+main:focus, main:focus-visible { outline: none; }
+
+/* Skip link: first focusable element, hidden until a keyboard user reaches it,
+   then it drops in as a square forest tab over the header. */
+.skip-link {
+  position: absolute;
+  left: 14px;
+  top: -100%;
+  z-index: 60;
+  background: var(--forest);
+  color: white;
+  font: 500 11px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+.skip-link:focus-visible { top: 12px; outline-color: var(--lime); }
 @media (prefers-reduced-motion: no-preference) {
   a, button, summary { transition: color .15s, background .15s, border-color .15s; }
 }
 .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 
-.site-header { height: 76px; padding: 0 max(24px, calc((100vw - 1180px) / 2)); display: flex; align-items: center; border-bottom: 1px solid var(--line); gap: 42px; }
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--paper); height: 76px; padding: 0 max(24px, calc((100vw - 1180px) / 2)); display: flex; align-items: center; border-bottom: 1px solid var(--line); gap: 42px; }
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 700; letter-spacing: -.03em; }
 .brand-mark { width: 22px; height: 22px; border: 6px solid var(--forest); border-top-color: var(--rust); border-radius: 50%; transform: rotate(-20deg); }
 .site-header > nav { display: flex; gap: 28px; margin-left: auto; }
-nav a { text-decoration: none; font-size: 13px; color: var(--muted); }
-nav a:hover { color: var(--ink); }
+/* Nav links wear the mono-marginalia voice (DESIGN.md): uppercase DM Mono, like
+   the snapshot eyebrow beside them. Current page gets a rare-rust under-rule. */
+.site-header > nav a { position: relative; text-decoration: none; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.site-header > nav a:hover { color: var(--ink); }
+.site-header > nav a.nav-active { color: var(--ink); }
+.site-header > nav a.nav-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--rust); }
 .snapshot { font: 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-left: 30px; border-left: 1px solid var(--line); }
 
 /* Mobile disclosure nav: CSS-only <details>, hidden on desktop. */
@@ -43,10 +67,13 @@ nav a:hover { color: var(--ink); }
 .mobile-nav > summary { list-style: none; cursor: pointer; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink); padding: 12px 14px; min-height: 44px; display: flex; align-items: center; border: 1px solid var(--line); }
 .mobile-nav > summary::-webkit-details-marker { display: none; }
 .mobile-nav[open] > summary { background: var(--forest); color: white; border-color: var(--forest); }
-.mobile-nav > nav { position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; display: flex; flex-direction: column; min-width: 200px; background: var(--paper); border: 1px solid var(--line); box-shadow: 12px 12px 0 var(--sage); }
-.mobile-nav > nav a { padding: 14px 18px; min-height: 44px; display: flex; align-items: center; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--ink); }
-.mobile-nav > nav a:last-child { border-bottom: 0; }
+.mobile-nav > nav { position: absolute; right: 0; top: calc(100% + 8px); z-index: 20; display: flex; flex-direction: column; min-width: 210px; background: var(--paper); border: 1px solid var(--line); box-shadow: 10px 10px 0 var(--sage); }
+.mobile-nav > nav a { padding: 14px 18px; min-height: 44px; display: flex; align-items: center; border-bottom: 1px solid var(--line); font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink); }
 .mobile-nav > nav a:hover { background: var(--paper-deep); }
+.mobile-nav > nav a.nav-active { background: var(--forest); color: white; }
+/* The dated snapshot relocates here on phones, where it would be unreadable
+   shrunk into the top bar; shown only at the width the header hides it. */
+.mobile-nav-snapshot { display: none; padding: 13px 18px; font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
 
 .hero { min-height: 630px; padding-block: 88px 72px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 90px; align-items: center; }
 .eyebrow { margin: 0 0 22px; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .13em; color: var(--rust-ink); }
@@ -171,7 +198,10 @@ footer a { font: 10px var(--mono); text-transform: uppercase; color: var(--lime)
 @media (max-width: 560px) {
   .shell { width: min(100% - 28px, 1180px); }
   .site-header { padding-inline: 14px; height: 64px; }
-  .snapshot { font-size: 8px; }
+  /* Below 560px the top bar is too cramped for a legible date; hide it here and
+     surface it inside the menu panel instead (see .mobile-nav-snapshot). */
+  .snapshot { display: none; }
+  .mobile-nav-snapshot { display: block; }
   .hero { min-height: auto; padding-block: 58px; }
   h1 { font-size: 57px; }
   .hero-intro { font-size: 15px; margin-top: 30px; }

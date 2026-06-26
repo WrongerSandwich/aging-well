@@ -13,7 +13,7 @@ export const metadata = {
 export default function ActionsPage() {
   const { rankedActions, matrix } = synthesis;
   return (
-    <main className="actions-page shell" id="top">
+    <main className="actions-page shell" id="top" tabIndex={-1}>
       <header className="lever-header">
         <p className="eyebrow">The output artifact</p>
         <h1>Ranked actions</h1>

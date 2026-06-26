@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function OpenQuestionsPage() {
   return (
-    <main className="oq-page shell" id="top">
+    <main className="oq-page shell" id="top" tabIndex={-1}>
       <header className="lever-header">
         <p className="eyebrow">Uncertainty, made visible</p>
         <h1>Open questions</h1>
