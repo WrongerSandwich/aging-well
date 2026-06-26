@@ -18,6 +18,7 @@ function rowClass(row: StatusRow, status?: string): string {
 export default function StatusSection() {
   const { totals } = derived;
   const pct = Math.round((totals.leversComplete / totals.leversTotal) * 100);
+  const allComplete = totals.leversComplete === totals.leversTotal;
   return (
     <section className="section shell" id="status">
       <div className="section-heading status-heading">
@@ -26,7 +27,9 @@ export default function StatusSection() {
           <h2>What's done. What isn't.</h2>
         </div>
         <p className="section-note">
-          The final ranked list remains intentionally blank until enough levers are complete.
+          {allComplete
+            ? `All ${totals.leversTotal} levers are complete. The actions are ranked by evidence and irreversibility.`
+            : "The final ranked list remains intentionally blank until enough levers are complete."}
         </p>
       </div>
       <div
@@ -63,6 +66,11 @@ export default function StatusSection() {
           );
         })}
       </div>
+      {allComplete && (
+        <Link className="primary-link status-cta" href="/actions">
+          See the ranked actions <span>→</span>
+        </Link>
+      )}
     </section>
   );
 }
