@@ -9,7 +9,7 @@
   --rust-ink: #9a3a1c;
   --amber-deep: #7a5200;
   --line: rgba(27, 37, 33, 0.18);
-  --muted: #657069;
+  --muted: #5a625b;
   --serif: var(--font-serif), "Newsreader", Georgia, serif;
   --sans: var(--font-sans), "Manrope", Arial, sans-serif;
   --mono: var(--font-mono), "DM Mono", monospace;
@@ -98,13 +98,14 @@ blockquote { font-size: 36px; line-height: 1.05; letter-spacing: -.025em; margin
 .metrics p { margin: 6px 0 0; font: 10px var(--mono); text-transform: uppercase; color: #46514b; letter-spacing: .07em; }
 
 .section { padding-block: 120px; }
-.section-heading { display: flex; align-items: end; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
+.section-heading { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
 h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weight: 500; letter-spacing: -.045em; }
 .section-note { max-width: 330px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0; }
 .filter { border: 1px solid var(--line); background: transparent; border-radius: 100px; padding: 9px 16px; min-height: 44px; display: inline-flex; align-items: center; cursor: pointer; font-size: 11px; color: var(--muted); }
 .filter.active, .filter:hover { color: white; border-color: var(--forest); background: var(--forest); }
 .empty-note { padding: 28px 0; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+.findings-count { margin: 26px 0 16px; font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 .findings-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .finding { min-height: 470px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; background: rgba(255,255,255,.12); transition: opacity .2s; }
 .finding.hidden { display: none; }
@@ -126,20 +127,29 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .finding.dark .lever { color: #c7d2cc; }
 .finding-number { margin: 38px 0 12px; font: 10px var(--mono); color: var(--muted); }
 .dark .finding-number { color: #b8c7c0; }
+/* Muted on the sage feature ground is only ~2.6:1; use the dark summary ink. */
+.finding.feature .finding-number { color: #37423b; }
 .finding h3 { margin: 0; font-size: 42px; line-height: 1; font-weight: 500; letter-spacing: -.03em; }
 .finding-summary { max-width: 470px; color: #37423b; font-size: 14px; line-height: 1.65; }
 .dark .finding-summary { color: #b8c7c0; }
-.stat-line { display: flex; align-items: end; gap: 15px; margin-top: auto; padding-top: 28px; }
+.stat-line { display: flex; align-items: flex-end; gap: 15px; margin-top: auto; padding-top: 28px; }
 .stat-line strong { font: 500 43px var(--serif); color: var(--ink); }
 .feature .stat-line strong { color: var(--forest); }
-.finding.feature .stat-line span { opacity: 1; color: #37423b; }
+.finding.feature .stat-line span { color: #37423b; }
 .dark .stat-line strong { color: var(--lime); }
-.stat-line span { font-size: 10px; line-height: 1.35; text-transform: uppercase; letter-spacing: .06em; opacity: .68; padding-bottom: 6px; }
-.detail-toggle { margin-top: 24px; padding: 14px 0 0; min-height: 44px; border: 0; border-top: 1px solid currentColor; background: none; color: inherit; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; opacity: .75; }
+.dark .stat-line span { color: #c7d2cc; }
+/* Was opacity:.68 over light grounds, which dropped this 10px label below AA.
+   An explicit dark value passes on the default/muted card grounds. */
+.stat-line span { font-size: 10px; line-height: 1.35; text-transform: uppercase; letter-spacing: .06em; color: #4f5b55; padding-bottom: 6px; }
+.detail-toggle { margin-top: 24px; padding: 14px 0 0; min-height: 44px; border: 0; border-top: 1px solid var(--line); background: none; color: #4f5b55; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.dark .detail-toggle { color: #c7d2cc; border-top-color: rgba(255,255,255,.2); }
+.finding.feature .detail-toggle { color: #37423b; }
 .detail-toggle span { font-size: 18px; line-height: 10px; }
 .finding-detail { display: none; padding-top: 14px; font-size: 12px; line-height: 1.55; }
 .finding-detail p { margin: 0 0 8px; }
-.finding-detail small { opacity: .65; }
+.finding-detail small { color: #4f5b55; }
+.dark .finding-detail small { color: #c7d2cc; }
+.finding.feature .finding-detail small { color: #37423b; }
 .finding.open .finding-detail { display: block; }
 .finding.open .detail-toggle span { transform: rotate(45deg); }
 
@@ -152,9 +162,12 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .tier-row strong { color: var(--lime); font: 500 28px var(--serif); }
 .tier-row span { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 .tier-row p { margin: 0; color: #c7d2cc; font-size: 13px; line-height: 1.5; }
-.tier-row.dim { opacity: .55; }
+/* Was opacity:.55 on the whole row, which dropped the 13px description to ~2.1:1.
+   De-emphasize T3/T4 via a quieter numeral color only; all text stays full-contrast. */
+.tier-row.dim strong { color: #b9c4ba; }
 
 .status-heading { margin-bottom: 38px; }
+.status-cta { margin-top: 40px; }
 .progress-track { height: 6px; background: var(--paper-deep); margin-bottom: 40px; }
 .progress-track span { height: 100%; display: block; background: var(--forest); }
 .lever-row { min-height: 76px; display: grid; grid-template-columns: 80px 1.5fr 1fr 100px; align-items: center; border-top: 1px solid var(--line); color: var(--muted); }
@@ -169,9 +182,9 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 
 .questions { padding: 0 0 120px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; }
 .questions h2 { font-size: 53px; }
-.question-list { border-top: 1px solid var(--line); }
-.question-list p { margin: 0; padding: 24px 0; border-bottom: 1px solid var(--line); line-height: 1.5; display: grid; grid-template-columns: 45px 1fr; }
-.question-list span { font: 10px var(--mono); color: var(--muted); padding-top: 4px; }
+.question-list { border-top: 1px solid var(--line); list-style: none; margin: 0; padding-left: 0; }
+.question-list li { margin: 0; padding: 24px 0; border-bottom: 1px solid var(--line); line-height: 1.5; display: grid; grid-template-columns: 45px 1fr; }
+.question-list li span { font: 10px var(--mono); color: var(--muted); padding-top: 4px; }
 
 footer { background: #101d18; color: white; padding: 45px 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; }

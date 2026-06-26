@@ -9,7 +9,7 @@ colors:
   paper: "#f3f0e7"
   paper-deep: "#e9e4d8"
   ink: "#1b2521"
-  muted: "#657069"
+  muted: "#5a625b"
   line: "#1b25212e"
 typography:
   display:
@@ -154,7 +154,8 @@ accent, lime is reserved for highlights on dark ground.
 - **Paper Deep** (#e9e4d8): One step down for tonal layering: the metrics band, muted findings,
   inline code backgrounds, default status badges.
 - **Ink** (#1b2521): Primary text. A near-black tinted toward forest, never pure #000.
-- **Muted** (#657069): Secondary text, mono labels, section notes, nav links at rest.
+- **Muted** (#5a625b): Secondary text, mono labels, section notes, nav links at rest. Tuned
+  to clear WCAG AA (4.5:1) against both paper and the paper-deep tonal step.
 - **Line** (rgba(27,37,33,0.18)): The hairline. Every divider, grid line, and border.
 
 ### Named Rules

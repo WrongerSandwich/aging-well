@@ -7,6 +7,17 @@ import FindingCard from "./FindingCard";
 export default function Findings() {
   const [active, setActive] = useState<Filter["value"]>("all");
 
+  const total = findings.length;
+  const leverCount = new Set(findings.map((f) => f.category)).size;
+  const shown =
+    active === "all"
+      ? total
+      : findings.filter((f) => f.category === active).length;
+  const countLabel =
+    active === "all"
+      ? `${total} takeaways across ${leverCount} levers`
+      : `${shown} ${shown === 1 ? "takeaway" : "takeaways"} in this lever`;
+
   return (
     <section className="section shell" id="takeaways">
       <div className="section-heading">
@@ -33,10 +44,15 @@ export default function Findings() {
         ))}
       </div>
 
+      <p className="findings-count" aria-live="polite">{countLabel}</p>
+
       <div className="findings-grid">
         {findings.map((finding) => (
           <FindingCard
-            key={finding.number}
+            // Keying on the active filter remounts cards on a filter change, so
+            // an open "View evidence" disclosure resets instead of leaving a
+            // half-empty card stretched in a filtered row.
+            key={`${active}:${finding.number}`}
             finding={finding}
             hidden={active !== "all" && finding.category !== active}
           />
