@@ -7,7 +7,7 @@ import { NavLinks } from "./nav-links";
 // JS, but when JS is present we add the dismissal contract users expect from a
 // menu, close on link follow, Escape, and any click outside. Escape returns
 // focus to the trigger so keyboard users aren't stranded.
-export default function MobileNav({ snapshot }: { snapshot: string }) {
+export default function MobileNav({ updated }: { updated: string }) {
   const ref = useRef<HTMLDetailsElement>(null);
 
   function close({ refocus = false } = {}) {
@@ -39,7 +39,7 @@ export default function MobileNav({ snapshot }: { snapshot: string }) {
       <summary aria-label="Open navigation menu">Menu</summary>
       <nav aria-label="Primary navigation">
         <NavLinks onNavigate={() => close()} />
-        <span className="mobile-nav-snapshot">{snapshot}</span>
+        <span className="mobile-nav-snapshot">{updated}</span>
       </nav>
     </details>
   );

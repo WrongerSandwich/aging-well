@@ -59,14 +59,14 @@ describe("MobileNav dismissal", () => {
   }
 
   it("closes when a nav link is followed", async () => {
-    const { container } = render(<MobileNav snapshot="Snapshot · Jun 24, 2026" />);
+    const { container } = render(<MobileNav updated="Updated · Jun 2026" />);
     const details = open(container);
     await userEvent.click(screen.getByRole("link", { name: "Sources" }));
     expect(details.open).toBe(false);
   });
 
   it("closes on Escape and returns focus to the trigger", () => {
-    const { container } = render(<MobileNav snapshot="Snapshot · Jun 24, 2026" />);
+    const { container } = render(<MobileNav updated="Updated · Jun 2026" />);
     const details = open(container);
     fireEvent.keyDown(document, { key: "Escape" });
     expect(details.open).toBe(false);
@@ -74,14 +74,14 @@ describe("MobileNav dismissal", () => {
   });
 
   it("closes when clicking outside the menu", () => {
-    const { container } = render(<MobileNav snapshot="Snapshot · Jun 24, 2026" />);
+    const { container } = render(<MobileNav updated="Updated · Jun 2026" />);
     const details = open(container);
     fireEvent.pointerDown(document.body);
     expect(details.open).toBe(false);
   });
 
   it("carries the relocated snapshot inside the panel", () => {
-    render(<MobileNav snapshot="Snapshot · Jun 24, 2026" />);
-    expect(screen.getByText("Snapshot · Jun 24, 2026")).toBeInTheDocument();
+    render(<MobileNav updated="Updated · Jun 2026" />);
+    expect(screen.getByText("Updated · Jun 2026")).toBeInTheDocument();
   });
 });
