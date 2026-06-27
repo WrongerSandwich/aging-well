@@ -439,4 +439,3 @@ a.citation:hover { text-decoration: underline; }
 .oq-item.resolved .oq-question { text-decoration: line-through; opacity: 0.55; }
 .oq-question { margin: 0 0 0.2rem; font-weight: 600; }
 .oq-guess { margin: 0.2rem 0; font-size: 0.85rem; color: var(--muted); }
-.done-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--forest); }

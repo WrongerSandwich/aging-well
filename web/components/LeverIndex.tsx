@@ -43,9 +43,11 @@ export default function LeverIndex({ levers }: { levers: LeverDetail[] }) {
               </p>
             </div>
             <aside className="lever-index-aside">
-              <span className={`lever-status status-${lever.status}`}>
-                {STATUS_LABEL[lever.status] ?? lever.status}
-              </span>
+              {lever.status !== "complete" && (
+                <span className={`lever-status status-${lever.status}`}>
+                  {STATUS_LABEL[lever.status] ?? lever.status}
+                </span>
+              )}
               <Link className="lever-index-link" href={`/levers/${lever.slug}`}>
                 View research →
               </Link>

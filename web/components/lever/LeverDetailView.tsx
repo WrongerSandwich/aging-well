@@ -30,9 +30,11 @@ export default function LeverDetailView({
       <header className="lever-header">
         <p className="eyebrow">Research lever</p>
         <h1>{lever.name}</h1>
-        <span className={`lever-status status-${lever.status}`}>
-          {STATUS_LABEL[lever.status] ?? lever.status}
-        </span>
+        {lever.status !== "complete" && (
+          <span className={`lever-status status-${lever.status}`}>
+            {STATUS_LABEL[lever.status] ?? lever.status}
+          </span>
+        )}
       </header>
 
       <ProseSection title="Scope" body={lever.scope} />

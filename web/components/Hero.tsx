@@ -1,12 +1,13 @@
-import { heroEyebrow } from "@/lib/content";
+import { derived } from "@/lib/derived";
+import { synthesis } from "@/lib/synthesis";
 
 export default function Hero() {
+  // Scope as substance, derived so it can't go stale — not a project-status line.
+  const eyebrow = `${derived.totals.leversTotal} levers · ${synthesis.rankedActions.rows.length} ranked actions`;
   return (
     <section className="hero shell">
       <div className="hero-copy">
-        <p className="eyebrow">
-          <span className="done-dot" aria-hidden="true"></span> {heroEyebrow}
-        </p>
+        <p className="eyebrow">{eyebrow}</p>
         <h1>
           Protect what<br />
           <em>doesn't come back.</em>

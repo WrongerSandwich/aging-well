@@ -1,5 +1,3 @@
-export const heroEyebrow = "Research complete · 8 levers";
-
 export interface Tier {
   id: string;
   verdict: string;
