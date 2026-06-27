@@ -17,14 +17,18 @@ export default function Findings() {
           <h2>The signal, so far.</h2>
         </div>
         <p className="section-note">
-          The whole review in plain language. Each line condenses several of the{" "}
-          {rows.length} actions that are scored and sorted on the ranking.
+          Each line condenses several of the {rows.length} actions scored and
+          sorted on the ranking.
         </p>
       </div>
 
       <div className="takeaways-summary">
         <PlainLanguageList items={plainLanguage} />
       </div>
+
+      <p className="takeaways-caveat">
+        General guidance from the evidence, not medical advice.
+      </p>
 
       <Link className="primary-link status-cta" href="/actions">
         See all {rows.length} ranked actions <span>→</span>
