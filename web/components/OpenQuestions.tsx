@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { synthesis } from "@/lib/synthesis";
 
+// One unresolved question from each of the first three distinct lever-groups, so
+// the teaser shows the breadth of what's unresolved. Slicing the first three
+// unresolved questions instead gave three from whichever lever leads the data
+// (all Cannabis), which made a corpus-wide humility beat read as one niche debate.
 export default function OpenQuestions() {
-  const unresolved = synthesis.openQuestions.groups
-    .flatMap((g) => g.questions)
-    .filter((q) => !q.resolved)
+  const picks = synthesis.openQuestions.groups
+    .flatMap((g) => {
+      const q = g.questions.find((x) => !x.resolved);
+      return q ? [q] : [];
+    })
     .slice(0, 3);
   return (
     <section className="questions shell">
@@ -16,9 +22,9 @@ export default function OpenQuestions() {
         </Link>
       </div>
       <ul className="question-list">
-        {unresolved.map((q, i) => (
+        {picks.map((q, i) => (
           <li key={i}>
-            <span>{String(i + 1).padStart(2, "0")}</span>
+            <span aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
             {q.question}
           </li>
         ))}

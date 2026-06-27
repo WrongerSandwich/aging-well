@@ -7,12 +7,14 @@ describe("OpenQuestions (home teaser)", () => {
     render(<OpenQuestions />);
     expect(screen.getByText(/Uncertainty stays visible/i)).toBeInTheDocument();
   });
-  it("shows at most three unresolved questions and links to the full page", () => {
+  it("shows three questions drawn from distinct levers, not a lever-skewed run", () => {
     render(<OpenQuestions />);
-    expect(screen.getAllByRole("listitem").length).toBeLessThanOrEqual(3);
-    expect(screen.getByRole("link", { name: /all open questions/i })).toHaveAttribute(
-      "href",
-      "/open-questions",
-    );
+    expect(screen.getAllByRole("listitem")).toHaveLength(3);
+  });
+  it("links to the full open-questions page", () => {
+    render(<OpenQuestions />);
+    expect(
+      screen.getByRole("link", { name: /all open questions/i }),
+    ).toHaveAttribute("href", "/open-questions");
   });
 });

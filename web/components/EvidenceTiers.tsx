@@ -7,7 +7,7 @@ export default function EvidenceTiers() {
         <div className="evidence-intro">
           <p className="eyebrow light">How to read this</p>
           <h2>
-            Evidence is not<br />a level playing field.
+            Evidence is not{" "}<br />a level playing field.
           </h2>
           <p>
             Every claim is tagged. Mechanism and hype can inform questions, but they do not

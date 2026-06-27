@@ -9,14 +9,14 @@ export default function Hero() {
       <div className="hero-copy">
         <p className="eyebrow">{eyebrow}</p>
         <h1>
-          Protect what<br />
+          Protect what{" "}<br />
           <em>doesn't come back.</em>
         </h1>
         <p className="hero-intro">
           An evidence-tiered review of the few actions that matter most for aging well.
           Built around hard outcomes, irreversibility, and a bias toward doing, not optimizing.
         </p>
-        <a className="primary-link" href="#takeaways">
+        <a className="jump-link" href="#takeaways">
           See current takeaways <span>↓</span>
         </a>
       </div>
