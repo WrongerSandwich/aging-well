@@ -1,5 +1,5 @@
 import { detail } from "@/lib/detail";
-import { statusRows } from "@/lib/content";
+import { LEVER_ORDER } from "@/lib/levers";
 import type { LeverDetail } from "@/lib/sync/parse";
 import LeverIndex from "@/components/LeverIndex";
 
@@ -10,11 +10,11 @@ export const metadata = {
 };
 
 export default function LeversPage() {
-  // statusRows holds the canonical descending-leverage order (and is the same
-  // order the home status list uses); resolve each to its full detail record.
-  const levers = statusRows
-    .map((row) => (row.slug ? detail.levers[row.slug] : undefined))
-    .filter((lever): lever is LeverDetail => Boolean(lever));
+  // LEVER_ORDER is the canonical descending-leverage order from the registry;
+  // resolve each slug to its full detail record.
+  const levers = LEVER_ORDER.map((slug) => detail.levers[slug]).filter(
+    (lever): lever is LeverDetail => Boolean(lever),
+  );
 
   return (
     <main className="levers-page shell" id="top" tabIndex={-1}>

@@ -79,7 +79,7 @@ export default function ActionsPage() {
           live in the repository (<code>synthesis/personalize.md</code>); your overlay stays
           local and is never published.
         </p>
-        <Link className="primary-link" href="/#status">← Back to overview</Link>
+        <Link className="primary-link" href="/">← Back to overview</Link>
       </section>
     </main>
   );
