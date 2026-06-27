@@ -2,6 +2,7 @@ import Link from "next/link";
 import { derived } from "@/lib/derived";
 import { detail } from "@/lib/detail";
 import { statusRows, type StatusRow } from "@/lib/content";
+import { leverName } from "@/lib/levers";
 
 const STATUS_LABEL: Record<string, string> = {
   complete: "Complete",
@@ -50,15 +51,16 @@ export default function StatusSection() {
                 : "Not yet researched");
           const statusLabel =
             row.statusLabel ?? (lever ? STATUS_LABEL[lever.status] : "Pending");
+          const name = row.slug ? leverName(row.slug) : row.label;
           return (
             <div key={row.index} className={rowClass(row, lever?.status)}>
               <span>{row.index}</span>
               {row.slug && (detail.levers[row.slug]?.claims.length ?? 0) > 0 ? (
                 <strong>
-                  <Link href={`/levers/${row.slug}`}>{row.label}</Link>
+                  <Link href={`/levers/${row.slug}`}>{name}</Link>
                 </strong>
               ) : (
-                <strong>{row.label}</strong>
+                <strong>{name}</strong>
               )}
               <em>{note}</em>
               <b>{statusLabel}</b>

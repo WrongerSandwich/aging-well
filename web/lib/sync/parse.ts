@@ -1,3 +1,8 @@
+import { leverName, leverSlug } from "../levers";
+
+// Re-exported so existing importers (sync, tests) keep their import site.
+export { leverName, leverSlug } from "../levers";
+
 export type LeverStatus = "complete" | "in-progress" | "pending";
 
 export interface LeverData {
@@ -185,31 +190,6 @@ export function parseLeverDetail(slug: string, md: string): LeverDetail {
   };
 }
 
-const LEVER_SLUG_MAP: Record<string, string> = {
-  substances: "substances",
-  exercise: "exercise",
-  sleep: "sleep",
-  nutrition: "nutrition-metabolic",
-  "nutrition-metabolic": "nutrition-metabolic",
-  medical: "medical-screening",
-  "medical-screening": "medical-screening",
-  sun: "sun-skin",
-  "sun-skin": "sun-skin",
-  stress: "stress-social",
-  "stress-social": "stress-social",
-  oral: "oral-sensory",
-  "oral-sensory": "oral-sensory",
-};
-
-export function leverSlug(display: string): string {
-  const key = display
-    .toLowerCase()
-    .replace(/&/g, "")
-    .replace(/[\s/]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-  return LEVER_SLUG_MAP[key] ?? key;
-}
-
 export type MatrixCell = "strong" | "moderate" | "minor" | "none";
 export interface MatrixRow {
   lever: string;
@@ -239,10 +219,11 @@ export function parseMatrix(md: string): LeverSystemMatrix {
   const rows: MatrixRow[] = [];
   for (const line of tableRows.slice(2)) {
     const cells = line.split("|").map((c) => c.trim());
-    const lever = cells[1];
-    if (!lever) continue;
+    const rawLever = cells[1];
+    if (!rawLever) continue;
+    const slug = leverSlug(rawLever);
     const cellValues = cells.slice(2, 2 + header.length).map((c) => GLYPH[c] ?? "none");
-    rows.push({ lever, slug: leverSlug(lever), cells: cellValues });
+    rows.push({ lever: leverName(slug), slug, cells: cellValues });
   }
   return { systems: header, rows };
 }
@@ -293,12 +274,12 @@ export function parseRankedActions(md: string): RankedActions {
       .replace(/\(conditional[^)]*\)/gi, "")
       .replace(/\s{2,}/g, " ")
       .trim();
-    const lever = cells[3];
+    const slug = leverSlug(cells[3]);
     rows.push({
       rank: Number(cells[1]),
       action,
-      lever,
-      slug: leverSlug(lever),
+      lever: leverName(slug),
+      slug,
       impact: Number(cells[4]),
       certainty: Number(cells[5]),
       rev: Number(cells[6]),
@@ -348,27 +329,30 @@ export interface OpenQuestion {
 }
 export interface OpenQuestionGroup {
   lever: string;
+  slug: string;
   questions: OpenQuestion[];
 }
 export interface OpenQuestions {
   groups: OpenQuestionGroup[];
 }
 
+// Maps an open-question's leading keyword to a canonical lever slug; the display
+// name is resolved from the registry at emit time so it can never drift.
 const OQ_KEYWORDS: [RegExp, string][] = [
-  [/vaping|nicotine|cannabis|alcohol|smokeless|tobacco|substance/i, "Substances"],
-  [/exercise|resistance|strength|balance|sarcopenia|crf/i, "Exercise"],
-  [/sleep|insomnia|cbt-i|osa|apnea/i, "Sleep"],
-  [/nutrition|diet|protein|sodium|fiber|weight|predimed|mediterranean/i, "Nutrition"],
-  [/medical|statin|screening|galleri|vaccine|polypharmacy|mced|covid/i, "Medical"],
-  [/oral|sensory|hearing|vision|cataract|dental|dementia paf/i, "Oral-sensory"],
-  [/stress|social|loneliness|purpose|optimism|cortisol|well-being/i, "Stress-social"],
-  [/sun|skin|melanoma|sunscreen|\buv\b|photoaging/i, "Sun-skin"],
+  [/vaping|nicotine|cannabis|alcohol|smokeless|tobacco|substance/i, "substances"],
+  [/exercise|resistance|strength|balance|sarcopenia|crf/i, "exercise"],
+  [/sleep|insomnia|cbt-i|osa|apnea/i, "sleep"],
+  [/nutrition|diet|protein|sodium|fiber|weight|predimed|mediterranean/i, "nutrition-metabolic"],
+  [/medical|statin|screening|galleri|vaccine|polypharmacy|mced|covid/i, "medical-screening"],
+  [/oral|sensory|hearing|vision|cataract|dental|dementia paf/i, "oral-sensory"],
+  [/stress|social|loneliness|purpose|optimism|cortisol|well-being/i, "stress-social"],
+  [/sun|skin|melanoma|sunscreen|\buv\b|photoaging/i, "sun-skin"],
 ];
 
 function oqGroupFor(question: string): string {
   const prefix = question.split(":")[0];
-  for (const [re, name] of OQ_KEYWORDS) if (re.test(prefix)) return name;
-  return "General";
+  for (const [re, slug] of OQ_KEYWORDS) if (re.test(prefix)) return slug;
+  return "general";
 }
 
 export function parseOpenQuestions(md: string): OpenQuestions {
@@ -383,12 +367,12 @@ export function parseOpenQuestions(md: string): OpenQuestions {
     if (!q || /^Question$/i.test(q) || /^[-:]+$/.test(q) || /^Claim$/i.test(q)) continue;
     const resolved = q.includes("~~") || /RESOLVED/i.test(q);
     const question = stripMarkdown(q.replace(/~~/g, ""));
-    const lever = oqGroupFor(question);
-    if (!byLever[lever]) {
-      byLever[lever] = [];
-      order.push(lever);
+    const slug = oqGroupFor(question);
+    if (!byLever[slug]) {
+      byLever[slug] = [];
+      order.push(slug);
     }
-    byLever[lever].push({
+    byLever[slug].push({
       question,
       resolved,
       whyUnresolved: stripMarkdown(cells[2]),
@@ -397,5 +381,11 @@ export function parseOpenQuestions(md: string): OpenQuestions {
       revisitWhen: stripMarkdown(cells[5]),
     });
   }
-  return { groups: order.map((lever) => ({ lever, questions: byLever[lever] })) };
+  return {
+    groups: order.map((slug) => ({
+      lever: leverName(slug),
+      slug,
+      questions: byLever[slug],
+    })),
+  };
 }

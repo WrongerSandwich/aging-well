@@ -14,24 +14,26 @@ export const tiers: Tier[] = [
 ];
 
 // Status rows. Rows with `slug` pull live status + claim counts from derived.json
-// at render time (StatusSection). Rows without a slug are editorial/grouped.
+// and their display name from the lever registry (StatusSection). `label` is only
+// for editorial slug-less rows; slugged rows never hard-code a name, so it can't
+// drift from the canonical spelling.
 export interface StatusRow {
   index: string;
-  label: string;
   slug?: string;
+  label?: string;       // only for editorial rows without a slug
   note?: string;        // override note; if absent and slug present, "<claims> claims" is shown
   statusLabel?: string; // override; if absent and slug present, derived status drives it
   active?: boolean;     // highlights the row (lever-row active-row)
 }
 export const statusRows: StatusRow[] = [
-  { index: "01", label: "Substances", slug: "substances" },
-  { index: "02", label: "Exercise", slug: "exercise" },
-  { index: "03", label: "Sleep", slug: "sleep" },
-  { index: "04", label: "Nutrition & metabolic", slug: "nutrition-metabolic" },
-  { index: "05", label: "Medical & screening", slug: "medical-screening" },
-  { index: "06", label: "Oral & sensory", slug: "oral-sensory" },
-  { index: "07", label: "Sun & skin", slug: "sun-skin" },
-  { index: "08", label: "Stress & social", slug: "stress-social" },
+  { index: "01", slug: "substances" },
+  { index: "02", slug: "exercise" },
+  { index: "03", slug: "sleep" },
+  { index: "04", slug: "nutrition-metabolic" },
+  { index: "05", slug: "medical-screening" },
+  { index: "06", slug: "oral-sensory" },
+  { index: "07", slug: "sun-skin" },
+  { index: "08", slug: "stress-social" },
 ];
 
 // The two right-hand metric cards are static; the two count cards are derived.

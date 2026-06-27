@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T01:05:01.733Z",
+  "generatedAt": "2026-06-27T01:14:10.987Z",
   "rankedActions": {
     "rows": [
       {
@@ -27,7 +27,7 @@
       {
         "rank": 3,
         "action": "Treat high blood pressure to target",
-        "lever": "Medical",
+        "lever": "Medical & Screening",
         "slug": "medical-screening",
         "impact": 5,
         "certainty": 5,
@@ -71,7 +71,7 @@
       {
         "rank": 7,
         "action": "Statins if elevated CVD risk",
-        "lever": "Medical",
+        "lever": "Medical & Screening",
         "slug": "medical-screening",
         "impact": 4,
         "certainty": 5,
@@ -82,7 +82,7 @@
       {
         "rank": 8,
         "action": "Colorectal cancer screening (from ~45–50)",
-        "lever": "Medical",
+        "lever": "Medical & Screening",
         "slug": "medical-screening",
         "impact": 4,
         "certainty": 5,
@@ -93,7 +93,7 @@
       {
         "rank": 9,
         "action": "Don't sunburn / never use tanning beds",
-        "lever": "Sun-skin",
+        "lever": "Sun & Skin",
         "slug": "sun-skin",
         "impact": 3,
         "certainty": 5,
@@ -104,7 +104,7 @@
       {
         "rank": 10,
         "action": "Get recommended adult vaccines (Shingrix, RSV, flu, COVID, pneumococcal)",
-        "lever": "Medical",
+        "lever": "Medical & Screening",
         "slug": "medical-screening",
         "impact": 3,
         "certainty": 5,
@@ -115,7 +115,7 @@
       {
         "rank": 11,
         "action": "Cervical cancer screening (if applicable)",
-        "lever": "Medical",
+        "lever": "Medical & Screening",
         "slug": "medical-screening",
         "impact": 3,
         "certainty": 5,
@@ -137,7 +137,7 @@
       {
         "rank": 13,
         "action": "Lung-cancer screening (LDCT)",
-        "lever": "Medical",
+        "lever": "Medical & Screening",
         "slug": "medical-screening",
         "impact": 3,
         "certainty": 4,
@@ -148,7 +148,7 @@
       {
         "rank": 14,
         "action": "Protect hearing + treat hearing loss early with aids",
-        "lever": "Oral-sensory",
+        "lever": "Oral & Sensory",
         "slug": "oral-sensory",
         "impact": 3,
         "certainty": 4,
@@ -159,7 +159,7 @@
       {
         "rank": 15,
         "action": "Correct vision / cataract surgery when it impairs you",
-        "lever": "Oral-sensory",
+        "lever": "Oral & Sensory",
         "slug": "oral-sensory",
         "impact": 3,
         "certainty": 4,
@@ -170,7 +170,7 @@
       {
         "rank": 16,
         "action": "Avoid ultra-processed food & sugary drinks",
-        "lever": "Nutrition",
+        "lever": "Nutrition & Metabolic",
         "slug": "nutrition-metabolic",
         "impact": 4,
         "certainty": 4,
@@ -181,7 +181,7 @@
       {
         "rank": 17,
         "action": "Avoid excess adiposity (don't become obese)",
-        "lever": "Nutrition",
+        "lever": "Nutrition & Metabolic",
         "slug": "nutrition-metabolic",
         "impact": 4,
         "certainty": 4,
@@ -203,7 +203,7 @@
       {
         "rank": 19,
         "action": "DASH-style diet / lower sodium (for BP)",
-        "lever": "Nutrition",
+        "lever": "Nutrition & Metabolic",
         "slug": "nutrition-metabolic",
         "impact": 3,
         "certainty": 5,
@@ -225,7 +225,7 @@
       {
         "rank": 21,
         "action": "Daily broad-spectrum sunscreen",
-        "lever": "Sun-skin",
+        "lever": "Sun & Skin",
         "slug": "sun-skin",
         "impact": 2,
         "certainty": 4,
@@ -236,7 +236,7 @@
       {
         "rank": 22,
         "action": "Adequate protein (preserve muscle, esp. older)",
-        "lever": "Nutrition",
+        "lever": "Nutrition & Metabolic",
         "slug": "nutrition-metabolic",
         "impact": 3,
         "certainty": 3,
@@ -247,7 +247,7 @@
       {
         "rank": 23,
         "action": "Cultivate a sense of purpose",
-        "lever": "Stress-social",
+        "lever": "Stress & Social",
         "slug": "stress-social",
         "impact": 3,
         "certainty": 3,
@@ -258,7 +258,7 @@
       {
         "rank": 24,
         "action": "Keep functional teeth (hygiene + regular dental care)",
-        "lever": "Oral-sensory",
+        "lever": "Oral & Sensory",
         "slug": "oral-sensory",
         "impact": 2,
         "certainty": 3,
@@ -269,7 +269,7 @@
       {
         "rank": 25,
         "action": "Limit processed / red meat",
-        "lever": "Nutrition",
+        "lever": "Nutrition & Metabolic",
         "slug": "nutrition-metabolic",
         "impact": 2,
         "certainty": 4,
@@ -302,7 +302,7 @@
       {
         "rank": 28,
         "action": "Maintain quality social connections",
-        "lever": "Stress-social",
+        "lever": "Stress & Social",
         "slug": "stress-social",
         "impact": 3,
         "certainty": 2,
@@ -313,7 +313,7 @@
       {
         "rank": 29,
         "action": "Manage chronic stress (for well-being)",
-        "lever": "Stress-social",
+        "lever": "Stress & Social",
         "slug": "stress-social",
         "impact": 2,
         "certainty": 2,
@@ -425,7 +425,7 @@
         ]
       },
       {
-        "lever": "Nutrition/Metabolic",
+        "lever": "Nutrition & Metabolic",
         "slug": "nutrition-metabolic",
         "cells": [
           "strong",
@@ -439,7 +439,7 @@
         ]
       },
       {
-        "lever": "Medical/Screening",
+        "lever": "Medical & Screening",
         "slug": "medical-screening",
         "cells": [
           "strong",
@@ -453,7 +453,7 @@
         ]
       },
       {
-        "lever": "Sun/Skin",
+        "lever": "Sun & Skin",
         "slug": "sun-skin",
         "cells": [
           "none",
@@ -467,7 +467,7 @@
         ]
       },
       {
-        "lever": "Stress/Social",
+        "lever": "Stress & Social",
         "slug": "stress-social",
         "cells": [
           "minor",
@@ -481,7 +481,7 @@
         ]
       },
       {
-        "lever": "Oral/Sensory",
+        "lever": "Oral & Sensory",
         "slug": "oral-sensory",
         "cells": [
           "none",
@@ -500,6 +500,7 @@
     "groups": [
       {
         "lever": "Substances",
+        "slug": "substances",
         "questions": [
           {
             "question": "Nicotine vaping: risk vs never-use and vs continued smoking? RESOLVED to T2 (patch 2026-06-18)",
@@ -561,6 +562,7 @@
       },
       {
         "lever": "Exercise",
+        "slug": "exercise",
         "questions": [
           {
             "question": "Exercise: do resistance/balance TRAINING interventions move falls, fracture, BMD? RESOLVED to T1 (RCT) — targeted patch 2026-06-18",
@@ -606,6 +608,7 @@
       },
       {
         "lever": "Sleep",
+        "slug": "sleep",
         "questions": [
           {
             "question": "Sleep: reversibility tiers (FAST/SLOW/IRREVERSIBLE) — acute-debt recovery, sleep-banking, weekend catch-up, chronic-restriction normalization?",
@@ -642,7 +645,8 @@
         ]
       },
       {
-        "lever": "Nutrition",
+        "lever": "Nutrition & Metabolic",
+        "slug": "nutrition-metabolic",
         "questions": [
           {
             "question": "Nutrition: PREDIMED (the Mediterranean-diet RCT) specific numbers?",
@@ -687,7 +691,8 @@
         ]
       },
       {
-        "lever": "Medical",
+        "lever": "Medical & Screening",
+        "slug": "medical-screening",
         "questions": [
           {
             "question": "Medical: COVID-19 vaccine mortality benefit (project-tier verified)?",
@@ -724,7 +729,8 @@
         ]
       },
       {
-        "lever": "Oral-sensory",
+        "lever": "Oral & Sensory",
+        "slug": "oral-sensory",
         "questions": [
           {
             "question": "Oral-sensory: no RCT of cataract surgery / refractive correction on dementia/falls/mortality",
@@ -761,7 +767,8 @@
         ]
       },
       {
-        "lever": "Stress-social",
+        "lever": "Stress & Social",
+        "slug": "stress-social",
         "questions": [
           {
             "question": "Stress-social: has ANY RCT/quasi-experiment powered for a HARD endpoint (mortality, incident CVD/dementia) of a social/loneliness intervention been run?",
@@ -862,7 +869,8 @@
         ]
       },
       {
-        "lever": "Sun-skin",
+        "lever": "Sun & Skin",
+        "slug": "sun-skin",
         "questions": [
           {
             "question": "Sun-skin (photoaging): what fraction of extrinsic facial aging is truly UV-attributable, and how reversible?",
