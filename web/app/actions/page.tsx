@@ -43,6 +43,10 @@ export default function ActionsPage() {
             <dd>Impact × Certainty × Rev, so the ceiling is 5 × 5 × 3 = 75.</dd>
           </div>
         </dl>
+        <p className="claims-note">
+          Each lever links through to that lever&rsquo;s &ldquo;act on these&rdquo;
+          evidence — the claims behind the score.
+        </p>
         <RankedTable rows={rankedActions.rows} />
       </section>
 

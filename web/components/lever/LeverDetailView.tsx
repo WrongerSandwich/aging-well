@@ -40,7 +40,7 @@ export default function LeverDetailView({
       ) : (
         <>
           {primary.length > 0 && (
-          <section className="claims-section">
+          <section className="claims-section" id="claims">
             <h2>Claims · act on these</h2>
             <p className="claims-note">
               T1–T2 evidence: large cohorts, RCTs, and meta-analyses with hard outcomes.

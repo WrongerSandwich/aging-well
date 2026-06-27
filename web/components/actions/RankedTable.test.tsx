@@ -17,8 +17,11 @@ describe("RankedTable", () => {
     render(<RankedTable rows={rows} />);
     expect(screen.getByText(/conditional/i)).toBeInTheDocument();
   });
-  it("links the lever to its detail page", () => {
+  it("links the lever to its act-on evidence (claims section), not the page top", () => {
     render(<RankedTable rows={rows} />);
-    expect(screen.getByRole("link", { name: /Substances/ })).toHaveAttribute("href", "/levers/substances");
+    expect(screen.getByRole("link", { name: /Substances/ })).toHaveAttribute(
+      "href",
+      "/levers/substances#claims",
+    );
   });
 });
