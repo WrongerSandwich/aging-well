@@ -21,7 +21,7 @@ export default function LeverDetailView({
 
   return (
     <main className="lever-page shell" id="top">
-      <Link className="lever-back" href="/#status">
+      <Link className="lever-back" href="/levers">
         ← All levers
       </Link>
 
