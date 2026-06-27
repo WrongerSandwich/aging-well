@@ -139,7 +139,7 @@ footer { background: #101d18; color: white; padding: 45px 0; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; }
 footer strong { font-family: var(--serif); font-size: 25px; }
 footer p { color: #91a098; font-size: 11px; margin: 6px 0 0; }
-footer a { font: 10px var(--mono); text-transform: uppercase; color: var(--lime); }
+footer a { font: 10px var(--mono); text-transform: uppercase; color: var(--lime); display: inline-flex; align-items: center; min-height: 24px; }
 
 @media (max-width: 850px) {
   .site-header { gap: 16px; }
@@ -339,7 +339,10 @@ a.citation:hover { text-decoration: underline; }
 .plain-list li { margin-bottom: 10px; line-height: 1.6; }
 
 .takeaways-summary { margin-top: 40px; }
-.takeaways-summary .plain-list { font-size: 17px; }
+/* The home teaser keeps ordered-list semantics (the lines are priority-ordered)
+   but drops the visible numbers, which read as a second canonical ranking
+   competing with /actions — the exact thing this teaser exists to avoid. */
+.takeaways-summary .plain-list { font-size: 17px; list-style: none; padding-left: 0; }
 .takeaways-summary .plain-list li { margin-bottom: 16px; }
 
 .personalize-callout { padding: 36px; background: var(--forest); color: #c7d2cc; margin-top: 72px; }

@@ -18,7 +18,7 @@ export default function OpenQuestions() {
       <ul className="question-list">
         {unresolved.map((q, i) => (
           <li key={i}>
-            <span>{String(i + 1).padStart(2, "0")}</span>
+            <span aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
             {q.question}
           </li>
         ))}

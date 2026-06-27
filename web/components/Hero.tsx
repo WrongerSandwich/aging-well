@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hero-copy">
         <p className="eyebrow">{eyebrow}</p>
         <h1>
-          Protect what<br />
+          Protect what{" "}<br />
           <em>doesn't come back.</em>
         </h1>
         <p className="hero-intro">
