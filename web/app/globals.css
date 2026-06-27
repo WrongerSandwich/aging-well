@@ -375,6 +375,10 @@ a.citation:hover { text-decoration: underline; }
 .plain-list { padding-left: 22px; max-width: 720px; }
 .plain-list li { margin-bottom: 10px; line-height: 1.6; }
 
+.takeaways-summary { margin-top: 40px; }
+.takeaways-summary .plain-list { font-size: 17px; }
+.takeaways-summary .plain-list li { margin-bottom: 16px; }
+
 .personalize-callout { padding: 36px; background: var(--forest); color: #c7d2cc; margin-top: 72px; }
 .personalize-callout h2 { color: white; }
 .personalize-callout p { max-width: 640px; line-height: 1.7; }

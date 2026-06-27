@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { synthesis } from "@/lib/synthesis";
 import RankedTable from "@/components/actions/RankedTable";
-import PlainLanguageList from "@/components/actions/PlainLanguageList";
 import DoNotBother from "@/components/actions/DoNotBother";
 import Matrix from "@/components/actions/Matrix";
 
@@ -23,11 +22,6 @@ export default function ActionsPage() {
           yourself.
         </p>
       </header>
-
-      <section className="actions-section">
-        <h2>In plain language</h2>
-        <PlainLanguageList items={rankedActions.plainLanguage} />
-      </section>
 
       <section className="actions-section">
         <h2>The ranking</h2>

@@ -1,23 +1,14 @@
-"use client";
+import Link from "next/link";
+import { synthesis } from "@/lib/synthesis";
+import PlainLanguageList from "@/components/actions/PlainLanguageList";
 
-import { useState } from "react";
-import { findings, findingsFilters, type Filter } from "@/lib/content";
-import FindingCard from "./FindingCard";
-
+// The home "takeaways" block is a teaser of the one canonical ranking, not a
+// second list: it renders the plain-language summary straight from synthesis
+// (the same source /actions reads) and links through to the full scored table.
+// There is deliberately no numbering here — a numbered list on the home page is
+// exactly what used to read as a competing ranking.
 export default function Findings() {
-  const [active, setActive] = useState<Filter["value"]>("all");
-
-  const total = findings.length;
-  const leverCount = new Set(findings.map((f) => f.category)).size;
-  const shown =
-    active === "all"
-      ? total
-      : findings.filter((f) => f.category === active).length;
-  const countLabel =
-    active === "all"
-      ? `${total} takeaways across ${leverCount} levers`
-      : `${shown} ${shown === 1 ? "takeaway" : "takeaways"} in this lever`;
-
+  const { plainLanguage, rows } = synthesis.rankedActions;
   return (
     <section className="section shell" id="takeaways">
       <div className="section-heading">
@@ -26,41 +17,18 @@ export default function Findings() {
           <h2>The signal, so far.</h2>
         </div>
         <p className="section-note">
-          Only actions supported by completed research sessions appear here.
+          The whole review in plain language. Each line condenses several of the{" "}
+          {rows.length} actions that are scored and sorted on the ranking.
         </p>
       </div>
 
-      <div className="filter-row" role="group" aria-label="Filter takeaways">
-        {findingsFilters.map((f) => (
-          <button
-            key={f.value}
-            className={f.value === active ? "filter active" : "filter"}
-            type="button"
-            data-filter={f.value}
-            onClick={() => setActive(f.value)}
-          >
-            {f.label}
-          </button>
-        ))}
+      <div className="takeaways-summary">
+        <PlainLanguageList items={plainLanguage} />
       </div>
 
-      <p className="findings-count" aria-live="polite">{countLabel}</p>
-
-      <div className="findings-grid">
-        {findings.map((finding) => (
-          <FindingCard
-            // Keying on the active filter remounts cards on a filter change, so
-            // an open "View evidence" disclosure resets instead of leaving a
-            // half-empty card stretched in a filtered row.
-            key={`${active}:${finding.number}`}
-            finding={finding}
-            hidden={active !== "all" && finding.category !== active}
-          />
-        ))}
-      </div>
-      {active !== "all" && !findings.some((f) => f.category === active) && (
-        <p className="empty-note">No completed findings for this lever yet.</p>
-      )}
+      <Link className="primary-link status-cta" href="/actions">
+        See all {rows.length} ranked actions <span>→</span>
+      </Link>
     </section>
   );
 }
