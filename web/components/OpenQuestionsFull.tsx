@@ -5,7 +5,7 @@ export default function OpenQuestionsFull({ groups }: { groups: OpenQuestionGrou
   return (
     <div className="oq-groups">
       {groups.map((g) => (
-        <section key={g.lever} className="oq-group">
+        <section key={g.slug} id={g.slug} className="oq-group">
           <h2>{g.lever}</h2>
           <ul className="oq-list">
             {g.questions.map((q, i) => (

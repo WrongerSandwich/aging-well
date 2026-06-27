@@ -12,9 +12,11 @@ const STATUS_LABEL: Record<string, string> = {
 export default function LeverDetailView({
   lever,
   sources,
+  openQuestionCount,
 }: {
   lever: LeverDetail;
   sources: Record<string, Source>;
+  openQuestionCount: number;
 }) {
   const primary = lever.claims.filter((c) => c.tierGroup === "primary");
   const informational = lever.claims.filter((c) => c.tierGroup === "informational");
@@ -72,7 +74,20 @@ export default function LeverDetailView({
       <ProseSection title="Dose & threshold" body={lever.dose} />
       <ProseSection title="Actions" body={lever.actions} />
       <ProseSection title="Caveats & population modifiers" body={lever.caveats} />
-      <ProseSection title="Open questions" body={lever.openQuestions} />
+
+      {openQuestionCount > 0 && (
+        <section className="lever-prose">
+          <h2>Open questions</h2>
+          <p className="prose-body">
+            {openQuestionCount} open question{openQuestionCount === 1 ? "" : "s"} for
+            this lever {openQuestionCount === 1 ? "is" : "are"} tracked centrally,
+            kept out of the ranking so they don&rsquo;t contaminate it.{" "}
+            <Link href={`/open-questions#${lever.slug}`}>
+              See the open questions for {lever.name} →
+            </Link>
+          </p>
+        </section>
+      )}
     </main>
   );
 }

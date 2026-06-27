@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { detail } from "@/lib/detail";
+import { synthesis } from "@/lib/synthesis";
 import LeverDetailView from "@/components/lever/LeverDetailView";
 
 export const dynamicParams = false;
@@ -29,5 +30,15 @@ export default async function LeverPage({
   const { slug } = await params;
   const lever = detail.levers[slug];
   if (!lever) notFound();
-  return <LeverDetailView lever={lever} sources={detail.sources} />;
+  // Open questions live canonically on /open-questions (grouped by lever); the
+  // lever page links to its section rather than duplicating the list.
+  const openQuestionCount =
+    synthesis.openQuestions.groups.find((g) => g.slug === slug)?.questions.length ?? 0;
+  return (
+    <LeverDetailView
+      lever={lever}
+      sources={detail.sources}
+      openQuestionCount={openQuestionCount}
+    />
+  );
 }
