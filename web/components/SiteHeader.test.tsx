@@ -38,16 +38,36 @@ describe("NavLinks active state", () => {
     );
   });
 
-  it("marks nothing current on the home brief, including its hash links", () => {
+  it("marks Overview current on the home brief and nothing else", () => {
     mockPath = "/";
     render(
       <nav>
         <NavLinks />
       </nav>,
     );
-    for (const name of ["Takeaways", "Ranking", "Evidence", "Sources", "Questions"]) {
+    expect(screen.getByRole("link", { name: "Overview" })).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
+    for (const name of ["Ranking", "Levers", "Sources", "Questions"]) {
       expect(screen.getByRole("link", { name })).not.toHaveAttribute("aria-current");
     }
+  });
+
+  it("keeps Levers current on a nested lever route, not Overview", () => {
+    mockPath = "/levers/sleep";
+    render(
+      <nav>
+        <NavLinks />
+      </nav>,
+    );
+    expect(screen.getByRole("link", { name: "Levers" })).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
+    expect(screen.getByRole("link", { name: "Overview" })).not.toHaveAttribute(
+      "aria-current",
+    );
   });
 });
 

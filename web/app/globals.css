@@ -23,7 +23,7 @@ a { color: inherit; }
 
 /* A real, visible focus state (promised in DESIGN.md, previously missing). */
 :focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
-.principle-card :focus-visible, .evidence-section :focus-visible, .finding.dark :focus-visible,
+.principle-card :focus-visible, .evidence-section :focus-visible,
 .personalize-callout :focus-visible, footer :focus-visible { outline-color: var(--lime); }
 /* The skip-link target is a structural region focused programmatically; the
    visible affordance is the skip link itself, not a box around all of main. */
@@ -104,16 +104,6 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0; }
 .filter { border: 1px solid var(--line); background: transparent; border-radius: 100px; padding: 9px 16px; min-height: 44px; display: inline-flex; align-items: center; cursor: pointer; font-size: 11px; color: var(--muted); }
 .filter.active, .filter:hover { color: white; border-color: var(--forest); background: var(--forest); }
-.empty-note { padding: 28px 0; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
-.findings-count { margin: 26px 0 16px; font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-.findings-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.finding { min-height: 470px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; background: rgba(255,255,255,.12); transition: opacity .2s; }
-.finding.hidden { display: none; }
-.finding.feature { background: var(--sage); }
-.finding.dark { background: var(--forest); color: white; }
-.finding.compact { min-height: 300px; }
-.finding.muted { background: var(--paper-deep); }
-.finding-top { display: flex; justify-content: space-between; align-items: center; }
 .tier { padding: 5px 8px; background: var(--forest); color: white; font: 10px var(--mono); }
 .tier-2 { background: var(--rust); }
 .tier-info { background: var(--paper-deep); color: #46514b; }
@@ -122,36 +112,6 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .tier.inverse { background: var(--paper-deep); color: var(--forest); }
 .tier-2.inverse { color: var(--rust-ink); }
 .tier-info.inverse { color: #46514b; }
-.lever { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: #46514b; }
-.finding.feature .lever { color: var(--forest); }
-.finding.dark .lever { color: #c7d2cc; }
-.finding-number { margin: 38px 0 12px; font: 10px var(--mono); color: var(--muted); }
-.dark .finding-number { color: #b8c7c0; }
-/* Muted on the sage feature ground is only ~2.6:1; use the dark summary ink. */
-.finding.feature .finding-number { color: #37423b; }
-.finding h3 { margin: 0; font-size: 42px; line-height: 1; font-weight: 500; letter-spacing: -.03em; }
-.finding-summary { max-width: 470px; color: #37423b; font-size: 14px; line-height: 1.65; }
-.dark .finding-summary { color: #b8c7c0; }
-.stat-line { display: flex; align-items: flex-end; gap: 15px; margin-top: auto; padding-top: 28px; }
-.stat-line strong { font: 500 43px var(--serif); color: var(--ink); }
-.feature .stat-line strong { color: var(--forest); }
-.finding.feature .stat-line span { color: #37423b; }
-.dark .stat-line strong { color: var(--lime); }
-.dark .stat-line span { color: #c7d2cc; }
-/* Was opacity:.68 over light grounds, which dropped this 10px label below AA.
-   An explicit dark value passes on the default/muted card grounds. */
-.stat-line span { font-size: 10px; line-height: 1.35; text-transform: uppercase; letter-spacing: .06em; color: #4f5b55; padding-bottom: 6px; }
-.detail-toggle { margin-top: 24px; padding: 14px 0 0; min-height: 44px; border: 0; border-top: 1px solid var(--line); background: none; color: #4f5b55; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
-.dark .detail-toggle { color: #c7d2cc; border-top-color: rgba(255,255,255,.2); }
-.finding.feature .detail-toggle { color: #37423b; }
-.detail-toggle span { font-size: 18px; line-height: 10px; }
-.finding-detail { display: none; padding-top: 14px; font-size: 12px; line-height: 1.55; }
-.finding-detail p { margin: 0 0 8px; }
-.finding-detail small { color: #4f5b55; }
-.dark .finding-detail small { color: #c7d2cc; }
-.finding.feature .finding-detail small { color: #37423b; }
-.finding.open .finding-detail { display: block; }
-.finding.open .detail-toggle span { transform: rotate(45deg); }
 
 .evidence-section { padding-block: 110px; background: var(--forest); color: white; }
 .evidence-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 100px; }
@@ -166,19 +126,8 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
    De-emphasize T3/T4 via a quieter numeral color only; all text stays full-contrast. */
 .tier-row.dim strong { color: #b9c4ba; }
 
-.status-heading { margin-bottom: 38px; }
+/* Shared margin utility for the home takeaways CTA (Findings). */
 .status-cta { margin-top: 40px; }
-.progress-track { height: 6px; background: var(--paper-deep); margin-bottom: 40px; }
-.progress-track span { height: 100%; display: block; background: var(--forest); }
-.lever-row { min-height: 76px; display: grid; grid-template-columns: 80px 1.5fr 1fr 100px; align-items: center; border-top: 1px solid var(--line); color: var(--muted); }
-.lever-row:last-child { border-bottom: 1px solid var(--line); }
-.lever-row span, .lever-row em, .lever-row b { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-.lever-row strong { font-size: 15px; font-weight: 600; }
-.lever-row b { text-align: right; }
-.lever-row.complete { color: var(--ink); }
-.lever-row.complete b { color: #46715d; }
-.lever-row.active-row { background: var(--lime); color: var(--ink); padding-inline: 18px; }
-.lever-row.active-row b { color: var(--rust); }
 
 .questions { padding: 0 0 120px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; }
 .questions h2 { font-size: 53px; }
@@ -202,10 +151,8 @@ footer a { font: 10px var(--mono); text-transform: uppercase; color: var(--lime)
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
   .section { padding-block: 85px; }
   .section-heading { align-items: start; gap: 30px; flex-direction: column; }
-  .findings-grid, .evidence-layout, .questions { grid-template-columns: 1fr; }
+  .evidence-layout, .questions { grid-template-columns: 1fr; }
   .evidence-layout, .questions { gap: 60px; }
-  .lever-row { grid-template-columns: 50px 1fr 90px; }
-  .lever-row em { display: none; }
 }
 
 @media (max-width: 560px) {
@@ -222,12 +169,7 @@ footer a { font: 10px var(--mono); text-transform: uppercase; color: var(--lime)
   blockquote { font-size: 31px; margin-top: 40px; }
   .metrics-grid > div { padding: 22px 15px; }
   .metrics strong { font-size: 32px; }
-  .finding { min-height: 430px; padding: 24px; }
-  .finding h3 { font-size: 36px; }
-  .finding.compact { min-height: 270px; }
   .tier-row { grid-template-columns: 45px 90px 1fr; gap: 10px; }
-  .lever-row { grid-template-columns: 42px 1fr 75px; }
-  .lever-row b { font-size: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -241,6 +183,27 @@ footer a { font: 10px var(--mono); text-transform: uppercase; color: var(--lime)
 .lever-status { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; padding: 6px 10px; background: var(--paper-deep); color: var(--muted); }
 .lever-status.status-complete { background: var(--forest); color: white; }
 .lever-status.status-in-progress { background: var(--lime); color: var(--forest); }
+
+/* Lever index (/levers) — catalogue of all levers as entries, not a ranking. */
+.levers-page { padding-block: 56px 110px; }
+.levers-page .lever-header { margin-bottom: 0; }
+.lever-index { list-style: none; margin: 0; padding: 0; }
+.lever-index-item { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; padding: 32px 0; border-bottom: 1px solid var(--line); }
+.lever-index-main { max-width: 60ch; }
+.lever-index-main h2 { margin: 0; font-size: clamp(30px, 4.4vw, 46px); line-height: .95; font-weight: 500; letter-spacing: -.035em; }
+.lever-index-main h2 a { color: var(--ink); text-decoration: none; }
+.lever-index-main h2 a:hover { color: var(--rust-ink); }
+.lever-scope { margin: 12px 0 0; color: var(--muted); line-height: 1.6; }
+.lever-counts { display: flex; flex-wrap: wrap; gap: 22px; margin: 16px 0 0; font: 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.lever-counts b { color: var(--ink); font-weight: 600; font-size: 12px; }
+.lever-index-aside { flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+.lever-index-link { font: 11px var(--mono); text-transform: uppercase; letter-spacing: .07em; color: var(--rust-ink); text-decoration: none; white-space: nowrap; }
+.lever-index-link:hover { color: var(--ink); }
+
+@media (max-width: 720px) {
+  .lever-index-item { flex-direction: column; gap: 18px; }
+  .lever-index-aside { flex-direction: row-reverse; align-items: center; justify-content: space-between; width: 100%; }
+}
 
 .lever-prose { padding-block: 36px; border-bottom: 1px solid var(--line); }
 .lever-prose h2 { font-size: 26px; margin: 0 0 14px; font-weight: 600; letter-spacing: -.02em; }
@@ -375,6 +338,10 @@ a.citation:hover { text-decoration: underline; }
 .plain-list { padding-left: 22px; max-width: 720px; }
 .plain-list li { margin-bottom: 10px; line-height: 1.6; }
 
+.takeaways-summary { margin-top: 40px; }
+.takeaways-summary .plain-list { font-size: 17px; }
+.takeaways-summary .plain-list li { margin-bottom: 16px; }
+
 .personalize-callout { padding: 36px; background: var(--forest); color: #c7d2cc; margin-top: 72px; }
 .personalize-callout h2 { color: white; }
 .personalize-callout p { max-width: 640px; line-height: 1.7; }
@@ -472,4 +439,3 @@ a.citation:hover { text-decoration: underline; }
 .oq-item.resolved .oq-question { text-decoration: line-through; opacity: 0.55; }
 .oq-question { margin: 0 0 0.2rem; font-weight: 600; }
 .oq-guess { margin: 0.2rem 0; font-size: 0.85rem; color: var(--muted); }
-.done-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--forest); }

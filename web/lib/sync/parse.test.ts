@@ -263,6 +263,8 @@ describe("parseMatrix", () => {
     });
     expect(m.rows[1].cells).toEqual(["none", "none", "strong"]);
     expect(m.rows[2].slug).toBe("oral-sensory");
+    // "Oral/Sensory" in the source table is normalized to the canonical name.
+    expect(m.rows[2].lever).toBe("Oral & Sensory");
   });
 });
 
@@ -306,6 +308,8 @@ describe("parseRankedActions", () => {
     expect(r.rows[1].conditional).toBe(true);
     expect(r.rows[1].action).toBe("Treat high blood pressure to target");
     expect(r.rows[1].slug).toBe("medical-screening");
+    // "Medical" in the source table is normalized to the canonical display name.
+    expect(r.rows[1].lever).toBe("Medical & Screening");
   });
   it("extracts do-not-bother items with refs", () => {
     const r = parseRankedActions(RANKED);
@@ -360,12 +364,15 @@ describe("parseOpenQuestions", () => {
     const r = parseOpenQuestions(OPEN_Q);
     const all = r.groups.flatMap((g) => g.questions);
     expect(all).toHaveLength(3);
-    expect(r.groups.find((g) => g.lever === "Sun-skin")).toBeTruthy();
+    const sun = r.groups.find((g) => g.slug === "sun-skin");
+    expect(sun).toBeTruthy();
+    expect(sun?.lever).toBe("Sun & Skin");
   });
   it("strips ** and * markdown emphasis from all fields", () => {
     const r = parseOpenQuestions(OPEN_Q_EMPHASIS);
-    const stress = r.groups.find((g) => g.lever === "Stress-social");
+    const stress = r.groups.find((g) => g.slug === "stress-social");
     expect(stress).toBeTruthy();
+    expect(stress?.lever).toBe("Stress & Social");
     const resolved = stress!.questions[0];
     expect(resolved.resolved).toBe(true);
     // ** and * removed from question text

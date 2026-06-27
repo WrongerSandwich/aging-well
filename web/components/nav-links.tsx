@@ -4,23 +4,29 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export const NAV_ITEMS = [
-  { label: "Takeaways", href: "/#takeaways" },
+  { label: "Overview", href: "/" },
   { label: "Ranking", href: "/actions" },
-  { label: "Evidence", href: "/#evidence" },
+  { label: "Levers", href: "/levers" },
   { label: "Sources", href: "/sources" },
   { label: "Questions", href: "/open-questions" },
 ] as const;
 
-// In-page anchors (e.g. "/#takeaways") resolve to the home route and never carry
-// a current-page mark; only the three distinct sub-pages do, so exactly one item
-// is ever "current" and the home brief is left unmarked.
+// Every nav item is a real route, so a click always means "go to this page",
+// never "scroll the current one". Exactly one item is current on every page,
+// including the home brief: "/" matches the home route only when it's an exact
+// match, and the others match their route plus any nested path beneath it (so
+// /levers/sleep keeps "Levers" current). The home sections that used to live in
+// this bar (#takeaways, #evidence) are still reachable by scrolling and via the
+// hero's in-page link.
 export function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
   return (
     <>
       {NAV_ITEMS.map((item) => {
-        const route = item.href.split("#")[0];
-        const isActive = route !== "/" && pathname === route;
+        const isActive =
+          item.href === "/"
+            ? pathname === "/"
+            : pathname === item.href || pathname.startsWith(`${item.href}/`);
         return (
           <Link
             key={item.href}

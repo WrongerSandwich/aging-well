@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { synthesis } from "@/lib/synthesis";
 import RankedTable from "@/components/actions/RankedTable";
-import PlainLanguageList from "@/components/actions/PlainLanguageList";
 import DoNotBother from "@/components/actions/DoNotBother";
 import Matrix from "@/components/actions/Matrix";
 
@@ -25,11 +24,6 @@ export default function ActionsPage() {
       </header>
 
       <section className="actions-section">
-        <h2>In plain language</h2>
-        <PlainLanguageList items={rankedActions.plainLanguage} />
-      </section>
-
-      <section className="actions-section">
         <h2>The ranking</h2>
         <dl className="score-legend" aria-label="How the score is built">
           <div>
@@ -49,6 +43,10 @@ export default function ActionsPage() {
             <dd>Impact × Certainty × Rev, so the ceiling is 5 × 5 × 3 = 75.</dd>
           </div>
         </dl>
+        <p className="claims-note">
+          Each lever links through to that lever&rsquo;s &ldquo;act on these&rdquo;
+          evidence — the claims behind the score.
+        </p>
         <RankedTable rows={rankedActions.rows} />
       </section>
 
@@ -81,7 +79,7 @@ export default function ActionsPage() {
           live in the repository (<code>synthesis/personalize.md</code>); your overlay stays
           local and is never published.
         </p>
-        <Link className="primary-link" href="/#status">← Back to overview</Link>
+        <Link className="primary-link" href="/">← Back to overview</Link>
       </section>
     </main>
   );

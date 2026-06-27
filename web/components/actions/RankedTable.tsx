@@ -20,7 +20,14 @@ export default function RankedTable({ rows }: { rows: RankedAction[] }) {
                 {r.action}
                 {r.conditional && <span className="cond-tag"> (conditional)</span>}
               </td>
-              <td><Link href={`/levers/${r.slug}`}>{r.lever}</Link></td>
+              <td>
+                <Link
+                  href={`/levers/${r.slug}#claims`}
+                  title={`See the act-on evidence behind this score on the ${r.lever} lever`}
+                >
+                  {r.lever}
+                </Link>
+              </td>
               <td className="col-num">{r.impact}</td>
               <td className="col-num">{r.certainty}</td>
               <td className="col-num">{r.rev}</td>

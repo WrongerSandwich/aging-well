@@ -2,18 +2,18 @@ import Hero from "@/components/Hero";
 import Metrics from "@/components/Metrics";
 import Findings from "@/components/Findings";
 import EvidenceTiers from "@/components/EvidenceTiers";
-import StatusSection from "@/components/StatusSection";
 import OpenQuestions from "@/components/OpenQuestions";
 
 export default function Home() {
   return (
     <main id="top" tabIndex={-1}>
       <Hero />
-      <Metrics />
       <Findings />
       <EvidenceTiers />
-      <StatusSection />
       <OpenQuestions />
+      {/* Corpus-scale metrics are process/volume, not "what to do" — kept as a
+          quiet credibility capstone near the end rather than leading the page. */}
+      <Metrics />
     </main>
   );
 }
