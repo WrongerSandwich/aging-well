@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { synthesis } from "@/lib/synthesis";
+import { PERSONALIZE_GUIDE_URL } from "@/lib/repo";
 import RankedTable from "@/components/actions/RankedTable";
 import DoNotBother from "@/components/actions/DoNotBother";
 import Matrix from "@/components/actions/Matrix";
@@ -74,12 +75,24 @@ export default function ActionsPage() {
         <h2>Make it yours</h2>
         <p>
           This ranking is universal. To turn it into your do-this-first list, add the one
-          personal factor (how realistically you’ll sustain each action) and resolve the
-          conditional rows against your own profile. The method and copy-and-fill templates
-          live in the repository (<code>synthesis/personalize.md</code>); your overlay stays
-          local and is never published.
+          personal factor — how realistically you’ll sustain each action — and resolve the
+          conditional rows against your own profile. The fastest way is to clone the
+          repository and walk through it with a coding agent (Claude Code or similar): point
+          it at the ranking, the scoring rubric, and the copy-and-fill templates, and have it
+          draft your overlay. Everything stays on your machine — your profile and Tractability
+          scores are gitignored and never published.
         </p>
-        <Link className="primary-link" href="/">← Back to overview</Link>
+        <div className="callout-actions">
+          <a
+            className="primary-link"
+            href={PERSONALIZE_GUIDE_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open the personalization guide <span aria-hidden="true">↗</span>
+          </a>
+          <Link className="callout-secondary" href="/">← Back to overview</Link>
+        </div>
       </section>
     </main>
   );

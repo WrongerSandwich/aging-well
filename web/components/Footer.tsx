@@ -1,3 +1,5 @@
+import { REPO_URL } from "@/lib/repo";
+
 export default function Footer() {
   return (
     <footer>
@@ -6,7 +8,12 @@ export default function Footer() {
           <strong>Aging Well</strong>
           <p>A living research snapshot, not medical advice.</p>
         </div>
-        <a href="#top">Back to top ↑</a>
+        <div className="footer-links">
+          <a href={REPO_URL} target="_blank" rel="noreferrer">
+            View source on GitHub ↗
+          </a>
+          <a href="#top">Back to top ↑</a>
+        </div>
       </div>
     </footer>
   );

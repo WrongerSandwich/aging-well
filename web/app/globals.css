@@ -60,6 +60,11 @@ main:focus, main:focus-visible { outline: none; }
 .site-header > nav a:hover { color: var(--ink); }
 .site-header > nav a.nav-active { color: var(--ink); }
 .site-header > nav a.nav-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--rust); }
+/* External source link: reads as a peer of the nav items (mono, muted→ink), set
+   just before the dated snapshot. Collapses into the mobile menu at 850px, the
+   same width the primary nav does. */
+.header-source { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); min-height: 24px; }
+.header-source:hover { color: var(--ink); }
 .snapshot { font: 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-left: 30px; border-left: 1px solid var(--line); }
 
 /* Mobile disclosure nav: CSS-only <details>, hidden on desktop. */
@@ -140,14 +145,16 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .question-list li span { font: 10px var(--mono); color: var(--muted); padding-top: 4px; }
 
 footer { background: #101d18; color: white; padding: 45px 0; }
-.footer-inner { display: flex; justify-content: space-between; align-items: center; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
 footer strong { font-family: var(--serif); font-size: 25px; }
 footer p { color: #91a098; font-size: 11px; margin: 6px 0 0; }
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
 footer a { font: 10px var(--mono); text-transform: uppercase; color: var(--lime); display: inline-flex; align-items: center; min-height: 24px; }
 
 @media (max-width: 850px) {
   .site-header { gap: 16px; }
   .site-header > nav { display: none; }
+  .header-source { display: none; }
   .mobile-nav { display: block; }
   .snapshot { margin-left: 0; padding-left: 0; border: 0; }
   .hero { grid-template-columns: 1fr; gap: 60px; padding-top: 70px; }
@@ -358,7 +365,13 @@ a.citation:hover { text-decoration: underline; }
 .personalize-callout h2 { color: white; }
 .personalize-callout p { max-width: 640px; line-height: 1.7; }
 .personalize-callout code { font: 13px var(--mono); background: rgba(255,255,255,0.1); padding: 1px 5px; color: var(--lime); }
-.personalize-callout .primary-link { color: white; border-color: var(--lime); margin-top: 8px; }
+/* The guide CTA is the one loud path out of the callout; the back link rides
+   alongside it in a quieter mono voice tuned for legibility on forest (muted
+   would fail contrast here). */
+.callout-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px; margin-top: 26px; }
+.personalize-callout .primary-link { color: white; border-color: var(--lime); margin-top: 0; }
+.callout-secondary { display: inline-flex; align-items: center; gap: 10px; min-height: 24px; text-decoration: none; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: #c7d2cc; }
+.callout-secondary:hover { color: white; }
 
 /* Sources controls: square search field + a dateless year-sort toggle, sitting
    above the tier chips. Inputs stay hairline-ruled with 0 radius per DESIGN.md. */

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { derived } from "@/lib/derived";
+import { REPO_URL } from "@/lib/repo";
 import { NavLinks } from "./nav-links";
 import MobileNav from "./MobileNav";
 
@@ -22,6 +23,15 @@ export default function SiteHeader() {
       <nav aria-label="Primary navigation">
         <NavLinks />
       </nav>
+      <a
+        className="header-source"
+        href={REPO_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Aging Well source and personalization guide on GitHub (opens in a new tab)"
+      >
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
       <span className="snapshot">{updated}</span>
       <MobileNav updated={updated} />
     </header>

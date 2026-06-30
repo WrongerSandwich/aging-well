@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { REPO_URL } from "@/lib/repo";
 import { NavLinks } from "./nav-links";
 
 // Progressive enhancement over a native <details>: it still opens/closes with no
@@ -39,6 +40,15 @@ export default function MobileNav({ updated }: { updated: string }) {
       <summary aria-label="Open navigation menu">Menu</summary>
       <nav aria-label="Primary navigation">
         <NavLinks onNavigate={() => close()} />
+        <a
+          className="mobile-nav-source"
+          href={REPO_URL}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => close()}
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
         <span className="mobile-nav-snapshot">{updated}</span>
       </nav>
     </details>
