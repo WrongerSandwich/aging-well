@@ -51,7 +51,7 @@ export default function LeverDetailView({
             </p>
             <div className="claims-list">
               {primary.map((c) => (
-                <ClaimCard key={c.number} claim={c} sources={sources} />
+                <ClaimCard key={c.number} claim={c} sources={sources} slug={lever.slug} />
               ))}
             </div>
           </section>
@@ -65,7 +65,7 @@ export default function LeverDetailView({
               </p>
               <div className="claims-list">
                 {informational.map((c) => (
-                  <ClaimCard key={c.number} claim={c} sources={sources} />
+                  <ClaimCard key={c.number} claim={c} sources={sources} slug={lever.slug} />
                 ))}
               </div>
             </section>
