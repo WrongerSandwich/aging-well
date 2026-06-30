@@ -1,29 +1,41 @@
 import Link from "next/link";
 import { synthesis } from "@/lib/synthesis";
-import PlainLanguageList from "@/components/actions/PlainLanguageList";
 
-// The home "takeaways" block is a teaser of the one canonical ranking, not a
-// second list: it renders the plain-language summary straight from synthesis
-// (the same source /actions reads) and links through to the full scored table.
-// There is deliberately no numbering here — a numbered list on the home page is
-// exactly what used to read as a competing ranking.
 export default function Findings() {
-  const { plainLanguage, rows } = synthesis.rankedActions;
+  const { rows } = synthesis.rankedActions;
+  const top5 = rows.slice(0, 5);
   return (
     <section className="section shell" id="takeaways">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Current takeaways</p>
+          <p className="eyebrow">Top 5 ranked actions</p>
           <h2>The signal, so far.</h2>
         </div>
         <p className="section-note">
-          Each line condenses several of the {rows.length} actions scored and
-          sorted on the ranking.
+          Sorted by Evidence-only score (Impact × Certainty × Reversibility).{" "}
+          {rows.length} total actions ranked.
         </p>
       </div>
 
       <div className="takeaways-summary">
-        <PlainLanguageList items={plainLanguage} />
+        <ol className="top-actions-list">
+          {top5.map((r) => (
+            <li key={r.rank}>
+              <span className="top-actions-rank">{r.rank}</span>
+              <span className="top-actions-text">
+                {r.action}
+                {r.conditional && <span className="cond-tag"> (conditional)</span>}
+              </span>
+              <Link
+                href={r.claimRef ? `/levers/${r.claimRef.slug}#claim-${r.claimRef.slug}-${r.claimRef.claimNum}` : `/levers/${r.slug}#claims`}
+                className="top-actions-lever"
+                title={`See the evidence behind this score on the ${r.lever} lever`}
+              >
+                {r.lever}
+              </Link>
+            </li>
+          ))}
+        </ol>
       </div>
 
       <p className="takeaways-caveat">

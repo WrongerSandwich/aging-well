@@ -350,16 +350,14 @@ a.citation:hover { text-decoration: underline; }
 .plain-list li { margin-bottom: 10px; line-height: 1.6; }
 
 .takeaways-summary { margin-top: 40px; }
-/* The home teaser keeps ordered-list semantics (the lines are priority-ordered)
-   but drops the visible numbers, which read as a second canonical ranking
-   competing with /actions — the exact thing this teaser exists to avoid. */
-.takeaways-summary .plain-list { font-size: 17px; list-style: none; padding-left: 0; }
+.top-actions-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); max-width: 720px; }
+.top-actions-list li { display: grid; grid-template-columns: 24px 1fr auto; align-items: baseline; gap: 0 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.top-actions-rank { font: 500 11px var(--mono); letter-spacing: .06em; color: var(--muted); }
+.top-actions-text { font-size: 17px; line-height: 1.5; }
+.top-actions-lever { font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; }
+.top-actions-lever:hover { color: var(--ink); }
 /* Caveat sits with the claims, not only in the footer. */
 .takeaways-caveat { margin: 30px 0 0; font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-/* A small square bullet (the system's square vocabulary) reads each line as a
-   distinct item rather than a run of adjacent mini-paragraphs. */
-.takeaways-summary .plain-list li { margin-bottom: 16px; position: relative; padding-left: 28px; }
-.takeaways-summary .plain-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; background: var(--forest); }
 
 .personalize-callout { padding: 36px; background: var(--forest); color: #c7d2cc; margin-top: 72px; }
 .personalize-callout h2 { color: white; }
