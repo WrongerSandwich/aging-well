@@ -25,16 +25,16 @@ export default function Findings() {
             <li key={r.rank}>
               <span className="top-actions-rank">{r.rank}</span>
               <span className="top-actions-text">{r.action}</span>
-              <span className="top-actions-cond" aria-label={r.conditional ? "conditional" : undefined}>
-                {r.conditional ? "cond." : ""}
+              <span className="top-actions-meta">
+                {r.conditional && <span className="top-actions-cond">cond.</span>}
+                <Link
+                  href={r.claimRef ? `/levers/${r.claimRef.slug}#claim-${r.claimRef.slug}-${r.claimRef.claimNum}` : `/levers/${r.slug}#claims`}
+                  className="top-actions-lever"
+                  title={`See the evidence behind this score on the ${r.lever} lever`}
+                >
+                  {r.lever}
+                </Link>
               </span>
-              <Link
-                href={r.claimRef ? `/levers/${r.claimRef.slug}#claim-${r.claimRef.slug}-${r.claimRef.claimNum}` : `/levers/${r.slug}#claims`}
-                className="top-actions-lever"
-                title={`See the evidence behind this score on the ${r.lever} lever`}
-              >
-                {r.lever}
-              </Link>
             </li>
           ))}
         </ol>

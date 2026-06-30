@@ -353,11 +353,12 @@ a.citation:hover { text-decoration: underline; }
 
 .takeaways-summary { margin-top: 40px; }
 .top-actions-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); max-width: 720px; }
-.top-actions-list li { display: grid; grid-template-columns: 24px 1fr auto auto; align-items: baseline; gap: 0 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.top-actions-list li { display: grid; grid-template-columns: 24px 1fr auto; align-items: baseline; gap: 0 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .top-actions-rank { font: 500 13px var(--mono); letter-spacing: .06em; color: var(--muted); }
 .top-actions-text { font-size: 17px; line-height: 1.5; }
-.top-actions-cond { font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); opacity: 0.65; align-self: center; }
-.top-actions-lever { font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; }
+.top-actions-meta { display: flex; align-items: baseline; gap: 10px; }
+.top-actions-cond { font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); opacity: 0.65; white-space: nowrap; }
+.top-actions-lever { font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; white-space: nowrap; }
 .top-actions-lever:hover { color: var(--ink); border-bottom-color: var(--ink); }
 /* Caveat sits with the claims, not only in the footer. */
 .takeaways-caveat { margin: 30px 0 0; font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
