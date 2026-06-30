@@ -3,11 +3,11 @@ import { render, screen } from "@testing-library/react";
 import Findings from "./Findings";
 import { synthesis } from "@/lib/synthesis";
 
-describe("Findings (home takeaways teaser)", () => {
-  it("renders the plain-language summary from the canonical synthesis source", () => {
+describe("Findings (home top-5 ranked actions)", () => {
+  it("renders the literal top 5 action texts from the canonical synthesis source", () => {
     render(<Findings />);
-    for (const line of synthesis.rankedActions.plainLanguage) {
-      expect(screen.getByText(line)).toBeInTheDocument();
+    for (const row of synthesis.rankedActions.rows.slice(0, 5)) {
+      expect(screen.getByText(row.action)).toBeInTheDocument();
     }
   });
 
@@ -22,13 +22,9 @@ describe("Findings (home takeaways teaser)", () => {
     expect(cta).toHaveAttribute("href", "/actions");
   });
 
-  it("is a teaser, not a competing ranking: no filters or per-card evidence toggles", () => {
+  it("shows no more than 5 items", () => {
     render(<Findings />);
-    expect(
-      screen.queryByRole("button", { name: /view evidence/i }),
-    ).toBeNull();
-    expect(
-      screen.queryByRole("group", { name: /filter takeaways/i }),
-    ).toBeNull();
+    const list = document.querySelector(".top-actions-list");
+    expect(list?.querySelectorAll("li").length).toBe(5);
   });
 });

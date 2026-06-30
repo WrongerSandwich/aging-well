@@ -18,7 +18,7 @@ export default function ActionsPage() {
         <p className="eyebrow">The output artifact</p>
         <h1>Ranked actions</h1>
         <p className="hero-intro">
-          Sorted by <strong>Evidence-only</strong> = Impact × Certainty × Reversibility
+          Sorted by <strong>Evidence-only</strong> = Impact × Certainty × Irreversibility
           (max 75). The personal Tractability factor is deliberately excluded, so apply it
           yourself.
         </p>
@@ -37,7 +37,7 @@ export default function ActionsPage() {
           </div>
           <div>
             <dt>Rev</dt>
-            <dd>Reversibility: how permanent the damage it prevents. Scored 1 to 3.</dd>
+            <dd>Irreversibility: how permanent the damage it prevents. Scored 1 to 3.</dd>
           </div>
           <div>
             <dt>Evidence-only</dt>

@@ -87,7 +87,7 @@ h1, h2, h3, blockquote { font-family: var(--serif); }
 h1 { margin: 0; font-size: clamp(60px, 8.2vw, 112px); line-height: .82; letter-spacing: -.06em; font-weight: 500; }
 h1 em { color: var(--rust); font-weight: 500; }
 .hero-intro { max-width: 640px; font-size: 18px; line-height: 1.7; color: #4f5b55; margin: 42px 0 34px; }
-.primary-link { display: inline-flex; gap: 30px; align-items: center; text-decoration: none; border-bottom: 1px solid var(--ink); padding: 0 0 9px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.primary-link { display: inline-flex; gap: 20px; align-items: center; text-decoration: none; border-bottom: 1px solid var(--ink); padding: 0 0 9px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 /* Quiet in-page scroll cue, deliberately lighter than .primary-link so the one
    loud path on the page is the teaser's link to the canonical /actions ranking. */
 .jump-link { display: inline-flex; gap: 12px; align-items: center; min-height: 24px; text-decoration: none; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
@@ -110,6 +110,8 @@ blockquote { font-size: 36px; line-height: 1.05; letter-spacing: -.025em; margin
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
 h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weight: 500; letter-spacing: -.045em; }
 .section-note { max-width: 330px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.section-note-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.section-note-link:hover { color: var(--ink); }
 .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0; }
 .filter { border: 1px solid var(--line); background: transparent; border-radius: 100px; padding: 9px 16px; min-height: 44px; display: inline-flex; align-items: center; cursor: pointer; font-size: 11px; color: var(--muted); }
 .filter.active, .filter:hover { color: white; border-color: var(--forest); background: var(--forest); }
@@ -122,7 +124,7 @@ h2 { margin: 0; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; font-weig
 .tier-2.inverse { color: var(--rust-ink); }
 .tier-info.inverse { color: #46514b; }
 
-.evidence-section { padding-block: 110px; background: var(--forest); color: white; }
+.evidence-section { padding-block: 110px; padding-inline: max(24px, calc((100vw - 1180px) / 2)); background: var(--forest); color: white; }
 .evidence-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 100px; }
 .eyebrow.light { color: var(--lime); }
 .evidence-intro p:last-child { max-width: 390px; color: #b8c7c0; line-height: 1.7; margin-top: 32px; }
@@ -350,16 +352,16 @@ a.citation:hover { text-decoration: underline; }
 .plain-list li { margin-bottom: 10px; line-height: 1.6; }
 
 .takeaways-summary { margin-top: 40px; }
-/* The home teaser keeps ordered-list semantics (the lines are priority-ordered)
-   but drops the visible numbers, which read as a second canonical ranking
-   competing with /actions — the exact thing this teaser exists to avoid. */
-.takeaways-summary .plain-list { font-size: 17px; list-style: none; padding-left: 0; }
+.top-actions-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); max-width: 720px; }
+.top-actions-list li { display: grid; grid-template-columns: 24px 1fr auto; align-items: baseline; gap: 0 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.top-actions-rank { font: 500 13px var(--mono); letter-spacing: .06em; color: var(--muted); }
+.top-actions-text { font-size: 17px; line-height: 1.5; }
+.top-actions-meta { display: flex; align-items: baseline; gap: 10px; }
+.top-actions-cond { font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); opacity: 0.65; white-space: nowrap; }
+.top-actions-lever { font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 1px; white-space: nowrap; }
+.top-actions-lever:hover { color: var(--ink); border-bottom-color: var(--ink); }
 /* Caveat sits with the claims, not only in the footer. */
 .takeaways-caveat { margin: 30px 0 0; font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-/* A small square bullet (the system's square vocabulary) reads each line as a
-   distinct item rather than a run of adjacent mini-paragraphs. */
-.takeaways-summary .plain-list li { margin-bottom: 16px; position: relative; padding-left: 28px; }
-.takeaways-summary .plain-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; background: var(--forest); }
 
 .personalize-callout { padding: 36px; background: var(--forest); color: #c7d2cc; margin-top: 72px; }
 .personalize-callout h2 { color: white; }

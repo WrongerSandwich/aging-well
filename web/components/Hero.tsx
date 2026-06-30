@@ -17,7 +17,7 @@ export default function Hero() {
           Built around hard outcomes, irreversibility, and a bias toward doing, not optimizing.
         </p>
         <a className="jump-link" href="#takeaways">
-          See current takeaways <span>↓</span>
+          See top 5 ranked actions <span>↓</span>
         </a>
       </div>
       <aside className="principle-card" aria-label="Core research principle">

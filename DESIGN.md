@@ -224,7 +224,7 @@ tonal step instead.
 - **Shape:** Square. 0px radius (`--rounded-none`). Buttons are rare; the primary call to
   action is usually a link, not a filled button.
 - **Primary link** (`.primary-link`): An underlined inline link, ink-colored, mono uppercase,
-  with a 1px bottom border and a trailing arrow glyph (e.g. "See current takeaways ↓"). Not a
+  with a 1px bottom border and a trailing arrow glyph (e.g. "See all 30 ranked actions →"). Not a
   filled pill.
 - **Hover / Focus:** Color shifts toward ink; underline persists. Keep a visible focus-visible
   outline for keyboard users.

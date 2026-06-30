@@ -32,6 +32,11 @@ that weights irreversibility and effect size. Success is the reader trusting the
 because the reasoning is visible, and the project reaching its own **stopping rule**: once
 the ranked actions stabilize, stop researching and start doing.
 
+The home page surfaces the **literal top 5 ranked actions** directly from the scoring
+output — the same text and order as the full /actions table, not an editorial paraphrase.
+The full scored table (all ranked actions, the do-not-bother list, and the lever × system
+matrix) lives on /actions.
+
 ## Brand Personality
 
 **Warm, plainspoken, honest.** Calm authority, not clinical coldness. It explains its
