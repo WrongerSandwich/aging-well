@@ -12,7 +12,9 @@ export default function Findings() {
           <h2>The signal, so far.</h2>
         </div>
         <p className="section-note">
-          Sorted by Evidence-only score (Impact × Certainty × Reversibility).{" "}
+          Sorted by{" "}
+          <Link href="/actions" className="section-note-link">Evidence-only score</Link>{" "}
+          (Impact × Certainty × Irreversibility).{" "}
           {rows.length} total actions ranked.
         </p>
       </div>
@@ -22,9 +24,9 @@ export default function Findings() {
           {top5.map((r) => (
             <li key={r.rank}>
               <span className="top-actions-rank">{r.rank}</span>
-              <span className="top-actions-text">
-                {r.action}
-                {r.conditional && <span className="cond-tag"> (conditional)</span>}
+              <span className="top-actions-text">{r.action}</span>
+              <span className="top-actions-cond" aria-label={r.conditional ? "conditional" : undefined}>
+                {r.conditional ? "cond." : ""}
               </span>
               <Link
                 href={r.claimRef ? `/levers/${r.claimRef.slug}#claim-${r.claimRef.slug}-${r.claimRef.claimNum}` : `/levers/${r.slug}#claims`}
