@@ -6,12 +6,14 @@ import Citations from "./Citations";
 export default function ClaimCard({
   claim,
   sources,
+  slug,
 }: {
   claim: Claim;
   sources: Record<string, Source>;
+  slug?: string;
 }) {
   return (
-    <article className="claim">
+    <article className="claim" id={slug ? `claim-${slug}-${claim.number}` : undefined}>
       <div className="claim-head">
         <span className="claim-number">{String(claim.number).padStart(2, "0")}</span>
         <span className={tierClass(claim.tier)}>{tierText(claim.tier)}</span>

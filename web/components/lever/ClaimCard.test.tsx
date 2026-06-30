@@ -30,4 +30,12 @@ describe("ClaimCard", () => {
       "https://example.com/s048",
     );
   });
+  it("adds a stable anchor id when slug is provided", () => {
+    const { container } = render(<ClaimCard claim={claim} sources={sources} slug="sleep" />);
+    expect(container.querySelector("article")).toHaveAttribute("id", "claim-sleep-1");
+  });
+  it("omits id when slug is not provided", () => {
+    const { container } = render(<ClaimCard claim={claim} sources={sources} />);
+    expect(container.querySelector("article")).not.toHaveAttribute("id");
+  });
 });

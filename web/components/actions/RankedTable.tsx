@@ -22,7 +22,7 @@ export default function RankedTable({ rows }: { rows: RankedAction[] }) {
               </td>
               <td>
                 <Link
-                  href={`/levers/${r.slug}#claims`}
+                  href={r.claimRef ? `/levers/${r.claimRef.slug}#claim-${r.claimRef.slug}-${r.claimRef.claimNum}` : `/levers/${r.slug}#claims`}
                   title={`See the act-on evidence behind this score on the ${r.lever} lever`}
                 >
                   {r.lever}

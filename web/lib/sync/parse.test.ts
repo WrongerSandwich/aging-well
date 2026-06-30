@@ -272,7 +272,7 @@ const RANKED = `# Ranked actions
 
 | Rank | Action | Lever | Impact | Certainty | Rev | **Evidence-only** |
 |:----:|--------|-------|:------:|:---------:|:---:|:-----------------:|
-| 1 | **Don't smoke** (quit ASAP if you do) | Substances | 5 | 5 | 3 | **75** |
+| 1 | **Don't smoke** (quit ASAP if you do) [substances #1] | Substances | 5 | 5 | 3 | **75** |
 | 3 | **Treat high blood pressure to target** *(conditional)* | Medical | 5 | 5 | 3 | **75** |
 
 ### Do NOT bother / actively avoid (negative or unproven — keep OFF the list)
@@ -304,12 +304,18 @@ describe("parseRankedActions", () => {
       rev: 3,
       evidenceOnly: 75,
       conditional: false,
+      claimRef: { slug: "substances", claimNum: 1 },
     });
     expect(r.rows[1].conditional).toBe(true);
     expect(r.rows[1].action).toBe("Treat high blood pressure to target");
     expect(r.rows[1].slug).toBe("medical-screening");
     // "Medical" in the source table is normalized to the canonical display name.
     expect(r.rows[1].lever).toBe("Medical & Screening");
+  });
+  it("strips claimRef from action text and leaves no ref when absent", () => {
+    const r = parseRankedActions(RANKED);
+    expect(r.rows[0].action).toBe("Don't smoke (quit ASAP if you do)");
+    expect(r.rows[1].claimRef).toBeUndefined();
   });
   it("extracts do-not-bother items with refs", () => {
     const r = parseRankedActions(RANKED);

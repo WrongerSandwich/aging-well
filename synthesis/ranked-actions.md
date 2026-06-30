@@ -19,36 +19,36 @@ This file is the **general, evidence-based ranking** — safe to publish. It is 
 
 | Rank | Action | Lever | Impact | Certainty | Rev | **Evidence-only** |
 |:----:|--------|-------|:------:|:---------:|:---:|:-----------------:|
-| 1 | **Don't smoke** (quit ASAP if you do) | Substances | 5 | 5 | 3 | **75** |
-| 2 | **Build cardiorespiratory fitness** (≥150 min/wk zone-2 + some vigorous) | Exercise | 5 | 5 | 3 | **75** |
-| 3 | **Treat high blood pressure to target** *(conditional)* | Medical | 5 | 5 | 3 | **75** |
-| 4 | **Keep alcohol minimal** (toward zero) | Substances | 4 | 5 | 3 | **60** |
-| 5 | **Resistance-train ≥2×/wk** | Exercise | 4 | 5 | 3 | **60** |
-| 6 | **Balance training** (esp. from midlife — falls/fracture prevention) | Exercise | 4 | 5 | 3 | **60** |
-| 7 | **Statins if elevated CVD risk** *(conditional)* | Medical | 4 | 5 | 3 | **60** |
-| 8 | **Colorectal cancer screening** (from ~45–50) | Medical | 4 | 5 | 3 | **60** |
-| 9 | **Don't sunburn / never use tanning beds** | Sun-skin | 3 | 5 | 3 | **45** |
-| 10 | **Get recommended adult vaccines** (Shingrix, RSV, flu, COVID, pneumococcal) | Medical | 3 | 5 | 3 | **45** |
-| 11 | **Cervical cancer screening** *(if applicable)* | Medical | 3 | 5 | 3 | **45** |
-| 12 | **Lift heavy for bone (HiRIT) if low BMD** *(conditional)* | Exercise | 3 | 4 | 3 | **36** |
-| 13 | **Lung-cancer screening (LDCT)** *(conditional — smoking history)* | Medical | 3 | 4 | 3 | **36** |
-| 14 | **Protect hearing + treat hearing loss early with aids** | Oral-sensory | 3 | 4 | 3 | **36** |
-| 15 | **Correct vision / cataract surgery when it impairs you** | Oral-sensory | 3 | 4 | 3 | **36** |
-| 16 | **Avoid ultra-processed food & sugary drinks** | Nutrition | 4 | 4 | 2 | **32** |
-| 17 | **Avoid excess adiposity** (don't become obese) | Nutrition | 4 | 4 | 2 | **32** |
-| 18 | **CBT-I if you have insomnia** (prevents depression) | Sleep | 3 | 5 | 2 | **30** |
-| 19 | **DASH-style diet / lower sodium** (for BP) | Nutrition | 3 | 5 | 2 | **30** |
-| 20 | **Sleep ~7–7.5 h on a consistent schedule** | Sleep | 3 | 4 | 2 | **24** |
-| 21 | **Daily broad-spectrum sunscreen** | Sun-skin | 2 | 4 | 3 | **24** |
-| 22 | **Adequate protein** (preserve muscle, esp. older) | Nutrition | 3 | 3 | 2 | **18** |
-| 23 | **Cultivate a sense of purpose** | Stress-social | 3 | 3 | 2 | **18** |
-| 24 | **Keep functional teeth** (hygiene + regular dental care) | Oral-sensory | 2 | 3 | 3 | **18** |
-| 25 | **Limit processed / red meat** | Nutrition | 2 | 4 | 2 | **16** |
-| 26 | **Treat OSA if symptomatic** (symptoms, not MACE) | Sleep | 2 | 4 | 2 | **16** |
-| 27 | **Don't start vaping** (if never-smoker) | Substances | 2 | 4 | 2 | **16** |
-| 28 | **Maintain quality social connections** | Stress-social | 3 | 2 | 2 | **12** |
-| 29 | **Manage chronic stress** (for well-being) | Stress-social | 2 | 2 | 2 | **8** |
-| 30 | **Avoid heavy / adolescent-onset cannabis** | Substances | 2 | 2 | 2 | **8** |
+| 1 | **Don't smoke** (quit ASAP if you do) [substances #1] | Substances | 5 | 5 | 3 | **75** |
+| 2 | **Build cardiorespiratory fitness** (≥150 min/wk zone-2 + some vigorous) [exercise #1] | Exercise | 5 | 5 | 3 | **75** |
+| 3 | **Treat high blood pressure to target** *(conditional)* [medical-screening #8] | Medical | 5 | 5 | 3 | **75** |
+| 4 | **Keep alcohol minimal** (toward zero) [substances #9] | Substances | 4 | 5 | 3 | **60** |
+| 5 | **Resistance-train ≥2×/wk** [exercise #5] | Exercise | 4 | 5 | 3 | **60** |
+| 6 | **Balance training** (esp. from midlife — falls/fracture prevention) [exercise #9] | Exercise | 4 | 5 | 3 | **60** |
+| 7 | **Statins if elevated CVD risk** *(conditional)* [medical-screening #6] | Medical | 4 | 5 | 3 | **60** |
+| 8 | **Colorectal cancer screening** (from ~45–50) [medical-screening #1] | Medical | 4 | 5 | 3 | **60** |
+| 9 | **Don't sunburn / never use tanning beds** [sun-skin #1] | Sun-skin | 3 | 5 | 3 | **45** |
+| 10 | **Get recommended adult vaccines** (Shingrix, RSV, flu, COVID, pneumococcal) [medical-screening #9] | Medical | 3 | 5 | 3 | **45** |
+| 11 | **Cervical cancer screening** *(if applicable)* [medical-screening #3] | Medical | 3 | 5 | 3 | **45** |
+| 12 | **Lift heavy for bone (HiRIT) if low BMD** *(conditional)* [exercise #13] | Exercise | 3 | 4 | 3 | **36** |
+| 13 | **Lung-cancer screening (LDCT)** *(conditional — smoking history)* [medical-screening #2] | Medical | 3 | 4 | 3 | **36** |
+| 14 | **Protect hearing + treat hearing loss early with aids** [oral-sensory #3] | Oral-sensory | 3 | 4 | 3 | **36** |
+| 15 | **Correct vision / cataract surgery when it impairs you** [oral-sensory #8] | Oral-sensory | 3 | 4 | 3 | **36** |
+| 16 | **Avoid ultra-processed food & sugary drinks** [nutrition-metabolic #4] | Nutrition | 4 | 4 | 2 | **32** |
+| 17 | **Avoid excess adiposity** (don't become obese) [nutrition-metabolic #11] | Nutrition | 4 | 4 | 2 | **32** |
+| 18 | **CBT-I if you have insomnia** (prevents depression) [sleep #12] | Sleep | 3 | 5 | 2 | **30** |
+| 19 | **DASH-style diet / lower sodium** (for BP) [nutrition-metabolic #7] | Nutrition | 3 | 5 | 2 | **30** |
+| 20 | **Sleep ~7–7.5 h on a consistent schedule** [sleep #1] | Sleep | 3 | 4 | 2 | **24** |
+| 21 | **Daily broad-spectrum sunscreen** [sun-skin #11] | Sun-skin | 2 | 4 | 3 | **24** |
+| 22 | **Adequate protein** (preserve muscle, esp. older) [nutrition-metabolic #14] | Nutrition | 3 | 3 | 2 | **18** |
+| 23 | **Cultivate a sense of purpose** [stress-social #25] | Stress-social | 3 | 3 | 2 | **18** |
+| 24 | **Keep functional teeth** (hygiene + regular dental care) [oral-sensory #14] | Oral-sensory | 2 | 3 | 3 | **18** |
+| 25 | **Limit processed / red meat** [nutrition-metabolic #5] | Nutrition | 2 | 4 | 2 | **16** |
+| 26 | **Treat OSA if symptomatic** (symptoms, not MACE) [sleep #7] | Sleep | 2 | 4 | 2 | **16** |
+| 27 | **Don't start vaping** (if never-smoker) [substances #11] | Substances | 2 | 4 | 2 | **16** |
+| 28 | **Maintain quality social connections** [stress-social #1] | Stress-social | 3 | 2 | 2 | **12** |
+| 29 | **Manage chronic stress** (for well-being) [stress-social #17] | Stress-social | 2 | 2 | 2 | **8** |
+| 30 | **Avoid heavy / adolescent-onset cannabis** [substances #19] | Substances | 2 | 2 | 2 | **8** |
 
 ### Do NOT bother / actively avoid (negative or unproven — keep OFF the list)
 These scored low or reversed in the research; listed so they don't creep back in:

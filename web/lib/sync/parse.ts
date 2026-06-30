@@ -238,6 +238,7 @@ export interface RankedAction {
   rev: number;
   evidenceOnly: number;
   conditional: boolean;
+  claimRef?: { slug: string; claimNum: number };
 }
 export interface DoNotBotherItem {
   text: string;
@@ -268,8 +269,13 @@ export function parseRankedActions(md: string): RankedActions {
     const cells = line.split("|").map((c) => c.trim());
     if (cells.length < 9) continue;
     const actionRaw = cells[2];
-    const conditional = /\(conditional/i.test(actionRaw);
-    const action = stripMarkdown(actionRaw)
+    const claimRefMatch = actionRaw.match(/\[([a-z][a-z-]*)\s+#(\d+)\]\s*$/);
+    const claimRef = claimRefMatch
+      ? { slug: claimRefMatch[1], claimNum: Number(claimRefMatch[2]) }
+      : undefined;
+    const actionStripped = actionRaw.replace(/\s*\[[a-z][a-z-]*\s+#\d+\]\s*$/, "");
+    const conditional = /\(conditional/i.test(actionStripped);
+    const action = stripMarkdown(actionStripped)
       .replace(/\*\(conditional\)\*/gi, "")
       .replace(/\(conditional[^)]*\)/gi, "")
       .replace(/\s{2,}/g, " ")
@@ -285,6 +291,7 @@ export function parseRankedActions(md: string): RankedActions {
       rev: Number(cells[6]),
       evidenceOnly: Number(stripMarkdown(cells[7])),
       conditional,
+      claimRef,
     });
   }
 
